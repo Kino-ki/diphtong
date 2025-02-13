@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "akira-expanded";
+    src: url("/fonts/akira-expanded-demo.otf");
+  }
+  @font-face {
+    font-family: "menlo-regular";
+    src: url("/fonts/Menlo-Regular.ttf");
+  }
+  @font-face {
+    font-family: "menlo-bold";
+    src: url("/fonts/Menlo-Bold.ttf");
+  }
+  @font-face {
+    font-family: "urbanist-regular";
+    src: url("/fonts/Urbanist-Regular.ttf");
+  }
+  @font-face {
+    font-family: "figtree-bold";
+    src: url("/fonts/Figtree-SemiBold.ttf");
+  }
+  @font-face {
+    font-family: "figtree-light";
+    src: url("/fonts/Figtree-Light.ttf");
+  }
+  /* @font-face {
+    font-family: f;
+    src: url();
+  }
+  @font-face {
+    font-family: f;
+    src: url();
+  } */
+}

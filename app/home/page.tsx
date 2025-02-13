@@ -10,8 +10,8 @@ import HomeHorizontalScroll from "@/components/HomeHorizontalScroll";
 import HeroSection from "@/components/HeroSection";
 gsap.registerPlugin(ScrollTrigger);
 
-import esthergif from "@/public/images/estherhome.gif";
-import beancesgif from "@/public/images/beanceshomes.gif";
+// import esthergif from "@/public/images/estherhome.gif";
+// import beancesgif from "@/public/images/beanceshomes.gif";
 
 export default function HomePage() {
   const bgImageRef = useRef<HTMLDivElement | null>(null);
@@ -19,7 +19,6 @@ export default function HomePage() {
   useEffect(() => {
     gsap.to(bgImageRef.current, {
       rotation: 360,
-      markers: true,
       ease: "power1.in",
       scrollTrigger: {
         trigger: document.documentElement,
@@ -41,23 +40,27 @@ export default function HomePage() {
       </div>
       <HeroSection />
       <HomeFirstText />
-      <div className="h-[50vh] "> </div>
+      <div className="h-[100vh] "> </div>
       <HomeHorizontalScroll />
-      <div className="flex justify-center">
-        <Image
-          src={esthergif}
-          width={1000}
-          height={500}
-          alt="esther"
-          className="z-50"
-        />
-        <Image
-          src={beancesgif}
-          width={1000}
-          height={500}
-          alt="esther"
-          className="z-50"
-        />
+      <div className="flex flex-col justify-center gap-12 pb-40">
+        {/* <div className=" h-60 overflow-hidden flex items-center pt-60 mx-[5%] ">
+          <Image
+            src={beancesgif}
+            width={1000}
+            height={500}
+            alt="esther"
+            className="z-50 w-full"
+          />
+        </div>
+        <div className=" h-60 overflow-hidden flex items-center pt-60 mx-[5%] ">
+          <Image
+            src={esthergif}
+            width={2000}
+            height={500}
+            alt="esther"
+            className="z-50 w-full "
+          />
+        </div> */}
       </div>
     </div>
   );

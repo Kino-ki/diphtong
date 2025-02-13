@@ -1,0 +1,38 @@
+{
+  "english": {
+    "servicesPage": [
+      {
+        "id": "1",
+        "serviceName": "WEB DEVELOPMENT",
+        "firstText": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue. Cras est lectus, tempus eget lacus at, porta porta magna. Sed commodo pretium laoreet. Integer egestas dolor ac nibh ultrices, id maximus eros mattis. Curabitur rutrum placerat ex eleifend facilisis. Integer pharetra, risus ut gravida molestie, ante justo ultricies mauris, ac lacinia metus purus ac nisl. ",
+        "subservice": "From Sketch to Screen ",
+        "secondText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue",
+        "thirdText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue"
+      },
+      {
+        "id": "2",
+        "serviceName": "WEB Design",
+        "firstText": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue. Cras est lectus, tempus eget lacus at, porta porta magna. Sed commodo pretium laoreet. Integer egestas dolor ac nibh ultrices, id maximus eros mattis. Curabitur rutrum placerat ex eleifend facilisis. Integer pharetra, risus ut gravida molestie, ante justo ultricies mauris, ac lacinia metus purus ac nisl. ",
+        "subservice": "Our Secret Recipe",
+        "secondText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue",
+        "thirdText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue"
+      },
+      {
+        "id": "3",
+        "serviceName": "RESPONSIVE APPS",
+        "firstText": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue. Cras est lectus, tempus eget lacus at, porta porta magna. Sed commodo pretium laoreet. Integer egestas dolor ac nibh ultrices, id maximus eros mattis. Curabitur rutrum placerat ex eleifend facilisis. Integer pharetra, risus ut gravida molestie, ante justo ultricies mauris, ac lacinia metus purus ac nisl. ",
+        "subservice": "Pixels to Perfection",
+        "secondText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue",
+        "thirdText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue"
+      },
+      {
+        "id": "4",
+        "serviceName": "MAINTENANCE",
+        "firstText": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue. Cras est lectus, tempus eget lacus at, porta porta magna. Sed commodo pretium laoreet. Integer egestas dolor ac nibh ultrices, id maximus eros mattis. Curabitur rutrum placerat ex eleifend facilisis. Integer pharetra, risus ut gravida molestie, ante justo ultricies mauris, ac lacinia metus purus ac nisl. ",
+        "subservice": "coucou",
+        "secondText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue",
+        "thirdText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue"
+      }
+    ]
+  }
+}

@@ -20,6 +20,10 @@
     src: url("/fonts/Urbanist-Regular.ttf");
   }
   @font-face {
+    font-family: "urbanist-medium";
+    src: url("/fonts/Urbanist-Medium.ttf");
+  }
+  @font-face {
     font-family: "figtree-bold";
     src: url("/fonts/Figtree-SemiBold.ttf");
   }

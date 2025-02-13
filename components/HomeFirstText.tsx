@@ -42,8 +42,8 @@ export default function HomeFirstText() {
       scrollTrigger: {
         trigger: secondTextRef.current,
         start: "center top",
-        end: "bottom top",
-        scrub: 2,
+        end: "2000vh top",
+        scrub: 1,
       },
     });
 
@@ -83,6 +83,7 @@ export default function HomeFirstText() {
             </button>
           </div>
         </div>
+        <div className=" "></div>
         <div
           ref={secondTextRef}
           className="fixed h-[120vh] top-[35%] left-0 w-full flex justify-center px-[12%] opacity-0"

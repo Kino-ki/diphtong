@@ -13,11 +13,15 @@ export default {
       },
       backgroundImage: {
         herogif: "url(/images/herogif.gif)",
+        diphlogo: "url(/images/diphlogo.svg)",
         slideone: "url(/images/backgrounds/heroslideone.svg) ",
         slidetwopic: "url(/images/backgrounds/heroslidetwo.svg) ",
         bgslidetwo: "url(/images/backgrounds/bg-slidetwo.svg) ",
         bgfooter: "url(/images/backgrounds/footerbg.svg) ",
         bgsecondfooter: "url(/images/backgrounds/footersecondbg.svg) ",
+        bgserviceone: "url(/images/backgrounds/servicesbgone.svg)",
+        bgservicetwo: "url(/images/backgrounds/servicesbgtwo.svg)",
+        bgservicethree: "url(/images/backgrounds/servicesbgthree.svg)",
       },
     },
     fontFamily: {

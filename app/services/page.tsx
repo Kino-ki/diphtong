@@ -94,8 +94,10 @@ export default function Services() {
           </div>
         </div>
       ))}
-      <div className="mt-[5%] flex justify-end items-end  w-full  ">
-        <GetAQuoteButton />
+      <div className="flex justify-end w-full">
+        <div className="mt-[5%] flex justify-end items-end ">
+          <GetAQuoteButton />
+        </div>
       </div>
     </div>
   );

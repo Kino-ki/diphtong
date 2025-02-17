@@ -1,5 +1,6 @@
 "use client";
 
+import { useLanguage } from "@/app/contexts/LangContext";
 import arrow from "@/public/images/servicearrow.svg";
 import Image from "next/image";
 
@@ -20,6 +21,22 @@ export function GetAQuoteButton() {
         Get a free quote
       </p>
       <Image src={arrow} width={8} height={5} alt="arrow" />
+    </button>
+  );
+}
+
+export function LangButton() {
+  const { language, handleLanguageChange } = useLanguage();
+  return (
+    <button
+      className=" flex flex-col justify-center "
+      onClick={handleLanguageChange}
+    >
+      <div>
+        <p className="font-menlor text-[1.1rem]/5  tracking-[0.25rem] w-full h-full ">
+          {language === "EN" ? "FR" : "EN"}
+        </p>
+      </div>
     </button>
   );
 }

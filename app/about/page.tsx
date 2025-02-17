@@ -8,10 +8,16 @@ gsap.registerPlugin(Observer);
 export default function AboutPage() {
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
   const imagesRef = useRef<(HTMLElement | null)[]>([]);
-  // const headingsRef = useRef<(HTMLElement | null)[]>([]);
-  // const splitHeadingsRef = useRef<(HTMLElement | null)[]>([]);
-  const animating = false;
-  let currentIndex = -1;
+  // const headings = gsap.utils.toArray(".section-heading");
+  // const splitHeadings = headings.map(
+  //   (heading) =>
+  //     new SplitText(heading, {
+  //       type: "chars,words,lines",
+  //       linesClass: "clip-text",
+  //     })
+  // );
+  const currentIndexRef = useRef(-1);
+  const animatingRef = useRef(false);
 
   useEffect(() => {
     // Get references to all DOM elements
@@ -25,29 +31,31 @@ export default function AboutPage() {
     gsap.set(outerWrappers, { yPercent: 100 });
     gsap.set(innerWrappers, { yPercent: -100 });
 
-    function gotoSection(index, direction) {
+    function gotoSection(index: number, direction: number) {
+      if (animatingRef.current) return; // Prevent new animations while one is running
+      animatingRef.current = true;
       index = wrap(index); // make sure it's valid
-      let animating = true;
+
       const fromTop = direction === -1,
         dFactor = fromTop ? -1 : 1,
         tl = gsap.timeline({
           defaults: { duration: 1.25, ease: "power1.inOut" },
           onComplete: () => {
-            animating = false;
+            animatingRef.current = false;
           },
         });
-      console.log("current", currentIndex);
+      console.log("current", currentIndexRef.current);
       console.log("index = going to =>", index);
 
-      if (currentIndex >= 0) {
+      if (currentIndexRef.current >= 0) {
         // The first time this function runs, current is -1
-        gsap.set(sections[currentIndex], { zIndex: 0 });
-        tl.to(images[currentIndex], {
-          yPercent: -20 * dFactor,
+        gsap.set(sections[currentIndexRef.current], { zIndex: 0 });
+        tl.to(images[currentIndexRef.current], {
+          yPercent: -15 * dFactor,
           delay: 0.2,
-        }).set(sections[currentIndex], { autoAlpha: 0 });
+        }).set(sections[currentIndexRef.current], { autoAlpha: 0 });
         tl.call(() => {
-          currentIndex = index;
+          currentIndexRef.current = index;
         });
       }
 
@@ -61,7 +69,7 @@ export default function AboutPage() {
           yPercent: 0,
         },
         0
-      ).fromTo(images[index], { yPercent: 100 * dFactor }, { yPercent: 0 }, 0);
+      ).fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0);
 
       // .fromTo(
       //   splitHeadings[index].chars,
@@ -82,15 +90,17 @@ export default function AboutPage() {
       //   0.2
       // );
 
-      currentIndex = index;
+      currentIndexRef.current = index;
     }
 
     Observer.create({
       // target: sections,
       type: "wheel,touch,pointer",
       wheelSpeed: -1,
-      onDown: () => !animating && gotoSection(currentIndex - 1, -1),
-      onUp: () => !animating && gotoSection(currentIndex + 1, 1),
+      onDown: () =>
+        !animatingRef.current && gotoSection(currentIndexRef.current - 1, -1),
+      onUp: () =>
+        !animatingRef.current && gotoSection(currentIndexRef.current + 1, 1),
       tolerance: 10,
       preventDefault: true,
     });
@@ -113,12 +123,12 @@ export default function AboutPage() {
             sectionsRef.current.push(el);
           }
         }}
-        className=" h-full w-full overflow-hidden fixed  inset-0"
+        className=" h-full w-full  fixed  inset-0"
       >
         {/* Outer div for sliding effect */}
-        <div className="outer bg-black absolute top-0 left-0 w-full h-full">
+        <div className="outer bg-black overflow-y-hidden w-full h-full">
           {/* Inner div for sliding effect */}
-          <div className="inner absolute top-0 left-0 w-full h-full">
+          <div className="inner overflow-y-hidden w-full h-full">
             {/* Background image */}
             <div
               ref={(el) => {
@@ -159,9 +169,9 @@ export default function AboutPage() {
         className=" h-[100vh] inset-0 fixed "
       >
         {/* Outer div for sliding effect */}
-        <div className="outer bg-black absolute top-0 left-0 w-full h-full">
+        <div className="outer bg-black overflow-y-hidden w-full h-full ">
           {/* Inner div for sliding effect */}
-          <div className="inner absolute top-0 left-0 w-full h-full">
+          <div className="inner overflow-y-hidden w-full h-full">
             {/* Background image */}
             <div
               ref={(el) => {
@@ -171,7 +181,7 @@ export default function AboutPage() {
               }}
               className="h-full bg-bgservicetwo bg-no-repeat bg-opacity-5 bg-center flex flex-col justify-center gap-12"
             >
-              <h1 className="uppercase font-menlor text-5xl text-center">
+              <h1 className="section-heading uppercase font-menlor text-5xl text-center">
                 Our Values
               </h1>
               <p className="font-urbanistmed text-xl px-[20%] text-center flex justify-center tracking-wider leading-8">
@@ -200,9 +210,9 @@ export default function AboutPage() {
         className=" h-[100vh] inset-0 fixed"
       >
         {/* Outer div for sliding effect */}
-        <div className="outer bg-black absolute top-0 left-0 w-full h-full">
+        <div className="outer bg-black overflow-y-hidden w-full h-full">
           {/* Inner div for sliding effect */}
-          <div className="inner absolute top-0 left-0 w-full h-full">
+          <div className="inner overflow-y-hidden w-full h-full">
             {/* Background image */}
             <div
               ref={(el) => {
@@ -212,7 +222,7 @@ export default function AboutPage() {
               }}
               className="h-full bg-bgserviceone flex flex-col justify-center gap-12"
             >
-              <h2 className="uppercase font-menlor text-5xl text-center">
+              <h2 className="section-heading uppercase font-menlor text-5xl text-center">
                 Meet the Founder
               </h2>
               <p className="font-urbanistmed text-xl px-[20%] text-center flex justify-center tracking-wider leading-8">
@@ -241,9 +251,9 @@ export default function AboutPage() {
         className="h-[100vh] inset-0 fixed "
       >
         {/* Outer div for sliding effect */}
-        <div className="outer absolute top-0 left-0 w-full h-full">
+        <div className="outer overflow-y-hidden w-full h-full">
           {/* Inner div for sliding effect */}
-          <div className="inner absolute top-0 left-0 w-full h-full">
+          <div className="inner overflow-y-hidden w-full h-full">
             {/* Background image */}
             <div
               ref={(el) => {
@@ -253,7 +263,7 @@ export default function AboutPage() {
               }}
               className="h-full bg-bgservicethree bg-no-repeat bg-center flex flex-col justify-center gap-16"
             >
-              <h1 className="uppercase font-menlor text-5xl text-center">
+              <h1 className="section-heading uppercase font-menlor text-5xl text-center">
                 How We Work (Why Us?)
               </h1>
               <p className="font-urbanistmed text-xl px-[20%] text-center flex justify-center tracking-wider leading-8">

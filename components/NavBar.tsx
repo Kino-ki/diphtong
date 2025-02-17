@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { LangButton } from "./Buttons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,7 +65,7 @@ export default function NavBar() {
   return (
     <div
       key={pathname}
-      className={`fixed top-0 z-40 w-full  text-wlite px-16 text-[1.1rem]/5 font-menlor  ${
+      className={`fixed top-0 z-40 w-full  text-wlite pl-16 pr-3 text-[1.1rem]/5 font-menlor flex  ${
         scrollY > 200 ? "mix-blend-difference" : ""
       }  tracking-[0.25rem]`}
     >
@@ -92,9 +93,13 @@ export default function NavBar() {
           </Link>
         </div>
 
-        <ul className=" text-wlite ">
+        <ul className=" text-wlite  flex ">
           <li>CONTACT US</li>
+          <div className="flex flex-col justify-start"></div>
         </ul>
+      </div>
+      <div className="flex flex-col justify-center pl-8">
+        <LangButton />
       </div>
     </div>
   );

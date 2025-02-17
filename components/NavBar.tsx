@@ -94,7 +94,9 @@ export default function NavBar() {
         </div>
 
         <ul className=" text-wlite  flex ">
-          <li>CONTACT US</li>
+          <li>
+            <Link href="/contact">CONTACT US</Link>
+          </li>
           <div className="flex flex-col justify-start"></div>
         </ul>
       </div>

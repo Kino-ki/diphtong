@@ -1,5 +1,15 @@
 {
   "EN": {
+    "contactPage": {
+      "PageTitle": "Contact",
+      "pageText": "contact us with details",
+      "form": {
+        "name": "name",
+        "email": "email (required)",
+        "website": "website (optional)"
+      },
+      "contactInfo": "Contact Information"
+    },
     "servicesPage": [
       {
         "id": "1",
@@ -36,6 +46,16 @@
     ]
   },
   "FR": {
+    "contactPage": {
+      "PageTitle": "Contact",
+      "pageText": "contactez nous icitte",
+      "form": {
+        "name": "nom",
+        "email": "courriel (champ obligatoire)",
+        "website": "site web (optionnel)"
+      },
+      "contactInfo": "Informations"
+    },
     "servicesPage": [
       {
         "id": "1",

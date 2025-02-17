@@ -15,11 +15,18 @@ export function ContactButton() {
 }
 
 export function GetAQuoteButton() {
+  const { language } = useLanguage();
   return (
     <button className="bg-transparent p-3 border mx-auto w-60 py-5 border-blue-100 rounded-md flex justify-between gap-3 items-center">
-      <p className="text-white text-base tracking-wider flex justify-center w-full uppercase font-figtree ">
-        Get a free quote
-      </p>
+      {language === "EN" ? (
+        <p className="text-white text-base tracking-wider flex justify-center w-full uppercase font-figtree ">
+          Get a free quote
+        </p>
+      ) : (
+        <p className="text-white text-base tracking-wider flex justify-center w-full uppercase font-figtree ">
+          Evaluation
+        </p>
+      )}
       <Image src={arrow} width={8} height={5} alt="arrow" />
     </button>
   );

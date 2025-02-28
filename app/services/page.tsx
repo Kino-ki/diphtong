@@ -55,13 +55,13 @@ export default function Services() {
   return (
     <div className="flex flex-col justify-start pt-[6%] px-[15%] h-auto pb-40">
       {language === "EN" ? (
-        <div>
+        <div className=" ">
           {englishServices?.map((service, index) => (
             <div
               key={index}
               onMouseEnter={() => handleMouseEnter(service.id)}
               onMouseLeave={handleMouseLeave}
-              className="flex flex-col py-10 border-b px-5 border-wlite"
+              className="flex flex-col py-10 border-b px-5 border-wlite "
             >
               <div className="flex gap-10">
                 <h2 className="text-white font-menlor font-semibold text-4xl uppercase py-3">
@@ -85,7 +85,10 @@ export default function Services() {
                   />
                 </div>
                 <div className="flex flex-col gap-12 pt-5">
-                  <p className="font-urbanistr w-[70%] px-5 text-xl ">
+                  <p
+                    id={service.serviceName}
+                    className=" font-urbanistr w-[70%] px-5 text-xl "
+                  >
                     {service.firstText}
                   </p>
                   <h3 className="font-menlor font-semibold text-white text-xl">

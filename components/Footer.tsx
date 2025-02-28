@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { ContactButton } from "./Buttons";
 import lineImg from "@/public/images/footerline.svg";
+import Link from "next/link";
 export default function Footer() {
   return (
     <div className="bg-bgfooter bg-cover bg-no-repeat h-[75vh] ">
@@ -17,7 +18,9 @@ export default function Footer() {
           <div className="flex flex-col justify-between ">
             <h2 className="uppercase font-menlor text-3xl "> our services</h2>
             <div className="font-menlor tracking-wide leading-10 capitalize text-lg">
-              <p>Web Development</p>
+              <p>
+                <Link href="/services/#WEB DEVOLOPMENT">Web Development</Link>
+              </p>
               <p>web design</p>
               <p>responsive apps </p>
               <p>maintenance </p>

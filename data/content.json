@@ -2,13 +2,14 @@
   "EN": {
     "contactPage": {
       "PageTitle": "Contact",
-      "pageText": "contact us with details",
+      "pageText": "ask us your question or book a meeting with us",
       "form": {
         "name": "name",
         "email": "email (required)",
         "website": "website (optional)"
       },
-      "contactInfo": "Contact Information"
+      "contactInfo": "Contact Information",
+      "adress": "2861 Ontario St E , Montréal (QC), H2K1X6  (514) 265-6791"
     },
     "servicesPage": [
       {
@@ -54,7 +55,8 @@
         "email": "courriel (champ obligatoire)",
         "website": "site web (optionnel)"
       },
-      "contactInfo": "Informations"
+      "contactInfo": "Informations de Contact",
+      "adress": "2861, rue Ontario Est, Montréal (QC), H2K1X6 (514) 265-6791"
     },
     "servicesPage": [
       {

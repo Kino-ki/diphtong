@@ -78,7 +78,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
               id="name"
               name="name"
               type="text"
-              className="bg-black h-1/3 w-full focus:outline-none flex flex-col justify-end  border-wlite border-b"
+              className="bg-black h-1/3 w-full focus:outline-none autofill:bg-transparent flex flex-col justify-end  border-wlite border-b"
             />
             <div className="h-5">
               {errors?.name && (

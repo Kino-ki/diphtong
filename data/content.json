@@ -1,5 +1,33 @@
 {
   "EN": {
+    "homepage": {
+      "heroh2": "creative web agency",
+      "heroh3": "We Craft Custom Solutions For Your Business.",
+      "firsttext": "Transform Your Online Presence & Grow Your Business",
+      "secondtext": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci, non euismod elit. duis eget sollicitudin erat. pellentesque in nisi ac lacus pretium efficitur."
+    },
+    "projservSection": {
+      "workstitle": "featured works",
+      "works": [
+        {
+          "id": "1",
+          "title": "Béances Editions",
+          "serv": ["Web develoment", "Web design"]
+        },
+        {
+          "id": "2",
+          "title": "Esther Lhuillery Video Editor",
+          "serv": ["Web develoment", "Web design"]
+        },
+        {
+          "id": "3",
+          "title": "Plein la tête studio éclaté",
+          "serv": ["collavorative project", "Web develoment"]
+        }
+      ],
+      "servicestitle": "our services",
+      "servicesName": ["web devolopment", "web design"]
+    },
     "contactPage": {
       "PageTitle": "Contact",
       "pageText": "ask us your question or book a meeting with us",
@@ -47,6 +75,34 @@
     ]
   },
   "FR": {
+    "homepage": {
+      "heroh2": "Agence web créative",
+      "heroh3": "Nous créons des solutions sur mesure pour votre entreprise.",
+      "firsttext": "Transformez votre présence en ligne et développez votre entreprise",
+      "secondtext": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci, non euismod elit. duis eget sollicitudin erat. pellentesque in nisi ac lacus pretium efficitur."
+    },
+    "projservSection": {
+      "workstitle": "Nos projets phares",
+      "works": [
+        {
+          "id": "1",
+          "title": "Béances Editions",
+          "serv": ["développement Web", "Conception & design"]
+        },
+        {
+          "id": "2",
+          "title": "Esther Lhuillery Monteuse Vidéo",
+          "serv": ["développement Web", "Conception & design"]
+        },
+        {
+          "id": "3",
+          "title": "Plein la tête studio éclaté",
+          "serv": ["project collaboratif", "développement Web"]
+        }
+      ],
+      "servicestitle": "Nos services",
+      "servicesName": ["dévelopment web ", "Conception & design"]
+    },
     "contactPage": {
       "PageTitle": "Contact",
       "pageText": "contactez nous icitte",

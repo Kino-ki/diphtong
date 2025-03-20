@@ -29,23 +29,25 @@ export default function HomePage() {
     return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
   }, []);
   return (
-    <div className="bg-black relative ">
+    <div className="bg-black relative -z-0 ">
       <div
         ref={bgImageRef}
-        className=" fixed inset-0 my-auto h-fit w-fit mx-auto opacity-[0.08] z-0"
+        className=" fixed inset-0 my-auto h-fit w-fit mx-auto opacity-[0.08] -z-20 "
       >
         <Image src={diphlogo} width={750} height={500} alt="logo" />
       </div>
-      <div className="z-10">
+      <div className="">
         <HeroSection />
       </div>
-      <div className="z-20">
+      <div className="">
         <HomeFirstText />
       </div>
       <div className="h-[100vh] "> </div>
       <HomeHorizontalScroll />
-      <div className="flex flex-col justify-center gap-12 pb-40 z-50"></div>
-      <ProjServ />
+      <div className="flex flex-col justify-center gap-12 pb-40"></div>
+      <div className="z-30 relative">
+        <ProjServ />
+      </div>
     </div>
   );
 }

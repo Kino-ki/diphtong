@@ -49,7 +49,7 @@ export default function HeroSection() {
       ref={firstSectionRef}
       className="h-[100vh] bg-herogif bg-cover relative "
     >
-      <div className="h-full w-full backdrop-blur-[1.5px] bg-black/75 fixed ">
+      <div className="h-full w-full backdrop-blur-[1.5px] bg-black/75 fixed z-10 ">
         <div className="h-full w-full pt-[22rem] pb-40 flex justify-center">
           <div className=" flex flex-col justify-between w-[95%] font-figtree">
             {language === "EN" ? (

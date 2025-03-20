@@ -83,7 +83,7 @@ export default function HomeFirstText() {
         <div className="flex flex-col justify-center h-[100vh] relative">
           <div
             ref={firstTextRef}
-            className="fixed top-[40%] items-center flex flex-col gap-20 w-full h-full opacity-0 "
+            className="fixed z-20 top-[40%] items-center flex flex-col gap-20 w-full h-full opacity-0 "
           >
             <h1 className="flex justify-center capitalize font-urbanistr font-semibold w-[80%] text-6xl text-center tracking-[1rem]">
               {englishhome.firsttext}

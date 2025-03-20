@@ -12,17 +12,29 @@
         {
           "id": "1",
           "title": "Béances Editions",
-          "serv": ["Web develoment", "Web design"]
+          "serv": ["Web develoment", "Web design"],
+          "imageSrc": "/images/beanceshomes.gif",
+          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
+          "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
+          "author": "the author"
         },
         {
           "id": "2",
           "title": "Esther Lhuillery Video Editor",
-          "serv": ["Web develoment", "Web design"]
+          "serv": ["Web develoment", "Web design"],
+          "imageSrc": "/images/estherhome.gif",
+          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
+          "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
+          "author": "the author"
         },
         {
           "id": "3",
           "title": "Plein la tête studio éclaté",
-          "serv": ["collavorative project", "Web develoment"]
+          "serv": ["collavorative project", "Web develoment"],
+          "imageSrc": "/images/estherhome.gif",
+          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
+          "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
+          "author": "the author"
         }
       ],
       "servicestitle": "our services",
@@ -87,17 +99,29 @@
         {
           "id": "1",
           "title": "Béances Editions",
-          "serv": ["développement Web", "Conception & design"]
+          "serv": ["développement Web", "Conception & design"],
+          "imageSrc": "url(/images/beanceshomes.gif)",
+          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
+          "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
+          "author": "the author"
         },
         {
           "id": "2",
           "title": "Esther Lhuillery Monteuse Vidéo",
-          "serv": ["développement Web", "Conception & design"]
+          "serv": ["développement Web", "Conception & design"],
+          "imageSrc": "/images/estherhome.gif",
+          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
+          "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
+          "author": "the author"
         },
         {
           "id": "3",
           "title": "Plein la tête studio éclaté",
-          "serv": ["project collaboratif", "développement Web"]
+          "serv": ["project collaboratif", "développement Web"],
+          "imageSrc": "/images/estherhome.gif",
+          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
+          "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
+          "author": "the author"
         }
       ],
       "servicestitle": "Nos services",

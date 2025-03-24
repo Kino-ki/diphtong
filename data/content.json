@@ -38,7 +38,12 @@
         }
       ],
       "servicestitle": "our services",
-      "servicesName": ["web devolopment", "web design"]
+      "servicesName": [
+        "web devolopment",
+        "web design",
+        "responsive apps",
+        "maintenance"
+      ]
     },
     "contactPage": {
       "PageTitle": "Contact",
@@ -100,7 +105,7 @@
           "id": "1",
           "title": "Béances Editions",
           "serv": ["développement Web", "Conception & design"],
-          "imageSrc": "url(/images/beanceshomes.gif)",
+          "imageSrc": "/images/beanceshomes.gif",
           "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
           "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
           "author": "the author"
@@ -125,7 +130,12 @@
         }
       ],
       "servicestitle": "Nos services",
-      "servicesName": ["dévelopment web ", "Conception & design"]
+      "servicesName": [
+        "dévelopment web ",
+        "Conception & design",
+        "applications responsives",
+        "maintenance"
+      ]
     },
     "contactPage": {
       "PageTitle": "Contact",

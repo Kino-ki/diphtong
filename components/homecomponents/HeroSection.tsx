@@ -35,8 +35,8 @@ export default function HeroSection() {
       {
         opacity: 0,
         duration: 3,
+        pin: true,
         ease: "power2.inOut",
-        z: 0,
       }
     );
 

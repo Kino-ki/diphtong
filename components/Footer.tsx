@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="bg-bgfooter bg-cover bg-no-repeat h-[75vh] ">
-      <div className=" h-full bg-bgsecondfooter bg-[3rem_7rem] bg-no-repeat mt-10 flex flex-col">
+      <div className=" h-full bg-bgsecondfooter bg-[3rem_7rem] bg-no-repeat flex flex-col">
         <div className=" flex justify-evenly text-wlite h-[40%] mt-[8%] ">
           <div className="flex flex-col justify-between w-[20%]">
             <h1 className="font-urbanistmed tracking-wider text-4xl ">

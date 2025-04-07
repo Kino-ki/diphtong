@@ -51,7 +51,7 @@ export default function HomeHorizontalScroll() {
     <div className="overflow-hidden bg-wlite">
       <div ref={slidesRef} className="flex ">
         {/* -------------------SLIDE ONE ------------------------- */}
-        <div className="slide flex h-[103vh] w-[100vw] bg-wlite  shrink-0 relative">
+        <section className="slide flex h-[103vh] w-[100vw] bg-wlite  shrink-0 relative">
           <div className="h-full w-[30%]  bg-slideone bg-cover "></div>
           <Image
             src={one}
@@ -73,10 +73,10 @@ export default function HomeHorizontalScroll() {
               Understanding your brand & audience Defining project goals & scope
             </p>
           </div>
-        </div>
+        </section>
         {/* -------------------SLIDE TWO ------------------------- */}
 
-        <div className="slide flex justify-center shrink-0 w-[100vw] h-[103vh] text-black py-40 bg-bgslidetwo bg-cover">
+        <section className="slide flex justify-center shrink-0 w-[100vw] h-[103vh] text-black py-40 bg-bgslidetwo bg-cover">
           <div className="h-full flex flex-col gap-40 w-[60%]">
             <h1 className=" font-menlor text-[3.4rem] text-start">
               <span className="text-[#999696] ">Creating a Website </span>
@@ -93,10 +93,10 @@ export default function HomeHorizontalScroll() {
               Optimized to convert visitors into customers
             </p>
           </div>
-        </div>
+        </section>
         {/* -------------------SLIDE THREE ------------------------- */}
 
-        <div className=" slide h-[103vh] shrink-0 flex w-[120vw] bg-wlite relative">
+        <section className=" slide h-[103vh] shrink-0 flex w-[120vw] bg-wlite relative">
           <Image
             src={three}
             width={250}
@@ -120,7 +120,7 @@ export default function HomeHorizontalScroll() {
               evolve
             </p>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );

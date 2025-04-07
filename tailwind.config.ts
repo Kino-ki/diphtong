@@ -8,8 +8,18 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 15s linear infinite",
+      },
       colors: {
         wlite: "#D9D9D9",
+        rouge: "#4f0000",
       },
       backgroundImage: {
         herogif: "url(/images/herogif.gif)",

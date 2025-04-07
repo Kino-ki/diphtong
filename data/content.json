@@ -38,11 +38,28 @@
         }
       ],
       "servicestitle": "our services",
-      "servicesName": [
-        "web devolopment",
-        "web design",
-        "responsive apps",
-        "maintenance"
+      "servicesList": [
+        {
+          "id": 0,
+          "serviceName": "web devolopment",
+          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum"
+        },
+        {
+          "id": 1,
+          "serviceName": "web design",
+
+          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum"
+        },
+        {
+          "id": 2,
+          "serviceName": "responsive apps",
+          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum"
+        },
+        {
+          "id": 3,
+          "serviceName": "maintenance",
+          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum"
+        }
       ]
     },
     "contactPage": {
@@ -106,7 +123,7 @@
           "title": "Béances Editions",
           "serv": ["développement Web", "Conception & design"],
           "imageSrc": "/images/beanceshomes.gif",
-          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
+          "description": "lorem ipsum dolor dhuz djzp çd AO09 Dxj c hds d dhso dhdishdi dhisodh   sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
           "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
           "author": "the author"
         },

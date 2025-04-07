@@ -44,6 +44,7 @@ export default function HomePage() {
       </div>
       <div className="h-[100vh] "> </div>
       <HomeHorizontalScroll />
+
       <div className="z-30 relative">
         <ProjServ />
       </div>

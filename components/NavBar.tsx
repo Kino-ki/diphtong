@@ -65,8 +65,10 @@ export default function NavBar() {
   return (
     <div
       key={pathname}
-      className={`fixed top-0 z-40 w-full  text-wlite pl-16 pr-3 text-[1.1rem]/5 font-menlor flex  ${
-        scrollY > 200 ? "mix-blend-difference" : ""
+      className={`fixed top-0 z-40 w-full  text-wlite pl-16 pr-3 text-[1.1rem]/5 font-menlor md:flex hidden ${
+        pathname.includes("/home") && scrollY < 200
+          ? ""
+          : "mix-blend-difference"
       }  tracking-[0.25rem]`}
     >
       <div className="flex justify-between w-full pt-3">
@@ -78,7 +80,9 @@ export default function NavBar() {
           <li>
             <Link href="/about">ABOUT</Link>
           </li>
-          <li className="">OUR PROJECTS</li>
+          <li className="">
+            <Link href="/projects">OUR PROJECTS</Link>
+          </li>
         </ul>
         <div className=" top-2">
           <Link href="/">

@@ -23,8 +23,6 @@ export default function ContactForm({ lang }: ContactFormProps) {
   const [isSent, setIsSent] = useState<number>(0);
   const [messageStatusText, setModalMessageStatustext] = useState<string>("");
 
-  console.log(isSent);
-
   const {
     handleSubmit,
     register,
@@ -34,7 +32,6 @@ export default function ContactForm({ lang }: ContactFormProps) {
   // { resolver: zodResolver(contactSchema) }
 
   const onSubmit = async (data: FormData) => {
-    console.log("submit");
     setIsSubmitting(true);
     try {
       const resstatus: number = await sendEmail(data);
@@ -50,14 +47,14 @@ export default function ContactForm({ lang }: ContactFormProps) {
   }, [isSent, lang]);
 
   return (
-    <div className="w-full font-urbanistr text-start text-xl">
+    <div className="w-full h-full font-urbanistr text-start text-xl">
       <form
-        className="flex flex-col gap-20"
+        className="flex flex-col gap-[3vh] h-full"
         onSubmit={handleSubmit(onSubmit)}
         action=""
       >
-        <div className="flex justify-between p-3 ">
-          <div className="flex flex-col justify-between  h-32  w-1/2 mr-4  ">
+        <div className="flex justify-between p-3 h-[15%] ">
+          <div className="flex flex-col justify-between    w-1/2 mr-4  ">
             {lang === "EN" ? (
               <label className="" htmlFor="name">
                 name <span className="text-base">(required)</span>
@@ -117,7 +114,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between border-wlite border-b h-32 p-3 ">
+        <div className="flex flex-col justify-between border-wlite border-b  h-[15%] p-3 ">
           {lang === "EN" ? (
             <label htmlFor="website">
               website <span className="text-base">(optional)</span>
@@ -138,7 +135,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
             <p className="text-red-600 text-sm">{errors?.website?.message}</p>
           )}
         </div>
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 h-[30%]">
           {lang === "EN" ? (
             <label htmlFor="content">
               let us know <span className="text-base">(required)</span>
@@ -159,7 +156,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
             })}
             id="content"
             name="content"
-            className="bg-black focus:outline-none h-60  border-wlite border-b"
+            className="bg-black focus:outline-none h-2/3  border-wlite border-b"
           />
           <div className="h-5">
             {errors?.content && (

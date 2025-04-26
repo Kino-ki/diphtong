@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+
 export default function ProjServ() {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -45,6 +46,7 @@ export default function ProjServ() {
   }
 
   useEffect(() => {
+    //  MARQUEE ANIMATION
     if (textRef.current) {
       ScrollTrigger.create({
         trigger: textRef.current,
@@ -54,7 +56,6 @@ export default function ProjServ() {
         pinSpacing: false,
       });
     }
-
     const marqueeElements = textRef.current?.querySelectorAll(".marquee");
     if (marqueeElements?.length) {
       marqueeElements.forEach((el, i) => {
@@ -64,13 +65,15 @@ export default function ProjServ() {
         });
       });
     }
+    // SECTIONS PINNING
     englishdata?.works.forEach((work) => {
       const titleEl = workstitlesRefs.current[work.id];
       if (titleEl) {
         ScrollTrigger.create({
           trigger: titleEl,
           start: "top top",
-          end: "bottom top",
+          end: "90% 5%",
+          // markers: true,
           pin: true,
           pinSpacing: false,
           scrub: true,
@@ -83,7 +86,7 @@ export default function ProjServ() {
     };
   }, []);
   return (
-    <div className=" flex flex-col  bg-wlite pb-4 text-rouge z-50 ">
+    <div className=" flex flex-col  bg-wlite text-rouge ">
       {language === "EN" ? (
         <div className="flex flex-col justify-center  relative">
           <div className="overflow-hidden h-[100vh] " ref={textRef}>
@@ -114,7 +117,7 @@ export default function ProjServ() {
           {englishdata?.works.map((work) => (
             <section
               key={work.id}
-              className="py-10 px-3 overflow-hidden bg-wlite flex justify-between h-[100vh]  backdrop-blur-[150px] scale-"
+              className="py-10 px-3 overflow-hidden bg-wlite flex justify-between h-[100vh]  backdrop-blur-[150px] "
               ref={(el) => {
                 workstitlesRefs.current[work.id] = el;
               }}
@@ -133,7 +136,7 @@ export default function ProjServ() {
                     {work.serv.map((service) => (
                       <p
                         key={service}
-                        className="font-urbanistr text-base tracking-wider "
+                        className="font-urbanistr text-base tracking-wider px-5 "
                       >
                         {service}
                       </p>
@@ -153,13 +156,16 @@ export default function ProjServ() {
               </div>
 
               <div className=" flex flex-col   justify-between py-32  ">
-                <Image
-                  src={work.imageSrc}
-                  alt="project image"
-                  width={650}
-                  height={700}
-                  className="shadow-lg"
-                />
+                <div className="h-fit w-fit relative bg-red-200">
+                  <Image
+                    src={work.imageSrc}
+                    alt="project image"
+                    width={650}
+                    height={700}
+                    className="shadow-lg"
+                  />
+                  <div className="h-full w-full absolute inset-0 "></div>
+                </div>
                 <button
                   type="button"
                   className="outline-1 outline mx-auto p-3 px-6 rounded-md hover:font-semibold transition-all ease-in-out "
@@ -171,108 +177,97 @@ export default function ProjServ() {
               </div>
             </section>
           ))}
-          {/* -------------------------------------SERVICES PAGE ----------------------------------- */}
-          <div className=" bg-green-100 text-black h-[100svh] z-50 pt-20  mx-4 flex flex-col ">
-            <div className="flex flex-col items-end">
-              <h1 className=" border-b-4 border-rouge  font-menlob uppercase tracking-widest  text-5xl pr-10">
-                {englishdata.servicestitle}
-              </h1>
-            </div>
-            <div className="flex flex-col  justify-evenly  h-full my-20 px-96 ">
-              {englishdata?.servicesList.map((service, index) => (
-                <div key={index} className="flex my-16 relative">
-                  <h2 className="font-menlor absolute bottom-0 text-4xl capitalize ">
-                    {service.serviceName}
-                  </h2>
-                  <p className="w-1/2 text-xl absolute top-0 right-0 font-urbanistr tracking-widest">
-                    {service.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       ) : (
+        // ---------------------------FRENCH -----------------
         <div className="flex flex-col justify-center">
-          {/* <h1 className="absolute z-50 top-[3%] border-b-2 border-[#fff7e0] right-6 font-menlob uppercase tracking-widest text-4xl pr-10">
-            {frenchdata.workstitle}
-          </h1> */}
+          <div className="overflow-hidden h-[100vh] " ref={textRef}>
+            {[
+              "top-[5%] scale-125",
+              "top-[25%] rotate-180",
+              "top-[45%] scale-150",
+              "bottom-[15%] rotate-180 scale-50",
+              "bottom-1",
+            ].map((pos, i) => (
+              <div
+                key={i}
+                className={`marquee absolute ${pos} w-max whitespace-nowrap`}
+                style={{
+                  left: i % 2 === 0 ? "0" : "auto",
+                  right: i % 2 !== 0 ? "0" : "auto",
+                }}
+              >
+                <p className="font-menlor text-[10vw] tracking-widest">
+                  NOS PROJETS&nbsp;&nbsp;NOS PROJETS&nbsp;&nbsp; NOS
+                  PROJETS&nbsp;NOS PROJETS&nbsp;NOS PROJETS&nbsp;NOS PROJETS
+                </p>
+              </div>
+            ))}
+          </div>
           {/* -----------------PROJECTS List ------------------- */}
           {frenchdata?.works.map((work) => (
             <section
               key={work.id}
-              className="py-10 px-3 overflow-hidden bg-rouge/90 backdrop-blur-3xl"
+              className="py-10 px-3 overflow-hidden bg-wlite flex justify-between h-[100vh]  backdrop-blur-[150px]"
               ref={(el) => {
                 workstitlesRefs.current[work.id] = el;
               }}
             >
-              <div className="flex flex-col pb-5 ">
-                <h2
-                  ref={(el) => {
-                    worksdetailsRefs.current[work.id] = el;
-                  }}
-                  className="font-menlob font-semibold text-5xl uppercase tracking-[0.4rem] my-5 px-10   "
-                >
-                  {work.title}
-                </h2>
-                <div className="flex gap-10 px-12 ">
-                  {work.serv.map((service) => (
-                    <p
-                      key={service}
-                      className="font-urbanistr text-base tracking-wider "
-                    >
-                      {service}
-                    </p>
-                  ))}
+              <div className="flex flex-col w-3/5">
+                <div className="  ">
+                  <h2
+                    ref={(el) => {
+                      worksdetailsRefs.current[work.id] = el;
+                    }}
+                    className="font-menlob font-semibold text-8xl uppercase tracking-[0.4rem] my-5    "
+                  >
+                    {work.title}
+                  </h2>
+                  <div className="flex gap-4 ">
+                    {work.serv.map((service) => (
+                      <p
+                        key={service}
+                        className="font-urbanistr text-base tracking-wider px-5"
+                      >
+                        {service}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex flex-col h-full justify-around font-urbanistr text-xl">
+                  <div className=" text-3xl  w-full pl-5 text-end tracking-wider leading-9">
+                    <p>{work.description}</p>
+                  </div>
+                  <div className="  text-rouge font-menlor text-base mx-auto p-8   flex flex-col gap-8">
+                    <p>{work.testimonial}</p>
+                    <p className="text-sm "> -{work.author}- </p>
+                  </div>
                 </div>
               </div>
-              <div className=" inner flex justify-between px-12 py-20 border-t border-[#fff7e0]">
-                <div>
+
+              <div className=" flex flex-col   justify-between py-32  ">
+                <div className="h-fit w-fit relative bg-red-200">
                   <Image
                     src={work.imageSrc}
                     alt="project image"
-                    width={800}
-                    height={800}
+                    width={650}
+                    height={700}
+                    className="shadow-lg"
                   />
+                  <div className="h-full w-full absolute inset-0 "></div>
                 </div>
-                <div className="flex flex-col justify-around w-1/2 font-urbanistmed text-xl">
-                  <div className="w-3/4 text-2xl  mx-auto">
-                    <p>{work.description}</p>
-                  </div>
-                  <div className="  text-[#fff7e0] font-menlor w-2/3 text-base bg-black/60 mx-auto p-8 rounded-md  text-center flex flex-col gap-8">
-                    <p>{work.testimonial}</p>
-                    <p className="text-sm "> {work.author} </p>
-                  </div>
-                  <button
-                    type="button"
-                    className="outline-1 outline mx-auto p-3 px-6 rounded-md hover:font-semibold transition-all ease-in-out "
-                  >
-                    <p className="tracking-wider font-menlor  ">
-                      Découvrir le projet
-                    </p>
-                  </button>
-                </div>
+                <button
+                  type="button"
+                  className="outline-1 outline mx-auto p-3 px-6 rounded-md hover:font-semibold transition-all ease-in-out "
+                >
+                  <p className="tracking-wider text-xl font-menlor  ">
+                    Discover Project
+                  </p>
+                </button>
               </div>
             </section>
           ))}
-          {/* -------------------------------------SERVICES PAGE ----------------------------------- */}
-          <div className=" bg-green-100 text-rouge h-[95svh] z-50 pt-20  mx-4 flex flex-col ">
-            <div className="flex flex-col items-end">
-              <h1 className=" border-b-4 border-rouge  font-menlob uppercase tracking-widest  text-5xl pr-10">
-                {frenchdata.servicestitle}
-              </h1>
-            </div>
-            <div className="flex mx-auto my-40 ">
-              {frenchdata?.servicesName.map((service) => (
-                <h2
-                  className="font-urbanistmed text-5xl border-x-2 px-4 border-rouge capitalize "
-                  key={service}
-                >
-                  {service}
-                </h2>
-              ))}
-            </div>
-          </div>
         </div>
       )}
     </div>

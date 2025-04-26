@@ -3,8 +3,9 @@
     "homepage": {
       "heroh2": "creative web agency",
       "heroh3": "We Craft Custom Solutions For Your Business.",
-      "firsttext": "Transform Your Online Presence & Grow Your Business",
-      "secondtext": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci, non euismod elit. duis eget sollicitudin erat. pellentesque in nisi ac lacus pretium efficitur."
+      "firsttext": "Transform Your Online Presence\n& Grow Your Business",
+      "secondtext": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci, non euismod elit. duis eget sollicitudin erat. pellentesque in nisi ac lacus pretium efficitur.",
+      "reachoutcontent": "Get a free quote or schedulte a meeting with us"
     },
     "projservSection": {
       "workstitle": "featured works",
@@ -62,6 +63,31 @@
         }
       ]
     },
+    "horizontalScroll": {
+      "intro": {
+        "h1": "how we proceed",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero neque, odit et rerum fuga debitis inventore itaque cum veniam eligendi temporibus officia perferendis, accusamus nam, optio repudiandae eum sequi molestiae."
+      },
+      "firstSlide": "Understanding Your Needs",
+      "secondSlide": "Creating a Website Your Users Will Love",
+      "thirdSlide": "Launching & Helping Your Business Grow"
+    },
+    "aboutPage": {
+      "firstSection": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue. Cras est lectus, tempus eget lacus at, porta porta magna. Sed commodo pretium laoreet. Integer egestas dolor ac nibh ultrices, id maximus eros mattis. Curabitur rutrum placerat ex eleifend facilisis. Integer pharetra, risus ut gravida molestie, ante justo ultricies mauris, ac lacinia metus purus ac nisl.",
+      "secondSection": {
+        "title": "OUR VALUES",
+        "content": "ac tellus nulla. Donec sed quam nec magna ultrices fermentum id ut eros. Proin eget ante a felis tincidunt viverra eget et ligula. Suspendisse sem arcu, fringilla ut convallis id, euismod vel sapien. Praesent faucibus non sapien in volutpat. Maecenas venenatis enim sit amet purus feugiat, ac consequat turpis posuere. Curabitur ornare lorem nec turpis eleifend, a viverra metus venenatis. Donec vel congue odio, vel consectetur nisl. Ut cursus ante sit amet turpis dapibus vestibulum. Donec quis erat leo."
+      },
+      "thirdSection": {
+        "title": "MEET THE FOUNDER",
+        "content": "ac tellus nulla. Donec sed quam nec magna ultrices fermentum id ut eros. Proin eget ante a felis tincidunt viverra eget et ligula. Suspendisse sem arcu, fringilla ut convallis id, euismod vel sapien. Praesent faucibus non sapien in volutpat. Maecenas venenatis enim sit amet purus feugiat, ac consequat turpis posuere. Curabitur ornare lorem nec turpis eleifend, a viverra metus venenatis. Donec vel congue odio, vel consectetur nisl. Ut cursus ante sit amet turpis dapibus vestibulum. Donec quis erat leo."
+      },
+      "lastSection": {
+        "title": "HOW WE WORK (WHY US?)",
+        "content": "ac tellus nulla. Donec sed quam nec magna ultrices fermentum id ut eros. Proin eget ante a felis tincidunt viverra eget et ligula. Suspendisse sem arcu, fringilla ut convallis id, euismod vel sapien. Praesent faucibus non sapien in volutpat. Maecenas venenatis enim sit amet purus feugiat, ac consequat turpis posuere. Curabitur ornare lorem nec turpis eleifend, a viverra metus venenatis. Donec vel congue odio, vel consectetur nisl. Ut cursus ante sit amet turpis dapibus vestibulum. Donec quis erat leo."
+      }
+    },
+
     "contactPage": {
       "PageTitle": "Contact",
       "pageText": "ask us your question or book a meeting with us",
@@ -106,14 +132,43 @@
         "secondText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue",
         "thirdText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue"
       }
-    ]
+    ],
+    "projectsPage": {
+      "estherProject": {
+        "h1": "esther lhuillery",
+        "subtitle": "video editor",
+        "span": "portfolio",
+        "content": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci."
+      },
+      "beancesProject": {
+        "h1": "béances éditions",
+        "subtitle": "QUEER ZINES EDITIONS",
+        "content": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci."
+      }
+    }
   },
   "FR": {
     "homepage": {
       "heroh2": "Agence web créative",
       "heroh3": "Nous créons des solutions sur mesure pour votre entreprise.",
       "firsttext": "Transformez votre présence en ligne et développez votre entreprise",
-      "secondtext": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci, non euismod elit. duis eget sollicitudin erat. pellentesque in nisi ac lacus pretium efficitur."
+      "secondtext": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci, non euismod elit. duis eget sollicitudin erat. pellentesque in nisi ac lacus pretium efficitur.",
+      "reachoutcontent": "Obtenez un devis gratuit ou planifiez une rencontre avec nous"
+    },
+    "aboutPage": {
+      "firstSection": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue. Cras est lectus, tempus eget lacus at, porta porta magna. Sed commodo pretium laoreet. Integer egestas dolor ac nibh ultrices, id maximus eros mattis. Curabitur rutrum placerat ex eleifend facilisis. Integer pharetra, risus ut gravida molestie, ante justo ultricies mauris, ac lacinia metus purus ac nisl.",
+      "secondSection": {
+        "title": "nos valeurs",
+        "content": "ac tellus nulla. Donec sed quam nec magna ultrices fermentum id ut eros. Proin eget ante a felis tincidunt viverra eget et ligula. Suspendisse sem arcu, fringilla ut convallis id, euismod vel sapien. Praesent faucibus non sapien in volutpat. Maecenas venenatis enim sit amet purus feugiat, ac consequat turpis posuere. Curabitur ornare lorem nec turpis eleifend, a viverra metus venenatis. Donec vel congue odio, vel consectetur nisl. Ut cursus ante sit amet turpis dapibus vestibulum. Donec quis erat leo."
+      },
+      "thirdSection": {
+        "title": "MEET THE FOUNDER",
+        "content": "ac tellus nulla. Donec sed quam nec magna ultrices fermentum id ut eros. Proin eget ante a felis tincidunt viverra eget et ligula. Suspendisse sem arcu, fringilla ut convallis id, euismod vel sapien. Praesent faucibus non sapien in volutpat. Maecenas venenatis enim sit amet purus feugiat, ac consequat turpis posuere. Curabitur ornare lorem nec turpis eleifend, a viverra metus venenatis. Donec vel congue odio, vel consectetur nisl. Ut cursus ante sit amet turpis dapibus vestibulum. Donec quis erat leo."
+      },
+      "lastSection": {
+        "title": "Comment on travaille",
+        "content": "ac tellus nulla. Donec sed quam nec magna ultrices fermentum id ut eros. Proin eget ante a felis tincidunt viverra eget et ligula. Suspendisse sem arcu, fringilla ut convallis id, euismod vel sapien. Praesent faucibus non sapien in volutpat. Maecenas venenatis enim sit amet purus feugiat, ac consequat turpis posuere. Curabitur ornare lorem nec turpis eleifend, a viverra metus venenatis. Donec vel congue odio, vel consectetur nisl. Ut cursus ante sit amet turpis dapibus vestibulum. Donec quis erat leo."
+      }
     },
     "projservSection": {
       "workstitle": "Nos projets phares",
@@ -146,13 +201,39 @@
           "author": "the author"
         }
       ],
-      "servicestitle": "Nos services",
-      "servicesName": [
-        "dévelopment web ",
-        "Conception & design",
-        "applications responsives",
-        "maintenance"
+      "servicestitle": "nos services",
+      "servicesList": [
+        {
+          "id": 0,
+          "serviceName": "developpement web",
+          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum"
+        },
+        {
+          "id": 1,
+          "serviceName": "design web",
+
+          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum"
+        },
+        {
+          "id": 2,
+          "serviceName": "applications responsives",
+          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum"
+        },
+        {
+          "id": 3,
+          "serviceName": "maintenance",
+          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum"
+        }
       ]
+    },
+    "horizontalScroll": {
+      "intro": {
+        "h1": "notre procesus",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero neque, odit et rerum fuga debitis inventore itaque cum veniam eligendi temporibus officia perferendis, accusamus nam, optio repudiandae eum sequi molestiae."
+      },
+      "firstSlide": "Understanding Your Needs",
+      "secondSlide": "Creating a Website Your Users Will Love",
+      "thirdSlide": "Launching & Helping Your Business Grow"
     },
     "contactPage": {
       "PageTitle": "Contact",
@@ -198,6 +279,18 @@
         "secondText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue",
         "thirdText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue"
       }
-    ]
+    ],
+    "projectsPage": {
+      "estherProject": {
+        "h1": "esther lhuillery",
+        "subtitle": "Portfolio montage vidéo",
+        "content": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci."
+      },
+      "beancesProject": {
+        "h1": "béances éditions",
+        "subtitle": "éditions de zines queer",
+        "content": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci."
+      }
+    }
   }
 }

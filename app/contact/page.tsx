@@ -15,7 +15,7 @@ export default function Contact() {
   const frenchcontact = FR.contactPage;
 
   return (
-    <div className="bg-black pb-40 pt-52 px-40 text-wlite">
+    <div className="bg-black pb-40 pt-52 px-40 text-wlite ">
       <CalendlyWidget />
       {language === "EN" ? (
         <div className="flex flex-col gap-16">
@@ -29,7 +29,7 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className=" my-20 lg:px-60">
+          <div className=" my-20 lg:px-60 h-[100vh]">
             <ContactForm lang={language} />
           </div>
           <div className="flex lg:px-40 text-white">
@@ -80,7 +80,7 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className=" my-20 lg:px-60">
+          <div className=" my-20 lg:px-60 h-[100vh]">
             <ContactForm lang={language} />
           </div>
           <div className="flex lg:px-40 text-white">

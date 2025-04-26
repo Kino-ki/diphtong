@@ -3,19 +3,21 @@
 import { gsap } from "gsap";
 import { Observer } from "gsap/all";
 import { useRef, useEffect } from "react";
+import { useLanguage } from "../contexts/LangContext";
+import data from "@/data/content.json";
+
 gsap.registerPlugin(Observer);
 
 export default function AboutPage() {
+  const { language } = useLanguage();
+  const { EN, FR } = data;
+  const frenchdata = FR.aboutPage;
+  console.log(frenchdata);
+
+  const englishdata = EN.aboutPage;
+
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
   const imagesRef = useRef<(HTMLElement | null)[]>([]);
-  // const headings = gsap.utils.toArray(".section-heading");
-  // const splitHeadings = headings.map(
-  //   (heading) =>
-  //     new SplitText(heading, {
-  //       type: "chars,words,lines",
-  //       linesClass: "clip-text",
-  //     })
-  // );
   const currentIndexRef = useRef(-1);
   const animatingRef = useRef(false);
 
@@ -27,14 +29,13 @@ export default function AboutPage() {
     const images = imagesRef.current;
     const wrap = gsap.utils.wrap(0, sections.length);
 
-    // Set initial positions for sliding elements
     gsap.set(outerWrappers, { yPercent: 100 });
     gsap.set(innerWrappers, { yPercent: -100 });
 
     function gotoSection(index: number, direction: number) {
       if (animatingRef.current) return; // Prevent new animations while one is running
       animatingRef.current = true;
-      index = wrap(index); // make sure it's valid
+      index = wrap(index);
 
       const fromTop = direction === -1,
         dFactor = fromTop ? -1 : 1,
@@ -44,11 +45,8 @@ export default function AboutPage() {
             animatingRef.current = false;
           },
         });
-      console.log("current", currentIndexRef.current);
-      console.log("index = going to =>", index);
 
       if (currentIndexRef.current >= 0) {
-        // The first time this function runs, current is -1
         gsap.set(sections[currentIndexRef.current], { zIndex: 0 });
         tl.to(images[currentIndexRef.current], {
           yPercent: -15 * dFactor,
@@ -71,31 +69,12 @@ export default function AboutPage() {
         0
       ).fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0);
 
-      // .fromTo(
-      //   splitHeadings[index].chars,
-      //   {
-      //     autoAlpha: 0,
-      //     yPercent: 150 * dFactor,
-      //   },
-      //   {
-      //     autoAlpha: 1,
-      //     yPercent: 0,
-      //     duration: 1,
-      //     ease: "power2",
-      //     stagger: {
-      //       each: 0.02,
-      //       from: "random",
-      //     },
-      //   },
-      //   0.2
-      // );
-
       currentIndexRef.current = index;
     }
 
     Observer.create({
       // target: sections,
-      type: "wheel,touch,pointer",
+      type: "wheel,touch",
       wheelSpeed: -1,
       onDown: () =>
         !animatingRef.current && gotoSection(currentIndexRef.current - 1, -1),
@@ -115,172 +94,151 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <div className="flex flex-col h-[100vh] ">
-      {/* --------- FIRST SECTION ------------------- */}
-      <section
-        ref={(el) => {
-          if (el && !sectionsRef.current.includes(el)) {
-            sectionsRef.current.push(el);
-          }
-        }}
-        className=" h-full w-full  fixed  inset-0"
-      >
-        {/* Outer div for sliding effect */}
-        <div className="outer bg-black overflow-y-hidden w-full h-full">
-          {/* Inner div for sliding effect */}
-          <div className="inner overflow-y-hidden w-full h-full">
-            {/* Background image */}
-            <div
-              ref={(el) => {
-                if (el && !imagesRef.current.includes(el)) {
-                  imagesRef.current.push(el);
-                }
-              }}
-              className="h-full w-full bg-bgserviceone bg-contain flex flex-col justify-center"
-            >
-              <div className="my-auto mx-auto w-[70%] h-[85%]">
-                <div className="bg-diphlogo bg-contain pt-[10%] h-full w-full bg-no-repeat flex flex-col justify-center">
-                  <div className="flex justify-end pr-[7%]">
-                    <p className="w-[50%] font-urbanistr tracking-wider leading-8 text-xl text-center text-pretty">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Donec faucibus semper sodales. Donec congue rutrum mi a
-                      congue. Cras est lectus, tempus eget lacus at, porta porta
-                      magna. Sed commodo pretium laoreet. Integer egestas dolor
-                      ac nibh ultrices, id maximus eros mattis. Curabitur rutrum
-                      placerat ex eleifend facilisis. Integer pharetra, risus ut
-                      gravida molestie, ante justo ultricies mauris, ac lacinia
-                      metus purus ac nisl.
+    <div className="text-rouge bg-wlite">
+      {language === "EN" ? (
+        <div className="flex flex-col h-[100vh] ">
+          {/* --------- FIRST SECTION ------------------- */}
+          <section
+            ref={(el) => {
+              if (el && !sectionsRef.current.includes(el)) {
+                sectionsRef.current.push(el);
+              }
+            }}
+            className=" h-full w-full  fixed  inset-0"
+          >
+            {/* Outer div for sliding effect */}
+            <div className="outer bg-wlite overflow-y-hidden w-full h-full">
+              {/* Inner div for sliding effect */}
+              <div className="inner overflow-y-hidden w-full h-full">
+                {/* Background image */}
+                <div
+                  ref={(el) => {
+                    if (el && !imagesRef.current.includes(el)) {
+                      imagesRef.current.push(el);
+                    }
+                  }}
+                  className="h-full w-full bg-wlite bg-contain flex flex-col justify-center"
+                >
+                  {/* <div className="my-auto mx-auto w-[70%] h-[85%]"> */}
+                  <div className="bg-diphlogo10 bg-repeat-space h-full w-full  flex flex-col justify-center">
+                    <div className="flex justify-end">
+                      <p className="w-[60%] p-8 bg-wlite font-urbanistb flex justify-center tracking-widest leading-[3.5rem] text-4xl text-start text-pretty">
+                        {englishdata.firstSection}
+                      </p>
+                    </div>
+                  </div>
+                  {/* </div> */}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ------------- SECOND SECTION ---------------------------- */}
+          <section
+            ref={(el) => {
+              if (el && !sectionsRef.current.includes(el)) {
+                sectionsRef.current.push(el);
+              }
+            }}
+            className=" h-[100vh] inset-0 fixed  "
+          >
+            {/* Outer div for sliding effect */}
+            <div className="outer overflow-y-hidden w-full h-full ">
+              {/* Inner div for sliding effect */}
+              <div className="inner overflow-y-hidden w-full h-full bg-wlite">
+                {/* Background image */}
+                <div
+                  ref={(el) => {
+                    if (el && !imagesRef.current.includes(el)) {
+                      imagesRef.current.push(el);
+                    }
+                  }}
+                  className="h-full bg-diphlogo10 bg-repeat-space  flex flex-col justify-center  "
+                >
+                  <div className="flex  justify-between px-10">
+                    <h1 className="section-heading uppercase font-menlor text-6xl w-1/3 my-auto p-20 bg-wlite  ">
+                      {englishdata.secondSection.title}
+                    </h1>
+                    <p className="font-urbanistr text-4xl text-start h-[100vh] tracking-widest w-1/2 leading-[3rem] mx-auto p-20 bg-wlite">
+                      {englishdata.secondSection.content}
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* ------------- SECOND SECTION ---------------------------- */}
-      <section
-        ref={(el) => {
-          if (el && !sectionsRef.current.includes(el)) {
-            sectionsRef.current.push(el);
-          }
-        }}
-        className=" h-[100vh] inset-0 fixed "
-      >
-        {/* Outer div for sliding effect */}
-        <div className="outer bg-black overflow-y-hidden w-full h-full ">
-          {/* Inner div for sliding effect */}
-          <div className="inner overflow-y-hidden w-full h-full">
-            {/* Background image */}
-            <div
-              ref={(el) => {
-                if (el && !imagesRef.current.includes(el)) {
-                  imagesRef.current.push(el);
-                }
-              }}
-              className="h-full bg-bgservicetwo bg-no-repeat bg-opacity-5 bg-center flex flex-col justify-center gap-12"
-            >
-              <h1 className="section-heading uppercase font-menlor text-5xl text-center">
-                Our Values
-              </h1>
-              <p className="font-urbanistmed text-xl px-[20%] text-center flex justify-center tracking-wider leading-8">
-                ac tellus nulla. Donec sed quam nec magna ultrices fermentum id
-                ut eros. Proin eget ante a felis tincidunt viverra eget et
-                ligula. Suspendisse sem arcu, fringilla ut convallis id, euismod
-                vel sapien. Praesent faucibus non sapien in volutpat. Maecenas
-                venenatis enim sit amet purus feugiat, ac consequat turpis
-                posuere. Curabitur ornare lorem nec turpis eleifend, a viverra
-                metus venenatis. Donec vel congue odio, vel consectetur nisl. Ut
-                cursus ante sit amet turpis dapibus vestibulum. Donec quis erat
-                leo.
-              </p>
+          {/* --------------------- THIRD SECTION -------------------------------- */}
+          <section
+            ref={(el) => {
+              if (el && !sectionsRef.current.includes(el)) {
+                sectionsRef.current.push(el);
+              }
+            }}
+            className=" h-[100vh] inset-0 fixed"
+          >
+            {/* Outer div for sliding effect */}
+            <div className="outer overflow-y-hidden w-full h-full">
+              {/* Inner div for sliding effect */}
+              <div className="inner overflow-y-hidden w-full h-full bg-wlite">
+                {/* Background image */}
+                <div
+                  ref={(el) => {
+                    if (el && !imagesRef.current.includes(el)) {
+                      imagesRef.current.push(el);
+                    }
+                  }}
+                  className="h-full bg-diphlogo10 bg-repeat-space flex "
+                >
+                  <div className="flex flex-col justify-center gap-12 bg-wlite m-28">
+                    <h2 className="section-heading uppercase font-menlor text-5xl text-center mx-auto p-10">
+                      {englishdata.thirdSection.title}
+                    </h2>
+                    <p className="font-urbanistr text-4xl text-center flex justify-center p-10  tracking-widest w-2/3 leading-[3rem]">
+                      {englishdata.thirdSection.content}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* --------------------- THIRD SECTION -------------------------------- */}
-      <section
-        ref={(el) => {
-          if (el && !sectionsRef.current.includes(el)) {
-            sectionsRef.current.push(el);
-          }
-        }}
-        className=" h-[100vh] inset-0 fixed"
-      >
-        {/* Outer div for sliding effect */}
-        <div className="outer bg-black overflow-y-hidden w-full h-full">
-          {/* Inner div for sliding effect */}
-          <div className="inner overflow-y-hidden w-full h-full">
-            {/* Background image */}
-            <div
-              ref={(el) => {
-                if (el && !imagesRef.current.includes(el)) {
-                  imagesRef.current.push(el);
-                }
-              }}
-              className="h-full bg-bgserviceone flex flex-col justify-center gap-12"
-            >
-              <h2 className="section-heading uppercase font-menlor text-5xl text-center">
-                Meet the Founder
-              </h2>
-              <p className="font-urbanistmed text-xl px-[20%] text-center flex justify-center tracking-wider leading-8">
-                ac tellus nulla. Donec sed quam nec magna ultrices fermentum id
-                ut eros. Proin eget ante a felis tincidunt viverra eget et
-                ligula. Suspendisse sem arcu, fringilla ut convallis id, euismod
-                vel sapien. Praesent faucibus non sapien in volutpat. Maecenas
-                venenatis enim sit amet purus feugiat, ac consequat turpis
-                posuere. Curabitur ornare lorem nec turpis eleifend, a viverra
-                metus venenatis. Donec vel congue odio, vel consectetur nisl. Ut
-                cursus ante sit amet turpis dapibus vestibulum. Donec quis erat
-                leo.
-              </p>
+          {/* -------------------------- FOURTH SECTION -------------------------------- */}
+          <section
+            ref={(el) => {
+              if (el && !sectionsRef.current.includes(el)) {
+                sectionsRef.current.push(el);
+              }
+            }}
+            className="h-[100vh] inset-0 fixed "
+          >
+            {/* Outer div for sliding effect */}
+            <div className="outer overflow-y-hidden w-full h-full">
+              {/* Inner div for sliding effect */}
+              <div className="inner overflow-y-hidden w-full h-full">
+                {/* Background image */}
+                <div
+                  ref={(el) => {
+                    if (el && !imagesRef.current.includes(el)) {
+                      imagesRef.current.push(el);
+                    }
+                  }}
+                  className="h-full bg-wlite bg-no-repeat bg-center flex flex-col justify-center gap-16"
+                >
+                  <h1 className="section-heading uppercase font-menlor text-5xl text-center">
+                    {englishdata.lastSection.title}
+                  </h1>
+                  <p className="font-urbanistmed text-xl px-[20%] text-center flex justify-center tracking-wider leading-8">
+                    {englishdata.lastSection.content}
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
         </div>
-      </section>
-
-      {/* -------------------------- FOURTH SECTION -------------------------------- */}
-      <section
-        ref={(el) => {
-          if (el && !sectionsRef.current.includes(el)) {
-            sectionsRef.current.push(el);
-          }
-        }}
-        className="h-[100vh] inset-0 fixed "
-      >
-        {/* Outer div for sliding effect */}
-        <div className="outer overflow-y-hidden w-full h-full">
-          {/* Inner div for sliding effect */}
-          <div className="inner overflow-y-hidden w-full h-full">
-            {/* Background image */}
-            <div
-              ref={(el) => {
-                if (el && !imagesRef.current.includes(el)) {
-                  imagesRef.current.push(el);
-                }
-              }}
-              className="h-full bg-bgservicethree bg-no-repeat bg-center flex flex-col justify-center gap-16"
-            >
-              <h1 className="section-heading uppercase font-menlor text-5xl text-center">
-                How We Work (Why Us?)
-              </h1>
-              <p className="font-urbanistmed text-xl px-[20%] text-center flex justify-center tracking-wider leading-8">
-                ac tellus nulla. Donec sed quam nec magna ultrices fermentum id
-                ut eros. Proin eget ante a felis tincidunt viverra eget et
-                ligula. Suspendisse sem arcu, fringilla ut convallis id, euismod
-                vel sapien. Praesent faucibus non sapien in volutpat. Maecenas
-                venenatis enim sit amet purus feugiat, ac consequat turpis
-                posuere. Curabitur ornare lorem nec turpis eleifend, a viverra
-                metus venenatis. Donec vel congue odio, vel consectetur nisl. Ut
-                cursus ante sit amet turpis dapibus vestibulum. Donec quis erat
-                leo.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 }

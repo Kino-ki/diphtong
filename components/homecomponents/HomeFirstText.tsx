@@ -25,9 +25,9 @@ export default function HomeFirstText() {
     const tl1 = gsap.timeline({
       scrollTrigger: {
         trigger: firstTextRef.current,
-
+        // markers: true,
         start: "top 20%",
-        end: "bottom 20%",
+        end: "bottom center",
         scrub: 2,
       },
     });
@@ -36,12 +36,8 @@ export default function HomeFirstText() {
       .fromTo(
         firstTextRef.current,
         { opacity: 0 },
-        { opacity: 1, duration: 2, ease: "power2.inOut" }
+        { opacity: 1, z: 0, duration: 2, ease: "power2.inOut" }
       )
-      .to(firstTextRef.current, {
-        opacity: 1,
-        duration: 2,
-      })
       .to(firstTextRef.current, {
         opacity: 0,
         duration: 2,
@@ -52,9 +48,10 @@ export default function HomeFirstText() {
     const tl2 = gsap.timeline({
       scrollTrigger: {
         trigger: secondTextRef.current,
-        start: "center top",
-        end: "2000vh top",
-        scrub: 1,
+        // markers: true,
+        start: "center 30%",
+        end: "150% top",
+        scrub: 2,
       },
     });
 
@@ -62,7 +59,7 @@ export default function HomeFirstText() {
       .fromTo(
         secondTextRef.current,
         { opacity: 0 },
-        { opacity: 1, duration: 2, ease: "power2.inOut" }
+        { opacity: 1, z: 0, duration: 2, ease: "power2.inOut" }
       )
       .to(secondTextRef.current, {
         opacity: 0,
@@ -77,15 +74,15 @@ export default function HomeFirstText() {
   }, []);
 
   return (
-    <div className="relative  h-[100vh]">
+    <div className="relative  h-[100vh]  ">
       {" "}
       {language === "EN" ? (
         <div className="flex flex-col justify-center h-[100vh] relative">
           <div
             ref={firstTextRef}
-            className="fixed z-20 top-[40%] items-center flex flex-col gap-20 w-full h-full opacity-0 "
+            className="fixed top-[35%] items-center flex flex-col gap-20 w-full h-full opacity-0 z-10 "
           >
-            <h1 className="flex justify-center capitalize font-urbanistr font-semibold w-[80%] text-6xl text-center tracking-[1rem]">
+            <h1 className="flex justify-center capitalize font-urbanistr font-semibold w-[80%]     text-6xl/relaxed text-center tracking-[1rem]">
               {englishhome.firsttext}
             </h1>
             <div className="flex justify-center items-center ">
@@ -98,10 +95,9 @@ export default function HomeFirstText() {
               </Link>
             </div>
           </div>
-          <div className=" "></div>
           <div
             ref={secondTextRef}
-            className="fixed h-[120vh] top-[35%] left-0 w-full flex justify-center px-[12%] opacity-0"
+            className="fixed h-[100vh] top-[35%] left-0 w-full flex justify-center px-[12%] opacity-0 z-0"
           >
             <p className=" font-urbanistr text-center text-4xl tracking-[0.2rem] leading-[3.5rem] text-pretty">
               {englishhome.secondtext}
@@ -112,7 +108,7 @@ export default function HomeFirstText() {
         <div className="flex flex-col justify-center h-[100vh] relative">
           <div
             ref={firstTextRef}
-            className="fixed top-[35%] items-center flex flex-col gap-20 w-full h-full opacity-0 "
+            className="fixed top-[35%] items-center flex flex-col gap-20 w-full h-full opacity-0 z-10"
           >
             <h1 className="flex justify-center font-urbanistr capitalize font-semibold w-[80%] text-6xl/relaxed text-center tracking-[0.8rem]">
               {frenchhome.firsttext}
@@ -130,7 +126,7 @@ export default function HomeFirstText() {
           <div className=" "></div>
           <div
             ref={secondTextRef}
-            className="fixed h-[120vh] top-[35%] left-0 w-full flex justify-center px-[12%] opacity-0"
+            className="fixed h-[120vh] top-[35%] left-0 w-full flex justify-center px-[12%] opacity-0 z-0"
           >
             <p className=" font-urbanistr text-center text-4xl tracking-[0.2rem] leading-[3.5rem] text-pretty">
               {frenchhome.secondtext}

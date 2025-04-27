@@ -27,19 +27,16 @@ export default function HomeHorizontalScroll() {
 
     if (titleRef.current) {
       gsap.to(titleRef.current, {
-        xPercent: -34,
-        // yPercent: 40,.
+        xPercent: -33,
+        yPercent: 70,
         scale: 0.3,
         ease: "sine.inOut",
         duration: 2,
-        // stagger: 1,
-
         scrollTrigger: {
           trigger: titleRef.current,
-          start: "top center",
-          end: "bottom center",
+          start: "top 70%",
+          end: "top top",
           scrub: 1,
-          pin: true,
           // markers: true,
         },
       });
@@ -72,6 +69,34 @@ export default function HomeHorizontalScroll() {
         },
       },
     });
+    const parallaxEffect = document.querySelector(".parallax");
+    if (!sectionsNameRef) return;
+    if (sectionsNameRef) {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: parallaxEffect,
+          start: "top bottom",
+          end: "top center",
+          // markers: true,
+          pin: false,
+          scrub: 1,
+        },
+      });
+      tl.fromTo(
+        parallaxEffect,
+        {
+          yPercent: 50,
+          duration: 3,
+          ease: "none",
+        },
+        {
+          yPercent: 0,
+          duration: 3,
+
+          ease: "none",
+        }
+      );
+    }
 
     return () => {
       ScrollTrigger.getAll().forEach((st) => st.kill());
@@ -81,20 +106,22 @@ export default function HomeHorizontalScroll() {
     <div>
       {language === "EN" ? (
         <div className=" overflow-hidden bg-wlite">
-          <div className="flex flex-col justify-start w-full">
+          <div className="h-[35vh] bg-wlite "> </div>
+
+          <div className="flex flex-col justify-start w-full pb-40">
             <p
               ref={titleRef}
-              className="flex text-start w-full text-[12vw] font-urbanistr tracking-wider  text-black capitalize"
+              className="flex  text-start w-full text-[12vw] font-urbanistr tracking-wider  text-black capitalize"
             >
               {englishslides.intro.h1}
             </p>
-            <div className=" flex  justify-between pt-[10%]">
-              <p className="text-[#999696]  text-3xl/relaxed tracking-wider font-urbanistb py-20 w-1/3 px-10">
+            <div className=" flex  justify-between pt-[8%]">
+              <p className="text-[#999696]  text-3xl/relaxed tracking-wider font-urbanistb  w-2/5 px-10">
                 {englishslides.intro.text}
               </p>
               <div
                 ref={sectionsNameRef}
-                className="flex flex-col  text-base text-[#323232] font-menlor w-1/3  "
+                className="parallax flex flex-col text-base  text-[#323232] font-menlor w-1/3  "
               >
                 <p className="py-10 pl-5"> {englishslides.firstSlide}</p>
                 <p className="w-full pl-5 border-b border-t border-[#999696] py-10">

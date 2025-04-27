@@ -5,8 +5,11 @@ import Footer from "@/components/Footer";
 import { LanguageContextProvider } from "./contexts/LangContext";
 
 export const metadata: Metadata = {
-  title: "Diphtong Web Agency",
+  title: "Diphtong Web Agency | Agence Web Diphtong",
   description: "Creative web agency",
+  icons: {
+    icon: "/images/bgdragon.svg",
+  },
 };
 
 export default function RootLayout({

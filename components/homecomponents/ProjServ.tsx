@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { arch } from "node:os";
 
 export default function ProjServ() {
   gsap.registerPlugin(ScrollTrigger);
@@ -66,9 +67,10 @@ export default function ProjServ() {
       });
     }
     // SECTIONS PINNING
-    englishdata?.works.forEach((work) => {
+    englishdata?.works.forEach((work, index) => {
       const titleEl = workstitlesRefs.current[work.id];
-      if (titleEl) {
+      const isLast = index === englishdata.works.length - 1;
+      if (titleEl && !isLast) {
         ScrollTrigger.create({
           trigger: titleEl,
           start: "top top",
@@ -99,7 +101,7 @@ export default function ProjServ() {
             ].map((pos, i) => (
               <div
                 key={i}
-                className={`marquee absolute ${pos} w-max whitespace-nowrap`}
+                className={`marquee absolute ${pos} w-max  whitespace-nowrap`}
                 style={{
                   left: i % 2 === 0 ? "0" : "auto",
                   right: i % 2 !== 0 ? "0" : "auto",
@@ -157,13 +159,13 @@ export default function ProjServ() {
 
               <div className=" flex flex-col   justify-between py-32  ">
                 <div className="h-fit w-fit relative bg-red-200">
-                  <Image
+                  {/* <Image
                     src={work.imageSrc}
                     alt="project image"
                     width={650}
                     height={700}
                     className="shadow-lg"
-                  />
+                  /> */}
                   <div className="h-full w-full absolute inset-0 "></div>
                 </div>
                 <button
@@ -247,14 +249,15 @@ export default function ProjServ() {
               </div>
 
               <div className=" flex flex-col   justify-between py-32  ">
-                <div className="h-fit w-fit relative bg-red-200">
-                  <Image
+                <div className="h-fit w-fit relative">
+                  {/* <Image
                     src={work.imageSrc}
+                    unoptimized
                     alt="project image"
                     width={650}
                     height={700}
                     className="shadow-lg"
-                  />
+                  /> */}
                   <div className="h-full w-full absolute inset-0 "></div>
                 </div>
                 <button

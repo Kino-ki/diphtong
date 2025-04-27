@@ -31,14 +31,14 @@ export default function HomePage() {
     gsap.to(bgRef.current, {
       backgroundColor: "#d9d9d9",
       duration: 1,
-
-      ease: "power4.out",
+      ease: "power1.out",
       scrollTrigger: {
         trigger: bgRef.current,
         // markers: true,
+        // pin: true,
         start: "top 10%",
-        end: "bottom top",
-        scrub: 1,
+        end: "80% 70%",
+        scrub: -10,
       },
     });
 
@@ -48,7 +48,7 @@ export default function HomePage() {
     <div className="bg-black relative -z-0 ">
       <div
         ref={bgImageRef}
-        className=" fixed bottom-5 left-5 opacity-[0.5] z-40 mix-blend-difference"
+        className=" fixed bottom-5 left-5 opacity-[0.5] z-50 mix-blend-difference"
       >
         <Image src={diphlogo} width={60} height={60} alt="logo" />
       </div>
@@ -58,18 +58,15 @@ export default function HomePage() {
       <div className="-z-0 relative">
         <HomeFirstText />
       </div>
-      <div ref={bgRef} className="h-[150vh]">
-        {" "}
-      </div>
+      <div ref={bgRef} className="h-[150vh]"></div>
       <div className="z-10 relative">
         <ProjServ />
       </div>
-      <div className="h-[80vh] "> </div>
-      <div className="z-50 relative ">
+      <div className="z-30 relative ">
         <HomeHorizontalScroll />
         <ServicesSection />
       </div>
-      <div className="z-50 relative">
+      <div className="z-30 relative">
         <ReachOutSection />
       </div>
     </div>

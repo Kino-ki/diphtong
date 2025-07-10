@@ -53,7 +53,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
         onSubmit={handleSubmit(onSubmit)}
         action=""
       >
-        <div className="flex justify-between p-3 h-[15%] ">
+        <div className="flex justify-between h-[15%] ">
           <div className="flex flex-col justify-between    w-1/2 mr-4  ">
             {lang === "EN" ? (
               <label className="" htmlFor="name">
@@ -75,7 +75,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
               id="name"
               name="name"
               type="text"
-              className="bg-black h-1/3 w-full focus:outline-none autofill:bg-transparent flex flex-col justify-end  border-wlite border-b"
+              className="bg-black h-1/3 w-full focus:outline-none autofill:bg-transparent flex flex-col justify-end  border-gray-400 border-b"
             />
             <div className="h-5">
               {errors?.name && (
@@ -104,7 +104,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
               id="email"
               name="email"
               type="email"
-              className="bg-black focus:outline-none  h-1/3 w-full border-wlite border-b"
+              className="bg-black focus:outline-none  h-1/3 w-full border-gray-400 border-b"
             />
             <div className="h-5">
               {errors?.email && (
@@ -114,7 +114,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between border-wlite border-b  h-[15%] p-3 ">
+        <div className="flex flex-col justify-between border-gray-400 border-b  h-[15%]  ">
           {lang === "EN" ? (
             <label htmlFor="website">
               website <span className="text-base">(optional)</span>
@@ -156,7 +156,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
             })}
             id="content"
             name="content"
-            className="bg-black focus:outline-none h-2/3  border-wlite border-b"
+            className="bg-black focus:outline-none h-2/3  border-gray-400 border-b"
           />
           <div className="h-5">
             {errors?.content && (

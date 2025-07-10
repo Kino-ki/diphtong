@@ -20,30 +20,55 @@ export default function ProjectsPage() {
   const frenchprojects = FR.projectsPage;
   useEffect(() => {
     // const innerWrappers = gsap.utils.toArray(".inner");
-    gsap.utils.toArray<HTMLElement>(".outer").forEach((container, index) => {
+    const outerWrapper = gsap.utils.toArray<HTMLElement>(".outer");
+    outerWrapper.forEach((container, index) => {
       const inner = container.querySelector<HTMLElement>(".inner");
-      if (!inner) return;
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: container,
-          start: "top bottom",
-          end: "bottom top",
-          // markers: true,
-          scrub: 1,
-          pin: false,
-        },
-      });
-      tl.fromTo(
-        inner,
-        {
-          yPercent: -12,
-          ease: "none",
-        },
-        {
-          yPercent: 12,
-          ease: "none",
-        }
-      );
+      if (!outerWrapper) return;
+      if (outerWrapper && index != 0) {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: container,
+            start: "top bottom",
+            end: "bottom top",
+            // markers: true,
+            scrub: 1,
+            pin: false,
+          },
+        });
+        tl.fromTo(
+          container,
+          {
+            yPercent: 0,
+            ease: "none",
+          },
+          {
+            yPercent: -10,
+            ease: "none",
+          }
+        );
+
+        const tl2 = gsap.timeline({
+          scrollTrigger: {
+            trigger: inner,
+            start: "top bottom",
+            end: "bottom top",
+            // markers: true,
+            scrub: 1,
+            pin: false,
+          },
+        });
+        tl2.fromTo(
+          inner,
+          {
+            yPercent: -10,
+            ease: "none",
+          },
+          {
+            yPercent: 0,
+            ease: "none",
+          }
+        );
+      }
     });
   }, []);
 
@@ -55,7 +80,7 @@ export default function ProjectsPage() {
             id="portfolio"
             className=" outer h-[100svh] overflow-hidden bg-[#151414] "
           >
-            <div className="inner flex flex-col p-[5%] bg-[#151414]">
+            <div className="inner  flex flex-col p-[5%] bg-[#151414]">
               <div className="flex  ">
                 <h1 className="font-estherfont uppercase text-[#CFEB98] text-7xl ">
                   {englishprojects.estherProject.h1}
@@ -110,9 +135,9 @@ export default function ProjectsPage() {
           {/*  --------------------------------BEANCES----------------------------- */}
           <section
             id="beances"
-            className="outer bg-white h-[100svh] overflow-hidden "
+            className="outer relative h-[100svh] bg-white overflow-hidden  "
           >
-            <div className="inner bg-white flex flex-col h-full text-[#4c4c4c]  bg-bgbeances bg-cover">
+            <div className="inner bg-white flex flex-col  text-[#4c4c4c] h-[120%] bg-bgbeances bg-cauto">
               <div className="p-[5%] pl-[7%] flex gap-5 items-end ">
                 <Image
                   src={beancestitle}
@@ -153,6 +178,17 @@ export default function ProjectsPage() {
                   height={200}
                   alt="beances picture"
                 />
+              </div>
+            </div>
+          </section>
+          <section id="collaboratives" className="h-[100svh] overflow-hidden ">
+            <div className="outer">
+              <div className="inner flex flex-col  ">
+                <div className="">
+                  <h1 className="text-wlite text-5xl font-menlob uppercase tracking-wider">
+                    {englishprojects.collavoratives.h1}{" "}
+                  </h1>
+                </div>
               </div>
             </div>
           </section>

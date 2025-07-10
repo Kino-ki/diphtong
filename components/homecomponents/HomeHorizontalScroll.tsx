@@ -106,7 +106,7 @@ export default function HomeHorizontalScroll() {
     <div>
       {language === "EN" ? (
         <div className=" overflow-hidden bg-wlite">
-          <div className="h-[35vh] bg-wlite "> </div>
+          {/* <div className="h-[35vh] bg-wlite  border-y border-red-50"> </div> */}
 
           <div className="flex flex-col justify-start w-full pb-40">
             <p

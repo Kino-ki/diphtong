@@ -22,7 +22,7 @@ export default function ReachOutSection() {
         trigger: textRef.current,
         // markers: true,
         start: "top center",
-        end: "bottom center",
+        // end: "bottom center",
         scrub: 1,
       },
     });
@@ -42,14 +42,14 @@ export default function ReachOutSection() {
       });
   }, []);
   return (
-    <div ref={textRef} className="h-[100vh] z-40 ">
+    <div ref={textRef} className=" z-40 ">
       <div className="flex  h-full mx-[10%]     ">
         {language === "EN" ? (
           <div className="flex flex-col w-full mt-20  items-center">
-            <h1 className=" text-4xl flex flex-col justify-center my-20 font menlor uppercase  ">
+            <h1 className=" text-4xl flex flex-col justify-center my-32 font menlor tracking-wider  ">
               {englishhome.reachoutcontent}
             </h1>
-            <div className=" flex justify-center items-center  w-1/2 my-auto h-[100svh] ">
+            <div className=" flex justify-center items-center  w-3/5 my-auto h-[100svh] ">
               <ContactForm lang={language} />
             </div>
             <CalendlyWidget />

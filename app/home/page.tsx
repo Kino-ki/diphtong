@@ -30,13 +30,13 @@ export default function HomePage() {
     });
     gsap.to(bgRef.current, {
       backgroundColor: "#d9d9d9",
-      duration: 1,
+      duration: 4,
       ease: "power1.out",
       scrollTrigger: {
         trigger: bgRef.current,
         // markers: true,
-        // pin: true,
-        start: "top 10%",
+        pin: true,
+        start: "top top",
         end: "80% 70%",
         scrub: -10,
       },
@@ -58,15 +58,15 @@ export default function HomePage() {
       <div className="-z-0 relative">
         <HomeFirstText />
       </div>
-      <div ref={bgRef} className="h-[150vh]"></div>
-      <div className="z-10 relative">
-        <ProjServ />
+      <div ref={bgRef} className="h-[100vh] -mt-[50%]"></div>
+      <div className="z-10 relative ">
+        <HomeHorizontalScroll />
       </div>
       <div className="z-30 relative ">
-        <HomeHorizontalScroll />
+        <ProjServ />
         <ServicesSection />
       </div>
-      <div className="z-30 relative">
+      <div className="z-30 relative pb-40">
         <ReachOutSection />
       </div>
     </div>

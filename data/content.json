@@ -13,29 +13,32 @@
         {
           "id": "1",
           "title": "Béances Editions",
-          "serv": ["Web develoment", "Web design"],
-          "imageSrc": "/images/beanceshomes.gif",
+          "serv": ["full stack develoment", "Web design"],
+          "imageSrc": "/images/projserv/beancesone.svg",
           "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
           "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
-          "author": "the author"
+          "author": "the author",
+          "link": "/projects#beances"
         },
         {
           "id": "2",
           "title": "Esther Lhuillery Video Editor",
-          "serv": ["Web develoment", "Web design"],
-          "imageSrc": "/images/estherhome.gif",
+          "serv": ["full stack develoment", "Web design"],
+          "imageSrc": "/images/projserv/esther.svg",
           "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
           "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
-          "author": "the author"
+          "author": "the author",
+          "link": "/projects#portfolio"
         },
         {
           "id": "3",
           "title": "Plein la tête studio éclaté",
-          "serv": ["collavorative project", "Web develoment"],
-          "imageSrc": "/images/estherhome.gif",
+          "serv": ["collavorative project", "Font-End develoment"],
+          "imageSrc": "/images/projserv/esther.svg",
           "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
           "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
-          "author": "the author"
+          "author": "the author",
+          "link": "/projects#collaboratives"
         }
       ],
       "servicestitle": "our services",
@@ -138,12 +141,37 @@
         "h1": "esther lhuillery",
         "subtitle": "video editor",
         "span": "portfolio",
+        "services": [" web design ", "full stack develoment"],
         "content": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci."
       },
       "beancesProject": {
         "h1": "béances éditions",
         "subtitle": "QUEER ZINES EDITIONS",
+        "services": [" web design ", "full stack develoment"],
         "content": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci."
+      },
+      "collavoratives": {
+        "h1": "collaborative projects",
+        "projects": [
+          {
+            "id": 0,
+            "projectName": "Plein la tête",
+            "projectSubtitle": " studio éclaté",
+            "services": ["Front-End develoment"],
+            "projecDescription": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva"
+          }
+        ]
+      },
+      "upcomingProjects": {
+        "h1": "Upcoming Projects",
+        "projects": [
+          {
+            "id": 0,
+            "projectName": "Physiothérapie Hélène Morin",
+            "services": ["Front-End develoment"],
+            "projecDescription": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva"
+          }
+        ]
       }
     }
   },
@@ -177,28 +205,31 @@
           "id": "1",
           "title": "Béances Editions",
           "serv": ["développement Web", "Conception & design"],
-          "imageSrc": "/images/beanceshomes.gif",
+          "imageSrc": "/images/projserv/beancesone.svg",
           "description": "lorem ipsum dolor dhuz djzp çd AO09 Dxj c hds d dhso dhdishdi dhisodh   sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
           "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
-          "author": "the author"
+          "author": "the author",
+          "link": "/projects#beances"
         },
         {
           "id": "2",
           "title": "Esther Lhuillery Monteuse Vidéo",
           "serv": ["développement Web", "Conception & design"],
-          "imageSrc": "/images/estherhome.gif",
+          "imageSrc": "/images/projserv/esther.svg",
           "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
           "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
-          "author": "the author"
+          "author": "the author",
+          "link": "/projects#portfolio"
         },
         {
           "id": "3",
           "title": "Plein la tête studio éclaté",
           "serv": ["project collaboratif", "développement Web"],
-          "imageSrc": "/images/estherhome.gif",
+          "imageSrc": "/images/projserv/esther.svg",
           "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
           "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
-          "author": "the author"
+          "author": "the author",
+          "link": "/projects#collaboratives"
         }
       ],
       "servicestitle": "nos services",
@@ -290,6 +321,29 @@
         "h1": "béances éditions",
         "subtitle": "éditions de zines queer",
         "content": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci."
+      },
+      "collavoratives": {
+        "h1": "Projets collaboratifs",
+        "projects": [
+          {
+            "id": 0,
+            "projectName": "Plein la tête",
+            "projectSubtitle": " studio éclaté",
+            "services": ["Développement Front-End"],
+            "projecDescription": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva"
+          }
+        ]
+      },
+      "upcomingProjects": {
+        "h1": "Projets à venir",
+        "projects": [
+          {
+            "id": 0,
+            "projectName": "Physiothérapie Hélène Morin",
+            "services": ["Développement Front-End"],
+            "projecDescription": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva"
+          }
+        ]
       }
     }
   }

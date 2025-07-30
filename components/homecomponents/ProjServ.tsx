@@ -125,12 +125,12 @@ export default function ProjServ() {
       {language === "EN" ? (
         <div className="flex flex-col justify-center  relative">
           <div
-            className="overflow-hidden  h-[30vh] "
+            className="overflow-hidden  h-[50vh] "
             // ref={textRef}
           >
             <p
               ref={titleRef}
-              className="md:text-[18vh]  font-urbanistr tracking-wider text-[#999696]"
+              className="md:text-[18vh] pt-40 font-urbanistr tracking-wider text-[#999696]"
             >
               FEATURED WORKS{" "}
             </p>

@@ -15,35 +15,35 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function HomePage() {
   const bgImageRef = useRef<HTMLDivElement | null>(null);
-  const bgRef = useRef<HTMLDivElement | null>(null);
+  // const bgRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    gsap.to(bgImageRef.current, {
-      rotation: 360,
-      ease: "power1.in",
-      scrollTrigger: {
-        trigger: document.documentElement,
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 5,
-      },
-    });
-    gsap.to(bgRef.current, {
-      backgroundColor: "#d9d9d9",
-      duration: 4,
-      ease: "power1.out",
-      scrollTrigger: {
-        trigger: bgRef.current,
-        // markers: true,
-        pin: true,
-        start: "top top",
-        end: "80% 70%",
-        scrub: -10,
-      },
-    });
+  // useEffect(() => {
+  //   gsap.to(bgImageRef.current, {
+  //     rotation: 360,
+  //     ease: "power1.in",
+  //     scrollTrigger: {
+  //       trigger: document.documentElement,
+  //       start: "top top",
+  //       end: "bottom bottom",
+  //       scrub: 5,
+  //     },
+  //   });
+  //   gsap.to(bgRef.current, {
+  //     backgroundColor: "#c3c3c3",
+  //     duration: 10,
+  //     ease: "power1.out",
+  //     scrollTrigger: {
+  //       trigger: bgRef.current,
+  //       markers: true,
+  //       // pin: true,
+  //       start: "top 10%",
+  //       end: "60% 30%",
+  //       scrub: -10,
+  //     },
+  //   });
 
-    return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  }, []);
+  //   return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  // }, []);
   return (
     <div className="bg-black relative -z-0 ">
       <div
@@ -58,7 +58,7 @@ export default function HomePage() {
       <div className="-z-0 relative">
         <HomeFirstText />
       </div>
-      <div ref={bgRef} className="h-[100vh] -mt-[50%]"></div>
+      {/* <div ref={bgRef} className="h-[100vh] -mt-[50%]  "></div> */}
       <div className="z-10 relative ">
         <HomeHorizontalScroll />
       </div>

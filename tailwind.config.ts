@@ -18,7 +18,8 @@ export default {
         marquee: "marquee 15s linear infinite",
       },
       colors: {
-        wlite: "#D9D9D9",
+        wlite: "#c3c3c3",
+        graytext: "#898787",
         rouge: "#4f0000",
       },
       backgroundImage: {

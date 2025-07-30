@@ -28,15 +28,15 @@ export default function HomeHorizontalScroll() {
     if (titleRef.current) {
       gsap.to(titleRef.current, {
         xPercent: -33,
-        yPercent: 70,
+        yPercent: 30,
         scale: 0.3,
         ease: "sine.inOut",
         duration: 2,
         scrollTrigger: {
           trigger: titleRef.current,
-          start: "top 70%",
+          start: "top 50%",
           end: "top top",
-          scrub: 1,
+          scrub: 2,
           // markers: true,
         },
       });
@@ -85,12 +85,12 @@ export default function HomeHorizontalScroll() {
       tl.fromTo(
         parallaxEffect,
         {
-          yPercent: 50,
+          yPercent: 80,
           duration: 3,
           ease: "none",
         },
         {
-          yPercent: 0,
+          yPercent: -20,
           duration: 3,
 
           ease: "none",
@@ -111,11 +111,11 @@ export default function HomeHorizontalScroll() {
           <div className="flex flex-col justify-start w-full pb-40">
             <p
               ref={titleRef}
-              className="flex  text-start w-full text-[12vw] font-urbanistr tracking-wider  text-black capitalize"
+              className="flex  text-start w-full text-[12vw]  font-urbanistr tracking-wider   text-black capitalize"
             >
               {englishslides.intro.h1}
             </p>
-            <div className=" flex  justify-between pt-[8%]">
+            <div className=" flex  justify-between ">
               <p className="text-[#999696]  text-3xl/relaxed tracking-wider font-urbanistb  w-2/5 px-10">
                 {englishslides.intro.text}
               </p>

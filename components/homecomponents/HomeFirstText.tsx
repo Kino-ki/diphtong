@@ -87,13 +87,13 @@ export default function HomeFirstText() {
             ref={firstTextRef}
             className=" flex flex-col justify-start h-[100svh] items-center gap-20 w-full  z-10 "
           >
-            <h1 className="flex justify-center capitalize font-urbanistr font-semibold w-[80%] text-4xl/normal md:text-6xl/relaxed text-center tracking-wider md:tracking-[1rem]">
+            <h1 className="flex justify-center capitalize font-urbanistr font-semibold w-[80%] text-3xl/normal md:text-6xl/relaxed text-center tracking-wider md:tracking-[1rem]">
               {englishhome.firsttext}
             </h1>
             <div className="flex justify-center items-center ">
               <Link href="/contact" className="">
-                <button className="bg-wlite rounded-lg text-black py-3 px-2">
-                  <p className="mx-auto w-[70%] text-lg md:text-xl tracking-wider font-semibold">
+                <button className="bg-wlite rounded-lg text-black py-3 md:px-2">
+                  <p className="mx-auto w-[70%] text-md md:text-xl tracking-wider font-semibold">
                     Got an Idea? Let’s Talk!
                   </p>
                 </button>
@@ -104,7 +104,7 @@ export default function HomeFirstText() {
             ref={secondTextRef}
             className=" h-[100svh] w-full flex flex-col justify-start text-pretty px-[5%] md:px-[12%]   z-0"
           >
-            <p className=" font-urbanistr text-center text-2xl/relaxed md:text-4xl md:tracking-[0.2rem] md:leading-[3.5rem] text-pretty">
+            <p className=" font-urbanistr text-center text-xl/relaxed md:text-4xl md:tracking-[0.2rem] md:leading-[3.5rem] text-pretty">
               {englishhome.secondtext}
             </p>
           </div>

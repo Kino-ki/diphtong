@@ -43,13 +43,13 @@ export default function ReachOutSection() {
   }, []);
   return (
     <div ref={textRef} className=" z-40 ">
-      <div className="flex  h-full mx-[10%]     ">
+      <div className="flex  h-full  md:mx-[10%] mx-5     ">
         {language === "EN" ? (
-          <div className="flex flex-col w-full mt-20  items-center">
-            <h1 className=" text-4xl flex flex-col justify-center my-32 font menlor tracking-wider  ">
+          <div className="flex flex-col w-full md:mt-20  items-center">
+            <h1 className=" text-4xl flex flex-col justify-center  my-16 md:my-32 font menlor tracking-wider  ">
               {englishhome.reachoutcontent}
             </h1>
-            <div className=" flex justify-center items-center  w-3/5 my-auto h-[100svh] ">
+            <div className=" flex justify-center items-center  md:w-3/5 md:my-auto my-10 h-[100svh] ">
               <ContactForm lang={language} />
             </div>
             <CalendlyWidget />

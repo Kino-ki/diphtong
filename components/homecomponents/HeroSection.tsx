@@ -3,8 +3,10 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect } from "react";
+import diphtexte from "@/public/images/vertical.svg";
 import data from "@/data/content.json";
 import { useLanguage } from "@/app/contexts/LangContext";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,10 +47,16 @@ export default function HeroSection() {
     };
   }, []);
   return (
-    <div ref={firstTextRef} className="h-[100vh] bg-herogif bg-cover relative ">
-      <div className="h-full w-full backdrop-blur-[1.5px] bg-black/70 fixed ">
-        <div className="h-full w-full pt-60 md:pt-[22rem] pb-40 flex justify-center">
-          <div className=" flex flex-col justify-between w-[95%] font-figtree">
+    <div
+      ref={firstTextRef}
+      className="h-[100vh] bg-herogif bg-auto md:bg-contain relative "
+    >
+      <div className="h-full w-full  bg-black/30 fixed ">
+        <div className="h-full w-full md:pt-[22rem] md:pb-40 flex justify-center">
+          <div className=" flex flex-col justify-evenly md:justify-between w-[95%] font-figtree">
+            <div className="md:hidden flex justify-center">
+              <Image src={diphtexte} alt="diph logo" width={180} />
+            </div>
             {language === "EN" ? (
               <h2 className=" font-figtree  capitalize tracking-widest md:tracking-[0.8rem] text-3xl md:text-4xl/5 flex justify-center md:justify-end  ">
                 {englishhome.heroh2}

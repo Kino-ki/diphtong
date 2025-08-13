@@ -11,30 +11,40 @@
       "workstitle": "featured works",
       "works": [
         {
-          "id": "1",
+          "id": "0",
           "title": "Béances Editions",
           "serv": ["full stack develoment", "Web design"],
-          "imageSrc": "/images/projserv/beancesone.svg",
+          "imageSrc": "/images/projserv/beancesthree.svg",
           "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
           "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
           "author": "the author",
           "link": "/projects#beances"
         },
         {
-          "id": "2",
+          "id": "1",
           "title": "Esther Lhuillery Video Editor",
           "serv": ["full stack develoment", "Web design"],
-          "imageSrc": "/images/projserv/esther.svg",
+          "imageSrc": "/images/projserv/infraredContact.svg",
           "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
           "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
           "author": "the author",
           "link": "/projects#portfolio"
         },
         {
-          "id": "3",
+          "id": "2",
           "title": "Plein la tête studio éclaté",
           "serv": ["collavorative project", "Font-End develoment"],
-          "imageSrc": "/images/projserv/esther.svg",
+          "imageSrc": "/images/projserv/plt.svg",
+          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
+          "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
+          "author": "the author",
+          "link": "/projects#collaboratives"
+        },
+        {
+          "id": "3",
+          "title": "Analogizing",
+          "serv": ["collavorative project", "Font-End develoment"],
+          "imageSrc": "/images/projserv/analogizing.svg",
           "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
           "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
           "author": "the author",

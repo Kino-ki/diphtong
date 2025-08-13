@@ -60,6 +60,7 @@ export default function Services() {
             <div
               key={index}
               onMouseEnter={() => handleMouseEnter(service.id)}
+              onTou
               onMouseLeave={handleMouseLeave}
               className="flex flex-col py-10 border-b px-5 border-wlite "
             >

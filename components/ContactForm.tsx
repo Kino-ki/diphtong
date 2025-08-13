@@ -49,12 +49,12 @@ export default function ContactForm({ lang }: ContactFormProps) {
   return (
     <div className="w-full h-full font-urbanistr text-start text-xl">
       <form
-        className="flex flex-col gap-[3vh] h-full"
+        className="flex flex-col gap-[4vh] h-full"
         onSubmit={handleSubmit(onSubmit)}
         action=""
       >
         <div className="flex justify-between h-[15%] ">
-          <div className="flex flex-col justify-between    w-1/2 mr-4  ">
+          <div className="flex flex-col justify-between  w-1/2 mr-4  ">
             {lang === "EN" ? (
               <label className="" htmlFor="name">
                 name <span className="text-base">(required)</span>
@@ -114,7 +114,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between border-gray-400 border-b  h-[15%]  ">
+        <div className="flex flex-col justify-between border-gray-400 border-b  h-[10%]  ">
           {lang === "EN" ? (
             <label htmlFor="website">
               website <span className="text-base">(optional)</span>

@@ -34,7 +34,7 @@ export default function HomeHorizontalScroll() {
         duration: 2,
         scrollTrigger: {
           trigger: titleRef.current,
-          start: "top 50%",
+          start: "top 75%",
           end: "top top",
           scrub: 2,
           // markers: true,
@@ -106,8 +106,6 @@ export default function HomeHorizontalScroll() {
     <div>
       {language === "EN" ? (
         <div className=" overflow-hidden bg-wlite">
-          {/* <div className="h-[35vh] bg-wlite  border-y border-red-50"> </div> */}
-
           <div className="flex flex-col justify-start w-full pb-40">
             <p
               ref={titleRef}
@@ -115,13 +113,13 @@ export default function HomeHorizontalScroll() {
             >
               {englishslides.intro.h1}
             </p>
-            <div className=" flex  justify-between ">
-              <p className="text-[#999696]  text-3xl/relaxed tracking-wider font-urbanistb  w-2/5 px-10">
+            <div className=" flex flex-col md:flex-row md:justify-between ">
+              <p className="text-[#999696] text-md md:text-3xl/relaxed tracking-wider font-urbanistb  md:w-2/5 px-2 md:px-10">
                 {englishslides.intro.text}
               </p>
               <div
                 ref={sectionsNameRef}
-                className="parallax flex flex-col text-base  text-[#323232] font-menlor w-1/3  "
+                className="parallax flex flex-col text-sm md:text-base  text-[#323232] font-menlor md:w-1/3  "
               >
                 <p className="py-10 pl-5"> {englishslides.firstSlide}</p>
                 <p className="w-full pl-5 border-b border-t border-[#999696] py-10">

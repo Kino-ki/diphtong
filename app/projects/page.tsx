@@ -76,22 +76,23 @@ export default function ProjectsPage() {
     <div>
       {language === "EN" ? (
         <div className="flex flex-col">
+          {/* ------------------------esther ----------------------------------- */}
           <section
             id="portfolio"
-            className=" outer h-[100svh] overflow-hidden bg-[#151414] "
+            className=" outer h-[100svh]  overflow-hidden bg-estherprojmobile bg-auto md:bg-[#151414] "
           >
-            <div className="inner  flex flex-col p-[5%] bg-[#151414]">
-              <div className="flex  ">
-                <h1 className="font-estherfont uppercase text-[#CFEB98] text-7xl ">
+            <div className="inner  h-[100svh] flex flex-col p-[5%] pt-16  md:bg-[#151414] bg-estherprojmobilellipse bg-top bg-cover">
+              <div className="flex  flex-col md:flex-row">
+                <h1 className="font-estherfont uppercase text-[#CFEB98] text-center md:text-start text-[2.4rem] md:text-7xl ">
                   {englishprojects.estherProject.h1}
                 </h1>
-                <h2 className="uppercase text-2xl flex items-end">
+                <h2 className="uppercase text-lg md:text-2xl flex justify-end  items-end">
                   {englishprojects.estherProject.subtitle}{" "}
                   <span className="capitalize ">&nbsp;portfolio</span>{" "}
                 </h2>
               </div>
               <div className="flex flex-col gap-8 mt-[2%] ">
-                <div className="flex flex-col justify-center h-[25%]  overflow-hidden">
+                <div className="md:flex flex-col hidden  justify-center h-[25%]  overflow-hidden">
                   <Image
                     src={estherone}
                     width={1800}
@@ -99,7 +100,7 @@ export default function ProjectsPage() {
                     alt="first editor picture"
                   />
                 </div>
-                <div className=" flex w-full justify-end ml-4">
+                <div className=" md:flex hidden w-full justify-end ml-4">
                   <Image
                     src={esthertwo}
                     width={1000}
@@ -107,12 +108,14 @@ export default function ProjectsPage() {
                     alt="second editor picture"
                   />
                 </div>
-                <div className=" flex justify-between">
-                  <p className="w-1/2 font-urbanistr text-2xl/loose tracking-widest text-pretty ">
-                    {" "}
-                    {englishprojects.estherProject.content}{" "}
-                  </p>
-                  <div className=" flex flex-col text-lg font-menlob gap-10 pt-[3%]  pr-[5%] w-1/3">
+                <div className=" flex md:flex-row pt-10 md:pt-0 flex-col md:justify-between">
+                  <div className="flex justify-end md:justify-start ">
+                    <p className=" w-2/3 md:w-1/2  font-urbanistr md:text-2xl/loose tracking-widest text-pretty ">
+                      {" "}
+                      {englishprojects.estherProject.content}{" "}
+                    </p>
+                  </div>
+                  <div className=" flex flex-col md:text-lg font-menlob gap-10 pt-[3%] mx-auto  pr-[5%] w-2/3 md:w-1/3">
                     <button
                       type="button"
                       className="p-5 rounded-lg border border-wlite capitalize"
@@ -135,26 +138,26 @@ export default function ProjectsPage() {
           {/*  --------------------------------BEANCES----------------------------- */}
           <section
             id="beances"
-            className="outer relative h-[100svh] bg-white overflow-hidden  "
+            className="outer relative h-[100svh] bg-beancesprojmobile  bg-white overflow-hidden  "
           >
-            <div className="inner bg-white flex flex-col  text-[#4c4c4c] h-[120%] bg-bgbeances bg-cauto">
-              <div className="p-[5%] pl-[7%] flex gap-5 items-end ">
+            <div className="inner h-[100svh] bg-white flex flex-col pt-16 md:pt-0 bg-beancesflowerjmobile bg-bottom md:bg-left bg-contain bg-no-repeat  text-[#4c4c4c]  md:bg-cover md:bg-bgbeances">
+              <div className="p-[5%] md:pl-[7%] flex md:flex-row flex-col gap-5 md:items-end ">
                 <Image
                   src={beancestitle}
                   width={600}
                   height={100}
                   alt="beances editions"
                 />
-                <h1 className="uppercase text-2xl tracking-widest font-menlor">
+                <h1 className="uppercase text-center md:text-2xl tracking-widest font-menlor">
                   {englishprojects.beancesProject.subtitle}
                 </h1>
               </div>
-              <div className="flex justify-end ">
-                <p className="w-1/2 font-urbanistr text-2xl/loose tracking-widest text-pretty ">
+              <div className="flex md:flex-row flex-col md:justify-end ">
+                <p className="md:w-1/2 font-urbanistr md:text-2xl/loose md:tracking-widest text-pretty ">
                   {" "}
                   {englishprojects.beancesProject.content}{" "}
                 </p>
-                <div className=" flex flex-col text-lg font-menlob gap-10 pt-[3%]  pr-[5%] w-1/4">
+                <div className=" flex flex-col text-lg font-menlob gap-10 pt-[3%]  pr-[5%] md:w-1/4">
                   <button
                     type="button"
                     className="p-5 rounded-lg border border-[#4c4c4c] capitalize"
@@ -171,7 +174,7 @@ export default function ProjectsPage() {
                   </button>
                 </div>
               </div>
-              <div className="flex justify-center pt-[2%]">
+              <div className="hidden md:flex justify-center pt-[2%]">
                 <Image
                   src={beancestwo}
                   width={1000}

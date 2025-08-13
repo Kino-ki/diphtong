@@ -31,7 +31,14 @@ export default {
         bgslidetwo: "url(/images/backgrounds/bg-slidetwo.svg) ",
         bgfooter: "url(/images/backgrounds/footerbg.svg) ",
         bgsecondfooter: "url(/images/backgrounds/footersecondbg.svg) ",
+        bgdragonmobile: "url(/images/backgrounds/bgdragonmobile.svg) ",
         bgbeances: "url(/images/projectsPage/bgbeances.svg) ",
+        estherprojmobile: "url(/images/projectsPage/bgesthermobile.svg)",
+        estherprojmobilellipse:
+          "url(/images/projectsPage/bgesthermobilellipse.svg)",
+        beancesprojmobile: "url(/images/projectsPage/bgbeancesmobile.svg)",
+        beancesflowerjmobile:
+          "url(/images/projectsPage/bgbeancesmobileflower.svg)",
       },
     },
     fontFamily: {

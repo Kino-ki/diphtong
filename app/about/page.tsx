@@ -2,9 +2,11 @@
 
 import { gsap } from "gsap";
 import { Observer } from "gsap/all";
-import { useRef, useEffect } from "react";
+// import { useRef, useEffect } from "react";
+import chinook from "@/public/images/chinook.jpg";
 import { useLanguage } from "../contexts/LangContext";
 import data from "@/data/content.json";
+import Image from "next/image";
 
 gsap.registerPlugin(Observer);
 
@@ -13,7 +15,6 @@ export default function AboutPage() {
   const { EN, FR } = data;
   const frenchdata = FR.aboutPage;
   const englishdata = EN.aboutPage;
-  console.log("englishdata", englishdata);
 
   // const sectionsRef = useRef<(HTMLElement | null)[]>([]);
   // const imagesRef = useRef<(HTMLElement | null)[]>([]);
@@ -93,10 +94,13 @@ export default function AboutPage() {
   // }, []);
 
   return (
-    <div className="text-black bg-wlite px-20 font-urbanistr">
+    <div className="text-black bg-wlite font-urbanistr">
       {language === "EN" ? (
         <div className="flex flex-col gap-20 pb-60 ">
-          <section className="flex justify-start w-1/2 pr-5 pt-40  ">
+          <div className="flex">
+            <Image src={chinook} alt="chinook" width={550} />
+          </div>
+          <section className="flex justify-start w-1/2 pr-5   ">
             <div className=" flex flex-col justify-center ">
               <p className="text-3xl text-end tracking-wide leading-relaxed md:mt-10 ">
                 {englishdata.firstSection}{" "}
@@ -105,7 +109,7 @@ export default function AboutPage() {
           </section>
           <section className="flex justify-end  ">
             <div className=" flex flex-col w-1/2  justify-center pl-5 ">
-              <h2 className="text-5xl flex justify-center pb-20">
+              <h2 className="text-5xl font-menlob flex justify-center pb-20">
                 {englishdata.secondSection.title}
               </h2>
               <p className="text-3xl text-start tracking-wide leading-relaxed ">
@@ -115,7 +119,7 @@ export default function AboutPage() {
           </section>
           <section className="flex justify-start ">
             <div className=" flex flex-col w-1/2  justify-center pr-5 ">
-              <h2 className="text-5xl flex justify-center pb-20">
+              <h2 className="text-5xl font-menlob flex justify-center pb-20">
                 {englishdata.thirdSection.title}
               </h2>
               <p className="text-3xl text-end tracking-wide leading-relaxed ">
@@ -125,10 +129,10 @@ export default function AboutPage() {
           </section>
           <section className="flex justify-end  ">
             <div className=" flex flex-col w-1/2  justify-center pl-5">
-              <h2 className="text-5xl flex justify-center pb-20">
+              <h2 className="text-5xl font-menlob flex justify-center pb-20">
                 {englishdata.lastSection.title}
               </h2>
-              <p className="text-3xl text-start tracking-wide leading-relaxed ">
+              <p className="text-xl text-start font-menlor  leading-relaxed ">
                 {englishdata.lastSection.content}
               </p>
             </div>

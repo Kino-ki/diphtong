@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { LanguageContextProvider } from "./contexts/LangContext";
+import MobileNav from "@/components/MobileNav";
 
 export const metadata: Metadata = {
   title: "Diphtong Web Agency | Agence Web Diphtong",
@@ -23,6 +24,7 @@ export default function RootLayout({
         <LanguageContextProvider>
           <header className="">
             <NavBar />
+            <MobileNav />
           </header>
           <main className="text-wlite z-10 ">{children}</main>
           <footer className="relative z-50">

@@ -65,7 +65,7 @@ export default function NavBar() {
   return (
     <div
       key={pathname}
-      className={`fixed top-0 z-40 w-full  text-wlite pl-16 pr-3 text-[1.1rem]/5 font-menlor md:flex hidden ${
+      className={`fixed top-0 z-40 w-full  text-wlite pl-16 pr-3 text-[1.1rem]/5 font-menlor lg:flex hidden ${
         pathname.includes("/home") && scrollY < 200
           ? ""
           : "mix-blend-difference"
@@ -99,9 +99,8 @@ export default function NavBar() {
 
         <ul className=" text-wlite  flex ">
           <li>
-            <Link href="/contact">CONTACT US</Link>
+            <Link href="/contact">CONTACT</Link>
           </li>
-          <div className="flex flex-col justify-start"></div>
         </ul>
       </div>
       <div className="flex flex-col justify-center pl-8">

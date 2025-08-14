@@ -24,12 +24,16 @@ export default function Contact() {
               {" "}
               {englishcontact.PageTitle}{" "}
             </h1>
-            <p className="md:font-figtree font-urbanistl md:uppercase md:w-2/3 text-xl md:text-3xl py-8 md:py-20 tracking-wider">
-              {englishcontact.pageText}
-            </p>
+            <h2 className="md:font-figtree font-urbanistl md:uppercase md:w-2/3 text-xl md:text-3xl py-8 md:py-20 tracking-wider">
+              {englishcontact.h2}
+            </h2>
           </div>
-          <div className="flex flex-col md:pt-40 pt-12 md:w-3/5 md:items-end overflow-y-auto ">
+
+          <div className="flex flex-col md:pt-10 pt-12 md:w-3/5 md:items-end overflow-y-auto ">
             <div className=" lg:w-full h-[80svh] md:h-[100svh]  mx-auto md:px-10 ">
+              <h3 className="md:font-figtree font-urbanistl md:uppercase text-lg md:text-xl py-8 md:py-20 md:pb-20 tracking-wider">
+                {englishcontact.h3}
+              </h3>
               <ContactForm lang={language} />
             </div>
             {/* ----------------------------contact info------------------- */}
@@ -78,11 +82,13 @@ export default function Contact() {
           </h1>
           <div className="flex justify-center pt-10">
             <p className="font-urbanistr uppercase text-xl tracking-wider">
-              {frenchcontact.pageText}
+              {frenchcontact.h2}
             </p>
           </div>
 
           <div className=" my-20 lg:px-60 h-[100vh]">
+            <h3>{englishcontact.h3}</h3>
+
             <ContactForm lang={language} />
           </div>
           <div className="flex lg:px-40 text-white">

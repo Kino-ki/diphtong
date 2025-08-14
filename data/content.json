@@ -103,7 +103,8 @@
 
     "contactPage": {
       "PageTitle": "Contact",
-      "pageText": "ask us your question or book a meeting with us",
+      "h2": "we would love tyo hear about your projezcts",
+      "h3": "ask us your question or book a meeting with us",
       "form": {
         "name": "name",
         "email": "email (required)",
@@ -278,7 +279,8 @@
     },
     "contactPage": {
       "PageTitle": "Contact",
-      "pageText": "contactez nous icitte",
+      "h2": "we would love tyo hear about your projezcts",
+      "h3": "ask us your question or book a meeting with us",
       "form": {
         "name": "nom",
         "email": "courriel (champ obligatoire)",

@@ -18,7 +18,7 @@ export function ContactButton({
     <div>
       <button
         type="button"
-        className={`bg-white p-3 rounded-md ${height} ${width}`}
+        className={`bg-wlite hover:bg-white transition-all ease-in-out duration-200 p-3 rounded-md ${height} ${width}`}
       >
         <Link href="/contact">
           <p className={`text-black  ${textsize}`}>hit us up</p>

@@ -49,9 +49,9 @@ export default function HeroSection() {
   return (
     <div
       ref={firstTextRef}
-      className="h-[100vh] bg-herogif bg-auto md:bg-contain relative "
+      className="h-[100vh] bg-mobileherogif bg-left  md:bg-herogif  md:bg-contain relative "
     >
-      <div className="h-full w-full  bg-black/30 fixed ">
+      <div className="h-full w-full backdrop-blur-[1px] bg-black/30 fixed ">
         <div className="h-full w-full md:pt-[22rem] md:pb-40 flex justify-center">
           <div className=" flex flex-col justify-evenly md:justify-between w-[95%] font-figtree">
             <div className="md:hidden flex justify-center">

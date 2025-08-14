@@ -14,6 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function NavBar() {
   const logoRef = useRef<HTMLImageElement | null>(null);
   const [scrollY, setScrollY] = useState(0);
+
   const pathname = usePathname();
 
   // ----------------------scroll monitor function
@@ -66,7 +67,7 @@ export default function NavBar() {
     <div
       key={pathname}
       className={`fixed top-0 z-40 w-full  text-wlite pl-16 pr-3 text-[1.1rem]/5 font-menlor lg:flex hidden ${
-        pathname.includes("/home") && scrollY < 200
+        pathname.includes("/home") && scrollY < 400
           ? ""
           : "mix-blend-difference"
       }  tracking-[0.25rem]`}

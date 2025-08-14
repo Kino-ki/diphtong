@@ -14,18 +14,30 @@ export default function Services() {
   const [hoverIndex, setHoverIndex] = useState<string | null>(null);
   const serviceRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
-  const handleMouseEnter = (id: string) => {
-    setHoverIndex(id);
-  };
-
-  const handleMouseLeave = () => {
-    setHoverIndex(null);
-  };
-
   const { EN, FR } = content;
 
   const englishServices = EN.servicesPage;
   const frenchServices = FR.servicesPage;
+
+  const handleMouseEnter = (id: string) => {
+    setHoverIndex(id);
+  };
+
+  const handleMouseLeave = (id: string) => {
+    console.log("id:", id, "num", Number(id));
+
+    if (Number(id) !== englishServices.length) {
+      setHoverIndex(null);
+    }
+  };
+
+  const handleTouch = (id: string) => {
+    if (!hoverIndex) {
+      setHoverIndex(id);
+    } else {
+      setHoverIndex(null);
+    }
+  };
 
   useEffect(() => {
     if (!hoverIndex) return;
@@ -53,28 +65,36 @@ export default function Services() {
   }, [hoverIndex]);
 
   return (
-    <div className="flex flex-col justify-start pt-[6%] px-[15%] h-auto pb-40">
+    <div className="flex flex-col justify-start pt-[6%] px-5 md:px-[15%] h-auto pb-40">
       {language === "EN" ? (
         <div className=" ">
           {englishServices?.map((service, index) => (
             <div
               key={index}
               onMouseEnter={() => handleMouseEnter(service.id)}
-              onTou
-              onMouseLeave={handleMouseLeave}
-              className="flex flex-col py-10 border-b px-5 border-wlite "
+              onMouseLeave={() => handleMouseLeave(service.id)}
+              className="flex flex-col  py-6 md:py-10 border-b px-5 border-wlite "
             >
-              <div className="flex gap-10">
-                <h2 className="text-white font-menlor font-semibold text-4xl uppercase py-3">
+              <div
+                onTouchStart={() => handleTouch(service.id)}
+                className="flex md:gap-10 justify-between md:justify-start h-fit "
+              >
+                <h2 className="text-white font-menlor font-semibold text-xl md:text-4xl uppercase py-3 ">
                   {service.serviceName}
                 </h2>
-                <Image src={arrowimg} width={15} height={15} alt="arrow" />
+                <div className=" w-3 md:w-10 flex flex-col justify-center">
+                  <Image
+                    src={arrowimg}
+                    alt="arrow"
+                    className="object-contain"
+                  />
+                </div>
               </div>
               <div
                 ref={(el) => {
                   serviceRefs.current[service.id] = el;
                 }}
-                className="flex gap-10 items-start overflow-hidden  h-0"
+                className="flex md:gap-10 items-start overflow-hidden  h-0"
               >
                 <div className=" ">
                   <Image
@@ -85,21 +105,25 @@ export default function Services() {
                     className="h-fit"
                   />
                 </div>
-                <div className="flex flex-col gap-12 pt-5">
+                <div className="flex flex-col gap-8 md:gap-12 pt-5">
                   <p
                     id={service.serviceName}
-                    className=" font-urbanistr w-[70%] px-5 text-xl "
+                    className=" font-urbanistr md:w-[70%] px-2 md:px-5 md:text-xl "
                   >
                     {service.firstText}
                   </p>
-                  <h3 className="font-menlor font-semibold text-white text-xl">
+                  <h3 className="font-menlor font-semibold text-white text-lg md:text-xl">
                     {service.subservice}
                   </h3>
-                  <div className="flex gap-10 text-sm px-2">
-                    <p className="w-[15%]">{service.secondText}</p>
-                    <p className="w-[15%]">{service.thirdText}</p>
-                    <div className="pl-40">
-                      <ContactButton />
+                  <div className="flex flex-col gap-5 md:flex-row md:gap-10 text-sm px-2">
+                    <p className="md:w-[15%]">{service.secondText}</p>
+                    <p className="md:w-[15%]">{service.thirdText}</p>
+                    <div className="md:pl-40 flex flex-row justify-end py-5 md:flex-col md:justify-center">
+                      <ContactButton
+                        height="md:h-16"
+                        width="md:w-36 w-32"
+                        textsize="md:text-lg text-md"
+                      />
                     </div>
                   </div>
                 </div>
@@ -113,7 +137,7 @@ export default function Services() {
             <div
               key={index}
               onMouseEnter={() => handleMouseEnter(service.id)}
-              onMouseLeave={handleMouseLeave}
+              onMouseLeave={handleMouseLeave(service.id)}
               className="flex flex-col py-10 border-b px-5 border-wlite"
             >
               <div className="flex gap-10">

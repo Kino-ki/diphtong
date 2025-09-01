@@ -12,9 +12,9 @@ export default function SectionServices() {
   return (
     <div>
       {language === "EN" ? (
-        <div className="flex h-[200svh] font-urbanistr border-b-8 border-wlite ">
+        <div className="flex md:min-h-[220svh] font-urbanistr border-b border-wlite ">
           {/* ----------------------ARTISTS ---------------------- */}
-          <div className="bg-wlite w-1/2 h-full text-diphblack py-[60svh] px-10">
+          <div className="bg-wlite w-1/2  text-diphblack py-[60svh] px-10">
             <h3 className="text-[6rem]  ">
               {" "}
               {englishhome.services.artists.h3}{" "}

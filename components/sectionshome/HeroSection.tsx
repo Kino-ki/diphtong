@@ -8,7 +8,7 @@ import data from "@/data/content.json";
 import { useLanguage } from "@/app/contexts/LangContext";
 import Image from "next/image";
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function HeroSection() {
   const { language } = useLanguage();
@@ -17,7 +17,30 @@ export default function HeroSection() {
   const englishhome = EN.homepage;
   const frenchhome = FR.homepage;
 
-  const firstTextRef = useRef<HTMLDivElement | null>(null);
+  const heroTextRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: heroTextRef.current,
+        start: "bottom 70%",
+        end: "bottom top",
+        markers: true,
+        scrub: 0.2,
+      },
+    });
+    tl.fromTo(
+      heroTextRef.current,
+      {
+        opacity: 1,
+        ease: "power2.inOut",
+      },
+      {
+        opacity: 0,
+        ease: "power2.inOut",
+      }
+    );
+  }, []);
   // useEffect(() => {
   //   const tl = gsap.timeline({
   //     scrollTrigger: {
@@ -48,8 +71,7 @@ export default function HeroSection() {
   // }, []);
   return (
     <div
-      id="smooth-content"
-      // ref={firstTextRef}
+      ref={heroTextRef}
       className="h-[100vh] bg-mobileherogif bg-left  md:bg-herogif  md:bg-contain relative "
     >
       <div className="h-full w-full backdrop-blur-[1px] bg-black/30  ">

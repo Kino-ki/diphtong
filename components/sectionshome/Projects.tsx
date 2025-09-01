@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
-export default function ProjServ() {
+export default function Projects() {
   const { language } = useLanguage();
   const { EN } = data;
   const englishdata = EN.projservSection;

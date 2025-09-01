@@ -65,6 +65,7 @@ export default function NavBar() {
 
   return (
     <div
+      id="navbar"
       key={pathname}
       className={`fixed top-0 z-40 w-full  text-wlite pl-16 pr-3 text-[1.1rem]/5 font-menlor lg:flex hidden ${
         pathname.includes("/home") && scrollY < 400

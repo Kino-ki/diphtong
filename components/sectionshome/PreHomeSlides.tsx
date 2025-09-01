@@ -194,13 +194,13 @@ export default function PreHomeSlides() {
             </p>
             <div
               ref={sectionsNameRef}
-              className="parallax   flex flex-col text-base md:text-xl mx-5 md:mx-0 pt-10 md:pt-0  text-[#323232] font-figtree md:w-1/3  "
+              className="parallax bg-diphblack  flex flex-col text-base md:text-xl mx-5 md:mx-0 pt-10 md:pt-0  text-wlite font-figtree md:w-[40%]  "
             >
               <p className="md:py-10 py-8 md:pl-5 text-center md:text-start ">
                 {" "}
                 {englishslides.firstSlide}
               </p>
-              <p className="w-full md:pl-5 border-b border-t border-black md:py-10 py-8 text-center md:text-start ">
+              <p className="w-full md:pl-5 border-b border-t border-wlite md:py-10 py-8 text-center md:text-start ">
                 {englishslides.secondSlide}
               </p>
               <p className="md:py-10 py-8 md:pl-5 text-center md:text-start ">

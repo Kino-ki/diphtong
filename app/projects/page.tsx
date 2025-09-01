@@ -28,9 +28,9 @@ export default function ProjectsPage() {
   }, []);
 
   return (
-    <div id="smooth-wrapper">
+    <div>
       {language === "EN" ? (
-        <div id="smooth-content" className="flex flex-col">
+        <div className="flex flex-col">
           {/* ------------------------esther ----------------------------------- */}
           <section
             id="portfolio"

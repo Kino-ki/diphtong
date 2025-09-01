@@ -49,7 +49,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
   return (
     <div className="w-full h-full font-urbanistr text-start text-xl">
       <form
-        className="flex flex-col gap-[4vh] h-full"
+        className="flex flex-col gap-[4vh] h-full "
         onSubmit={handleSubmit(onSubmit)}
         action=""
       >
@@ -75,7 +75,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
               id="name"
               name="name"
               type="text"
-              className="bg-black h-1/3 w-full focus:outline-none autofill:bg-transparent flex flex-col justify-end  border-gray-400 border-b"
+              className="bg-diphblack text-white h-1/3 w-full focus:outline-none autofill:bg-transparent flex flex-col justify-end  border-gray-400 border-b"
             />
             <div className="h-5">
               {errors?.name && (
@@ -104,7 +104,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
               id="email"
               name="email"
               type="email"
-              className="bg-black focus:outline-none  h-1/3 w-full border-gray-400 border-b"
+              className="bg-diphblack focus:outline-none text-white  h-1/3 w-full border-gray-400 border-b"
             />
             <div className="h-5">
               {errors?.email && (
@@ -129,7 +129,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
             id="website"
             name="website"
             type="text"
-            className="bg-black focus:outline-none h-1/3"
+            className="bg-diphblack text-white focus:outline-none h-1/3"
           />
           {errors?.website && (
             <p className="text-red-600 text-sm">{errors?.website?.message}</p>
@@ -156,7 +156,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
             })}
             id="content"
             name="content"
-            className="bg-black focus:outline-none h-2/3  border-gray-400 border-b"
+            className="bg-diphblack text-white focus:outline-none h-2/3  border-gray-400 border-b"
           />
           <div className="h-5">
             {errors?.content && (
@@ -172,7 +172,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
           )}
           <button
             type="submit"
-            className="bg-wlite text-black p-5 font-akira text-2xl rounded-md hover:bg-white transition-colors ease-in-out duration-400 lg:w-52"
+            className="bg-wlite text-diphblack p-5 font-akira text-2xl rounded-md hover:bg-white transition-colors ease-in-out duration-400 lg:w-52"
           >
             {isSubmitting ? (
               <div role="status" className="">

@@ -59,7 +59,12 @@
         },
         "business": {
           "h3": "For Small Businesses",
-          "content": [{ "bold": "" }, "", { "bold": "  " }],
+          "content": [
+            "We help small businesses",
+            { "bold": "stand out in competitive markets " },
+            "with websites that combine",
+            { "bold": " design, strategy, and performance." }
+          ],
           "delivery": "What we deliver for businesses:",
           "deliveryarray": [
             "Conversion-driven website design that turns visitors into clients",
@@ -74,7 +79,10 @@
           ]
         }
       },
-      "reachoutcontent": "Get a free quote or schedulte a meeting with us"
+      "reachoutsection": {
+        "h2": "Ready to Elevate Your Online Presence?",
+        "content": "Whether you’re an artist who wants a portfolio that shines or a small business looking to grow, we’re here to help. Our expertise in design, development, and SEO ensures your website isn’t just beautiful—it works for you."
+      }
     },
     "projservSection": {
       "workstitle": "featured works",
@@ -84,9 +92,7 @@
           "title": "Béances Editions",
           "serv": ["full stack develoment", "Web design"],
           "imageSrc": "/images/projserv/beancesthree.svg",
-          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
-          "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
-          "author": "the author",
+
           "link": "/projects#beances"
         },
         {
@@ -94,9 +100,7 @@
           "title": "Esther Lhuillery Video Editor",
           "serv": ["full stack develoment", "Web design"],
           "imageSrc": "/images/projserv/infraredContact.svg",
-          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
-          "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
-          "author": "the author",
+
           "link": "/projects#portfolio"
         },
         {
@@ -104,9 +108,7 @@
           "title": "Plein la tête studio éclaté",
           "serv": ["collavorative project", "Font-End develoment"],
           "imageSrc": "/images/projserv/plt.svg",
-          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
-          "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
-          "author": "the author",
+
           "link": "/projects#collaboratives"
         },
         {
@@ -114,9 +116,7 @@
           "title": "Analogizing",
           "serv": ["collavorative project", "Font-End develoment"],
           "imageSrc": "/images/projserv/analogizing.svg",
-          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
-          "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
-          "author": "the author",
+
           "link": "/projects#collaboratives"
         }
       ]

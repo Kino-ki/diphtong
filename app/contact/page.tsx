@@ -29,16 +29,16 @@ export default function Contact() {
             </h2>
           </div>
 
-          <div className="flex flex-col md:pt-10 pt-12 md:w-3/5 md:items-end overflow-y-auto ">
+          <div className="flex flex-col md:pt-10 md:w-3/5 md:items-end overflow-y-auto ">
             <div className=" lg:w-full h-[80svh] md:h-[100svh]  mx-auto md:px-10 ">
-              <h3 className="md:font-figtree font-urbanistl md:uppercase text-lg md:text-xl py-8 md:py-20 md:pb-20 tracking-wider">
+              <h3 className="md:font-figtree font-urbanistl  md:uppercase text-lg md:text-xl pb-10 w-4/5  md:py-20  tracking-wider">
                 {englishcontact.h3}
               </h3>
               <ContactForm lang={language} />
             </div>
             {/* ----------------------------contact info------------------- */}
-            <div className="flex md:flex-row flex-col text-center md:text-start gap-10 mx-auto text-white ">
-              <div className="flex flex-col justify-between  gap-10 md:w-1/2 ">
+            <div className="flex md:flex-row flex-col text-center md:text-start gap-10 mx-auto pt-20 text-white ">
+              <div className="flex flex-col justify-between  gap-5 md:w-1/2 ">
                 <h2 className="font font-menlob text-xl md:text-3xl">
                   {englishcontact.contactInfo}
                 </h2>
@@ -48,7 +48,7 @@ export default function Contact() {
                 </p>
               </div>
               {/* --------------------------LINKS------------------------------------- */}
-              <div className="flex flex-col  md:w-1/2 gap-10 my-auto ">
+              <div className="flex flex-col  md:w-1/2 gap-5 my-auto ">
                 <div className=" flex md:justify-end  justify-center">
                   <Link
                     className="font-akira text-2xl md:text-4xl"

@@ -3,21 +3,26 @@
 import { useEffect, useRef } from "react";
 import diphlogo from "@/public/images/bgdragon.svg";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import ScrollSmoother from "gsap/dist/ScrollSmoother";
 import Image from "next/image";
-import HomeFirstText from "@/components/homecomponents/HomeFirstText";
-import HomeHorizontalScroll from "@/components/homecomponents/HomeHorizontalScroll";
-import HeroSection from "@/components/homecomponents/HeroSection";
-import ProjServ from "@/components/homecomponents/ProjServ";
-import ServicesSection from "@/components/homecomponents/ServicesSections";
+import HeroSection from "@/components/sectionshome/HeroSection";
+import ProjServ from "@/components/sectionshome/ProjServ";
 import ReachOutSection from "@/components/ReachOutSection";
-gsap.registerPlugin(ScrollTrigger);
+import SectionCta from "@/components/sectionshome/SectionCta";
+import SectionWhyUs from "@/components/sectionshome/SectionWhyUs";
+import PreHomeSlides from "@/components/sectionshome/PreHomeSlides";
+import HomeHorizontalScroll from "@/components/sectionshome/HomeHorizontalScroll";
+import SectionServices from "@/components/sectionshome/SectionServices";
+
+gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
 export default function HomePage() {
   const bgImageRef = useRef<HTMLDivElement | null>(null);
   const bgRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    ScrollSmoother.create({ smooth: 1, effects: true });
     gsap.to(bgImageRef.current, {
       rotation: 360,
       ease: "power1.in",
@@ -45,30 +50,28 @@ export default function HomePage() {
     return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
   }, []);
   return (
-    <div className="bg-black relative -z-0 ">
-      <div
-        ref={bgImageRef}
-        className=" fixed bottom-5 left-5 opacity-[0.5] z-50 mix-blend-difference"
-      >
-        <Image src={diphlogo} width={60} alt="logo" />
-      </div>
-      <div className="-z-0">
-        <HeroSection />
-      </div>
-      <div className="-z-0 relative">
-        <HomeFirstText />
-      </div>
-      <div className="z-10 hidden md:flex md:flex-col relative ">
-        <HomeHorizontalScroll />
-      </div>
-      <div className="z-30 relative ">
-        <ProjServ />
-      </div>
-      <div className="z-30 relative ">
-        <ServicesSection />
-      </div>
-      <div className="z-30 relative md:pb-40">
-        <ReachOutSection />
+    <div id="smoot-wrapper">
+      <div id="smooth-content" className="bg-diphblack relative -z-0 ">
+        <div
+          ref={bgImageRef}
+          className=" fixed bottom-5 left-5 opacity-[0.5] z-50 mix-blend-difference"
+        >
+          <Image src={diphlogo} width={60} alt="logo" />
+        </div>
+        <div className="">
+          <HeroSection />
+          <SectionCta />
+          <SectionWhyUs />
+          <div className="mt-5 ">
+            <PreHomeSlides />
+          </div>
+          <HomeHorizontalScroll />
+          <ProjServ />
+          <SectionServices />
+        </div>
+        <div className=" md:pb-40">
+          <ReachOutSection />
+        </div>
       </div>
     </div>
   );

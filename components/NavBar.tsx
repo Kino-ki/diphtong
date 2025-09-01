@@ -85,7 +85,7 @@ export default function NavBar() {
             <Link href="/projects">OUR PROJECTS</Link>
           </li>
         </ul>
-        <div className=" top-2">
+        <div id="" className=" top-2">
           <Link href="/">
             <Image
               ref={logoRef}

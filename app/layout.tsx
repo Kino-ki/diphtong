@@ -27,7 +27,7 @@ export default function RootLayout({
             <MobileNav />
           </header>
           <main className="text-wlite z-10 ">{children}</main>
-          <footer className="relative z-50">
+          <footer className="">
             <Footer />
           </footer>
         </LanguageContextProvider>

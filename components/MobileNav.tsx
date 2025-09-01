@@ -9,8 +9,19 @@ import { LangButton } from "./Buttons";
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [scrollY, setScrollY] = useState(0);
 
   const pathname = usePathname();
+
+  useEffect(() => {
+    // if (pathname !== "/home") return;
+
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [pathname]);
 
   useEffect(() => {
     setIsOpen(false);
@@ -25,9 +36,14 @@ export default function MobileNav() {
 
   return (
     <div
-      className={`fixed lg:hidden  top-0 left-0 w-full z-50  ${
-        !isOpen ? " mix-blend-difference" : "mix-blend-normal"
-      } `}
+      className={`fixed lg:hidden  top-0 left-0 w-full z-50    ${
+        !isOpen
+          ? pathname.includes("/home") && scrollY < 200
+            ? "mix-blend-normal"
+            : "mix-blend-difference"
+          : ""
+      }
+  `}
     >
       {!isOpen && (
         <nav
@@ -48,7 +64,7 @@ export default function MobileNav() {
         </nav>
       )}
       {isOpen && (
-        <div className="bg-[#E8E5E5] bg-bgdragonmobile bg-contain bg-right bg-no-repeat h-screen w-screen relative overflow-y-auto ">
+        <div className="bg-[#E8E5E5] z-50 bg-bgdragonmobile bg-contain bg-right bg-no-repeat h-screen w-screen relative overflow-y-auto ">
           <button
             onClick={() => setIsOpen(false)}
             type="button"
@@ -58,7 +74,7 @@ export default function MobileNav() {
           </button>
           <div className="pt-12 flex flex-col px-2 ">
             <h1 className="font-akira  text-black text-[3.5rem] text-center">
-              diphtong
+              <Link href="/">diphtong</Link>
             </h1>
             <h2 className="uppercase font-menlob text-[2rem] text-end ">
               web agency

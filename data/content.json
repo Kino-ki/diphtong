@@ -2,9 +2,78 @@
   "EN": {
     "homepage": {
       "heroh2": "creative web agency",
-      "heroh3": "We Craft Custom Solutions For Your Business.",
-      "firsttext": "Transform Your Online Presence\n& Grow Your Business",
-      "secondtext": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci, non euismod elit. duis eget sollicitudin erat. pellentesque in nisi ac lacus pretium efficitur.",
+      "heroh3": "Elegant, High-Performance Websites for Artists and Small Businesses",
+      "firsttext": "We craft websites that blend creativity, performance, and strategy. Whether you’re an artist seeking a stunning online portfolio or a small business owner wanting to grow your brand, we design and develop websites that captivate your audience, load at lightning speed, and deliver measurable results.",
+      "ctaright": [
+        "Built with ",
+        { "bold": " modern design " },
+        "seamless navigation, and future-proof technology."
+      ],
+      "ctaleft": [
+        { "bold": " Tailored for artists, creators, and entrepreneur " },
+        "who need more than just a website, they need a digital presence that sells",
+        { "bold": " their story " }
+      ],
+      "whyus": {
+        "h2": "Why Choose Us for Your Website?",
+        "content": "Your website is more than a digital business card—it’s the foundation of your brand identity. We understand the unique needs of artists showcasing portfolios and small businesses building trust with customers.",
+        "h4": "We craft each site with precision and artistry, making sure your online presence feels authentic and unforgettable.",
+        "h3": "We focus on three pillars:",
+        "pillars": [
+          {
+            "title": "Design Excellence",
+            "content": "Websites that look elegant, clean, and timeless."
+          },
+          {
+            "title": " Business Growth",
+            "content": "SEO-friendly, scalable, and aligned with your goals."
+          },
+          {
+            "title": " Smooth User Experience",
+            "content": " Fast-loading, mobile-optimized, and intuitive to navigate."
+          }
+        ]
+      },
+      "services": {
+        "h2": "Our Services",
+        "artists": {
+          "h3": "For Artists",
+          "content": [
+            { "bold": " Your portfolio is your story " },
+            "it deserves to be seen. We help artists of all discipline painters, photographers, musicians, dancers, and writers showcase their work",
+            { "bold": " with elegance and clarity. " }
+          ],
+          "delivery": "What we deliver for artists:",
+          "deliveryarray": [
+            "Custom Portfolio Websites with gallery features",
+            "Minimalist, design-oriented layouts that put your work first",
+            "Mobile-friendly to reach audiences everywhere",
+            "SEO optimization so your art is discoverable",
+            "Easy content management to update your portfolio anytime"
+          ],
+          "h4": [
+            "Your website becomes",
+            { "bold": "   a stage for your art " },
+            "leaving visitors with a lasting impression."
+          ]
+        },
+        "business": {
+          "h3": "For Small Businesses",
+          "content": [{ "bold": "" }, "", { "bold": "  " }],
+          "delivery": "What we deliver for businesses:",
+          "deliveryarray": [
+            "Conversion-driven website design that turns visitors into clients",
+            "Professional branding integration for credibility and trust",
+            "Fast, secure, and SEO-optimized websites for higher rankings",
+            "Scalable platforms that grow as your business grows",
+            "Custom features such as blogs, booking systems, or e-commerce"
+          ],
+          "h4": [
+            "Whether you’re a café, a local boutique, a wellness studio, or a service provider, we’ll craft a site that ",
+            { "bold": " reflects your values and drives measurable growth" }
+          ]
+        }
+      },
       "reachoutcontent": "Get a free quote or schedulte a meeting with us"
     },
     "projservSection": {
@@ -50,38 +119,14 @@
           "author": "the author",
           "link": "/projects#collaboratives"
         }
-      ],
-      "servicestitle": "our services",
-      "servicesList": [
-        {
-          "id": 0,
-          "serviceName": "web devolopment",
-          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum"
-        },
-        {
-          "id": 1,
-          "serviceName": "web design",
-
-          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum"
-        },
-        {
-          "id": 2,
-          "serviceName": "responsive apps",
-          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum"
-        },
-        {
-          "id": 3,
-          "serviceName": "maintenance",
-          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum"
-        }
       ]
     },
     "horizontalScroll": {
       "intro": {
-        "h1": "how we proceed",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero neque, odit et rerum fuga debitis inventore itaque cum veniam eligendi temporibus officia perferendis, accusamus nam, optio repudiandae eum sequi molestiae."
+        "h1": "From Idea to Launch: Our Process",
+        "text": "We keep the process smooth, transparent, and stress-free:"
       },
-      "firstSlide": "Understanding Your Needs",
+      "firstSlide": " Discovery: Understanding Your Needs",
       "secondSlide": "Creating a Website Your Users Will Love",
       "thirdSlide": "Launching & Helping Your Business Grow"
     },

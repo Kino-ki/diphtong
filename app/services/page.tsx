@@ -17,7 +17,7 @@ export default function Services() {
   const { EN, FR } = content;
 
   const englishServices = EN.servicesPage;
-  const frenchServices = FR.servicesPage;
+  // const frenchServices = FR.servicesPage;
 
   const handleMouseEnter = (id: string) => {
     setHoverIndex(id);
@@ -68,6 +68,9 @@ export default function Services() {
     <div className="flex flex-col justify-start pt-[6%] px-5 md:px-[15%] h-auto pb-40">
       {language === "EN" ? (
         <div className=" ">
+          <div className="flex lg:hidden  pt-14 pb-10   ">
+            <h1 className="font-menlob uppercase text-[12vw]">Our Services</h1>
+          </div>
           {englishServices?.map((service, index) => (
             <div
               key={index}
@@ -79,7 +82,7 @@ export default function Services() {
                 onTouchStart={() => handleTouch(service.id)}
                 className="flex md:gap-10 justify-between md:justify-start h-fit "
               >
-                <h2 className="text-white font-menlor font-semibold text-xl md:text-4xl uppercase py-3 ">
+                <h2 className="text-wlite font-menlor font-semibold text-xl md:text-4xl uppercase py-3 ">
                   {service.serviceName}
                 </h2>
                 <div className=" w-3 md:w-10 flex flex-col justify-center">
@@ -133,7 +136,7 @@ export default function Services() {
         </div>
       ) : (
         <div>
-          {frenchServices?.map((service, index) => (
+          {/* {frenchServices?.map((service, index) => (
             <div
               key={index}
               onMouseEnter={() => handleMouseEnter(service.id)}
@@ -178,7 +181,7 @@ export default function Services() {
                 </div>
               </div>
             </div>
-          ))}
+          ))} */}
         </div>
       )}
       <div className="flex justify-end w-full">

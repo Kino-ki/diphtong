@@ -19,6 +19,7 @@ export default {
       },
       colors: {
         wlite: "#c3c3c3",
+        diphblack: "#191919",
         graytext: "#898787",
         rouge: "#4f0000",
       },

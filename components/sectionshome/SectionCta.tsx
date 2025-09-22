@@ -22,9 +22,9 @@ export default function SectionCta() {
           </div>
           {/* ---------------------secondtext on white bg */}
           <div className="flex justify-between mr-[0.2rem] h-full ">
-            <div className="flex flex-col w-1/3">
+            <div data-speed="" className="flex flex-col w-1/3">
               <div className="h-[30svh]  "></div>
-              <div className="bg-wlite h-[100svh] w-full flex flex-col justify-center">
+              <div className="bg-wlite  h-[100svh] w-full flex flex-col justify-center">
                 <p className="text-diphblack px-[2rem] text-3xl text-start leading-[4.6rem] tracking-wider ">
                   {englishhome.ctaleft.map((part, i) =>
                     typeof part === "string" ? part : <b key={i}>{part.bold}</b>

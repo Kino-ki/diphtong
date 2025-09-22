@@ -10,8 +10,9 @@ import beancestitle from "@/public/images/projectsPage/beancesh1.svg";
 import gsap from "gsap";
 import { useEffect } from "react";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-gsap.registerPlugin(ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function ProjectsPage() {
   const { language } = useLanguage();
@@ -21,6 +22,8 @@ export default function ProjectsPage() {
 
   useEffect(() => {
     ScrollSmoother.create({
+      wrapper: "#smooth-wrapper",
+      content: "#smooth-content",
       smooth: 3,
       effects: true,
       smoothTouch: 0.1,

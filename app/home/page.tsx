@@ -1,11 +1,9 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import diphlogo from "@/public/images/bgdragon.svg";
+// import diphlogo from "@/public/images/bgdragon.svg";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import ScrollSmoother from "gsap/dist/ScrollSmoother";
-import Image from "next/image";
+// import Image from "next/image";
 import HeroSection from "@/components/sectionshome/HeroSection";
 import ReachOutSection from "@/components/ReachOutSection";
 import SectionCta from "@/components/sectionshome/SectionCta";
@@ -14,41 +12,23 @@ import PreHomeSlides from "@/components/sectionshome/PreHomeSlides";
 import HomeHorizontalScroll from "@/components/sectionshome/HomeHorizontalScroll";
 import SectionServices from "@/components/sectionshome/SectionServices";
 import Projects from "@/components/sectionshome/Projects";
+import { useEffect } from "react";
+import ScrollSmoother from "gsap/dist/ScrollSmoother";
 
-gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function HomePage() {
-  const bgImageRef = useRef<HTMLDivElement | null>(null);
-  const bgRef = useRef<HTMLDivElement | null>(null);
+  // const bgImageRef = useRef<HTMLDivElement | null>(null);
+  // const bgRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const smoother = ScrollSmoother.create({ smooth: 1.5, effects: true });
-    smoother.effects("imgdragon", { speed: 1, lag: 0 });
-    gsap.to(bgImageRef.current, {
-      rotation: 360,
-      ease: "power1.in",
-      scrollTrigger: {
-        trigger: document.documentElement,
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 5,
-      },
+    ScrollSmoother.create({
+      wrapper: "#smooth-wrapper",
+      content: "#smooth-content",
+      smooth: 1,
+      effects: true,
+      smoothTouch: 0.1,
     });
-    gsap.to(bgRef.current, {
-      backgroundColor: "#c3c3c3",
-      duration: 10,
-      ease: "power1.out",
-      scrollTrigger: {
-        trigger: bgRef.current,
-        // markers: true,
-        // pin: true,
-        start: "top 10%",
-        end: "bottom 60%",
-        scrub: -10,
-      },
-    });
-
-    return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
   }, []);
   return (
     <div>

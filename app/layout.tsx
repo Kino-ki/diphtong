@@ -5,8 +5,7 @@ import Footer from "@/components/Footer";
 
 import { LanguageContextProvider } from "./contexts/LangContext";
 import MobileNav from "@/components/MobileNav";
-import { gsap } from "gsap";
-import ScrollSmoother from "gsap/dist/ScrollSmoother";
+import NewFooter from "@/components/NewFooter";
 
 export const metadata: Metadata = {
   title: "Diphtong Web Agency | Agence Web Diphtong",
@@ -16,8 +15,6 @@ export const metadata: Metadata = {
   },
 };
 
-gsap.registerPlugin(ScrollSmoother);
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,17 +22,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body id="smoot-wrapper" className="  bg-black">
+      <body className=" bg-black">
         <LanguageContextProvider>
-          <header className="">
-            <NavBar />
-            <MobileNav />
-          </header>
-          <div id="smooth-content">
-            <main className="text-wlite z-10 ">{children}</main>
-            <footer className="">
-              <Footer />
-            </footer>
+          <div id="smooth-wrapper">
+            <header className="">
+              <NavBar />
+              <MobileNav />
+            </header>
+            <div id="smooth-content">
+              <main className="text-wlite z-10 ">{children}</main>
+              <footer className="">
+                <NewFooter />
+                {/* <Footer /> */}
+              </footer>
+            </div>
           </div>
         </LanguageContextProvider>
       </body>

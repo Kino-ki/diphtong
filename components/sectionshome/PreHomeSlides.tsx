@@ -5,7 +5,7 @@ import data from "@/data/content.json";
 import { useLanguage } from "@/app/contexts/LangContext";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function PreHomeSlides() {
   const titleRef = useRef<HTMLDivElement | null>(null);
@@ -18,184 +18,70 @@ export default function PreHomeSlides() {
   const frenchslides = FR.horizontalScroll;
 
   useEffect(() => {
-    // -------------------------H1 ANIMATIOON--------------------------------------------------------
     if (!titleRef.current) return;
-    console.log("fuck it", ScrollSmoother.get()?.content());
 
-    const mm = gsap.matchMedia();
-
-    mm.add(
-      // -------------------DESKTOP-----------------------------------------
-
-      "(min-width: 1024px)",
-      () => {
-        ScrollTrigger.create({
-          trigger: titleRef.current?.parentElement?.parentElement,
-          start: "top 60%",
-          end: "center top",
-          pin: true,
-          pinSpacing: true, // keeps space so layout doesn't jump
-          // markers: true,
-        });
-
-        gsap.to(titleRef.current, {
-          xPercent: -35.5,
-          yPercent: 0,
-          scale: 0.25,
-          ease: "sine.inOut",
-          duration: 2,
-          scrollTrigger: {
-            trigger: titleRef.current,
-            start: "bottom 50%",
-            end: "bottom top",
-            scrub: 2,
-            // markers: true,
-          },
-        });
-      }
-    );
-
-    // ------------------Mobile=----------------------------------------
-
-    mm.add("(max-width: 1023px)", () => {
-      ScrollTrigger.create({
-        trigger: titleRef.current?.parentElement?.parentElement, // the bg-wlite div
-        start: "top 75%",
-        end: "top center",
-        pin: true,
-        pinSpacing: true, // keeps space so layout doesn't jump
-        // markers: true,
-      });
-      gsap.to(titleRef.current, {
-        xPercent: -10,
-        yPercent: 0,
-        scale: 0.7,
-        ease: "sine.inOut",
-        duration: 2,
-        scrollTrigger: {
-          trigger: titleRef.current,
-          start: "top 80%",
-          end: "top 50%",
-          scrub: 2,
-          //   markers: true,
-        },
-      });
-    });
-
-    // -------------------------CONTENT ANIMATIOON--------------------------------------------------------
-
-    const parallaxEffect = document.querySelector(".parallax");
-    const desktopparallaxEffect = document.querySelector(".mdparallax");
-    if (!sectionsNameRef) return;
-
-    if (sectionsNameRef) {
-      const mm2 = gsap.matchMedia();
-
-      // -------------------DESKTOP-----------------------------------------
-      mm2.add("(min-width: 1024px)", () => {
-        const parentdivtl = gsap.timeline({
-          scrollTrigger: {
-            trigger: desktopparallaxEffect,
-            start: "top center",
-            end: "top 20%",
-            // markers: true,
-            pin: false,
-            scrub: 1,
-          },
-        });
-        parentdivtl.fromTo(
-          desktopparallaxEffect,
+    if (titleRef.current) {
+      const mm = gsap.matchMedia();
+      mm.add("(min-width: 1024px)", () => {
+        gsap.fromTo(
+          titleRef.current,
+          { scale: 1, xPercent: 0.4 }, // starting size
           {
-            yPercent: 120,
-            duration: 3,
+            scale: 0.4, // target size while scrolling
+            transformOrigin: "left left",
             ease: "none",
-          },
-          {
-            yPercent: 30,
-            duration: 3,
-
-            ease: "none",
+            scrollTrigger: {
+              trigger: titleRef.current,
+              start: "top 70%",
+              end: "bottom 20%",
+              scrub: true, // smooth scrubbing
+              pin: true, // keep element pinned
+              // markers: true, // debug
+            },
           }
         );
-
-        const childivtl = gsap.timeline({
-          scrollTrigger: {
-            trigger: parallaxEffect,
-            start: "top bottom",
-            end: "bottom top",
-            // markers: true,
-            pin: false,
-            scrub: 1,
-          },
-        });
-
-        childivtl.fromTo(
-          parallaxEffect,
-          {
-            yPercent: 10,
-            duration: 3,
-            ease: "none",
-          },
-          {
-            yPercent: -60,
-            duration: 3,
-
-            ease: "none",
-          }
-        );
-      });
-
-      // ------------------Mobile=----------------------------------------
-
-      mm2.add("(max-width: 1023px)", () => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: desktopparallaxEffect,
-            start: "top bottom",
-            end: "top 20%  ",
-            // markers: true,
-            pin: false,
-            scrub: 1,
-          },
-        });
-        tl.fromTo(
-          desktopparallaxEffect,
-          {
-            yPercent: 30,
-            duration: 3,
-            ease: "none",
-          },
+        gsap.fromTo(
+          sectionsNameRef.current,
           {
             yPercent: 0,
-            duration: 3,
-
-            ease: "none",
+          },
+          {
+            yPercent: -30,
+            scrollTrigger: {
+              trigger: sectionsNameRef.current,
+              start: "top bottom",
+              end: "bottom 60%",
+              scrub: 1,
+              // markers: true,
+            },
           }
         );
       });
+
+      return () => mm.revert();
     }
   }, []);
 
   return (
-    <div className="bg-wlite md:h-[150svh]  h-[120svh] md:pb-20 ">
+    <div className="bg-wlite md:h-auto  h-[120svh] md:pb-20 ">
       {language === "EN" ? (
         <div className="flex flex-col justify-start w-full pb-40">
-          <div className="border-b md:h-1 md:border-none  border-black my-12 md:my-0  ">
-            <p
+          <div className="border-b md:border-none  border-black my-12 md:my-0  ">
+            <h3
               ref={titleRef}
               className="flex text-start  w-full text-[6vw]  font-urbanistr font-semibold md:font-medium tracking-wider md:-mb-0 -mb-5 text-black capitalize"
             >
               {englishslides.intro.h1}
-            </p>
+            </h3>
           </div>
-          <div className=" flex flex-col  md:flex-row md:justify-between md:py-5 mdparallax ">
-            <p className="text-[#7a7878]  text-lg md:text-3xl/relaxed text-center md:text-start tracking-wider font-urbanistb  md:w-[45%] px-2 md:px-10">
+          <div
+            ref={sectionsNameRef}
+            className=" flex flex-col  md:flex-row md:justify-between md:py-5 mdparallax "
+          >
+            <p className="text-[#7a7878]  text-lg md:text-3xl/relaxed text-center md:text-start tracking-wider font-urbanistb  md:w-[45%] px-2 md:px-5">
               {englishslides.intro.text}
             </p>
-            <div
-              ref={sectionsNameRef}
-              className="parallax bg-diphblack  flex flex-col text-base md:text-xl mx-5 md:mx-0 pt-10 md:pt-0  text-wlite font-figtree md:w-[40%]  "
-            >
+            <div className="parallax bg-diphblack  flex flex-col text-base md:text-xl mx-5 md:mx-0 pt-10 md:pt-0  text-wlite font-figtree md:w-[40%]  ">
               <p className="md:py-10 py-8 md:pl-5 text-center md:text-start ">
                 {" "}
                 {englishslides.firstSlide}

@@ -1,16 +1,49 @@
 "use client";
 import data from "@/data/content.json";
 import { useLanguage } from "@/app/contexts/LangContext";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+// import ScrollSmoother from "gsap/dist/ScrollSmoother";
 
+gsap.registerPlugin(ScrollTrigger);
 export default function SectionWhyUs() {
   const { language } = useLanguage();
   const { EN, FR } = data;
 
   const englishhome = EN.homepage;
   const frenchhome = FR.homepage;
+  const bgRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    bgRefs.current.forEach((el) => {
+      if (!el) return;
+      gsap.fromTo(
+        el,
+        {
+          backgroundColor: "#c3c3c3",
+        },
+        {
+          backgroundColor: "#191919",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 70%",
+            end: "top 60%",
+            scrub: 1,
+            // markers: true,
+          },
+        }
+      );
+    });
+
+    // Optional: cleanup on unmount
+    return () => {
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
+  }, []);
 
   return (
-    <div id="smooth-content">
+    <div id="">
       {language === "EN" ? (
         <div className="flex flex-col bg-wlite font-urbanistr">
           <div className="h-[95svh] flex flex-col lg:px-10 ">
@@ -42,7 +75,12 @@ export default function SectionWhyUs() {
                     i === 1 ? "justify-end" : "justify-start"
                   }`}
                 >
-                  <div className="flex flex-col justify-center gap-5 text-3xl text-start w-2/3 bg-diphblack h-[23svh] px-20 ">
+                  <div
+                    ref={(el) => {
+                      bgRefs.current[i] = el;
+                    }}
+                    className="flex flex-col justify-center gap-5 text-3xl text-start w-2/3 bg-diphblack  h-[23svh] px-20 "
+                  >
                     <p>
                       {" "}
                       <b> {pillar.title} </b>

@@ -24,9 +24,9 @@ export default function HeroSection() {
       scrollTrigger: {
         trigger: heroTextRef.current,
         start: "bottom 70%",
-        end: "bottom top",
-        markers: true,
-        scrub: 0.2,
+        end: "bottom 50%",
+        // markers: true,
+        scrub: 1,
       },
     });
     tl.fromTo(
@@ -41,34 +41,7 @@ export default function HeroSection() {
       }
     );
   }, []);
-  // useEffect(() => {
-  //   const tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       // markers: true,
-  //       trigger: firstTextRef.current,
-  //       start: "300px top",
-  //       end: "600px 700px",
-  //       scrub: 3,
-  //     },
-  //   });
-  //   tl.fromTo(
-  //     firstTextRef.current,
-  //     {
-  //       opacity: 1,
-  //       duration: 3,
-  //       ease: "power2.inOut",
-  //     },
-  //     {
-  //       opacity: 0,
-  //       duration: 3,
-  //       ease: "power2.inOut",
-  //     }
-  //   );
 
-  //   return () => {
-  //     tl.kill();
-  //   };
-  // }, []);
   return (
     <div
       ref={heroTextRef}

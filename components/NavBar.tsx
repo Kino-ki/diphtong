@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import diphtext from "@/public/images/dIphtongtext.svg";
+import diphtext from "@/public/images/logo/dIphtongtext.svg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect, useState } from "react";

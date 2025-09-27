@@ -1,145 +1,123 @@
 "use client";
 
-import { gsap } from "gsap";
-import { Observer } from "gsap/all";
-// import { useRef, useEffect } from "react";
-import chinook from "@/public/images/chinook.jpg";
-import { useLanguage } from "../contexts/LangContext";
 import data from "@/data/content.json";
-import Image from "next/image";
+import gsap from "gsap";
+import { useLanguage } from "@/app/contexts/LangContext";
 
-gsap.registerPlugin(Observer);
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import ScrollSmoother from "gsap/dist/ScrollSmoother";
+import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function AboutPage() {
   const { language } = useLanguage();
   const { EN, FR } = data;
-  const frenchdata = FR.aboutPage;
-  const englishdata = EN.aboutPage;
+  const englishabout = EN.aboutPage;
+  const frenshabout = FR.aboutPage;
+  const pinnedRef = useRef<HTMLDivElement | null>(null);
 
-  // const sectionsRef = useRef<(HTMLElement | null)[]>([]);
-  // const imagesRef = useRef<(HTMLElement | null)[]>([]);
-  // const currentIndexRef = useRef(-1);
-  // const animatingRef = useRef(false);
-
-  // useEffect(() => {
-  //   // Get references to all DOM elements
-  //   const sections = sectionsRef.current;
-  //   const outerWrappers = gsap.utils.toArray(".outer");
-  //   const innerWrappers = gsap.utils.toArray(".inner");
-  //   const images = imagesRef.current;
-  //   const wrap = gsap.utils.wrap(0, sections.length);
-
-  //   gsap.set(outerWrappers, { yPercent: 100 });
-  //   gsap.set(innerWrappers, { yPercent: -100 });
-
-  //   function gotoSection(index: number, direction: number) {
-  //     if (animatingRef.current) return; // Prevent new animations while one is running
-  //     animatingRef.current = true;
-  //     index = wrap(index);
-
-  //     const fromTop = direction === -1,
-  //       dFactor = fromTop ? -1 : 1,
-  //       tl = gsap.timeline({
-  //         defaults: { duration: 1.25, ease: "power1.inOut" },
-  //         onComplete: () => {
-  //           animatingRef.current = false;
-  //         },
-  //       });
-
-  //     if (currentIndexRef.current >= 0) {
-  //       gsap.set(sections[currentIndexRef.current], { zIndex: 0 });
-  //       tl.to(images[currentIndexRef.current], {
-  //         yPercent: -15 * dFactor,
-  //         delay: 0.2,
-  //       }).set(sections[currentIndexRef.current], { autoAlpha: 0 });
-  //       tl.call(() => {
-  //         currentIndexRef.current = index;
-  //       });
-  //     }
-
-  //     gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
-  //     tl.fromTo(
-  //       [outerWrappers[index], innerWrappers[index]],
-  //       {
-  //         yPercent: (i) => (i ? -100 * dFactor : 100 * dFactor),
-  //       },
-  //       {
-  //         yPercent: 0,
-  //       },
-  //       0
-  //     ).fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0);
-
-  //     currentIndexRef.current = index;
-  //   }
-
-  //   Observer.create({
-  //     // target: sections,
-  //     type: "wheel,touch",
-  //     wheelSpeed: -1,
-  //     onDown: () =>
-  //       !animatingRef.current && gotoSection(currentIndexRef.current - 1, -1),
-  //     onUp: () =>
-  //       !animatingRef.current && gotoSection(currentIndexRef.current + 1, 1),
-  //     tolerance: 10,
-  //     preventDefault: true,
-  //   });
-
-  //   // Initialize first section
-  //   gotoSection(0, 1);
-
-  //   // Cleanup function
-  //   return () => {
-  //     Observer.getAll().forEach((observer) => observer.kill());
-  //   };
-  // }, []);
+  useEffect(() => {
+    const smoother = ScrollSmoother.create({
+      smooth: 1,
+      effects: true,
+      normalizeScroll: true,
+    });
+    if (!pinnedRef.current) return;
+    const mm = gsap.matchMedia();
+    mm.add("(min-width:1024px)", () => {
+      const st = ScrollTrigger.create({
+        trigger: pinnedRef.current,
+        start: "top top",
+        endTrigger: ".endtrigger",
+        end: "top top",
+        pin: true,
+        markers: true,
+      });
+      return () => st.kill();
+    });
+    return () => {
+      mm.revert();
+      smoother.kill();
+    };
+  }, []);
 
   return (
-    <div className="text-black bg-wlite font-urbanistr">
+    <div className="bg-wlite text-diphblack px-20 font-urbanistl">
       {language === "EN" ? (
-        <div className="flex flex-col gap-20 pb-60 ">
-          <div className="flex">
-            <Image src={chinook} alt="chinook" width={550} />
+        <div className="flex">
+          <div className="w-[40%]">
+            <div
+              ref={pinnedRef}
+              className=" flex flex-col h-[100svh] border-r border-r-[#a8a6a6]/20 "
+            >
+              <div className="h-[20%] " />
+              <h1 className=" text-9xl h-[80%] ">{englishabout.h1} </h1>
+            </div>
           </div>
-          <section className="flex justify-start w-1/2 pr-5   ">
-            <div className=" flex flex-col justify-center ">
-              <p className="text-3xl text-end tracking-wide leading-relaxed md:mt-10 ">
-                {englishdata.firstSection}{" "}
-              </p>
-            </div>
-          </section>
-          <section className="flex justify-end  ">
-            <div className=" flex flex-col w-1/2  justify-center pl-5 ">
-              <h2 className="text-5xl font-menlob flex justify-center pb-20">
-                {englishdata.secondSection.title}
+          <div className="w-[60%] flex flex-col ">
+            <div className="h-[100svh] flex flex-col justify-end gap-20 p-20 pb-40">
+              <h2 className="text-5xl tracking-widest font-urbanistr">
+                {englishabout.h1description}
               </h2>
-              <p className="text-3xl text-start tracking-wide leading-relaxed ">
-                {englishdata.secondSection.content}
+              <p className="text-2xl tracking-wider ">
+                {englishabout.firsttext.map((part, i) =>
+                  typeof part === "string" ? part : <b key={i}>{part.bold}</b>
+                )}
               </p>
             </div>
-          </section>
-          <section className="flex justify-start ">
-            <div className=" flex flex-col w-1/2  justify-center pr-5 ">
-              <h2 className="text-5xl font-menlob flex justify-center pb-20">
-                {englishdata.thirdSection.title}
+            <div className="h-[100svh] flex flex-col justify-end  p-20 pb-40">
+              <h2 className="text-5xl tracking-widest font-urbanistr py-20">
+                {englishabout.secondSectionspecial.h3}
               </h2>
-              <p className="text-3xl text-end tracking-wide leading-relaxed ">
-                {englishdata.thirdSection.content}
+              <p className="text-2xl tracking-wider ">
+                {englishabout.secondSectionspecial.specialcontent.map(
+                  (part, i) =>
+                    typeof part === "string" ? part : <b key={i}>{part.bold}</b>
+                )}
               </p>
+              <ul className="text-2xl font-urbanistmed py-10 tracking-wider">
+                {englishabout.secondSectionspecial.specialarray.map(
+                  (spacial, i) => (
+                    <li className="py-1" key={i}>
+                      {" "}
+                      {spacial}{" "}
+                    </li>
+                  )
+                )}
+                <p className="text-2xl tracking-wider pt-10">
+                  {englishabout.secondSectionspecial.specialend.map((part, i) =>
+                    typeof part === "string" ? part : <b key={i}>{part.bold}</b>
+                  )}
+                </p>
+              </ul>
             </div>
-          </section>
-          <section className="flex justify-end  ">
-            <div className=" flex flex-col w-1/2  justify-center pl-5">
-              <h2 className="text-5xl font-menlob flex justify-center pb-20">
-                {englishdata.lastSection.title}
+            <div className="h-[100svh] flex flex-col justify-end  p-20 pb-40 endtrigger">
+              <h2 className="text-5xl tracking-widest font-urbanistr py-20">
+                {englishabout.thirdSectionhow.h3}
               </h2>
-              <p className="text-xl text-start font-menlor  leading-relaxed ">
-                {englishdata.lastSection.content}
+              <p className="text-3xl tracking-wider ">
+                {englishabout.thirdSectionhow.howcontent.map((part, i) =>
+                  typeof part === "string" ? part : <b key={i}>{part.bold}</b>
+                )}
               </p>
+              <ul className="text-2xl font-urbanistmed py-10 tracking-wider">
+                {englishabout.thirdSectionhow.howarray.map((how, i) => (
+                  <li className="py-3" key={i}>
+                    {typeof how === "string" ? how : <b key={i}>{how.bold}</b>}
+                  </li>
+                ))}
+                <p className="text-2xl tracking-wider pt-10">
+                  {/* {englishabout.thirdSectionhow.specialend.map((part, i) =>
+                    typeof part === "string" ? part : <b key={i}>{part.bold}</b>
+                  )} */}
+                </p>
+              </ul>
             </div>
-          </section>
+          </div>
         </div>
       ) : (
-        <div></div>
+        <div>coucou</div>
       )}
     </div>
   );

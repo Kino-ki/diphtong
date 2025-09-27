@@ -3,7 +3,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect } from "react";
-import diphtexte from "@/public/images/vertical.svg";
+import diphtexte from "@/public/images/logo/vertical.svg";
 import data from "@/data/content.json";
 import { useLanguage } from "@/app/contexts/LangContext";
 import Image from "next/image";

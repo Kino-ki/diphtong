@@ -3,10 +3,12 @@ import data from "@/data/content.json";
 import { useLanguage } from "@/app/contexts/LangContext";
 import Image from "next/image";
 import gsap from "gsap";
-
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+// import { useMousePosition } from "../MousePosition";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 export default function Projects() {
   const { language } = useLanguage();
   const { EN } = data;
@@ -14,10 +16,10 @@ export default function Projects() {
   // const frenchdata = FR.projservSection;
 
   const titleRef = useRef<HTMLDivElement | null>(null);
-  const blurOverlayRef = useRef<HTMLDivElement | null>(null);
   const [isHovered, setIsHovered] = useState<boolean>(false);
-
+  const floatImgRef = useRef<HTMLDivElement | null>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  // const yPosition = useMousePosition(isHovered);
 
   useEffect(() => {
     if (!titleRef.current) return;
@@ -65,23 +67,20 @@ export default function Projects() {
     );
   }, []);
 
-  useEffect(() => {
-    if (isHovered) {
-      // Fade in
-      gsap.fromTo(
-        blurOverlayRef.current,
-        { backdropFilter: "blur(10px)" },
-        {
-          backdropFilter: "blur(0px)",
-          duration: 0.15,
-          ease: "power3.out",
-        }
-      );
-    }
-  }, [isHovered]);
+  // useEffect(() => {
+  //   if (!isHovered) return;
+  //   const img = floatImgRef.current;
+  //   if (!img) return;
+
+  //   gsap.to(img, {
+  //     y: yPosition.y - img.offsetHeight / 2,
+  //     duration: 0.15,
+  //     ease: "power1.out",
+  //   });
+  // }, [isHovered, yPosition]);
 
   return (
-    <div className=" flex flex-col bg-wlite border-t-8 lg:border-none border-black text-[#1e1e1e]  ">
+    <div className=" flex flex-col bg-wlite border-t-8 lg:border-none border-black text-[#1e1e1e] overflow-hidden ">
       {language === "EN" ? (
         <div className="flex flex-col justify-center  relative">
           <div className="w-full h-fit  border-b-2 md:border-none border-[#999696] mt-20 md:pt-40 mb-20 ">
@@ -101,6 +100,7 @@ export default function Projects() {
                 }}
                 onMouseLeave={() => {
                   setIsHovered(false);
+                  setHoveredIndex(null);
                 }}
                 key={index}
               >
@@ -124,25 +124,25 @@ export default function Projects() {
                         </p>
                       ))}
                   </div>
-                  {isHovered && work.id === hoveredIndex?.toString() && (
-                    <div className="absolute  hidden   lg:flex h-[95%] lg:w-fit right-24 -top-5">
-                      <Image
-                        src={work.imageSrc}
-                        alt="image"
-                        width={250}
-                        height={200}
-                        className=""
-                      />
-                      <div
-                        ref={blurOverlayRef}
-                        className="absolute inset-0  lg:w-60 bg-transparent pointer-events-none"
-                      />
-                    </div>
-                  )}
                 </Link>
               </section>
             ))}
           </div>
+          {isHovered && hoveredIndex !== null && (
+            <div
+              // onMouseEnter={() => setIsHovered(true)}
+              ref={floatImgRef}
+              className="absolute  hidden lg:flex h-[55%] bottom-20 lg:w-40 right-36 pointer-events-none "
+            >
+              <Image
+                src={englishdata.works[hoveredIndex].imageSrc}
+                alt="image"
+                width={250}
+                height={200}
+                className="object-cover"
+              />
+            </div>
+          )}
         </div>
       ) : (
         <div></div>

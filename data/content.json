@@ -61,7 +61,7 @@
           "h3": "For Small Businesses",
           "content": [
             "We help small businesses",
-            { "bold": "stand out in competitive markets " },
+            { "bold": " stand out in competitive markets " },
             "with websites that combine",
             { "bold": " design, strategy, and performance." }
           ],
@@ -131,19 +131,75 @@
       "thirdSlide": "Launching & Helping Your Business Grow"
     },
     "aboutPage": {
-      "firstSection": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue. Cras est lectus, tempus eget lacus at, porta porta magna. Sed commodo pretium laoreet. Integer egestas dolor ac nibh ultrices, id maximus eros mattis. Curabitur rutrum placerat ex eleifend facilisis. Integer pharetra, risus ut gravida molestie, ante justo ultricies mauris, ac lacinia metus purus ac nisl.",
-      "secondSection": {
-        "title": "OUR VALUES",
-        "content": "ac tellus nulla. Donec sed quam nec magna ultrices fermentum id ut eros. Proin eget ante a felis tincidunt viverra eget et ligula. Suspendisse sem arcu, fringilla ut convallis id, euismod vel sapien. Praesent faucibus non sapien in volutpat. Maecenas venenatis enim sit amet purus feugiat, ac consequat turpis posuere. Curabitur ornare lorem nec turpis eleifend, a viverra metus venenatis. Donec vel congue odio, vel consectetur nisl. Ut cursus ante sit amet turpis dapibus vestibulum. Donec quis erat leo."
+      "h1": "About us",
+      "h1description": "Web Design for Artists & Small Businesses in Montreal",
+      "firsttext": [
+        "We’re a ",
+        {
+          "bold": "young, women-led web development company based in Montreal"
+        },
+        "dedicated to helping ",
+        {
+          "bold": "artists and small businesses "
+        },
+        "build websites that are both ",
+        { "bold": "beautiful and functional. " },
+        "Our mission is simple: to provide solutions that match your ",
+        { "bold": "vision, style, and budget. " },
+        "Whether you want a fully custom experience or a practical, easy-to-manage site, we ensure your online presence reflects your brand and connects with your audience."
+      ],
+      "secondSectionspecial": {
+        "h3": "Why We Do What We Do",
+        "specialcontent": [
+          "We believe that a website is more than a digital placeholder, ",
+          { "bold": "it’s your portfolio, your showcase, your stage. " },
+          "That’s why we specialize in:"
+        ],
+        "specialarray": [
+          "Portfolio websites for artists",
+          "Websites for small businesses",
+          "Updating and maintaining existing websites"
+        ],
+        "specialend": [
+          "Whether you’re launching a new site or need support for an existing one, we make sure your online presence stays ",
+          { "bold": "modern, functional, and aligned with your goals." }
+        ]
       },
-      "thirdSection": {
-        "title": "MEET THE FOUNDER",
-        "content": "ac tellus nulla. Donec sed quam nec magna ultrices fermentum id ut eros. Proin eget ante a felis tincidunt viverra eget et ligula. Suspendisse sem arcu, fringilla ut convallis id, euismod vel sapien. Praesent faucibus non sapien in volutpat. Maecenas venenatis enim sit amet purus feugiat, ac consequat turpis posuere. Curabitur ornare lorem nec turpis eleifend, a viverra metus venenatis. Donec vel congue odio, vel consectetur nisl. Ut cursus ante sit amet turpis dapibus vestibulum. Donec quis erat leo."
+      "thirdSectionhow": {
+        "h3": "How We Work",
+        "howcontent": [
+          "We create ",
+          { "bold": "websites tailored to your needs and vision, " },
+          "offering ",
+          { "bold": "two main paths:" }
+        ],
+        "howarray": [
+          { "bold": "Custom “sur mesure” websites " },
+          "fully bespoke, with smooth animations, elegant design, and advanced features for a high-end, standout presence. Perfect for clients seeking a truly unique digital experience.",
+          { "bold": "WordPress websites  " },
+          "a more accessible option that is professional, easy to update, and can grow with your business. Ideal for artists and small businesses with tighter budgets."
+        ],
+        "creationend": "No matter which option you choose, every website is carefully designed, responsive, and aligned with your brand.",
+        "maintenance": "We also provide ongoing support and maintenance for existing websites, including updates, performance optimization, and minor redesigns to keep your site fresh and secure."
       },
-      "lastSection": {
-        "title": "HOW WE WORK (WHY US?)",
-        "content": "ac tellus nulla. Donec sed quam nec magna ultrices fermentum id ut eros. Proin eget ante a felis tincidunt viverra eget et ligula. Suspendisse sem arcu, fringilla ut convallis id, euismod vel sapien. Praesent faucibus non sapien in volutpat. Maecenas venenatis enim sit amet purus feugiat, ac consequat turpis posuere. Curabitur ornare lorem nec turpis eleifend, a viverra metus venenatis. Donec vel congue odio, vel consectetur nisl. Ut cursus ante sit amet turpis dapibus vestibulum. Donec quis erat leo."
-      }
+      "fourthsectionValues": {
+        "h3": "Our Values",
+        "valuesArray": [
+          "Creativity with clarity  design that is elegant, modern, and user-friendly.",
+          "Human approach  flexible pricing and collaboration to fit your budget and goals.",
+          "Accessibility for all  quality websites for artists and small businesses, regardless of size or resources.",
+          "Reliability & support  keeping your site updated, secure, and performing at its best."
+        ]
+      },
+      "founderNote": {
+        "h3": "A Note from Our Founder",
+        "content": "“As both a creative and an entrepreneur, I know how important it is to have a website that feels authentic and professional. I started this company to help artists and small businesses share their vision online  whether through high-end custom sites or more accessible WordPress solutions. Every project is crafted with care, creativity, and attention to detail.”"
+      },
+      "conclusion": {
+        "h3": "Let’s Create Something Together",
+        "content": "If you’re looking for a website that feels personal, professional, and designed around your vision, we’d love to collaborate  whether it’s a brand-new site or an update to your existing one."
+      },
+      "cta": "Reach out today,  let’s bring your ideas online."
     },
 
     "contactPage": {

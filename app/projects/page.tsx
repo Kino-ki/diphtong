@@ -8,7 +8,7 @@ import esthertwo from "@/public/images/projectsPage/esthertwo.svg";
 import beancestwo from "@/public/images/projectsPage/beancestwo.svg";
 import beancestitle from "@/public/images/projectsPage/beancesh1.svg";
 import gsap from "gsap";
-import { useEffect } from "react";
+import {  useLayoutEffect } from "react";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
@@ -20,18 +20,29 @@ export default function ProjectsPage() {
   const englishprojects = EN.projectsPage;
   const frenchprojects = FR.projectsPage;
 
-  useEffect(() => {
-    ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 3,
-      effects: true,
-      smoothTouch: 0.1,
-    });
+  useLayoutEffect(() => {
+    const init = () => {
+      if (ScrollSmoother.get()) ScrollSmoother.get()?.kill();
+
+      ScrollSmoother.create({
+        wrapper: "#smooth-wrapper",
+        content: "#smooth-content",
+        smooth: 3,
+        effects: true,
+        smoothTouch: 0.1,
+      });
+    };
+
+    if (document.readyState === "complete") {
+      init();
+    } else {
+      window.addEventListener("load", init);
+      return () => window.removeEventListener("load", init);
+    }
   }, []);
 
   return (
-    <div>
+    <div className="bg-diphblack">
       {language === "EN" ? (
         <div className="flex flex-col">
           {/* ------------------------esther ----------------------------------- */}
@@ -101,7 +112,7 @@ export default function ProjectsPage() {
           <section
             data-speed="1"
             id="beances"
-            className="outer relative h-[120svh] bg-beancesprojmobile  bg-white overflow-hidden  "
+            className="outer relative h-[110svh] bg-beancesprojmobile  bg-white overflow-hidden  "
           >
             <div
               data-speed="0.5"
@@ -153,9 +164,9 @@ export default function ProjectsPage() {
           <section
             data-speed="1"
             id="collaboratives"
-            className="h-[100svh] overflow-hidden  bg-red-50"
+            className="h-[100svh] overflow-hidden "
           >
-            <div data-speed="0.9" className="outer bg-red-200 ">
+            <div data-speed="0.9" className="outer ">
               <h1 className="text-wlite text-5xl font-menlob uppercase tracking-wider">
                 {englishprojects.collavoratives.h1}{" "}
               </h1>

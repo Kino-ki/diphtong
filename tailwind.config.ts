@@ -26,8 +26,6 @@ export default {
       backgroundImage: {
         herogif: "url(/images/herogif.gif)",
         mobileherogif: "url(/images/mobileherogif.gif)",
-        diphlogo: "url(/images/diphlogo.svg)",
-        diphlogo10: "url(/images/diphlogo10.svg)",
         slideone: "url(/images/backgrounds/heroslideone.svg) ",
         slidetwopic: "url(/images/backgrounds/heroslidetwo.svg) ",
         bgslidetwo: "url(/images/backgrounds/bg-slidetwo.svg) ",

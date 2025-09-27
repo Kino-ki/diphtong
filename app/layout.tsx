@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
 
 import { LanguageContextProvider } from "./contexts/LangContext";
 import MobileNav from "@/components/MobileNav";
@@ -22,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className=" bg-black">
+      <body className=" ">
         <LanguageContextProvider>
           <div id="smooth-wrapper">
             <header className="">
@@ -33,7 +32,6 @@ export default function RootLayout({
               <main className="text-wlite z-10 ">{children}</main>
               <footer className="">
                 <NewFooter />
-                {/* <Footer /> */}
               </footer>
             </div>
           </div>

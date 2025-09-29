@@ -8,7 +8,7 @@ import esthertwo from "@/public/images/projectsPage/esthertwo.svg";
 import beancestwo from "@/public/images/projectsPage/beancestwo.svg";
 import beancestitle from "@/public/images/projectsPage/beancesh1.svg";
 import gsap from "gsap";
-import {  useLayoutEffect } from "react";
+import { useLayoutEffect } from "react";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
@@ -162,6 +162,16 @@ export default function ProjectsPage() {
             </div>
           </section>
           <section
+            id="analogizing"
+            data-speed="1"
+            className="h-[110svh] overflow-hidden "
+          >
+            <div
+              data-speed="0.5"
+              className=" bg-bganalog h-full bg-contain"
+            ></div>
+          </section>
+          {/* <section
             data-speed="1"
             id="collaboratives"
             className="h-[100svh] overflow-hidden "
@@ -171,7 +181,7 @@ export default function ProjectsPage() {
                 {englishprojects.collavoratives.h1}{" "}
               </h1>
             </div>
-          </section>
+          </section> */}
         </div>
       ) : (
         <div> {frenchprojects.beancesProject.h1} </div>

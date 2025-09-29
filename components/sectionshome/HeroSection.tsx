@@ -23,8 +23,8 @@ export default function HeroSection() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: heroTextRef.current,
-        start: "bottom 70%",
-        end: "bottom 50%",
+        start: "bottom 80%",
+        end: "bottom 70%",
         // markers: true,
         scrub: 1,
       },

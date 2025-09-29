@@ -20,29 +20,31 @@ export function ContactButton({
         type="button"
         className={`bg-wlite hover:bg-white transition-all ease-in-out duration-200 p-3 rounded-md ${height} ${width}`}
       >
-        <Link href="/contact">
+        <a href="/contact">
           <p className={`text-black  ${textsize}`}>hit us up</p>
-        </Link>
+        </a>
       </button>
     </div>
   );
 }
 
-export function GetAQuoteButton() {
+export function GetAQuoteButton({ divclass }: { divclass: string }) {
   const { language } = useLanguage();
   return (
-    <button className="bg-transparent p-3 border mx-auto w-60 py-5 border-blue-100 rounded-md flex justify-between gap-3 items-center">
-      <Link href="/contact">
+    <button
+      className={`bg-transparent  border mx-auto ${divclass} py-5 border-wlite rounded-md flex justify-between gap-3 items-center`}
+    >
+      <a href="/contact">
         {language === "EN" ? (
-          <p className="text-white text-base tracking-wider flex justify-center w-full uppercase font-figtree ">
+          <p className="text-wlite  text-base tracking-wider flex justify-center w-full uppercase font-figtree ">
             Get a free quote
           </p>
         ) : (
-          <p className="text-white text-base tracking-wider flex justify-center w-full uppercase font-figtree ">
+          <p className="text-wlite text-base tracking-wider flex justify-center w-full uppercase font-figtree ">
             Evaluation
           </p>
         )}
-      </Link>
+      </a>
       <Image src={arrow} width={8} height={5} alt="arrow" />
     </button>
   );

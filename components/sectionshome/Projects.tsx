@@ -1,6 +1,5 @@
 "use client";
-import data from "@/data/content.json";
-import { useLanguage } from "@/app/contexts/LangContext";
+import { useLanguage } from "@/components/language/LangContext";
 import Image from "next/image";
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
@@ -10,10 +9,9 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Projects() {
-  const { language } = useLanguage();
-  const { EN } = data;
-  const englishdata = EN.projservSection;
-  // const frenchdata = FR.projservSection;
+  const { dictionary } = useLanguage();
+
+  const works = dictionary.homepage.projservSection;
 
   const titleRef = useRef<HTMLDivElement | null>(null);
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -81,72 +79,68 @@ export default function Projects() {
 
   return (
     <div className=" flex flex-col bg-wlite border-t-8 lg:border-none border-black text-[#1e1e1e] overflow-hidden ">
-      {language === "EN" ? (
-        <div className="flex flex-col justify-center  relative">
-          <div className="w-full h-fit  border-b-2 md:border-none border-[#999696] mt-20 md:pt-40 mb-20 ">
-            <p
-              ref={titleRef}
-              className="text-[11svw]  md:text-[18vh]  font-urbanistr font-semibold md:underline text-center md:text-start -mb-5 tracking-wider text-[#999696]"
-            >
-              FEATURED WORKS{" "}
-            </p>
-          </div>
-          <div className=" relative md:pb-32 pb-20">
-            {englishdata?.works.map((work, index) => (
-              <section
-                onMouseEnter={() => {
-                  setIsHovered(true);
-                  setHoveredIndex(index);
-                }}
-                onMouseLeave={() => {
-                  setIsHovered(false);
-                  setHoveredIndex(null);
-                }}
-                key={index}
-              >
-                <Link
-                  href={work.link}
-                  className=" px-3 flex flex-col-reverse gap-5 py-6 md:px-10 md:py-8 border-b border-[#999696]"
-                >
-                  <div className="flex justify-center md:justify-start">
-                    <h2 className="font-menlob  text-center md:text-start font-semibold  text-3xl md:text-6xl uppercase tracking-[0.1rem] md:tracking-[0.2rem] mb-5 ">
-                      {work.title}
-                    </h2>
-                  </div>
-                  <div className="md:flex hidden justify-center md:justify-start gap-2  md:gap-4 ">
-                    {work.serv?.length > 0 &&
-                      work.serv.map((service) => (
-                        <p
-                          key={service}
-                          className="capitalize text-sm  font-urbanistl md:font-figtree text-[#7a7878]  "
-                        >
-                          {service}
-                        </p>
-                      ))}
-                  </div>
-                </Link>
-              </section>
-            ))}
-          </div>
-          {isHovered && hoveredIndex !== null && (
-            <div
-              // onMouseEnter={() => setIsHovered(true)}
-              ref={floatImgRef}
-              className="absolute  hidden lg:flex h-[55%] bottom-20 lg:w-40 right-36 pointer-events-none "
-            >
-              <Image
-                src={englishdata.works[hoveredIndex].imageSrc}
-                alt="image"
-                width={250}
-                height={200}
-                className="object-cover"
-              />
-            </div>
-          )}
+      <div className="flex flex-col justify-center  relative">
+        <div className="w-full h-fit  border-b-2 md:border-none border-[#999696] mt-20 md:pt-40 mb-20 ">
+          <h2
+            ref={titleRef}
+            className="text-[11svw] uppercase md:text-[18vh]  font-urbanistr font-semibold md:underline text-center md:text-start -mb-5 tracking-wider text-[#999696]"
+          >
+            {works.workstitle}
+          </h2>
         </div>
-      ) : (
-        <div></div>
-      )}
+        <div className=" relative md:pb-32 pb-20">
+          {works.works.map((work, index) => (
+            <section
+              onMouseEnter={() => {
+                setIsHovered(true);
+                setHoveredIndex(index);
+              }}
+              onMouseLeave={() => {
+                setIsHovered(false);
+                setHoveredIndex(null);
+              }}
+              key={index}
+            >
+              <Link
+                href={work.link}
+                className=" px-3 flex flex-col-reverse gap-5 py-6 md:px-10 md:py-8 border-b border-[#999696]"
+              >
+                <div className="flex justify-center md:justify-start">
+                  <h3 className="font-menlob  text-center md:text-start font-semibold  text-3xl md:text-6xl uppercase tracking-[0.1rem] md:tracking-[0.2rem] mb-5 ">
+                    {work.title}
+                  </h3>
+                </div>
+                <div className="md:flex hidden justify-center md:justify-start gap-2  md:gap-4 ">
+                  {work.serv?.length > 0 &&
+                    work.serv.map((service) => (
+                      <p
+                        key={service}
+                        className="capitalize text-sm  font-urbanistl md:font-figtree text-[#7a7878]  "
+                      >
+                        {service}
+                      </p>
+                    ))}
+                </div>
+              </Link>
+            </section>
+          ))}
+        </div>
+        {isHovered && hoveredIndex !== null && (
+          <div
+            // onMouseEnter={() => setIsHovered(true)}
+            ref={floatImgRef}
+            className="absolute  hidden lg:flex h-[55%] bottom-20 lg:w-40 right-36 pointer-events-none "
+          >
+            <Image
+              src={works.works[hoveredIndex].imageSrc}
+              alt="image"
+              width={250}
+              height={200}
+              className="object-cover"
+            />
+          </div>
+        )}
+      </div>
     </div>
   );
 }

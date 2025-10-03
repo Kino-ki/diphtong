@@ -1,32 +1,21 @@
 "use client";
 
-import Image from "next/image";
-import { useLanguage } from "../contexts/LangContext";
-import data from "@/data/content.json";
-import estherone from "@/public/images/projectsPage/estherone.svg";
-import esthertwo from "@/public/images/projectsPage/esthertwo.svg";
-import beancestwo from "@/public/images/projectsPage/beancestwo.svg";
-import beancestitle from "@/public/images/projectsPage/beancesh1.svg";
 import gsap from "gsap";
 import { useLayoutEffect } from "react";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import Analogizing from "@/components/projectSection/analogizing";
+import BeancesProject from "@/components/projectSection/beances";
+import Esther from "@/components/projectSection/esther";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function ProjectsPage() {
-  const { language } = useLanguage();
-  const { EN, FR } = data;
-  const englishprojects = EN.projectsPage;
-  const frenchprojects = FR.projectsPage;
-
   useLayoutEffect(() => {
     const init = () => {
       if (ScrollSmoother.get()) ScrollSmoother.get()?.kill();
 
       ScrollSmoother.create({
-        wrapper: "#smooth-wrapper",
-        content: "#smooth-content",
         smooth: 3,
         effects: true,
         smoothTouch: 0.1,
@@ -42,150 +31,35 @@ export default function ProjectsPage() {
   }, []);
 
   return (
-    <div className="bg-diphblack">
-      {language === "EN" ? (
-        <div className="flex flex-col">
-          {/* ------------------------esther ----------------------------------- */}
-          <section
-            id="portfolio"
-            data-speed="1"
-            className=" outer h-[100svh]  overflow-hidden bg-estherprojmobile bg-auto lg:bg-black "
-          >
-            <div
-              data-speed="0.5"
-              className="inner  h-[100svh] flex flex-col p-[5%] pt-16  md:bg-[#151414] bg-estherprojmobilellipse bg-top bg-cover"
-            >
-              <div className="flex  flex-col md:flex-row">
-                <h1 className="font-estherfont uppercase text-[#CFEB98] text-center md:text-start text-[2.4rem] md:text-7xl ">
-                  {englishprojects.estherProject.h1}
-                </h1>
-                <h2 className="uppercase text-lg md:text-2xl flex justify-end  items-end">
-                  {englishprojects.estherProject.subtitle}{" "}
-                  <span className="capitalize ">&nbsp;portfolio</span>{" "}
-                </h2>
-              </div>
-              <div className="flex flex-col gap-8 mt-[2%]  ">
-                <div className="md:flex flex-col hidden  justify-center h-[25%]  overflow-hidden">
-                  <Image
-                    src={estherone}
-                    width={1800}
-                    height={100}
-                    alt="first editor picture"
-                  />
-                </div>
-                <div className=" md:flex hidden w-full justify-end ml-4">
-                  <Image
-                    src={esthertwo}
-                    width={1000}
-                    height={100}
-                    alt="second editor picture"
-                  />
-                </div>
-                <div className=" flex md:flex-row pt-10 md:pt-0 flex-col md:justify-between">
-                  <div className="flex justify-end md:justify-start ">
-                    <p className=" w-2/3 md:w-1/2 md:-mt-10 font-urbanistr md:text-2xl/loose tracking-widest text-pretty ">
-                      {" "}
-                      {englishprojects.estherProject.content}{" "}
-                    </p>
-                  </div>
-                  <div className=" flex flex-col  md:text-lg font-menlob gap-10 pt-[3%] mx-auto  pr-[5%] w-2/3 ">
-                    <button
-                      type="button"
-                      className="p-5 rounded-lg border border-wlite capitalize"
-                    >
-                      {" "}
-                      discover project{" "}
-                    </button>
-                    <button
-                      type="button"
-                      className="p-5 rounded-lg border border-wlite capitalize"
-                    >
-                      {" "}
-                      visit website{" "}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          {/*  --------------------------------BEANCES----------------------------- */}
-          <section
-            data-speed="1"
-            id="beances"
-            className="outer relative h-[110svh] bg-beancesprojmobile  bg-white overflow-hidden  "
-          >
-            <div
-              data-speed="0.5"
-              className="inner h-[120svh] bg-white flex flex-col  px-5  pt-16 md:pt-0 bg-beancesflowerjmobile bg-bottom bg-auto bg-no-repeat  md:bg-left  text-[#4c4c4c]  md:bg-cover md:bg-bgbeances"
-            >
-              <div className="lg:p-[5%] py-20 md:pl-[7%] flex md:flex-row flex-col gap-5 md:items-end ">
-                <Image
-                  src={beancestitle}
-                  width={600}
-                  height={100}
-                  alt="beances editions"
-                />
-                <h1 className="uppercase text-center md:text-2xl tracking-widest font-menlor">
-                  {englishprojects.beancesProject.subtitle}
-                </h1>
-              </div>
-              <div className="flex md:flex-row flex-col md:justify-end ">
-                <p className="md:w-1/2 font-urbanistr md:text-2xl/loose md:tracking-widest text-pretty ">
-                  {" "}
-                  {englishprojects.beancesProject.content}{" "}
-                </p>
-                <div className=" flex flex-col text-lg font-menlob gap-10 pt-20  lg:pt-0 pr-[5%] lg:w-1/4 mx-auto lg:mx-0">
-                  <button
-                    type="button"
-                    className="p-5 rounded-lg border border-[#4c4c4c] capitalize  "
-                  >
-                    {" "}
-                    discover project{" "}
-                  </button>
-                  <button
-                    type="button"
-                    className="p-5 rounded-lg bg-white border border-[#4c4c4c] capitalize"
-                  >
-                    {" "}
-                    visit website{" "}
-                  </button>
-                </div>
-              </div>
-              <div className="hidden md:flex justify-center pt-[2%]">
-                <Image
-                  src={beancestwo}
-                  width={1000}
-                  height={200}
-                  alt="beances picture"
-                />
-              </div>
-            </div>
-          </section>
-          <section
-            id="analogizing"
-            data-speed="1"
-            className="h-[110svh] overflow-hidden "
-          >
-            <div
-              data-speed="0.5"
-              className=" bg-bganalog h-full bg-contain"
-            ></div>
-          </section>
-          {/* <section
-            data-speed="1"
-            id="collaboratives"
-            className="h-[100svh] overflow-hidden "
-          >
-            <div data-speed="0.9" className="outer ">
-              <h1 className="text-wlite text-5xl font-menlob uppercase tracking-wider">
-                {englishprojects.collavoratives.h1}{" "}
-              </h1>
-            </div>
-          </section> */}
-        </div>
-      ) : (
-        <div> {frenchprojects.beancesProject.h1} </div>
-      )}
+    <div className="flex flex-col bg-diphblack ">
+      {/*  --------------------------------ANALOG----------------------------- */}
+
+      <section
+        id="analogizing"
+        data-speed="1"
+        className="h-[110svh] overflow-hidden "
+      >
+        <Analogizing speed="0.5" />
+      </section>
+      <div data-speed="2" className="w-full h-[50svh] bg-diphblack"></div>
+      {/*  --------------------------------BEANCES----------------------------- */}
+      <section
+        data-speed="1"
+        id="beances"
+        className="outer relative h-[110svh] bg-beancesprojmobile  bg-white overflow-hidden  "
+      >
+        <BeancesProject speed="0.5" />
+      </section>
+      <div data-speed="2" className="w-full  h-[50svh] bg-diphblack"></div>
+
+      {/* ------------------------esther ----------------------------------- */}
+      <section
+        id="portfolio"
+        data-speed="1"
+        className=" outer h-[100svh]  overflow-hidden bg-estherprojmobile bg-auto lg:bg-black "
+      >
+        <Esther speed={0.5} />
+      </section>
     </div>
   );
 }

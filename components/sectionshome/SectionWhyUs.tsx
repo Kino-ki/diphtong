@@ -1,6 +1,5 @@
 "use client";
-import data from "@/data/content.json";
-import { useLanguage } from "@/app/contexts/LangContext";
+import { useLanguage } from "@/components/language/LangContext";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -8,11 +7,9 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function SectionWhyUs() {
-  const { language } = useLanguage();
-  const { EN, FR } = data;
+  const { dictionary } = useLanguage();
+  const whyus = dictionary.homepage.whyus;
 
-  const englishhome = EN.homepage;
-  const frenchhome = FR.homepage;
   const bgRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -44,57 +41,49 @@ export default function SectionWhyUs() {
 
   return (
     <div id="">
-      {language === "EN" ? (
-        <div className="flex flex-col bg-wlite font-urbanistr">
-          <div className="h-[95svh] flex flex-col lg:px-10 ">
-            <div className="w-2/5 flex flex-col gap-[3rem]  ">
-              <h2 className="text-5xl text-diphblack lg:pt-[10.75rem] ">
-                {englishhome.whyus.h2}
-              </h2>
-              <p className="text-[#595959] text-3xl">
-                {englishhome.whyus.content}
-              </p>
-            </div>
-            <div className="h-full flex flex-col justify-center px-[8rem] ">
-              <h4 className="text-black text-center text-5xl font-urbanistl leading-[4rem] ">
-                {englishhome.whyus.h4}
-              </h4>
-            </div>
+      <div className="flex flex-col bg-wlite font-urbanistr">
+        <div className="h-[95svh] flex flex-col lg:px-10 ">
+          <div className="w-2/5 flex flex-col gap-[3rem]  ">
+            <h2 className="text-5xl text-diphblack lg:pt-[10.75rem] ">
+              {whyus.h2}
+            </h2>
+            <p className="text-[#595959] text-3xl">{whyus.content}</p>
           </div>
-          {/* ----------------------------PILLARS---------------------------------- */}
-          <div className="h-[100svh] flex flex-col gap-10 ">
-            <h3 className="font-menlor text-4xl text-diphblack px-14">
-              {" "}
-              {englishhome.whyus.h3}{" "}
-            </h3>
-            <div className="flex flex-col gap-10 w-full ">
-              {englishhome.whyus.pillars.map((pillar, i) => (
-                <div
-                  key={i}
-                  className={`flex ${
-                    i === 1 ? "justify-end" : "justify-start"
-                  }`}
-                >
-                  <div
-                    ref={(el) => {
-                      bgRefs.current[i] = el;
-                    }}
-                    className="flex flex-col justify-center gap-5 text-3xl text-start w-2/3 bg-diphblack  h-[23svh] px-20 "
-                  >
-                    <p>
-                      {" "}
-                      <b> {pillar.title} </b>
-                    </p>
-                    <p> {pillar.content} </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="h-full flex flex-col justify-center px-[8rem] ">
+            <h4 className="text-black text-center text-5xl font-urbanistl leading-[4rem] ">
+              {whyus.h4}
+            </h4>
           </div>
         </div>
-      ) : (
-        <div> {} </div>
-      )}
+        {/* ----------------------------PILLARS---------------------------------- */}
+        <div className="h-[100svh] flex flex-col gap-10 ">
+          <h3 className="font-menlor text-4xl text-diphblack px-14">
+            {" "}
+            {whyus.h3}{" "}
+          </h3>
+          <div className="flex flex-col gap-10 w-full ">
+            {whyus.pillars.map((pillar, i) => (
+              <div
+                key={i}
+                className={`flex ${i === 1 ? "justify-end" : "justify-start"}`}
+              >
+                <div
+                  ref={(el) => {
+                    bgRefs.current[i] = el;
+                  }}
+                  className="flex flex-col justify-center gap-5 text-3xl text-start w-2/3 bg-diphblack  h-[23svh] px-20 "
+                >
+                  <h4>
+                    {" "}
+                    <b> {pillar.title} </b>
+                  </h4>
+                  <p> {pillar.content} </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

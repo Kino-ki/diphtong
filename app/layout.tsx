@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 
-import { LanguageContextProvider } from "./contexts/LangContext";
+import { LanguageProvider } from "../components/language/LangContext";
 import MobileNav from "@/components/MobileNav";
 import NewFooter from "@/components/NewFooter";
 
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=" ">
-        <LanguageContextProvider>
+        <LanguageProvider>
           <div id="smooth-wrapper">
             <header className="">
               <NavBar />
@@ -35,7 +35,7 @@ export default function RootLayout({
               </footer>
             </div>
           </div>
-        </LanguageContextProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -3,7 +3,7 @@
     "homepage": {
       "heroh2": "creative web agency",
       "heroh3": "Elegant, High-Performance Websites for Artists and Small Businesses",
-      "firsttext": "We craft websites that blend creativity, performance, and strategy. Whether you’re an artist seeking a stunning online portfolio or a small business owner wanting to grow your brand, we design and develop websites that captivate your audience, load at lightning speed, and deliver measurable results.",
+      "firsttext": "We are a Montréal-based web agency, crafting custom websites that blend creativity, performance, and strategy. Whether you’re an artist in need of a stunning portfolio or a small business owner ready to grow your brand, we design and develop websites that captivate your audience, load at lightning speed, and are built with SEO in mind to deliver measurable results.",
       "ctaright": [
         "Built with ",
         { "bold": " modern design " },
@@ -114,7 +114,7 @@
         {
           "id": "3",
           "title": "Analogizing",
-          "serv": ["collavorative project", "Font-End develoment"],
+          "serv": ["full stack develoment", "Web design"],
           "imageSrc": "/images/projserv/analogizing.svg",
 
           "link": "/projects#collaboratives"
@@ -352,13 +352,22 @@
         "subtitle": "video editor",
         "span": "portfolio",
         "services": [" web design ", "full stack develoment"],
-        "content": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci."
+        "content": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci.",
+        "href": "https://www.estherlhuillery.com/"
       },
       "beancesProject": {
         "h1": "béances éditions",
         "subtitle": "QUEER ZINES EDITIONS",
         "services": [" web design ", "full stack develoment"],
-        "content": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci."
+        "content": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci.",
+        "href": "https://www.beanceseditions.com/"
+      },
+      "AnalogProject": {
+        "h1": "Analogizing",
+        "subtitle": "Artist Portfolio",
+        "services": [" web design ", "full stack develoment"],
+        "content": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci.",
+        "href": "https://www.analogizing.art/home"
       },
       "collavoratives": {
         "h1": "collaborative projects",
@@ -368,7 +377,8 @@
             "projectName": "Plein la tête",
             "projectSubtitle": " studio éclaté",
             "services": ["Front-End develoment"],
-            "projecDescription": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva"
+            "projecDescription": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva",
+            "href": "https://pleinlatete.ca/"
           }
         ]
       },
@@ -387,175 +397,231 @@
   },
   "FR": {
     "homepage": {
-      "heroh2": "Agence web créative",
-      "heroh3": "Nous créons des solutions sur mesure pour votre entreprise.",
-      "firsttext": "Transformez votre présence en ligne et développez votre entreprise",
-      "secondtext": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci, non euismod elit. duis eget sollicitudin erat. pellentesque in nisi ac lacus pretium efficitur.",
-      "reachoutcontent": "Obtenez un devis gratuit ou planifiez une rencontre avec nous"
-    },
-    "aboutPage": {
-      "firstSection": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue. Cras est lectus, tempus eget lacus at, porta porta magna. Sed commodo pretium laoreet. Integer egestas dolor ac nibh ultrices, id maximus eros mattis. Curabitur rutrum placerat ex eleifend facilisis. Integer pharetra, risus ut gravida molestie, ante justo ultricies mauris, ac lacinia metus purus ac nisl.",
-      "secondSection": {
-        "title": "nos valeurs",
-        "content": "ac tellus nulla. Donec sed quam nec magna ultrices fermentum id ut eros. Proin eget ante a felis tincidunt viverra eget et ligula. Suspendisse sem arcu, fringilla ut convallis id, euismod vel sapien. Praesent faucibus non sapien in volutpat. Maecenas venenatis enim sit amet purus feugiat, ac consequat turpis posuere. Curabitur ornare lorem nec turpis eleifend, a viverra metus venenatis. Donec vel congue odio, vel consectetur nisl. Ut cursus ante sit amet turpis dapibus vestibulum. Donec quis erat leo."
+      "heroh2": "agence web créative",
+      "heroh3": "Sites élégants et performants pour artistes et petites entreprises",
+      "firsttext": "Nous sommes une agence web basée à Montréal et travaillant à l’international, spécialisée dans la création de sites web sur mesure qui allient créativité, performance et stratégie. Que vous soyez un artiste à la recherche d’un portfolio en ligne captivant ou une petite entreprise souhaitant développer sa marque, nous concevons et développons des sites qui séduisent votre audience, se chargent à une vitesse éclair, et sont pensés pour le référencement (SEO) afin de générer des résultats concrets.",
+      "ctaright": [
+        "Conçus avec",
+        { "bold": " un design moderne " },
+        ", une navigation fluide et une technologie pérenne."
+      ],
+      "ctaleft": [
+        { "bold": " Pensés pour les artistes, créateurs et entrepreneurs " },
+        "qui ont besoin de plus qu’un simple site web : une présence numérique qui met en valeur",
+        { "bold": " leur histoire " }
+      ],
+      "whyus": {
+        "h2": "Pourquoi nous choisir pour votre site web ?",
+        "content": "Votre site est bien plus qu’une carte de visite numérique : c’est la base de votre identité de marque. Nous comprenons les besoins uniques des artistes qui souhaitent présenter leurs portfolios et des petites entreprises qui veulent instaurer la confiance auprès de leurs clients.",
+        "h4": "Nous créons chaque site avec précision et sens artistique, pour que votre présence en ligne soit authentique et mémorable.",
+        "h3": "Nous nous appuyons sur trois piliers :",
+        "pillars": [
+          {
+            "title": "Excellence du design",
+            "content": "Des sites élégants, épurés et intemporels."
+          },
+          {
+            "title": " Croissance de votre activité",
+            "content": "SEO intégré, évolutif et aligné avec vos objectifs."
+          },
+          {
+            "title": " Expérience utilisateur fluide",
+            "content": "Rapidité de chargement, optimisation mobile et navigation intuitive."
+          }
+        ]
       },
-      "thirdSection": {
-        "title": "MEET THE FOUNDER",
-        "content": "ac tellus nulla. Donec sed quam nec magna ultrices fermentum id ut eros. Proin eget ante a felis tincidunt viverra eget et ligula. Suspendisse sem arcu, fringilla ut convallis id, euismod vel sapien. Praesent faucibus non sapien in volutpat. Maecenas venenatis enim sit amet purus feugiat, ac consequat turpis posuere. Curabitur ornare lorem nec turpis eleifend, a viverra metus venenatis. Donec vel congue odio, vel consectetur nisl. Ut cursus ante sit amet turpis dapibus vestibulum. Donec quis erat leo."
+      "services": {
+        "h2": "Nos services",
+        "artists": {
+          "h3": "Pour les artistes",
+          "content": [
+            { "bold": " Votre portfolio est votre histoire " },
+            " il mérite d’être vu. Nous aidons les artistes de toutes disciplines — peintres, photographes, musiciens, danseurs, écrivains — à mettre en valeur leur travail",
+            { "bold": " avec élégance et clarté. " }
+          ],
+          "delivery": "Ce que nous proposons aux artistes :",
+          "deliveryarray": [
+            "Sites portfolios sur mesure",
+            "Mises en page minimalistes et orientées design qui valorisent vos œuvres",
+            "Compatibilité mobile pour toucher votre audience partout",
+            "Optimisation SEO pour rendre votre art facilement découvrable",
+            "Gestion de contenu simple pour mettre à jour votre portfolio à tout moment"
+          ],
+          "h4": [
+            "Votre site devient",
+            { "bold": "   une véritable scène pour votre art " },
+            "et laisse une impression durable à vos visiteurs."
+          ]
+        },
+        "business": {
+          "h3": "Pour les petites entreprises",
+          "content": [
+            "Nous aidons les petites entreprises à",
+            { "bold": " se démarquer dans des marchés compétitifs " },
+            "grâce à des sites qui allient",
+            { "bold": " design, stratégie et performance." }
+          ],
+          "delivery": "Ce que nous proposons aux entreprises :",
+          "deliveryarray": [
+            "Sites conçus pour convertir vos visiteurs en clients",
+            "Intégration d’une identité visuelle professionnelle pour crédibilité et confiance",
+            "Sites rapides, sécurisés et optimisés SEO pour un meilleur classement",
+            "Plateformes évolutives qui grandissent avec votre activité",
+            "Fonctionnalités personnalisées : blog, réservation en ligne, e-commerce"
+          ],
+          "h4": [
+            "Que vous soyez un café, une boutique locale, un studio bien-être ou un prestataire de services, nous créons un site qui ",
+            {
+              "bold": " reflète vos valeurs et favorise une croissance mesurable"
+            }
+          ]
+        }
       },
-      "lastSection": {
-        "title": "Comment on travaille",
-        "content": "ac tellus nulla. Donec sed quam nec magna ultrices fermentum id ut eros. Proin eget ante a felis tincidunt viverra eget et ligula. Suspendisse sem arcu, fringilla ut convallis id, euismod vel sapien. Praesent faucibus non sapien in volutpat. Maecenas venenatis enim sit amet purus feugiat, ac consequat turpis posuere. Curabitur ornare lorem nec turpis eleifend, a viverra metus venenatis. Donec vel congue odio, vel consectetur nisl. Ut cursus ante sit amet turpis dapibus vestibulum. Donec quis erat leo."
+      "reachoutsection": {
+        "h2": "Prêt·e à booster votre présence en ligne ?",
+        "content": "Que vous soyez un artiste souhaitant un portfolio qui brille ou une petite entreprise cherchant à se développer, nous sommes là pour vous aider. Notre expertise en design, développement et SEO garantit que votre site n’est pas seulement beau : il travaille pour vous."
       }
     },
     "projservSection": {
-      "workstitle": "Nos projets phares",
+      "workstitle": "Réalisations",
       "works": [
         {
-          "id": "1",
+          "id": "0",
           "title": "Béances Editions",
-          "serv": ["développement Web", "Conception & design"],
-          "imageSrc": "/images/projserv/beancesone.svg",
-          "description": "lorem ipsum dolor dhuz djzp çd AO09 Dxj c hds d dhso dhdishdi dhisodh   sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
-          "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
-          "author": "the author",
+          "serv": ["Développmenet full stack", "design Web"],
+          "imageSrc": "/images/projserv/beancesthree.svg",
+
           "link": "/projects#beances"
         },
         {
-          "id": "2",
-          "title": "Esther Lhuillery Monteuse Vidéo",
-          "serv": ["développement Web", "Conception & design"],
-          "imageSrc": "/images/projserv/esther.svg",
-          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
-          "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
-          "author": "the author",
+          "id": "1",
+          "title": "Esther Lhuillery Monteuse Video",
+          "serv": ["Développmenet full stack", "design Web"],
+          "imageSrc": "/images/projserv/infraredContact.svg",
+
           "link": "/projects#portfolio"
         },
         {
-          "id": "3",
+          "id": "2",
           "title": "Plein la tête studio éclaté",
-          "serv": ["project collaboratif", "développement Web"],
-          "imageSrc": "/images/projserv/esther.svg",
-          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in",
-          "testimonial": "blablabla c'était super on a adoré quel plaisir excellente travail je recommande fuuuullll",
-          "author": "the author",
-          "link": "/projects#collaboratives"
-        }
-      ],
-      "servicestitle": "nos services",
-      "servicesList": [
-        {
-          "id": 0,
-          "serviceName": "developpement web",
-          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum"
-        },
-        {
-          "id": 1,
-          "serviceName": "design web",
+          "serv": ["projet collaboratif", "Développment Font-End"],
+          "imageSrc": "/images/projserv/plt.svg",
 
-          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum"
+          "link": "/projects#collaboratives"
         },
         {
-          "id": 2,
-          "serviceName": "applications responsives",
-          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum"
-        },
-        {
-          "id": 3,
-          "serviceName": "maintenance",
-          "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum"
+          "id": "3",
+          "title": "Analogizing",
+          "serv": ["Développmenet full stack", "design Web"],
+          "imageSrc": "/images/projserv/analogizing.svg",
+
+          "link": "/projects#collaboratives"
         }
       ]
     },
     "horizontalScroll": {
       "intro": {
-        "h1": "notre procesus",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero neque, odit et rerum fuga debitis inventore itaque cum veniam eligendi temporibus officia perferendis, accusamus nam, optio repudiandae eum sequi molestiae."
+        "h1": "From Idea to Launch: Our Process",
+        "text": "We keep the process smooth, transparent, and stress-free:"
       },
-      "firstSlide": "Understanding Your Needs",
+      "firstSlide": " Discovery: Understanding Your Needs",
       "secondSlide": "Creating a Website Your Users Will Love",
       "thirdSlide": "Launching & Helping Your Business Grow"
     },
-    "contactPage": {
-      "PageTitle": "Contact",
-      "h2": "we would love tyo hear about your projezcts",
-      "h3": "ask us your question or book a meeting with us",
-      "form": {
-        "name": "nom",
-        "email": "courriel (champ obligatoire)",
-        "website": "site web (optionnel)"
-      },
-      "contactInfo": "Informations de Contact",
-      "adress": "2861, rue Ontario Est, Montréal (QC), H2K1X6 (514) 265-6791"
-    },
-    "servicesPage": [
-      {
-        "id": "1",
-        "serviceName": "developpement web",
-        "firstText": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue. Cras est lectus, tempus eget lacus at, porta porta magna. Sed commodo pretium laoreet. Integer egestas dolor ac nibh ultrices, id maximus eros mattis. Curabitur rutrum placerat ex eleifend facilisis. Integer pharetra, risus ut gravida molestie, ante justo ultricies mauris, ac lacinia metus purus ac nisl. ",
-        "subservice": "From Sketch to Screen ",
-        "secondText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue",
-        "thirdText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue"
-      },
-      {
-        "id": "2",
-        "serviceName": "design web",
-        "firstText": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue. Cras est lectus, tempus eget lacus at, porta porta magna. Sed commodo pretium laoreet. Integer egestas dolor ac nibh ultrices, id maximus eros mattis. Curabitur rutrum placerat ex eleifend facilisis. Integer pharetra, risus ut gravida molestie, ante justo ultricies mauris, ac lacinia metus purus ac nisl. ",
-        "subservice": "Our Secret Recipe",
-        "secondText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue",
-        "thirdText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue"
-      },
-      {
-        "id": "3",
-        "serviceName": "applications responsives",
-        "firstText": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue. Cras est lectus, tempus eget lacus at, porta porta magna. Sed commodo pretium laoreet. Integer egestas dolor ac nibh ultrices, id maximus eros mattis. Curabitur rutrum placerat ex eleifend facilisis. Integer pharetra, risus ut gravida molestie, ante justo ultricies mauris, ac lacinia metus purus ac nisl. ",
-        "subservice": "Pixels to Perfection",
-        "secondText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue",
-        "thirdText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue"
-      },
-      {
-        "id": "4",
-        "serviceName": "MAINTENANCE",
-        "firstText": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue. Cras est lectus, tempus eget lacus at, porta porta magna. Sed commodo pretium laoreet. Integer egestas dolor ac nibh ultrices, id maximus eros mattis. Curabitur rutrum placerat ex eleifend facilisis. Integer pharetra, risus ut gravida molestie, ante justo ultricies mauris, ac lacinia metus purus ac nisl. ",
-        "subservice": "coucou",
-        "secondText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue",
-        "thirdText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus semper sodales. Donec congue rutrum mi a congue"
-      }
-    ],
-    "projectsPage": {
-      "estherProject": {
-        "h1": "esther lhuillery",
-        "subtitle": "Portfolio montage vidéo",
-        "content": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci."
-      },
-      "beancesProject": {
-        "h1": "béances éditions",
-        "subtitle": "éditions de zines queer",
-        "content": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci."
-      },
-      "collavoratives": {
-        "h1": "Projets collaboratifs",
-        "projects": [
-          {
-            "id": 0,
-            "projectName": "Plein la tête",
-            "projectSubtitle": " studio éclaté",
-            "services": ["Développement Front-End"],
-            "projecDescription": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva"
-          }
+    "aboutPage": {
+      "h1": "À propos de nous",
+      "h1description": "Conception de sites web pour artistes et petites entreprises à Montréal et à l’international",
+      "firsttext": [
+        "Nous sommes une ",
+        {
+          "bold": "jeune entreprise de développement web dirigée par des femmes et basée à Montréal"
+        },
+        "dédiée à accompagner ",
+        {
+          "bold": "les artistes et les petites entreprises "
+        },
+        "dans la création de sites web à la fois ",
+        { "bold": "esthétiques et fonctionnels. " },
+        "Notre mission est simple : offrir des solutions qui respectent votre ",
+        { "bold": "vision, votre style et votre budget. " },
+        "Que vous souhaitiez une expérience entièrement sur mesure ou un site pratique et facile à gérer, nous veillons à ce que votre présence en ligne reflète votre marque et crée un lien authentique avec votre audience."
+      ],
+      "secondSectionspecial": {
+        "h3": "Pourquoi nous faisons ce que nous faisons",
+        "specialcontent": [
+          "Nous croyons qu’un site web est bien plus qu’une simple carte de visite numérique, ",
+          { "bold": "c’est votre portfolio, votre vitrine, votre scène. " },
+          "C’est pourquoi nous nous spécialisons dans :"
+        ],
+        "specialarray": [
+          "Sites portfolio pour artistes",
+          "Sites web pour petites entreprises",
+          "Mise à jour et maintenance de sites existants"
+        ],
+        "specialend": [
+          "Que vous lanciez un nouveau site ou que vous cherchiez du soutien pour un site déjà en ligne, nous faisons en sorte que votre présence numérique reste ",
+          { "bold": "moderne, fonctionnelle et alignée avec vos objectifs." }
         ]
       },
-      "upcomingProjects": {
-        "h1": "Projets à venir",
-        "projects": [
+      "thirdSectionhow": {
+        "h3": "Notre approche",
+        "howcontent": [
+          "Nous créons des ",
+          { "bold": "sites web adaptés à vos besoins et à votre vision, " },
+          "en vous offrant ",
+          { "bold": "deux principales options :" }
+        ],
+        "howarray": [
+          { "bold": "Sites web sur mesure « sur mesure » " },
+          "entièrement personnalisés, avec animations fluides, design élégant et fonctionnalités avancées pour une présence haut de gamme et unique. Parfait pour les clients recherchant une expérience digitale distinctive.",
+          { "bold": "Sites WordPress " },
+          "une solution plus accessible, professionnelle, facile à mettre à jour et évolutive avec votre entreprise. Idéal pour les artistes et les petites entreprises ayant un budget limité."
+        ],
+        "creationend": [
+          "Peu importe l’option choisie, chaque site est ",
           {
-            "id": 0,
-            "projectName": "Physiothérapie Hélène Morin",
-            "services": ["Développement Front-End"],
-            "projecDescription": "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva"
+            "bold": "soigneusement conçu, responsive et aligné avec votre identité de marque."
           }
+        ],
+        "maintenance": [
+          "Nous proposons également ",
+          {
+            "bold": "un service continu de maintenance et de support pour les sites existants, "
+          },
+          "incluant mises à jour, optimisation des performances et petits redesigns pour garder votre site moderne et sécurisé."
         ]
-      }
+      },
+      "fourthsectionValues": {
+        "h3": "Nos valeurs",
+        "valuesArray": [
+          [
+            { "bold": "Créativité avec clarté " },
+            "un design élégant, moderne et facile à utiliser."
+          ],
+          [
+            "Une approche humaine : ",
+            { "bold": "tarification flexible et collaboration " },
+            "pour s’adapter à vos objectifs et à votre budget."
+          ],
+          [
+            { "bold": "Accessibilité pour tous " },
+            "des sites de qualité pour artistes et petites entreprises, quelle que soit leur taille ou leurs ressources."
+          ],
+          [
+            { "bold": "Fiabilité & accompagnement " },
+            "des sites toujours à jour, sécurisés et performants."
+          ]
+        ]
+      },
+      "founderNote": {
+        "h3": "Un mot de la fondatrice",
+        "content": "« En tant que créative et entrepreneure, je sais combien il est essentiel d’avoir un site web à la fois authentique et professionnel. J’ai fondé cette entreprise pour aider les artistes et les petites entreprises à partager leur vision en ligne — que ce soit via des sites entièrement sur mesure ou des solutions WordPress plus accessibles. Chaque projet est conçu avec soin, créativité et une grande attention aux détails. »"
+      },
+      "conclusion": {
+        "h3": "Créons ensemble votre site",
+        "content": "Si vous cherchez un site web à la fois personnel, professionnel et pensé pour refléter votre vision, nous serions ravies de collaborer avec vous — qu’il s’agisse d’un tout nouveau projet ou de l’amélioration de votre site existant."
+      },
+      "cta": "Contactez-nous dès aujourd’hui et donnons vie à vos idées en ligne."
     }
   }
 }

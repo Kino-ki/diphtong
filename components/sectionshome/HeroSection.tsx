@@ -4,18 +4,14 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect } from "react";
 import diphtexte from "@/public/images/logo/vertical.svg";
-import data from "@/data/content.json";
-import { useLanguage } from "@/app/contexts/LangContext";
+import { useLanguage } from "@/components/language/LangContext";
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HeroSection() {
-  const { language } = useLanguage();
-  const { EN, FR } = data;
-
-  const englishhome = EN.homepage;
-  const frenchhome = FR.homepage;
+  const { dictionary } = useLanguage();
+  const hero = dictionary.homepage;
 
   const heroTextRef = useRef<HTMLDivElement | null>(null);
 
@@ -53,25 +49,13 @@ export default function HeroSection() {
             <div className="md:hidden flex justify-center">
               <Image src={diphtexte} alt="diph logo" width={180} />
             </div>
-            {language === "EN" ? (
-              <h2 className=" font-figtree  capitalize tracking-widest md:tracking-[0.6rem] text-3xl md:text-4xl/5 flex justify-center md:justify-end  ">
-                {englishhome.heroh2}
-              </h2>
-            ) : (
-              <h2 className=" font-figtree capitalize tracking-widest md:tracking-[0.8rem] text-3xl md:text-4xl/5 flex justify-center md:justify-end ">
-                {frenchhome.heroh2}
-              </h2>
-            )}
+            <h1 className=" font-figtree  capitalize tracking-widest md:tracking-[0.6rem] text-3xl md:text-4xl/5 flex justify-center md:justify-end  ">
+              {hero.heroh2}
+            </h1>
 
-            {language === "EN" ? (
-              <h3 className="font-figtreel lg:px-40 capitalize text-xl md:text-4xl tracking-wider md:tracking-[0.5rem] lg:leading-[4rem] flex justify-center text-center font-semibold ">
-                {englishhome.heroh3}
-              </h3>
-            ) : (
-              <h3 className="font-figtreel capitalize text-xl md:text-4xl tracking-wider md:tracking-[0.8rem] flex justify-center text-center font-semibold ">
-                {frenchhome.heroh3}
-              </h3>
-            )}
+            <h2 className="font-figtreel lg:px-40 capitalize text-xl md:text-4xl tracking-wider md:tracking-[0.5rem] lg:leading-[4rem] flex justify-center text-center font-semibold ">
+              {hero.heroh3}
+            </h2>
           </div>
         </div>
       </div>

@@ -8,18 +8,16 @@ import two from "@/public/images/2.svg";
 import three from "@/public/images/3.svg";
 import Image from "next/image";
 // import data from "@/data/content.json";
-import { useLanguage } from "@/app/contexts/LangContext";
+import { useLanguage } from "@/components/language/LangContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HomeHorizontalScroll() {
   const slidesRef = useRef<HTMLDivElement | null>(null);
   const isPaused = { current: false };
-  const { language } = useLanguage();
-
-  // const { EN, FR } = data;
-  // const englishslides = EN.horizontalScroll;
-  // const frenchslides = FR.horizontalScroll;
+  const { language, dictionary } = useLanguage();
+  const slidecontent = dictionary.homepage.horizontalScroll;
+  const { firstSlide, secondSlide, thirdSlide } = slidecontent;
 
   useEffect(() => {
     if (!slidesRef.current) return;
@@ -83,22 +81,18 @@ export default function HomeHorizontalScroll() {
               />
 
               <div className="h-full flex flex-col lg:gap-10  text-black  lg:py-40 lg:w-[55%] lg:px-40 ">
-                <h1
+                <h4
                   className=" font-menlor absolute lg:relative lg:top-0 px-5 top-[5%] text-start  font-medium text-[3.4rem] hyphens-auto  lg:tracking-widest leading-[5rem] lg:leading-[5rem] text-[#999696]"
                   lang="de"
                 >
                   Understanding <br />{" "}
                   <span className="text-black "> Your Needs</span>
-                </h1>
-                <p className="flex flex-col text-lg px-5  lg:text-2xl/relaxed font-urbanistr   pb-5 h-full">
-                  &quot;We Listen & Plan&quot; <br /> We start by understanding
-                  your business, goals, and vision. <br /> Through a strategy
-                  session, we define your needs and outline the best approach
-                  for your website.
-                  <br /> Key points: <br /> Discovery call / consultation
-                  Understanding your brand & audience Defining project goals &
-                  scope
-                </p>
+                </h4>
+                <div className="flex flex-col gap-5 text-lg px-5  lg:text-2xl/relaxed font-urbanistr   pb-5 h-full">
+                  <p>{firstSlide.txtone}</p>
+                  <p>{firstSlide.txttwo}</p>
+                  <p>{firstSlide.txtthree}</p>
+                </div>
               </div>
             </section>
             {/* -------------------SLIDE TWO ------------------------- */}
@@ -112,20 +106,16 @@ export default function HomeHorizontalScroll() {
                 className="relative lg:absolute lg:bottom-10 lg:left-[70%]"
               />
               <div className="h-full flex flex-col lg:mx-10 lg:gap-10 lg:w-[60%]">
-                <h1 className=" absolute lg:relative lg:top-0  top-[5%] lg:mx-auto  font-menlor text-[3.4rem] text-start">
+                <h4 className=" absolute lg:relative lg:top-0  top-[5%] lg:mx-auto  font-menlor text-[3.4rem] text-start">
                   <span className="text-[#999696] ">Creating a Website </span>
                   <br />
                   Your Users Will Love
-                </h1>
-                <p className="fflex flex-col justify-end text-lg  lg:mx-auto lg:text-2xl/relaxed font-urbanistr lg:w-[60%]  pb-5 h-full ">
-                  We Design for Your Audience <br /> A beautiful website is
-                  great, but a website that engages and converts is even better.
-                  We design with your users in mind, ensuring a seamless
-                  experience that reflects your brand and drives action. <br />{" "}
-                  Key points: <br /> Intuitive, user-friendly design
-                  <br /> Fast, responsive, and accessible on all devices <br />{" "}
-                  Optimized to convert visitors into customers
-                </p>
+                </h4>
+                <div className="fflex flex-col gap-5 justify-end text-lg  lg:mx-auto lg:text-2xl/relaxed font-urbanistr lg:w-[60%]  pb-5 h-full ">
+                  <p>{secondSlide.txtone}</p>
+                  <p>{secondSlide.txttwo}</p>
+                  <p>{secondSlide.txtthree}</p>
+                </div>
               </div>
             </section>
             {/* -------------------SLIDE THREE ------------------------- */}
@@ -140,19 +130,14 @@ export default function HomeHorizontalScroll() {
               />
               <div className=" bg-slidetwopic  bg-cover lg:w-[50%] "></div>
               <div className="flex flex-col justify-center  lg:pl-20 w-full text-black lg:gap-10 ">
-                <h1 className="absolute lg:relative lg:top-0  top-[5%]   font-menlor text-[3.4rem] text-start">
+                <h4 className="absolute lg:relative lg:top-0  top-[5%]   font-menlor text-[3.4rem] text-start">
                   Launching & Helping <br />{" "}
                   <span className="text-[#999696] ">Your Business Grow</span>{" "}
-                </h1>
-                <p className="flex justify-center lg:mx-10 text-start  text-lg lg:text-2xl/relaxed  font-urbanistr lg:w-[60%] ">
-                  We Launch & Support Your Success <br /> Your website isn’t
-                  just a project—it’s a tool to help your business thrive.{" "}
-                  <br /> We ensure a smooth launch and provide ongoing support
-                  so your site stays fast, secure, and ready to grow with you.{" "}
-                  <br /> Key points: <br /> Hassle-free launch & optimization{" "}
-                  <br /> Performance tracking & updates <br /> Continuous
-                  support to help your business evolve
-                </p>
+                </h4>
+                <div className="flex flex-col gap-5 lg:mx-10 text-start  text-lg lg:text-2xl/relaxed  font-urbanistr lg:w-[60%] "></div>
+                <p>{thirdSlide.txtone}</p>
+                <p>{thirdSlide.txttwo}</p>
+                <p>{thirdSlide.txtthree}</p>
               </div>
             </section>
           </div>
@@ -172,10 +157,10 @@ export default function HomeHorizontalScroll() {
                 className="absolute bottom-1/4 right-[10%]"
               />
               <div className="h-full flex flex-col justify-between lg:py-[8%] text-black ">
-                <h1 className=" font-menlor font-medium lg:text-[3.4rem]  tracking-widest text-center lg:leading-[5rem] text-[#999696]">
+                <h4 className=" font-menlor font-medium lg:text-[3.4rem]  tracking-widest text-center lg:leading-[5rem] text-[#999696]">
                   Understanding <br />{" "}
                   <span className="text-black "> Your Needs</span>
-                </h1>
+                </h4>
                 <p className="flex flex-col justify-end text-center mx-auto text-3xl/relaxed font-urbanistr w-[60%] pb-5 h-full">
                   &quot;We Listen & Plan&quot; <br /> We start by understanding
                   your business, goals, and vision. <br /> Through a strategy
@@ -191,11 +176,11 @@ export default function HomeHorizontalScroll() {
 
             <section className="slide flex justify-center shrink-0 w-[100vw] h-[103vh] text-black py-40 bg-bgslidetwo bg-cover">
               <div className="h-full flex flex-col gap-40 w-[60%]">
-                <h1 className=" font-menlor text-[3.4rem] text-start">
+                <h4 className=" font-menlor text-[3.4rem] text-start">
                   <span className="text-[#999696] ">Creating a Website </span>
                   <br />
                   Your Users Will Love
-                </h1>
+                </h4>
                 <p className="flex justify-start text-start  text-2xl/relaxed font-urbanistr ">
                   We Design for Your Audience <br /> A beautiful website is
                   great, but a website that engages and converts is even better.
@@ -219,10 +204,10 @@ export default function HomeHorizontalScroll() {
               />
               <div className=" bg-slidetwopic bg-cover w-[50%] "></div>
               <div className="flex flex-col justify-center  pl-20 w-full text-black gap-40 ">
-                <h1 className="font-menlor text-[3.4rem] text-start">
+                <h4 className="font-menlor text-[3.4rem] text-start">
                   Launching & Helping <br />{" "}
                   <span className="text-[#999696] ">Your Business Grow</span>{" "}
-                </h1>
+                </h4>
                 <p className="flex justify-center text-start text-2xl/relaxed  font-urbanistr w-[60%] ">
                   We Launch & Support Your Success <br /> Your website isn’t
                   just a project—it’s a tool to help your business thrive.{" "}

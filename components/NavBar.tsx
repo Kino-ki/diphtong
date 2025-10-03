@@ -76,14 +76,14 @@ export default function NavBar() {
       <div className="flex justify-between w-full pt-3">
         <ul className="flex gap-20   ">
           <li className="">
-            <Link href="/services">SERVICES</Link>
+            <a href="/services">SERVICES</a>
           </li>
 
           <li>
-            <Link href="/about">ABOUT</Link>
+            <a href="/about">ABOUT</a>
           </li>
           <li className="">
-            <Link href="/projects">OUR PROJECTS</Link>
+            <a href="/projects">OUR PROJECTS</a>
           </li>
         </ul>
         <div id="" className=" top-2">
@@ -101,7 +101,7 @@ export default function NavBar() {
 
         <ul className=" text-wlite  flex ">
           <li>
-            <Link href="/contact">CONTACT</Link>
+            <a href="/contact">CONTACT</a>
           </li>
         </ul>
       </div>

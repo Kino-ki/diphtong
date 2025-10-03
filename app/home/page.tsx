@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 // import Image from "next/image";
 import HeroSection from "@/components/sectionshome/HeroSection";
-import ReachOutSection from "@/components/ReachOutSection";
+import ReachOutSection from "@/components/sectionshome/ReachOutSection";
 import SectionCta from "@/components/sectionshome/SectionCta";
 import SectionWhyUs from "@/components/sectionshome/SectionWhyUs";
 import PreHomeSlides from "@/components/sectionshome/PreHomeSlides";
@@ -42,8 +42,8 @@ export default function HomePage() {
         <div className="">
           <HeroSection />
           <SectionCta />
-          <SectionWhyUs />
-          <div className="mt-5 bg-wlite">
+          <div className=" bg-wlite">
+            <SectionWhyUs />
             <PreHomeSlides />
             <HomeHorizontalScroll />
             <Projects />

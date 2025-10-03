@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { PopupWidget } from "react-calendly";
-import { useLanguage } from "@/app/contexts/LangContext";
+import { useLanguage } from "@/components/language/LangContext";
 
 export default function CalendlyWidget() {
   const [rootId, setRootId] = useState<HTMLElement | null>(null);

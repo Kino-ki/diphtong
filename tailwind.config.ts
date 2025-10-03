@@ -32,6 +32,7 @@ export default {
         bgdragonmobile: "url(/images/backgrounds/bgdragonmobile.svg) ",
         bgbeances: "url(/images/projectsPage/bgbeances.svg) ",
         bganalog: "url(/images/projectsPage/analogall.svg) ",
+        bganalogf: "url(/images/projectsPage/analogf.svg) ",
         estherprojmobile: "url(/images/projectsPage/bgesthermobile.svg)",
         estherprojmobilellipse:
           "url(/images/projectsPage/bgesthermobilellipse.svg)",

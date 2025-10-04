@@ -47,7 +47,7 @@ export const dictionaries = {
           text: "Building a website might sound complicated, but with us, it’s a simple journey. From the first conversation to the moment your site goes live, we guide you step by step, always clear, always human.",
         },
         firstSlide: {
-          h3: " Discovery: Understanding Your Needs",
+          h3: [{ gray: " Discovery:" }, " Understanding Your Needs"],
           txtone:
             "This is where everything begins. We take the time to really listen who you are, what your business or art is about, and what you want your website to achieve.",
           txttwo: "Think of it as a conversation, not a technical meeting.",
@@ -55,7 +55,7 @@ export const dictionaries = {
             "We’ll talk about your vision, your audience, your style, and even your budget. By the end of this step, you’ll know exactly what we’ll create together a website that reflects your unique identity and sets the right goals from the start.",
         },
         secondSlide: {
-          h3: "Creating a Website Your Users Will Love",
+          h3: [{ gray: "Creating a Website " }, "Your Users Will Love"],
           txtone:
             "This is where ideas turn into reality. While we handle the design and development, you’ll see your future website come to life step by step",
           txttwo:
@@ -64,7 +64,7 @@ export const dictionaries = {
             "You don’t have to worry about the technical side, we take care of everything, keeping you updated so you always feel in the loop.",
         },
         thirdSlide: {
-          h3: "Launching & Helping Your Business Grow",
+          h3: ["Launching & Helping ", { gray: "Your Business Grow" }],
           txtone: "Here comes the exciting part: your website goes live!  ",
           txttwo:
             "But we don’t stop there. If you ever need updates, new features, or ongoing support, we’re here for you.",
@@ -480,7 +480,7 @@ export const dictionaries = {
           text: "Créer un site web peut sembler compliqué, mais avec nous, c’est un parcours simple. De la première conversation jusqu’à la mise en ligne de votre site, nous vous guidons étape par étape — toujours avec clarté, toujours avec une approche humaine.",
         },
         firstSlide: {
-          h3: " Découverte : comprendre vos besoins",
+          h3: [{ gray: " Découverte: " }, "comprendre vos besoins"],
           txtone:
             "C’est ici que tout commence. Nous prenons le temps de vraiment écouter : qui vous êtes, ce que représente votre entreprise ou votre art, et ce que vous souhaitez que votre site web accomplisse.",
           txttwo: "Voyez cela comme une discussion, pas une réunion technique.",
@@ -488,7 +488,10 @@ export const dictionaries = {
             "Nous parlerons de votre vision, de votre audience, de votre style et même de votre budget. À la fin de cette étape, vous saurez exactement ce que nous allons créer ensemble : un site web qui reflète votre identité unique et fixe les bons objectifs dès le départ.",
         },
         secondSlide: {
-          h3: "Créer un site web que vos utilisateurs vont adorer",
+          h3: [
+            { gray: "Créer un site web " },
+            "que vos utilisateurs vont adorer",
+          ],
           txtone:
             "C’est ici que les idées prennent vie. Pendant que nous nous occupons du design et du développement, vous verrez votre futur site se concrétiser étape par étape.",
           txttwo:
@@ -497,7 +500,10 @@ export const dictionaries = {
             "Vous n’avez pas à vous soucier de l’aspect technique : nous nous occupons de tout, tout en vous tenant informé pour que vous soyez toujours impliqué dans le processus.",
         },
         thirdSlide: {
-          h3: "Lancement & accompagnement pour la croissance de votre entreprise",
+          h3: [
+            "Lancement & accompagnement pour ",
+            { gray: "la croissance de votre entreprise" },
+          ],
           txtone:
             "Voici la partie la plus excitante : votre site web est en ligne !",
           txttwo:

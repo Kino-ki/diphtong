@@ -95,13 +95,19 @@ export default function PreHomeSlides() {
           >
             <h3 className="md:py-10 py-8 md:pl-5 text-center md:text-start ">
               {" "}
-              {phslides.firstSlide.h3}
+              {phslides.firstSlide.h3.map((p) =>
+                typeof p === "string" ? p : p.gray
+              )}
             </h3>
             <h3 className="w-full md:pl-5 border-b border-t border-wlite md:py-10 py-8 text-center md:text-start ">
-              {phslides.secondSlide.h3}
+              {phslides.secondSlide.h3.map((p) =>
+                typeof p === "string" ? p : p.gray
+              )}
             </h3>
             <h3 className="md:py-10 py-8 md:pl-5 text-center md:text-start ">
-              {phslides.thirdSlide.h3}
+              {phslides.thirdSlide.h3.map((p) =>
+                typeof p === "string" ? p : p.gray
+              )}
             </h3>
           </div>
         </div>

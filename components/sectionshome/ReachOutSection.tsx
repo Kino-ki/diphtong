@@ -4,15 +4,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "@/components/language/LangContext";
 import ContactForm from "../ContactForm";
 import CalendlyWidget from "@/components/CalendlyWidget";
+import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function ReachOutSection() {
   const { language, dictionary } = useLanguage();
   const reachout = dictionary.homepage.reachoutsection;
+  const sectionRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <div className="flex  h-full     ">
-      <div className="flex flex-col w-full md:mt-5  items-center">
+    <div ref={sectionRef} className="flex  h-full     ">
+      <div className="flex flex-col w-full md:mt-5  items-center relative">
         <h2 className=" text-[6rem] flex text-center w-[80%] justify-center  my-16 lg:mt-3 font menlor tracking-wide leading-tight  ">
           {reachout.h2}
         </h2>
@@ -20,7 +22,8 @@ export default function ReachOutSection() {
         <div className=" flex justify-center items-center md:w-3/5 md:my-20 my-10  h-[100svh] ">
           <ContactForm lang={language} />
         </div>
-        <CalendlyWidget />
+
+        <CalendlyWidget sectionRef={sectionRef} />
       </div>
     </div>
   );

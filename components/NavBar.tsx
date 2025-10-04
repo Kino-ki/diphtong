@@ -8,6 +8,7 @@ import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LangButton } from "./Buttons";
+import { useLanguage } from "./language/LangContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,6 +17,10 @@ export default function NavBar() {
   const [scrollY, setScrollY] = useState(0);
 
   const pathname = usePathname();
+  const { dictionary } = useLanguage();
+  const {
+    navbar: { services, about, contact, proj },
+  } = dictionary;
 
   // ----------------------scroll monitor function
   useEffect(() => {
@@ -67,7 +72,7 @@ export default function NavBar() {
     <div
       id="navbar"
       key={pathname}
-      className={`fixed top-0 z-40 w-full  text-wlite pl-16 pr-3 text-[1.1rem]/5 font-menlor lg:flex hidden ${
+      className={`fixed top-0 z-40 w-full  text-wlite pl-16 pr-3 text-[1.1rem]/5 font-menlor uppercase lg:flex hidden ${
         pathname.includes("/home") && scrollY < 400
           ? ""
           : "mix-blend-difference"
@@ -76,14 +81,14 @@ export default function NavBar() {
       <div className="flex justify-between w-full pt-3">
         <ul className="flex gap-20   ">
           <li className="">
-            <a href="/services">SERVICES</a>
+            <a href="/services">{services} </a>
           </li>
 
           <li>
-            <a href="/about">ABOUT</a>
+            <a href="/about">{about} </a>
           </li>
           <li className="">
-            <a href="/projects">OUR PROJECTS</a>
+            <a href="/projects">{proj} </a>
           </li>
         </ul>
         <div id="" className=" top-2">
@@ -101,7 +106,7 @@ export default function NavBar() {
 
         <ul className=" text-wlite  flex ">
           <li>
-            <a href="/contact">CONTACT</a>
+            <a href="/contact">{contact} </a>
           </li>
         </ul>
       </div>

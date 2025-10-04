@@ -41,7 +41,7 @@ export default function HeroSection() {
   return (
     <div
       ref={heroTextRef}
-      className="h-[100vh] bg-mobileherogif bg-left  md:bg-herogif  md:bg-contain relative "
+      className="h-[100vh] bg-mobileherogif  bg-left  md:bg-herogif  md:bg-contain relative "
     >
       <div className="h-full w-full backdrop-blur-[1px] bg-black/30  ">
         <div className="h-full w-full md:pt-[22rem] md:pb-40 flex justify-center">

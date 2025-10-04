@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/components/language/LangContext";
 import arrow from "@/public/images/servicearrow.svg";
+import blackarrow from "@/public/images/blackservicearrow.svg";
 import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -16,17 +17,19 @@ export function ContactButton({
   width: string;
   height: string;
 }) {
+  const { language } = useLanguage();
   return (
-    <div>
-      <button
-        type="button"
-        className={`bg-wlite hover:bg-white transition-all ease-in-out duration-200 p-3 rounded-md ${height} ${width}`}
-      >
-        <a href="/contact">
-          <p className={`text-black  ${textsize}`}>hit us up</p>
-        </a>
-      </button>
-    </div>
+    <button
+      type="button"
+      className={`bg-wlite hover:bg-white transition-all ease-in-out duration-200 p-3 px-6 capitalize rounded-md font-figtree ${height} ${width}`}
+    >
+      <a href="/contact">
+        <p className={`text-black  ${textsize}`}>
+          {" "}
+          {language === "EN" ? "hit us up" : "contactez-nous"}{" "}
+        </p>
+      </a>
+    </button>
   );
 }
 
@@ -77,17 +80,26 @@ export function GetAQuoteButton({
   return (
     <button
       ref={buttonRef}
-      className={` relative overflow-hidden border mx-auto ${divclass} py-5 border-wlite rounded-md flex justify-between gap-3 items-center`}
+      className={` relative overflow-hidden border ${divclass}  border-wlite rounded-md  `}
     >
-      <a href="/contact" className="">
-        <span
+      <a
+        href="/contact"
+        className="  w-full h-full flex justify-between gap-3 "
+      >
+        <p
           ref={textRef}
-          className="relative z-10 text-wlite text-base tracking-wider flex justify-center w-full uppercase font-figtree"
+          className="relative z-10 text-wlite text-base tracking-wider flex justify-start w-full uppercase font-figtree  py-5"
         >
           {language === "EN" ? "Get a free quote" : "Évaluation"}
-        </span>
+        </p>
+        <Image
+          src={isHovered ? blackarrow : arrow}
+          width={8}
+          height={5}
+          alt="arrow"
+          className="z-10"
+        />
       </a>
-      <Image src={arrow} width={8} height={5} alt="arrow" />
       <span className="absolute inset-0 bg-[#c3c3c3] -left-full" />
     </button>
   );

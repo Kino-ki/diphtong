@@ -45,31 +45,34 @@ export default function Contact() {
   }, []);
 
   return (
-    <div className="bg-diphblack pb-20 md:pb-40 px-3  md:px-10 text-wlite  ">
-      <CalendlyWidget />
+    <div className="bg-diphblack px-3  md:px-10 text-wlite  ">
       <div className="flex flex-col gap-12 md:flex-row  ">
         <div
           ref={pinnedRef}
-          className="flex flex-col text-center md:text-start  md:pt-20 pt-10  md:w-[48%] md:sticky md:top-0 md:self-start "
+          className="flex flex-col h-[100svh]  md:w-[40%] md:sticky md:top-0 md:self-start"
         >
+          <div className="h-[20%] " />
           <h1 className="font-menlob  text-[20vw] md:text-[9rem]  uppercase ">
             {" "}
             {contact.PageTitle}{" "}
           </h1>
-          <h2 className="md:font-figtree font-urbanistl md:uppercase md:w-2/3 text-xl md:text-3xl py-8 md:py-20 tracking-wider">
+          <h2 className="md:font-figtree font-urbanistl md:uppercase md:w-2/3 text-xl md:text-3xl tracking-wider text-end mx-auto ">
             {contact.h2}
           </h2>
         </div>
 
-        <div className="flex flex-col md:pt-10 md:w-3/5 md:items-end overflow-y-auto ">
+        <div className="flex flex-col lg:gap-52 md:py-24 md:w-[60%] md:items-end overflow-y-auto ">
           <div className=" lg:w-full h-[80svh] md:h-[100svh]  mx-auto md:px-10 ">
-            <h3 className="md:font-figtree font-urbanistl  md:uppercase text-lg md:text-xl pb-10 w-4/5  md:py-20  tracking-wider">
+            <h3 className="md:font-urbanistmed  md:uppercase text-lg md:text-3xl  md:py-20  md:pb-32 tracking-wider text-center">
               {contact.h3}
             </h3>
             <ContactForm lang={language} />
           </div>
+          <div className=" w-full flex justify-center endtrigger">
+            <CalendlyWidget />
+          </div>
           {/* ----------------------------contact info------------------- */}
-          <div className="flex md:flex-row flex-col text-center md:text-start gap-10 mx-auto pt-20 text-wlite endtrigger">
+          <div className="flex md:flex-row flex-col text-center md:text-start gap-10 mx-auto text-wlite  md:pb-20">
             <div className="flex flex-col justify-between  gap-5 md:w-1/2 ">
               <h2 className="font font-menlob text-xl md:text-3xl">
                 {contact.contactInfo}

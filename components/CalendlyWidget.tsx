@@ -1,42 +1,33 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { PopupWidget } from "react-calendly";<
-
+import { PopupWidget } from "react-calendly";
 import { useLanguage } from "@/components/language/LangContext";
 
-export default function CalendlyWidget({
-  sectionRef,
-}: {
-  sectionRef: React.RefObject<HTMLDivElement | null>;
-}) {
-  const [rootId, setRootId] = useState<HTMLElement | null>(null);
-
+export default function CalendlyWidget() {
   const { language } = useLanguage();
 
-  useEffect(() => {
-    if (sectionRef.current) {
-      setRootId(sectionRef.current);
-    } else {
-      setRootId(document.body);
-    }
-  }, [sectionRef]);
-
-  if (!rootId) return null; // guard
-
   return (
-    <div>
+    <>
+      <button
+        onClick={() =>
+          document
+            .querySelector<HTMLDivElement>(".calendly-badge-content")
+            ?.click()
+        }
+        className="px-8 py-5 bg-wlite rounded-xl text-diphblack font-figtree text-2xl  hover:bg-white transition-colors ease-in-out duration-400"
+      >
+        {language === "EN"
+          ? "Click here to schedule a meeting with us"
+          : "Cliquez ici pour prendre un rendez-vous"}
+      </button>
+
       <PopupWidget
         url="https://calendly.com/faiza-fehri-dev/new-meeting"
-        rootElement={rootId as HTMLDivElement}
-        text={
-          language === "EN"
-            ? "Click here to schedule a meeting"
-            : "Prenez rendez-vous avec nous"
-        }
-        textColor="#000000"
-        color="#d9d9d9"
+        rootElement={document.body} // escape ScrollSmoother
+        text="" // disable Calendly's default floating button
+        color="transparent"
+        textColor="transparent"
       />
-    </div>
+    </>
   );
 }

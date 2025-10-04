@@ -160,7 +160,6 @@ export const dictionaries = {
           "Whether you’re an artist who wants a portfolio that shines or a small business looking to grow, we’re here to help. Our expertise in design, development, and SEO ensures your website isn’t just beautiful—it works for you.",
       },
     },
-
     aboutPage: {
       h1: "About us",
       h1description: "Web Design for Artists & Small Businesses in Montreal",
@@ -256,7 +255,6 @@ export const dictionaries = {
       },
       cta: "Reach out today,  let’s bring your ideas online.",
     },
-
     contactPage: {
       PageTitle: "Contact",
       h2: "we would love to hear about your projects",
@@ -269,116 +267,128 @@ export const dictionaries = {
       contactInfo: "Contact Information",
       adress: "2861 Ontario St E , Montréal (QC),H21X6  (514) 265-6791",
     },
-    servicesPage: [
-      {
-        id: "1",
-        serv: {
-          h2: "WEB DEVELOPMENT",
-          content: [
-            "We build ",
-            { bold: "custom websites tailored to your goals. " },
-            "Whether you’re looking for a high-end Next.js website with ",
-            { bold: "animations and cutting-edge performance, " },
-            "or an ",
-            { bold: "affordable WordPress site that’s easy to manage, " },
-            "we adapt to your needs and budget.",
-          ],
-          h3: "Our development ensures:",
-          webdevarray: [
-            "SEO-friendly code for better visibility on Google",
-            "Fast load times and optimized performance",
-            "Secure, scalable solutions for growth",
-            "Full ownership, no locked platforms or hidden fees",
-          ],
-          conclusion: [
-            {
-              bold: "From artists in Montreal to small businesses worldwide, ",
-            },
-            "we help you launch a website that’s both beautiful and functional.",
-          ],
+    servicesPage: {
+      h1: "Our Web Services",
+      textintro: [
+        "We create websites that are both ",
+        { bold: "visually striking and technically flawless. " },
+        " Whether you’re an artist, a small business, or an organization in the creative world our services cover everything you need: ",
+        {
+          bold: " web development, design, maintenance, and responsiveness.",
         },
-      },
-      {
-        id: "2",
-        serv: {
-          h2: "Web Design",
-          content: [
-            "We believe design is more than just looks, it’s ",
-            { bold: "how people experience your brand online. " },
-            "Our approach blends ",
-            {
-              bold: "clean, modern aesthetics with user-friendly navigation ",
-            },
-            " so your website feels effortless to use. ",
-          ],
-          h3: "What we offer:",
-          webdevarray: [
-            "Custom layouts that reflect your brand’s personality",
-            "Accessible and inclusive design for all audiences",
-            "Mobile-first interfaces that adapt to every screen",
-            "Integration of visual identity, typography, and colors",
-          ],
-          conclusion: [
-            "We design websites that ",
-            {
-              bold: "inspire trust and engage visitors, ",
-            },
-            "helping your business stand out in a competitive online world.",
-          ],
+      ],
+
+      servicearray: [
+        {
+          id: "1",
+          serv: {
+            h2: "web development",
+            content: [
+              "We build ",
+              { bold: "custom websites tailored to your goals. " },
+              "Whether you’re looking for a high-end Next.js website with ",
+              { bold: "animations and cutting-edge performance, " },
+              "or an ",
+              { bold: "affordable WordPress site that’s easy to manage, " },
+              "we adapt to your needs and budget.",
+            ],
+            h3: "Our development ensures:",
+            webdevarray: [
+              "SEO-friendly code for better visibility on Google",
+              "Fast load times and optimized performance",
+              "Secure, scalable solutions for growth",
+              "Full ownership, no locked platforms or hidden fees",
+            ],
+            conclusion: [
+              {
+                bold: "From artists in Montreal to small businesses worldwide, ",
+              },
+              "we help you launch a website that’s both beautiful and functional.",
+            ],
+          },
         },
-      },
-      {
-        id: "3",
-        serv: {
-          h2: "Maintenance & Updates",
-          content: [
-            "Already have a website? We’ll help you  ",
-            { bold: "keep it fresh and secure. " },
-            "Many of our clients come to us with existing sites that need ",
-            { bold: "updates, bug fixes, orcontentchanges. " },
-            " and we make sure everything runs smoothly. ",
-          ],
-          h3: "Our maintenance plans cover:",
-          webdevarray: [
-            "Security updates & plugin management",
-            "Regular backups to prevent data loss",
-            "Content and design updates on demand",
-            "Performance audits & speed optimization",
-          ],
-          conclusion: [
-            "Whether your site was built on WordPress or custom code, we offer ",
-            {
-              bold: "flexible maintenance plans ",
-            },
-            "so you can focus on your work while we handle the tech.",
-          ],
+        {
+          id: "2",
+          serv: {
+            h2: "Web Design",
+            content: [
+              "We believe design is more than just looks, it’s ",
+              { bold: "how people experience your brand online. " },
+              "Our approach blends ",
+              {
+                bold: "clean, modern aesthetics with user-friendly navigation ",
+              },
+              " so your website feels effortless to use. ",
+            ],
+            h3: "What we offer:",
+            webdevarray: [
+              "Custom layouts that reflect your brand’s personality",
+              "Accessible and inclusive design for all audiences",
+              "Mobile-first interfaces that adapt to every screen",
+              "Integration of visual identity, typography, and colors",
+            ],
+            conclusion: [
+              "We design websites that ",
+              {
+                bold: "inspire trust and engage visitors, ",
+              },
+              "helping your business stand out in a competitive online world.",
+            ],
+          },
         },
-      },
-      {
-        id: "4",
-        serv: {
-          h2: "Responsive Design",
-          content: [
-            "Today, over 60% of web traffic comes from mobile devices. That’s why we make sure every website we deliver is ",
-            { bold: "fully responsive and tested across devices" },
-          ],
-          h3: "With us, you get:",
-          webdevarray: [
-            "Seamless experiences on phones, tablets, and desktops",
-            "Optimized layouts that adapt to any screen size",
-            "Faster loading and better SEO rankings with mobile-first design",
-            "Accessibility standards that make your site inclusive",
-          ],
-          conclusion: [
-            "A website that looks good on every screen means more ",
-            {
-              bold: "engagement, conversions, and trust ",
-            },
-            "from your visitors.",
-          ],
+        {
+          id: "3",
+          serv: {
+            h2: "Maintenance & Updates",
+            content: [
+              "Already have a website? We’ll help you  ",
+              { bold: "keep it fresh and secure. " },
+              "Many of our clients come to us with existing sites that need ",
+              { bold: "updates, bug fixes, orcontentchanges. " },
+              " and we make sure everything runs smoothly. ",
+            ],
+            h3: "Our maintenance plans cover:",
+            webdevarray: [
+              "Security updates & plugin management",
+              "Regular backups to prevent data loss",
+              "Content and design updates on demand",
+              "Performance audits & speed optimization",
+            ],
+            conclusion: [
+              "Whether your site was built on WordPress or custom code, we offer ",
+              {
+                bold: "flexible maintenance plans ",
+              },
+              "so you can focus on your work while we handle the tech.",
+            ],
+          },
         },
-      },
-    ],
+        {
+          id: "4",
+          serv: {
+            h2: "Responsive Design",
+            content: [
+              "Today, over 60% of web traffic comes from mobile devices. That’s why we make sure every website we deliver is ",
+              { bold: "fully responsive and tested across devices" },
+            ],
+            h3: "With us, you get:",
+            webdevarray: [
+              "Seamless experiences on phones, tablets, and desktops",
+              "Optimized layouts that adapt to any screen size",
+              "Faster loading and better SEO rankings with mobile-first design",
+              "Accessibility standards that make your site inclusive",
+            ],
+            conclusion: [
+              "A website that looks good on every screen means more ",
+              {
+                bold: "engagement, conversions, and trust ",
+              },
+              "from your visitors.",
+            ],
+          },
+        },
+      ],
+    },
     projectsPage: {
       estherProject: {
         h1: "esther lhuillery",
@@ -431,6 +441,41 @@ export const dictionaries = {
           },
         ],
       },
+    },
+    footer: {
+      services: {
+        h2: "our services",
+        servicearray: [
+          {
+            id: "1",
+            h3: "WEB DEVELOPMENT",
+          },
+          {
+            id: "2",
+            h3: "Web Design",
+          },
+          {
+            id: "3",
+            h3: "Maintenance",
+          },
+          {
+            id: "4",
+            h3: "Responsive Design",
+          },
+        ],
+      },
+      h22: "Our Company",
+      about: "about us",
+      projects: "our projects",
+      sitemap: "sitemap",
+      contact: "contact info",
+      cta: ["let's talk about your next", { br: "project" }],
+    },
+    navbar: {
+      services: "services",
+      about: "about",
+      proj: "our projects",
+      contact: "contact",
     },
   },
   FR: {
@@ -702,126 +747,144 @@ export const dictionaries = {
     },
     contactPage: {
       PageTitle: "Contact",
-      h2: "we would love to hear about your projects",
-      h3: "ask us your question or book a meeting with us",
+      h2: "Nous aimerions beaucoup découvrir vos projets",
+      h3: "Posez-nous vos questions ou réservez une rencontre avec nous",
       form: {
         name: "name",
         email: "email (required)",
         website: "website (optional)",
       },
-      contactInfo: "Contact Information",
-      adress: "2861 Ontario St E , Montréal (QC),H21X6  (514) 265-6791",
+      contactInfo: "Information de Contact ",
+      adress: "2861 Rue Ontario Est , Montréal (QC),H21X6  (514) 265-6791",
     },
-    servicesPage: [
-      {
-        id: "1",
-        serv: {
-          h2: "WEB DEVELOPMENT",
-          content: [
-            "We build ",
-            { bold: "custom websites tailored to your goals. " },
-            "Whether you’re looking for a high-end Next.js website with ",
-            { bold: "animations and cutting-edge performance, " },
-            "or an ",
-            { bold: "affordable WordPress site that’s easy to manage, " },
-            "we adapt to your needs and budget.",
-          ],
-          h3: "Our development ensures:",
-          webdevarray: [
-            "SEO-friendly code for better visibility on Google",
-            "Fast load times and optimized performance",
-            "Secure, scalable solutions for growth",
-            "Full ownership, no locked platforms or hidden fees",
-          ],
-          conclusion: [
-            {
-              bold: "From artists in Montreal to small businesses worldwide, ",
-            },
-            "we help you launch a website that’s both beautiful and functional.",
-          ],
+    servicesPage: {
+      h1: "Nos Services Web",
+      textintro: [
+        "Nous créons des sites web à la fois ",
+        { bold: "visuellement percutants et techniquement irréprochables. " },
+        " Que vous soyez un artiste, une petite entreprise ou une organisation du monde créatifnos services couvrent tout ce dont vous avez besoin : ",
+        {
+          bold: " développement web, design, maintenance et adaptabilité.",
         },
-      },
-      {
-        id: "2",
-        serv: {
-          h2: "Web Design",
-          content: [
-            "We believe design is more than just looks, it’s ",
-            { bold: "how people experience your brand online. " },
-            "Our approach blends ",
-            {
-              bold: "clean, modern aesthetics with user-friendly navigation ",
-            },
-            " so your website feels effortless to use. ",
-          ],
-          h3: "What we offer:",
-          webdevarray: [
-            "Custom layouts that reflect your brand’s personality",
-            "Accessible and inclusive design for all audiences",
-            "Mobile-first interfaces that adapt to every screen",
-            "Integration of visual identity, typography, and colors",
-          ],
-          conclusion: [
-            "We design websites that ",
-            {
-              bold: "inspire trust and engage visitors, ",
-            },
-            "helping your business stand out in a competitive online world.",
-          ],
+      ],
+
+      servicearray: [
+        {
+          id: "1",
+          serv: {
+            h2: "DÉVELOPPEMENT WEB",
+            content: [
+              "Nous créons ",
+              { bold: "des sites web sur mesure adaptés à vos objectifs. " },
+              "Que vous recherchiez un site Next.js haut de gamme avec ",
+              { bold: "animations et performance de pointe, " },
+              "ou un ",
+              { bold: "site WordPress abordable et facile à gérer, " },
+              "nous nous adaptons à vos besoins et à votre budget.",
+            ],
+            h3: "Notre développement garantit :",
+            webdevarray: [
+              "Un code optimisé pour le SEO et une meilleure visibilité sur Google",
+              "Des temps de chargement rapides et des performances optimisées",
+              "Des solutions sécurisées et évolutives pour accompagner votre croissance",
+              "Une pleine propriété, sans plateformes verrouillées ni frais cachés",
+            ],
+            conclusion: [
+              {
+                bold: "Des artistes de Montréal aux petites entreprises du monde entier, ",
+              },
+              "nous vous aidons à lancer un site web à la fois beau et fonctionnel.",
+            ],
+          },
         },
-      },
-      {
-        id: "3",
-        serv: {
-          h2: "Maintenance & Updates",
-          content: [
-            "Already have a website? We’ll help you  ",
-            { bold: "keep it fresh and secure. " },
-            "Many of our clients come to us with existing sites that need ",
-            { bold: "updates, bug fixes, orcontentchanges. " },
-            " and we make sure everything runs smoothly. ",
-          ],
-          h3: "Our maintenance plans cover:",
-          webdevarray: [
-            "Security updates & plugin management",
-            "Regular backups to prevent data loss",
-            "Content and design updates on demand",
-            "Performance audits & speed optimization",
-          ],
-          conclusion: [
-            "Whether your site was built on WordPress or custom code, we offer ",
-            {
-              bold: "flexible maintenance plans ",
-            },
-            "so you can focus on your work while we handle the tech.",
-          ],
+        {
+          id: "2",
+          serv: {
+            h2: "Design Web",
+            content: [
+              "Nous pensons que le design est plus qu’une apparence, c’est ",
+              {
+                bold: "la manière dont les gens vivent votre marque en ligne. ",
+              },
+              "Notre approche combine ",
+              {
+                bold: "esthétique moderne et épurée avec une navigation intuitive ",
+              },
+              " pour que votre site soit facile et agréable à utiliser. ",
+            ],
+            h3: "Ce que nous offrons :",
+            webdevarray: [
+              "Des maquettes personnalisées qui reflètent la personnalité de votre marque",
+              "Un design accessible et inclusif pour tous les publics",
+              "Des interfaces mobile-first qui s’adaptent à tous les écrans",
+              "L’intégration de l’identité visuelle, de la typographie et des couleurs",
+            ],
+            conclusion: [
+              "Nous concevons des sites web qui ",
+              {
+                bold: "inspirent confiance et engagent les visiteurs, ",
+              },
+              "aidant votre entreprise à se démarquer dans un monde numérique compétitif.",
+            ],
+          },
         },
-      },
-      {
-        id: "4",
-        serv: {
-          h2: "Responsive Design",
-          content: [
-            "Today, over 60% of web traffic comes from mobile devices. That’s why we make sure every website we deliver is ",
-            { bold: "fully responsive and tested across devices" },
-          ],
-          h3: "With us, you get:",
-          webdevarray: [
-            "Seamless experiences on phones, tablets, and desktops",
-            "Optimized layouts that adapt to any screen size",
-            "Faster loading and better SEO rankings with mobile-first design",
-            "Accessibility standards that make your site inclusive",
-          ],
-          conclusion: [
-            "A website that looks good on every screen means more ",
-            {
-              bold: "engagement, conversions, and trust ",
-            },
-            "from your visitors.",
-          ],
+        {
+          id: "3",
+          serv: {
+            h2: "Maintenance & Mises à jour",
+            content: [
+              "Vous avez déjà un site web ? Nous vous aidons à ",
+              { bold: "le garder à jour et sécurisé. " },
+              "De nombreux clients viennent à nous avec des sites existants nécessitant ",
+              {
+                bold: "des mises à jour, corrections de bugs ou changements de contenu. ",
+              },
+              " et nous nous assurons que tout fonctionne parfaitement. ",
+            ],
+            h3: "Nos forfaits de maintenance couvrent :",
+            webdevarray: [
+              "Mises à jour de sécurité et gestion des plugins",
+              "Sauvegardes régulières pour éviter toute perte de données",
+              "Mises à jour de contenu et design à la demande",
+              "Audits de performance et optimisation de la vitesse",
+            ],
+            conclusion: [
+              "Que votre site ait été développé sous WordPress ou en code personnalisé, nous proposons ",
+              {
+                bold: "des forfaits de maintenance flexibles ",
+              },
+              "afin que vous puissiez vous concentrer sur votre activité pendant que nous gérons la technique.",
+            ],
+          },
         },
-      },
-    ],
+        {
+          id: "4",
+          serv: {
+            h2: "Design Responsive",
+            content: [
+              "Aujourd’hui, plus de 60% du trafic web provient des appareils mobiles. C’est pourquoi nous veillons à ce que chaque site que nous livrons soit ",
+              {
+                bold: "entièrement responsive et testé sur tous les appareils",
+              },
+            ],
+            h3: "Avec nous, vous bénéficiez de :",
+            webdevarray: [
+              "Des expériences fluides sur téléphones, tablettes et ordinateurs",
+              "Des mises en page optimisées qui s’adaptent à toutes les tailles d’écran",
+              "Un chargement plus rapide et un meilleur référencement grâce au design mobile-first",
+              "Des normes d’accessibilité qui rendent votre site inclusif",
+            ],
+            conclusion: [
+              "Un site qui s’affiche parfaitement sur tous les écrans génère plus ",
+              {
+                bold: "d’engagement, de conversions et de confiance ",
+              },
+              "de la part de vos visiteurs.",
+            ],
+          },
+        },
+      ],
+    },
     projectsPage: {
       estherProject: {
         h1: "esther lhuillery",
@@ -874,6 +937,42 @@ export const dictionaries = {
           },
         ],
       },
+    },
+    footer: {
+      services: {
+        h2: "nos services",
+        servicearray: [
+          {
+            id: "1",
+            h3: "Développement web",
+          },
+          {
+            id: "2",
+            h3: "Design Web",
+          },
+          {
+            id: "3",
+            h3: "Maintenance",
+          },
+          {
+            id: "4",
+            h3: "Design Responsive",
+          },
+        ],
+      },
+
+      h22: "la compagnie",
+      about: "qui sommes-nous",
+      projects: "nos projets",
+      sitemap: "sitemap",
+      contact: "contactez-nous",
+      cta: ["Discutons de votre prochain ", { br: "projet en ligne" }],
+    },
+    navbar: {
+      services: "services",
+      about: "a propos",
+      proj: "nos projets",
+      contact: "contact",
     },
   },
 };

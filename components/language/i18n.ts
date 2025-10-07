@@ -166,7 +166,7 @@ export const dictionaries = {
       firsttext: [
         "We’re a ",
         {
-          bold: "young, women-led web development company based in Montreal",
+          bold: "young, women-led web development company based in Montreal ",
         },
         "dedicated to helping ",
         {
@@ -395,24 +395,48 @@ export const dictionaries = {
         subtitle: "video editor",
         span: "portfolio",
         services: [" web design ", "full stack develoment"],
-        content:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci.",
+        content: [
+          "Esther Lhuillery is a Montreal-based video editor specializing in movie trailers. Her work blends precision and emotion, capturing the essence of each film in just a few minutes. ",
+          { br: "We designed a " },
+          { bold: "minimalist one-page website " },
+          "that mirrors the atmosphere of a dark cinema room : elegant, and focused entirely on the moving image. ",
+          {
+            br: "The layout lets Esther’s editing shine, offering a seamless viewing experience that draws the eye to what matters most: the videos themselves.",
+          },
+        ],
         href: "https://www.estherlhuillery.com/",
       },
       beancesProject: {
         h1: "béances éditions",
         subtitle: "QUEER ZINES EDITIONS",
         services: [" web design ", "full stack develoment"],
-        content:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci.",
+        content: [
+          "Béances Éditions is a Montreal-based publishing house amplifying ",
+          { bold: "lesbo-queer, lesbian, and trans voices " },
+          "rarely heard in the Francophone world. Their mission: to reclaim space, pleasure, and time for stories that inspire, challenge, and resist erasure.",
+          { br: "We designed a bold, characterful website that echoes " },
+          { bold: " feminist punk and grunge aesthetics: " },
+          "vibrant colors, stencil-style visuals, and unapologetic energy. The result is a platform that feels both rebellious and accessible, staying true to Béances’ vision of literature as a space for liberation and collective expression.",
+        ],
         href: "https://www.beanceseditions.com/",
       },
       AnalogProject: {
         h1: "Analogizing",
         subtitle: "Artist Portfolio",
         services: [" web design ", "full stack develoment"],
-        content:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci.",
+        content: [
+          "Analogizing is the digital portfolio of a ",
+          { bold: "multidisciplinary queer artist based in Montreal. " },
+          "Their practice spans writing, translation, photography, collage, and sculpture.",
+          {
+            br: "We designed a minimalist website offering ",
+          },
+          { bold: "an elegant and fluid experience," },
+          " with smooth animations, no visual noise, and a layout inspired by contemporary art galleries. ",
+          {
+            br: "To reflect the diversity of the artist’s work, the site is structured around three dimensions — 1D for written works, 2D for visual pieces, and 3D for sculptural objects — allowing visitors to explore each field intuitively.",
+          },
+        ],
         href: "https://www.analogizing.art/home",
       },
       collavoratives: {
@@ -433,8 +457,22 @@ export const dictionaries = {
         h1: "Upcoming Projects",
         projects: [
           {
-            id: 0,
+            id: 2,
             projectName: "Physiothérapie Hélène Morin",
+            services: ["Front-End develoment"],
+            projecDescription:
+              "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva",
+          },
+          {
+            id: 0,
+            projectName: "Christian Maria Brun Del Re",
+            services: [" web design ", "full stack develoment"],
+            projecDescription:
+              "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva",
+          },
+          {
+            id: 1,
+            projectName: "Chambre de commerce de Lotbinière",
             services: ["Front-End develoment"],
             projecDescription:
               "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva",
@@ -654,7 +692,7 @@ export const dictionaries = {
       firsttext: [
         "Nous sommes une ",
         {
-          bold: "jeune entreprise de développement web dirigée par des femmes et basée à Montréal",
+          bold: "jeune entreprise de développement web dirigée par des femmes et basée à Montréal ",
         },
         "dédiée à accompagner ",
         {
@@ -891,24 +929,48 @@ export const dictionaries = {
         subtitle: "video editor",
         span: "portfolio",
         services: [" web design ", "full stack develoment"],
-        content:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci.",
+        content: [
+          "Esther Lhuillery is a Montreal-based video editor specializing in movie trailers. Her work blends precision and emotion, capturing the essence of each film in just a few minutes. ",
+          { br: "We designed a " },
+          { bold: "minimalist one-page website " },
+          "that mirrors the atmosphere of a dark cinema room : elegant, and focused entirely on the moving image. ",
+          {
+            br: "The layout lets Esther’s editing shine, offering a seamless viewing experience that draws the eye to what matters most: the videos themselves.",
+          },
+        ],
         href: "https://www.estherlhuillery.com/",
       },
       beancesProject: {
         h1: "béances éditions",
         subtitle: "QUEER ZINES EDITIONS",
         services: [" web design ", "full stack develoment"],
-        content:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci.",
+        content: [
+          "Béances Éditions is a Montreal-based publishing house amplifying ",
+          { bold: "lesbo-queer, lesbian, and trans voices " },
+          "rarely heard in the Francophone world. Their mission: to reclaim space, pleasure, and time for stories that inspire, challenge, and resist erasure.",
+          { br: "We designed a bold, characterful website that echoes " },
+          { bold: " feminist punk and grunge aesthetics: " },
+          "vibrant colors, stencil-style visuals, and unapologetic energy. The result is a platform that feels both rebellious and accessible, staying true to Béances’ vision of literature as a space for liberation and collective expression.",
+        ],
         href: "https://www.beanceseditions.com/",
       },
       AnalogProject: {
         h1: "Analogizing",
         subtitle: "Artist Portfolio",
         services: [" web design ", "full stack develoment"],
-        content:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. vivamus mauris ipsum, porttitor eu rutrum in, malesuada a purus. duis at vulputate sem. morbi metus nibh, efficitur at aliquam in, vulputate sed libero. nulla quis iaculis orci.",
+        content: [
+          "Analogizing is the digital portfolio of a ",
+          { bold: "multidisciplinary queer artist based in Montreal. " },
+          "Their practice spans writing, translation, photography, collage, and sculpture.",
+          {
+            br: "We designed a minimalist website offering ",
+          },
+          { bold: "an elegant and fluid experience," },
+          " with smooth animations, no visual noise, and a layout inspired by contemporary art galleries. ",
+          {
+            br: "To reflect the diversity of the artist’s work, the site is structured around three dimensions — 1D for written works, 2D for visual pieces, and 3D for sculptural objects — allowing visitors to explore each field intuitively.",
+          },
+        ],
         href: "https://www.analogizing.art/home",
       },
       collavoratives: {

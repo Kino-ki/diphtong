@@ -64,7 +64,7 @@ export default function Services() {
             {services.h1}{" "}
           </h1>
           <p
-            data-speed="1.4"
+            data-speed="1.2"
             className="lg:text-4xl/normal tracking-wide px-[10%]  py-20"
           >
             {services.textintro.map((s, i) =>

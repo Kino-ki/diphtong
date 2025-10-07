@@ -3,7 +3,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "@/components/language/LangContext";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
-import { BarCode } from "./BarCode";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -29,7 +28,7 @@ export default function PreHomeSlides() {
             ease: "power1.inOut",
             scrollTrigger: {
               trigger: titleRef.current,
-              start: "top 70%",
+              start: "top 60%",
               end: "bottom 20%",
               scrub: 2,
               pin: true,
@@ -37,22 +36,22 @@ export default function PreHomeSlides() {
             },
           }
         );
-        gsap.fromTo(
-          sectionsNameRef.current,
-          {
-            yPercent: 0,
-          },
-          {
-            yPercent: -30,
-            scrollTrigger: {
-              trigger: sectionsNameRef.current,
-              start: "top bottom",
-              end: "bottom 60%",
-              scrub: 1,
-              // markers: true,
-            },
-          }
-        );
+        // gsap.fromTo(
+        //   sectionsNameRef.current,
+        //   {
+        //     yPercent: 0,
+        //   },
+        //   {
+        //     yPercent: -50,
+        //     scrollTrigger: {
+        //       trigger: sectionsNameRef.current,
+        //       start: "top bottom",
+        //       end: "bottom 60%",
+        //       scrub: 1,
+        //       // markers: true,
+        //     },
+        //   }
+        // );
       });
 
       return () => mm.revert();
@@ -60,34 +59,27 @@ export default function PreHomeSlides() {
   }, []);
 
   return (
-    <div className="bg-wlite md:h-auto  h-[60svh] md:pb-20 relative ">
-      <div className="absolute w-full h-full ">
-        <BarCode
-          height={400}
-          strokeWidth={10}
-          x={400}
-          start="top 70%"
-          scrub={3}
-        />
-      </div>
+    <div className="bg-wlite md:h-auto  h-[60svh] md:pb-20  ">
       <div className="flex flex-col justify-start w-full pb-40">
         <div className="border-b md:border-none  border-black my-12 md:my-0  ">
           <h2
+            data-speed="0.9"
             ref={titleRef}
-            className="flex text-start  w-full text-[10vw]  font-urbanistr font-semibold md:font-medium tracking-wider md:-mb-0 -mb-5 text-black capitalize"
+            className="flex text-start  w-full text-[16vw]  font-urbanistr font-semibold md:font-medium tracking-wider md:-mb-0 -mb-5 text-black capitalize"
           >
             {phslides.intro.h2}
           </h2>
         </div>
         <div
+          data-speed="0.7"
           ref={sectionsNameRef}
           className=" flex flex-col  md:flex-row md:justify-between md:py-5 mdparallax "
         >
           <div className="flex flex-col gap-5 md:w-[45%]  px-2 md:px-12">
-            <p className="text-[#7a7878]  text-lg md:text-3xl/relaxed text-center md:text-start tracking-wider font-urbanistb  ">
+            <p className="text-[#7a7878]  text-lg md:text-4xl/relaxed text-center md:text-start tracking-wider font-urbanistb  ">
               {phslides.intro.subtitle}
             </p>
-            <p className="text-xl text-diphblack">{phslides.intro.text}</p>
+            <p className="text-2xl/10 text-diphblack">{phslides.intro.text}</p>
           </div>
           <div
             data-speed="1.5"

@@ -5,6 +5,7 @@ import gsap from "gsap";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useLanguage } from "@/components/language/LangContext";
+import { renderContentItem } from "../HelperFunctions";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -47,7 +48,7 @@ export default function Esther({ speed }: { speed: number }) {
         <div className=" flex md:flex-row pt-10 md:pt-0 flex-col md:justify-between">
           <div className="flex justify-end md:justify-start ">
             <p className=" w-2/3 md:w-1/2 md:-mt-10 font-urbanistr md:text-2xl/loose tracking-widest text-pretty ">
-              {estherProject.content}
+              {estherProject.content.map(renderContentItem)}
             </p>
           </div>
           <div className=" flex flex-col  md:text-lg font-menlob gap-10 pt-[3%] mx-auto  pr-[5%] w-2/3 ">

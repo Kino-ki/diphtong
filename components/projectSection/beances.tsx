@@ -5,6 +5,8 @@ import gsap from "gsap";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
 import { useLanguage } from "@/components/language/LangContext";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { renderContentItem } from "../HelperFunctions";
+
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function BeancesProject({ speed }: { speed: string }) {
@@ -31,7 +33,7 @@ export default function BeancesProject({ speed }: { speed: string }) {
       <div className="flex md:flex-row flex-col md:justify-end ">
         <p className="md:w-1/2 font-urbanistr md:text-2xl/loose md:tracking-widest text-pretty ">
           {" "}
-          {beancesProject.content}
+          {beancesProject.content.map(renderContentItem)}
         </p>
         <div className=" flex flex-col text-lg font-menlob gap-10 pt-20  lg:pt-0 pr-[5%] lg:w-1/4 mx-auto lg:mx-0">
           <button

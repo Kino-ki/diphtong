@@ -86,26 +86,26 @@ export default function AboutPage() {
             className="w-[40%]  flex flex-col h-[100svh] border-r border-r-[#888888]/20 "
           >
             <div className="h-[20%] " />
-            <h1 className=" text-9xl h-[80%] pr-20  ">{about.h1} </h1>
+            <h1 className=" text-9xl/normal h-[80%] pr-20  ">{about.h1} </h1>
           </div>
           {/* ----------------------------RIGHT SIDE flex col ----------------------------------------------- */}
 
           <div className="w-[60%] flex flex-col bg-wlite text-diphblack">
             <div className="h-[100svh] flex flex-col justify-end gap-20 p-20 pb-40 border-b-8 border-diphblack">
-              <h2 className="text-5xl tracking-widest font-urbanistr">
+              <h2 className="text-5xl/relaxed tracking-widest font-urbanistr">
                 {about.h1description}
               </h2>
-              <p className="text-2xl tracking-wider ">
+              <p className="text-2xl/10 tracking-wider ">
                 {about.firsttext.map((part, i) =>
                   typeof part === "string" ? part : <b key={i}>{part.bold}</b>
                 )}
               </p>
             </div>
             <div className="h-[100svh] flex flex-col justify-end  p-20 pb-40">
-              <h2 className="text-5xl tracking-widest font-urbanistr py-20">
+              <h2 className="text-5xl/relaxed tracking-widest font-urbanistr py-20">
                 {about.secondSectionspecial.h3}
               </h2>
-              <p className="text-2xl tracking-wider ">
+              <p className="text-2xl/10 tracking-wider ">
                 {about.secondSectionspecial.specialcontent.map((part, i) =>
                   typeof part === "string" ? part : <b key={i}>{part.bold}</b>
                 )}
@@ -117,7 +117,7 @@ export default function AboutPage() {
                     {spacial}{" "}
                   </li>
                 ))}
-                <p className="text-2xl tracking-wider pt-10">
+                <p className="text-2xl/10 font-urbanistr tracking-wider pt-10">
                   {about.secondSectionspecial.specialend.map((part, i) =>
                     typeof part === "string" ? part : <b key={i}>{part.bold}</b>
                   )}
@@ -128,24 +128,24 @@ export default function AboutPage() {
               <h2 className="text-5xl tracking-widest font-urbanistr py-20">
                 {about.thirdSectionhow.h3}
               </h2>
-              <p className="text-3xl tracking-wider ">
+              <p className="text-3xl/10 tracking-wider ">
                 {about.thirdSectionhow.howcontent.map((part, i) =>
                   typeof part === "string" ? part : <b key={i}>{part.bold}</b>
                 )}
               </p>
-              <ul className="text-2xl font-urbanistmed py-10 tracking-wider">
+              <ul className="text-xl font-urbanistmed py-10 tracking-wider">
                 {about.thirdSectionhow.howarray.map((how, i) => (
-                  <li className="py-1 first-letter:capitalize text-lg" key={i}>
+                  <li className="py-1 first-letter:capitalize " key={i}>
                     {typeof how === "string" ? how : <b key={i}>{how.bold}</b>}
                   </li>
                 ))}
               </ul>
-              <p className="text-lg font-urbanistmed pb-10">
+              <p className="text-2xl/10 font-urbanistr pb-10">
                 {about.thirdSectionhow.maintenance.map((part, i) =>
                   typeof part === "string" ? part : <b key={i}>{part.bold}</b>
                 )}
               </p>
-              <p className="text-3xl ">
+              <p className="text-3xl/10 ">
                 {about.thirdSectionhow.creationend.map((part, i) =>
                   typeof part === "string" ? part : <b key={i}>{part.bold}</b>
                 )}

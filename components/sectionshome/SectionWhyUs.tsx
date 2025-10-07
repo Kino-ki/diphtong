@@ -3,7 +3,6 @@ import { useLanguage } from "@/components/language/LangContext";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-// import ScrollSmoother from "gsap/dist/ScrollSmoother";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function SectionWhyUs() {
@@ -61,9 +60,9 @@ export default function SectionWhyUs() {
             {" "}
             {whyus.h3}{" "}
           </h3>
-          <div className="flex flex-col gap-10 w-full ">
+          <ul className="flex flex-col gap-10 w-full">
             {whyus.pillars.map((pillar, i) => (
-              <div
+              <li
                 key={i}
                 className={`flex ${i === 1 ? "justify-end" : "justify-start"}`}
               >
@@ -79,9 +78,9 @@ export default function SectionWhyUs() {
                   </h4>
                   <p> {pillar.content} </p>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </div>

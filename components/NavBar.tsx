@@ -15,58 +15,53 @@ gsap.registerPlugin(ScrollTrigger);
 export default function NavBar() {
   const logoRef = useRef<HTMLImageElement | null>(null);
   const [scrollY, setScrollY] = useState(0);
-
   const pathname = usePathname();
   const { dictionary } = useLanguage();
   const {
     navbar: { services, about, contact, proj },
   } = dictionary;
 
-  // ----------------------scroll monitor function
   useEffect(() => {
-    // if (pathname !== "/home") return;
-
+    if (pathname !== "/" && pathname !== "/home") return;
+    // ----------------------scroll monitor function
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [pathname]);
-
-  // ------------------------GSAP function
-
-  useEffect(() => {
-    if (!logoRef.current) return;
-    if (pathname !== "/home") return;
-    const ref = logoRef.current;
+    if (window.scrollY > 50) return;
     const imageWidth = 350;
     const viewportWidth = window.innerWidth;
     const scaleFactor = imageWidth ? (viewportWidth * 0.95) / imageWidth : 1;
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: document.documentElement,
-        start: "top top",
-        end: "400px top",
-        scrub: true,
-      },
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        logoRef.current,
+        {
+          scale: scaleFactor, // initial big size
+          y: "12rem",
+          x: "-56%",
+          transformOrigin: "center center",
+        },
+        {
+          scale: 1, // normal size when scrolled
+          y: "0rem",
+          x: "0%",
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: document.documentElement,
+            start: "top top",
+            end: "400px top",
+            scrub: true,
+            toggleActions: "play none none none",
+          },
+        }
+      );
     });
 
-    tl.from(logoRef.current, {
-      scale: scaleFactor,
-      y: "12rem",
-      x: "-55%",
-      ease: "power2.out",
-    });
-
-    requestAnimationFrame(() => ScrollTrigger.refresh());
-
-    // Cleanup function
     return () => {
-      tl.kill(); // Kill the timeline
-      gsap.set(ref, { clearProps: "all" });
+      ctx.revert();
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [logoRef.current, pathname]);
+  }, [pathname]);
 
   return (
     <div

@@ -7,8 +7,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LangButton } from "./Buttons";
-import { useLanguage } from "./language/LangContext";
+import { LangButton } from "../Buttons";
+import { useLanguage } from "../language/LangContext";
 
 gsap.registerPlugin(ScrollTrigger);
 

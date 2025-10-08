@@ -8,6 +8,24 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
 
+export function LangButton() {
+  const { language, handleLanguageChange } = useLanguage();
+  return (
+    <button
+      className=" flex flex-col justify-center "
+      onClick={handleLanguageChange}
+    >
+      <div>
+        <p className="font-menlor text-[1.1rem]/5  tracking-[0.25rem] w-full h-full ">
+          {language === "EN" ? "FR" : "EN"}
+        </p>
+      </div>
+    </button>
+  );
+}
+
+gsap.registerPlugin(ScrollTrigger);
+
 export function ContactButton({
   textsize,
   width,
@@ -43,7 +61,6 @@ export function GetAQuoteButton({
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const textRef = useRef<HTMLParagraphElement | null>(null);
 
-  gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     if (!buttonRef.current || !textRef.current) return;
 
@@ -100,23 +117,46 @@ export function GetAQuoteButton({
           className="z-10"
         />
       </a>
-      <span className="absolute inset-0 bg-[#c3c3c3] -left-full" />
+      <span className="absolute inset-0 bg-wlite -left-full" />
     </button>
   );
 }
 
-export function LangButton() {
-  const { language, handleLanguageChange } = useLanguage();
+export function VisitWebsite({
+  href,
+  isHovered,
+  divClass,
+  hoverborder,
+  border = "",
+}: {
+  href: string;
+  isHovered: boolean;
+  divClass: string;
+  hoverborder: string;
+  border: string;
+}) {
+  const { language } = useLanguage();
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const textRef = useRef<HTMLParagraphElement | null>(null);
+
   return (
     <button
-      className=" flex flex-col justify-center "
-      onClick={handleLanguageChange}
+      ref={buttonRef}
+      className={` ${divClass}  rounded-xl py-5 px-20  transition-colors ease-in-out duration-200 s ${
+        isHovered ? hoverborder : border
+      } `}
     >
-      <div>
-        <p className="font-menlor text-[1.1rem]/5  tracking-[0.25rem] w-full h-full ">
-          {language === "EN" ? "FR" : "EN"}
+      <a href={href} target="_blank" className="text-2xl font-figtree ">
+        {" "}
+        <p
+          ref={textRef}
+          className={`${
+            isHovered ? "scale-95" : ""
+          } transition-transform ease-in-out duration-200`}
+        >
+          {language === "EN" ? "Visit Website" : "Voir Site Web"}{" "}
         </p>
-      </div>
+      </a>
     </button>
   );
 }

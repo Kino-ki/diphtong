@@ -12,24 +12,13 @@ import PreHomeSlides from "@/components/sectionshome/PreHomeSlides";
 import HomeHorizontalScroll from "@/components/sectionshome/HomeHorizontalScroll";
 import SectionServices from "@/components/sectionshome/SectionServices";
 import Projects from "@/components/sectionshome/Projects";
-import { useEffect } from "react";
-import ScrollSmoother from "gsap/dist/ScrollSmoother";
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function HomePage() {
   // const bgImageRef = useRef<HTMLDivElement | null>(null);
   // const bgRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 1,
-      effects: true,
-      smoothTouch: 0.1,
-    });
-  }, []);
   return (
     <div>
       <div className="bg-diphblack relative -z-0 ">

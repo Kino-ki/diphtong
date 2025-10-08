@@ -1,21 +1,24 @@
 import Image from "next/image";
 import estherone from "@/public/images/projectsPage/estherone.svg";
-import esthertwo from "@/public/images/projectsPage/esthertwo.svg";
 import gsap from "gsap";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useLanguage } from "@/components/language/LangContext";
 import { renderContentItem } from "../HelperFunctions";
+import { VisitWebsite } from "../Buttons";
+import { useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function Esther({ speed }: { speed: number }) {
-  const { language, dictionary } = useLanguage();
+  const { dictionary } = useLanguage();
   const estherProject = dictionary.projectsPage.estherProject;
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
   return (
     <div
       data-speed={speed}
-      className="inner  h-[100svh] flex flex-col p-[5%] pt-16  md:bg-diphblack bg-estherprojmobilellipse bg-top bg-cover"
+      className="inner  h-[110svh] flex flex-col lg:py-32 p-[5%] pt-16  md:bg-diphblack  bg-top bg-cover"
     >
       <div className="flex  flex-col md:flex-row">
         <h1 className="font-estherfont uppercase text-[#CFEB98] text-center md:text-start text-[2.4rem] md:text-7xl ">
@@ -36,37 +39,26 @@ export default function Esther({ speed }: { speed: number }) {
             className="pointer-events-none"
           />
         </div>
-        <div className=" md:flex hidden w-full justify-end ml-4">
-          <Image
-            src={esthertwo}
-            width={1000}
-            height={100}
-            alt="second editor picture"
-            className="pointer-events-none"
-          />
-        </div>
-        <div className=" flex md:flex-row pt-10 md:pt-0 flex-col md:justify-between">
-          <div className="flex justify-end md:justify-start ">
-            <p className=" w-2/3 md:w-1/2 md:-mt-10 font-urbanistr md:text-2xl/loose tracking-widest text-pretty ">
+        <div className=" flex md:flex-row pt-10 md:py-10 flex-col md:justify-between">
+          <div className="flex justify-end md:justify-start  w-2/3 ">
+            <p className=" font-urbanistr md:text-2xl/10 tracking-widest text-pretty ">
               {estherProject.content.map(renderContentItem)}
             </p>
           </div>
-          <div className=" flex flex-col  md:text-lg font-menlob gap-10 pt-[3%] mx-auto  pr-[5%] w-2/3 ">
-            <button
-              type="button"
-              className="p-5 rounded-lg border border-wlite capitalize"
+          <div className=" flex flex-col justify-center pb-20 mx-auto ">
+            <div
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              className="w-full"
             >
-              {language === "EN" ? "discover project" : "découvrir"}
-            </button>
-            <button
-              type="button"
-              className="p-5 rounded-lg border border-wlite capitalize"
-            >
-              <a href={estherProject.href} target="_blank">
-                {" "}
-                {language === "EN" ? "visit website" : "visiter site web"}
-              </a>
-            </button>
+              <VisitWebsite
+                isHovered={isHovered}
+                href={estherProject.href}
+                divClass="border-[3px] w-96 "
+                border="border-graytext"
+                hoverborder="border-wlite"
+              />
+            </div>
           </div>
         </div>
       </div>

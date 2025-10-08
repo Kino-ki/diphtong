@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   @font-face {
     font-family: "akira-expanded";
@@ -37,14 +41,6 @@
     font-family: "figtree-light";
     src: url("/fonts/Figtree-Light.ttf");
   }
-  /* @font-face {
-    font-family: f;
-    src: url();
-  }
-  @font-face {
-    font-family: f;
-    src: url();
-  } */
 }
 
 input:-webkit-autofill,

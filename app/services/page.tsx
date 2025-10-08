@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useLanguage } from "../../components/language/LangContext";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
+import { renderContentItem } from "@/components/HelperFunctions";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -19,36 +20,35 @@ export default function Services() {
   const titleRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    ScrollSmoother.create({
-      smooth: 1.5,
-      effects: true,
-      smoothTouch: 0.1,
-    });
-    if (!titleRef.current) return;
+    const el = titleRef.current;
 
-    if (titleRef.current) {
+    if (el) {
       const mm = gsap.matchMedia();
       mm.add("(min-width: 1024px)", () => {
         gsap.fromTo(
           titleRef.current,
           { scale: 1, xPercent: 0 },
           {
+            xPercent: 8,
             scale: 0.5,
             transformOrigin: "left left",
             ease: "power1.inOut",
             scrollTrigger: {
-              trigger: titleRef.current,
+              trigger: el,
               start: "top 10%",
               end: "bottom 60%",
               scrub: 2,
               pin: true,
+              // pinSpacing: true,
               // markers: true,
             },
           }
         );
       });
 
-      return () => mm.revert();
+      return () => {
+        mm.revert();
+      };
     }
   }, []);
 
@@ -67,9 +67,7 @@ export default function Services() {
             data-speed="1.2"
             className="lg:text-4xl/normal tracking-wide px-[10%]  py-20"
           >
-            {services.textintro.map((s, i) =>
-              typeof s === "string" ? s : <b key={i}> {s.bold} </b>
-            )}
+            {services.textintro.map(renderContentItem)}
           </p>
         </div>
         {/* ------------------------------SERVICE ARRAY -------------------------------------------------- */}

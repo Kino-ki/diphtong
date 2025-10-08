@@ -24,17 +24,20 @@ export default function AboutPage() {
     if (!pinnedRef.current) return;
 
     // ScrollSmoother (make sure wrapper/content exist in DOM!)
-    const smoother = ScrollSmoother.create({
-      smooth: 1,
+    ScrollSmoother.create({
+      smooth: 1.2,
       effects: true,
+      normalizeScroll: true,
     });
 
     const mm = gsap.matchMedia();
+    const el = pinnedRef.current;
 
     mm.add("(min-width:1024px)", () => {
       // Pin left column
-      const st = ScrollTrigger.create({
-        trigger: pinnedRef.current,
+
+      ScrollTrigger.create({
+        trigger: el,
         start: "top top",
         endTrigger: ".endtrigger",
         end: "top top",
@@ -65,14 +68,13 @@ export default function AboutPage() {
       });
 
       return () => {
-        st.kill();
         bgTriggers.forEach((st) => st.kill());
+        mm.revert();
       };
     });
 
     return () => {
       mm.revert();
-      smoother.kill();
     };
   }, []);
 

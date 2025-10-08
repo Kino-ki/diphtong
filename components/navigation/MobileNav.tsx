@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-import { LangButton } from "./Buttons";
+import { LangButton } from "../Buttons";
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState<boolean>(false);

@@ -1,24 +1,26 @@
 import Image from "next/image";
-import beancestwo from "@/public/images/projectsPage/beancestwo.svg";
 import beancestitle from "@/public/images/projectsPage/beancesh1.svg";
 import gsap from "gsap";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
 import { useLanguage } from "@/components/language/LangContext";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { renderContentItem } from "../HelperFunctions";
+import { VisitWebsite } from "../Buttons";
+import { useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function BeancesProject({ speed }: { speed: string }) {
-  const { language, dictionary } = useLanguage();
+  const { dictionary } = useLanguage();
+  const [isHovered, setIsHovered] = useState<boolean>(false);
 
   const beancesProject = dictionary.projectsPage.beancesProject;
   return (
     <div
       data-speed={speed}
-      className="inner h-[120svh] bg-white flex flex-col  px-5  pt-16 md:pt-0 bg-beancesflowerjmobile bg-bottom bg-auto bg-no-repeat  md:bg-left  text-[#4c4c4c]  md:bg-cover md:bg-bgbeances"
+      className="inner h-[110svh] bg-[#E5E5E5] flex flex-col justify-evenly px-5  bg-beancesflowerjmobile bg-bottom bg-auto bg-no-repeat  md:bg-left  text-[#4c4c4c]  md:bg-cover md:bg-bgbeances"
     >
-      <div className="lg:p-[5%] py-20 md:pl-[7%] flex md:flex-row flex-col gap-5 md:items-end ">
+      <div className="lg:px-[7%]  lg:py-0 flex md:flex-row flex-col gap-5 md:items-end ">
         <Image
           src={beancestitle}
           width={600}
@@ -30,37 +32,29 @@ export default function BeancesProject({ speed }: { speed: string }) {
           {beancesProject.subtitle}
         </h1>
       </div>
-      <div className="flex md:flex-row flex-col md:justify-end ">
-        <p className="md:w-1/2 font-urbanistr md:text-2xl/loose md:tracking-widest text-pretty ">
-          {" "}
-          {beancesProject.content.map(renderContentItem)}
-        </p>
-        <div className=" flex flex-col text-lg font-menlob gap-10 pt-20  lg:pt-0 pr-[5%] lg:w-1/4 mx-auto lg:mx-0">
-          <button
-            type="button"
-            className="p-5 rounded-lg border border-[#4c4c4c] capitalize  "
-          >
+      <div className="flex lg:flex-row pb-10  flex-col lg:justify-evenly  ">
+        <div className="w-[15%] "></div>
+        <div className=" w-[50%] ">
+          <p className=" font-urbanistr md:text-2xl/loose md:tracking-widest text-pretty ">
             {" "}
-            {language === "EN" ? "discover project" : "découvrir"}
-          </button>
-          <button
-            type="button"
-            className="p-5 rounded-lg bg-white border border-[#4c4c4c] capitalize"
-          >
-            <a href={beancesProject.href} target="_blank">
-              {language === "EN" ? "visit website" : "visiter site web"}
-            </a>
-          </button>
+            {beancesProject.content.map(renderContentItem)}
+          </p>
         </div>
-      </div>
-      <div className="hidden md:flex justify-center pt-[2%]">
-        <Image
-          src={beancestwo}
-          width={1000}
-          height={200}
-          alt="beances picture"
-          className="pointer-events-none"
-        />
+        <div className=" flex flex-col my-auto pb-20 w-1/5">
+          <div
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            className=" w-fit "
+          >
+            <VisitWebsite
+              isHovered={isHovered}
+              href={beancesProject.href}
+              divClass="border-[3px] shadow-2xl w-80"
+              hoverborder="border-graytext"
+              border="border-diphblack"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

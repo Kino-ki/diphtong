@@ -20,7 +20,7 @@ export default function Contact() {
 
   useEffect(() => {
     const smoother = ScrollSmoother.create({
-      smooth: 1,
+      smooth: 1.2,
       effects: true,
     });
     const mm = gsap.matchMedia();

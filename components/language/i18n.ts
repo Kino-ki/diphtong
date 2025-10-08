@@ -274,7 +274,29 @@ export const dictionaries = {
         { bold: "visually striking and technically flawless. " },
         " Whether you’re an artist, a small business, or an organization in the creative world our services cover everything you need: ",
         {
-          bold: " web development, design, maintenance, and responsiveness.",
+          a: {
+            txt: " web development",
+            href: "/services#1",
+          },
+        },
+        {
+          a: {
+            txt: "design",
+            href: "/services#2",
+          },
+        },
+        {
+          a: {
+            txt: "maintenance",
+            href: "/services#3",
+          },
+        },
+        "and",
+        {
+          a: {
+            txt: "responsiveness",
+            href: "/services#4",
+          },
         },
       ],
 
@@ -390,38 +412,9 @@ export const dictionaries = {
       ],
     },
     projectsPage: {
-      estherProject: {
-        h1: "esther lhuillery",
-        subtitle: "video editor",
-        span: "portfolio",
-        services: [" web design ", "full stack develoment"],
-        content: [
-          "Esther Lhuillery is a Montreal-based video editor specializing in movie trailers. Her work blends precision and emotion, capturing the essence of each film in just a few minutes. ",
-          { br: "We designed a " },
-          { bold: "minimalist one-page website " },
-          "that mirrors the atmosphere of a dark cinema room : elegant, and focused entirely on the moving image. ",
-          {
-            br: "The layout lets Esther’s editing shine, offering a seamless viewing experience that draws the eye to what matters most: the videos themselves.",
-          },
-        ],
-        href: "https://www.estherlhuillery.com/",
-      },
-      beancesProject: {
-        h1: "béances éditions",
-        subtitle: "QUEER ZINES EDITIONS",
-        services: [" web design ", "full stack develoment"],
-        content: [
-          "Béances Éditions is a Montreal-based publishing house amplifying ",
-          { bold: "lesbo-queer, lesbian, and trans voices " },
-          "rarely heard in the Francophone world. Their mission: to reclaim space, pleasure, and time for stories that inspire, challenge, and resist erasure.",
-          { br: "We designed a bold, characterful website that echoes " },
-          { bold: " feminist punk and grunge aesthetics: " },
-          "vibrant colors, stencil-style visuals, and unapologetic energy. The result is a platform that feels both rebellious and accessible, staying true to Béances’ vision of literature as a space for liberation and collective expression.",
-        ],
-        href: "https://www.beanceseditions.com/",
-      },
       AnalogProject: {
         h1: "Analogizing",
+        id: "analogizing",
         subtitle: "Artist Portfolio",
         services: [" web design ", "full stack develoment"],
         content: [
@@ -439,44 +432,63 @@ export const dictionaries = {
         ],
         href: "https://www.analogizing.art/home",
       },
+      beancesProject: {
+        h1: "béances éditions",
+        id: "beances_editions",
+        subtitle: "QUEER ZINES EDITIONS",
+        services: [" web design ", "full stack develoment"],
+        content: [
+          "Béances Éditions is a Montreal-based publishing house amplifying ",
+          { bold: "lesbo-queer, lesbian, and trans voices " },
+          "rarely heard in the Francophone world. Their mission: to reclaim space, pleasure, and time for stories that inspire, challenge, and resist erasure.",
+          { br: "We designed a bold, characterful website that echoes " },
+          { bold: " feminist punk and grunge aesthetics: " },
+          "vibrant colors, stencil-style visuals, and unapologetic energy. The result is a platform that feels both rebellious and accessible, staying true to Béances’ vision of literature as a space for liberation and collective expression.",
+        ],
+        href: "https://www.beanceseditions.com/",
+      },
+
+      estherProject: {
+        h1: "esther lhuillery",
+        id: "esther_portfolio",
+        subtitle: "video editor",
+        span: "portfolio",
+        services: [" web design ", "full stack develoment"],
+        content: [
+          "Esther Lhuillery is a Montreal-based video editor specializing in movie trailers. Her work blends precision and emotion, capturing the essence of each film in just a few minutes. ",
+          { br: "We designed a " },
+          { bold: "minimalist one-page website " },
+          "that mirrors the atmosphere of a dark cinema room : elegant, and focused entirely on the moving image. ",
+          {
+            br: "The layout lets Esther’s editing shine, offering a seamless viewing experience that draws the eye to what matters most: the videos themselves.",
+          },
+        ],
+        href: "https://www.estherlhuillery.com/",
+      },
       collavoratives: {
-        h1: "collaborative projects",
+        h1: "Collaborations",
+        id: "collaborations",
+
         projects: [
           {
             id: 0,
-            projectName: "Plein la tête",
+            projectName: "Plein la tête - studio éclaté",
             projectSubtitle: " studio éclaté",
             services: ["Front-End develoment"],
             projecDescription:
-              "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva",
+              "Front-end development and motion design for a digital marketing agency based in Lévis, Québec.",
             href: "https://pleinlatete.ca/",
           },
         ],
       },
       upcomingProjects: {
-        h1: "Upcoming Projects",
+        h1: "Upcoming",
+        id: "upcoming",
+
         projects: [
-          {
-            id: 2,
-            projectName: "Physiothérapie Hélène Morin",
-            services: ["Front-End develoment"],
-            projecDescription:
-              "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva",
-          },
-          {
-            id: 0,
-            projectName: "Christian Maria Brun Del Re",
-            services: [" web design ", "full stack develoment"],
-            projecDescription:
-              "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva",
-          },
-          {
-            id: 1,
-            projectName: "Chambre de commerce de Lotbinière",
-            services: ["Front-End develoment"],
-            projecDescription:
-              "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva",
-          },
+          "Chambre de commerce de Lotbinière",
+          "Christian Maria Brun Del Re Portfolio",
+          "Physiothérapie Hélène Morin",
         ],
       },
     },
@@ -801,8 +813,30 @@ export const dictionaries = {
         "Nous créons des sites web à la fois ",
         { bold: "visuellement percutants et techniquement irréprochables. " },
         " Que vous soyez un artiste, une petite entreprise ou une organisation du monde créatifnos services couvrent tout ce dont vous avez besoin : ",
+                {
+          a: {
+            txt: " développement web",
+            href: "/services#1",
+          },
+        },
         {
-          bold: " développement web, design, maintenance et adaptabilité.",
+          a: {
+            txt: "design",
+            href: "/services#2",
+          },
+        },
+        {
+          a: {
+            txt: "maintenance",
+            href: "/services#3",
+          },
+        },
+        "et",
+        {
+          a: {
+            txt: "adaptabilité",
+            href: "/services#4",
+          },
         },
       ],
 
@@ -810,7 +844,7 @@ export const dictionaries = {
         {
           id: "1",
           serv: {
-            h2: "DÉVELOPPEMENT WEB",
+            h2: "Développement Web",
             content: [
               "Nous créons ",
               { bold: "des sites web sur mesure adaptés à vos objectifs. " },
@@ -924,79 +958,83 @@ export const dictionaries = {
       ],
     },
     projectsPage: {
-      estherProject: {
-        h1: "esther lhuillery",
-        subtitle: "video editor",
-        span: "portfolio",
-        services: [" web design ", "full stack develoment"],
-        content: [
-          "Esther Lhuillery is a Montreal-based video editor specializing in movie trailers. Her work blends precision and emotion, capturing the essence of each film in just a few minutes. ",
-          { br: "We designed a " },
-          { bold: "minimalist one-page website " },
-          "that mirrors the atmosphere of a dark cinema room : elegant, and focused entirely on the moving image. ",
-          {
-            br: "The layout lets Esther’s editing shine, offering a seamless viewing experience that draws the eye to what matters most: the videos themselves.",
-          },
-        ],
-        href: "https://www.estherlhuillery.com/",
-      },
-      beancesProject: {
-        h1: "béances éditions",
-        subtitle: "QUEER ZINES EDITIONS",
-        services: [" web design ", "full stack develoment"],
-        content: [
-          "Béances Éditions is a Montreal-based publishing house amplifying ",
-          { bold: "lesbo-queer, lesbian, and trans voices " },
-          "rarely heard in the Francophone world. Their mission: to reclaim space, pleasure, and time for stories that inspire, challenge, and resist erasure.",
-          { br: "We designed a bold, characterful website that echoes " },
-          { bold: " feminist punk and grunge aesthetics: " },
-          "vibrant colors, stencil-style visuals, and unapologetic energy. The result is a platform that feels both rebellious and accessible, staying true to Béances’ vision of literature as a space for liberation and collective expression.",
-        ],
-        href: "https://www.beanceseditions.com/",
-      },
       AnalogProject: {
         h1: "Analogizing",
+        id: "analogizing",
         subtitle: "Artist Portfolio",
         services: [" web design ", "full stack develoment"],
         content: [
-          "Analogizing is the digital portfolio of a ",
-          { bold: "multidisciplinary queer artist based in Montreal. " },
-          "Their practice spans writing, translation, photography, collage, and sculpture.",
+          "Analogizing est le portfolio numérique d’un·e ",
+          { bold: "artiste queer pluridisciplinaire basé·e à Montréal. " },
+          "Sa pratique englobe l’écriture, la traduction, la photographie, le collage et la sculpture.",
           {
-            br: "We designed a minimalist website offering ",
+            br: "Nous avons conçu un site web minimaliste offrant ",
           },
-          { bold: "an elegant and fluid experience," },
-          " with smooth animations, no visual noise, and a layout inspired by contemporary art galleries. ",
+          { bold: "une expérience élégante et fluide," },
+          " avec des animations douces, aucune distraction visuelle, et une mise en page inspirée des galeries d’art contemporain. ",
           {
-            br: "To reflect the diversity of the artist’s work, the site is structured around three dimensions — 1D for written works, 2D for visual pieces, and 3D for sculptural objects — allowing visitors to explore each field intuitively.",
+            br: "Pour refléter la diversité de la pratique de l’artiste, le site est structuré autour de trois dimensions — 1D pour les œuvres écrites, 2D pour les pièces visuelles et 3D pour les objets sculpturaux — permettant aux visiteurs d’explorer chaque domaine de façon intuitive.",
           },
         ],
         href: "https://www.analogizing.art/home",
       },
+      beancesProject: {
+        h1: "béances éditions",
+        id: "beances_editions",
+        subtitle: "QUEER ZINES EDITIONS",
+        services: [" web design ", "full stack develoment"],
+        content: [
+          "Béances Éditions est une maison d’édition montréalaise qui met en lumière ",
+          { bold: "des voix lesbo-queer, lesbiennes et trans " },
+          "rarement entendues dans le monde francophone. Leur mission : réinvestir l’espace, le plaisir et le temps pour des récits qui inspirent, bousculent et résistent à l’effacement.",
+          {
+            br: "Nous avons conçu un site web audacieux et plein de caractère, qui fait écho aux ",
+          },
+          { bold: "esthétiques féministes punk et grunge : " },
+          "couleurs vibrantes, visuels inspirés du pochoir et énergie revendicatrice. Le résultat : une plateforme à la fois rebelle et accessible, fidèle à la vision de Béances, où la littérature devient un espace de libération et d’expression collective.",
+        ],
+        href: "https://www.beanceseditions.com/",
+      },
+      estherProject: {
+        h1: "esther lhuillery",
+        id: "esther_portfolio",
+        subtitle: "video editor",
+        span: "portfolio",
+        services: [" web design ", "full stack develoment"],
+        content: [
+          "Esther Lhuillery est une monteuse vidéo basée à Montréal, spécialisée dans les bandes-annonces de films. Son travail allie précision et émotion, capturant l’essence de chaque œuvre en quelques minutes seulement. ",
+          { br: "Nous avons conçu un " },
+          { bold: "site web minimaliste d’une seule page " },
+          "qui évoque l’atmosphère d’une salle de cinéma sombre : élégant, et entièrement centré sur l’image en mouvement. ",
+          {
+            br: "La mise en page met en valeur le travail de montage d’Esther, offrant une expérience de visionnement fluide qui attire le regard sur l’essentiel : les vidéos elles-mêmes.",
+          },
+        ],
+        href: "https://www.estherlhuillery.com/",
+      },
+
       collavoratives: {
-        h1: "collaborative projects",
+        h1: "collaborations",
+        id: "collaborations",
         projects: [
           {
             id: 0,
-            projectName: "Plein la tête",
+            projectName: "Plein la tête - studio éclaté",
             projectSubtitle: " studio éclaté",
             services: ["Front-End develoment"],
             projecDescription:
-              "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva",
+              "Front-end development and motion design for a digital marketing agency based in Lévis, Québec.",
             href: "https://pleinlatete.ca/",
           },
         ],
       },
       upcomingProjects: {
-        h1: "Upcoming Projects",
+        h1: "A venir",
+        id: "upcoming",
         projects: [
-          {
-            id: 0,
-            projectName: "Physiothérapie Hélène Morin",
-            services: ["Front-End develoment"],
-            projecDescription:
-              "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed vitae tempor nisl. nulla malesuada feugiat dolor sed tincidunt. viva",
-          },
+          "Chambre de commerce de Lotbinière",
+          "Christian Maria Brun Del Re Portfolio",
+          "Physiothérapie Hélène Morin",
         ],
       },
     },

@@ -276,33 +276,33 @@ export const dictionaries = {
         {
           a: {
             txt: " web development",
-            href: "/services#1",
+            href: "#dev",
           },
         },
         {
           a: {
             txt: "design",
-            href: "/services#2",
+            href: "#design",
           },
         },
         {
           a: {
             txt: "maintenance",
-            href: "/services#3",
+            href: "#maintenance",
           },
         },
         "and",
         {
           a: {
             txt: "responsiveness",
-            href: "/services#4",
+            href: "#responsiveness",
           },
         },
       ],
 
       servicearray: [
         {
-          id: "1",
+          id: "dev",
           serv: {
             h2: "web development",
             content: [
@@ -330,7 +330,7 @@ export const dictionaries = {
           },
         },
         {
-          id: "2",
+          id: "design",
           serv: {
             h2: "Web Design",
             content: [
@@ -359,7 +359,7 @@ export const dictionaries = {
           },
         },
         {
-          id: "3",
+          id: "maintenance",
           serv: {
             h2: "Maintenance & Updates",
             content: [
@@ -386,7 +386,7 @@ export const dictionaries = {
           },
         },
         {
-          id: "4",
+          id: "responsiveness",
           serv: {
             h2: "Responsive Design",
             content: [
@@ -482,7 +482,7 @@ export const dictionaries = {
         ],
       },
       upcomingProjects: {
-        h1: "Upcoming",
+        h1: "Upcoming Projects",
         id: "upcoming",
 
         projects: [
@@ -497,19 +497,19 @@ export const dictionaries = {
         h2: "our services",
         servicearray: [
           {
-            id: "1",
-            h3: "WEB DEVELOPMENT",
+            id: "dev",
+            h3: "Web Development",
           },
           {
-            id: "2",
+            id: "design",
             h3: "Web Design",
           },
           {
-            id: "3",
+            id: "maintenance",
             h3: "Maintenance",
           },
           {
-            id: "4",
+            id: "responsiveness",
             h3: "Responsive Design",
           },
         ],
@@ -813,36 +813,36 @@ export const dictionaries = {
         "Nous créons des sites web à la fois ",
         { bold: "visuellement percutants et techniquement irréprochables. " },
         " Que vous soyez un artiste, une petite entreprise ou une organisation du monde créatifnos services couvrent tout ce dont vous avez besoin : ",
-                {
+        {
           a: {
             txt: " développement web",
-            href: "/services#1",
+            href: "#dev",
           },
         },
         {
           a: {
             txt: "design",
-            href: "/services#2",
+            href: "#design",
           },
         },
         {
           a: {
             txt: "maintenance",
-            href: "/services#3",
+            href: "#maintenance",
           },
         },
         "et",
         {
           a: {
             txt: "adaptabilité",
-            href: "/services#4",
+            href: "#responsiveness",
           },
         },
       ],
 
       servicearray: [
         {
-          id: "1",
+          id: "dev",
           serv: {
             h2: "Développement Web",
             content: [
@@ -870,7 +870,7 @@ export const dictionaries = {
           },
         },
         {
-          id: "2",
+          id: "design",
           serv: {
             h2: "Design Web",
             content: [
@@ -901,7 +901,7 @@ export const dictionaries = {
           },
         },
         {
-          id: "3",
+          id: "maintenance",
           serv: {
             h2: "Maintenance & Mises à jour",
             content: [
@@ -930,7 +930,7 @@ export const dictionaries = {
           },
         },
         {
-          id: "4",
+          id: "responsiveness",
           serv: {
             h2: "Design Responsive",
             content: [
@@ -1043,19 +1043,19 @@ export const dictionaries = {
         h2: "nos services",
         servicearray: [
           {
-            id: "1",
+            id: "dev",
             h3: "Développement web",
           },
           {
-            id: "2",
+            id: "design",
             h3: "Design Web",
           },
           {
-            id: "3",
+            id: "maintenance",
             h3: "Maintenance",
           },
           {
-            id: "4",
+            id: "responsiveness",
             h3: "Design Responsive",
           },
         ],

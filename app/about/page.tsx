@@ -23,7 +23,6 @@ export default function AboutPage() {
   useEffect(() => {
     if (!pinnedRef.current) return;
 
-    // ScrollSmoother (make sure wrapper/content exist in DOM!)
     ScrollSmoother.create({
       smooth: 1.2,
       effects: true,

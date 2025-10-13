@@ -29,7 +29,7 @@ export default function PreHomeSlides() {
             scrollTrigger: {
               trigger: titleRef.current,
               start: "top 60%",
-              end: "bottom 20%",
+              end: "bottom 15%",
               scrub: 2,
               pin: true,
               // markers: true,
@@ -60,10 +60,12 @@ export default function PreHomeSlides() {
 
   return (
     <div className="bg-wlite md:h-auto  h-[60svh] md:pb-20  ">
-      <div className="flex flex-col justify-start w-full pb-40">
+      <div
+        // data-speed="1"
+        className="flex flex-col justify-start w-full pb-40"
+      >
         <div className="border-b md:border-none  border-black my-12 md:my-0  ">
           <h2
-            data-speed="0.9"
             ref={titleRef}
             className="flex text-start  w-full text-[16vw]  font-urbanistr font-semibold md:font-medium tracking-wider md:-mb-0 -mb-5 text-black capitalize"
           >
@@ -71,11 +73,13 @@ export default function PreHomeSlides() {
           </h2>
         </div>
         <div
-          data-speed="0.7"
           ref={sectionsNameRef}
           className=" flex flex-col  md:flex-row md:justify-between md:py-5 mdparallax "
         >
-          <div className="flex flex-col gap-5 md:w-[45%]  px-2 md:px-12">
+          <div
+            data-speed="0.65"
+            className="flex flex-col gap-5 md:w-[45%]  px-2 md:px-12"
+          >
             <p className="text-[#7a7878]  text-lg md:text-4xl/relaxed text-center md:text-start tracking-wider font-urbanistb  ">
               {phslides.intro.subtitle}
             </p>

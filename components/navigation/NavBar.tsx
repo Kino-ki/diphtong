@@ -67,14 +67,14 @@ export default function NavBar() {
     <div
       id="navbar"
       key={pathname}
-      className={`fixed top-0 z-40 w-full  text-wlite pl-16 pr-3 text-[1.1rem]/5 font-menlor uppercase lg:flex hidden ${
+      className={`fixed top-0 z-40 w-full  text-wlite px-5 2xl:pl-16 pr-3 text-[1.1rem]/5 font-menlor uppercase lg:flex hidden ${
         pathname.includes("/home") && scrollY < 400
           ? ""
           : "mix-blend-difference"
       }  tracking-[0.25rem]`}
     >
       <div className="flex justify-between w-full pt-3">
-        <ul className="flex gap-20   ">
+        <ul className="flex gap-12 2xl:gap-20   ">
           <li className="">
             <a href="/services">{services} </a>
           </li>

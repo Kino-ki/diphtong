@@ -22,6 +22,7 @@ export default function Contact() {
     const smoother = ScrollSmoother.create({
       smooth: 1.2,
       effects: true,
+      normalizeScroll: true,
     });
     const mm = gsap.matchMedia();
     mm.add("(min-width:1024px)", () => {
@@ -37,6 +38,19 @@ export default function Contact() {
         st.kill();
       };
     });
+    mm.add("(max-width:1023px)", () => {
+      const st = ScrollTrigger.create({
+        trigger: pinnedRef.current,
+        start: "top top",
+        // endTrigger: ".endtrigger",
+        end: "bottom top",
+        pin: false,
+        // markers: true,
+      });
+      return () => {
+        st.kill();
+      };
+    });
 
     return () => {
       mm.revert();
@@ -46,24 +60,24 @@ export default function Contact() {
 
   return (
     <div className="bg-diphblack px-3  md:px-10 text-wlite  ">
-      <div className="flex flex-col gap-12 md:flex-row  ">
+      <div className="flex flex-col gap-12 lg:flex-row  ">
         <div
           ref={pinnedRef}
-          className="flex flex-col h-[100svh]  md:w-[40%] md:sticky md:top-0 md:self-start"
+          className="flex flex-col lg:h-[100svh] w-full lg:w-[40%] lg:sticky md:top-0 md:self-start items-center md:bg-diphblack"
         >
-          <div className="h-[20%] " />
-          <h1 className="font-menlob  text-[20vw] md:text-[9rem]  uppercase ">
+          <div className="lg:h-[20%] h-10  " />
+          <h1 className="font-menlob  text-[20vw] md:text-[9rem] lg:text-[7rem] 2xl:text-[9rem] uppercase ">
             {" "}
             {contact.PageTitle}{" "}
           </h1>
-          <h2 className="md:font-figtree font-urbanistl md:uppercase md:w-2/3 text-xl md:text-3xl tracking-wider text-end mx-auto ">
+          <h2 className="md:font-figtree font-urbanistl lg:uppercase 2xl:w-2/3 text-xl md:text-3xl tracking-wider text-end mx-auto ">
             {contact.h2}
           </h2>
         </div>
 
-        <div className="flex flex-col lg:gap-52 md:py-24 md:w-[60%] md:items-end overflow-y-auto ">
-          <div className=" lg:w-full h-[80svh] md:h-[100svh]  mx-auto md:px-10 ">
-            <h3 className="md:font-urbanistmed  md:uppercase text-lg md:text-3xl  md:py-20  md:pb-32 tracking-wider text-center">
+        <div className="flex flex-col gap-20 lg:gap-20 2xl:gap-52 lg:py-24 lg:w-[60%] md:items-end overflow-y-auto  ">
+          <div className=" lg:w-full h-[80svh] md:h-[100svh]  mx-auto lg:px-10 ">
+            <h3 className="lg:font-urbanistmed  uppercase text-lg md:text-3xl lg:text-2xl 2xl:text-3xl  py-10 md:py-20 lg:py-12 xl:py-16 md:pb-32 tracking-wider text-center">
               {contact.h3}
             </h3>
             <ContactForm lang={language} />
@@ -72,12 +86,12 @@ export default function Contact() {
             <CalendlyWidget />
           </div>
           {/* ----------------------------contact info------------------- */}
-          <div className="flex md:flex-row flex-col text-center md:text-start gap-10 mx-auto text-wlite  md:pb-20">
+          <div className="flex md:flex-row flex-col text-center md:text-start gap-10 mx-auto text-wlite  pb-20">
             <div className="flex flex-col justify-between  gap-5 md:w-1/2 ">
-              <h2 className="font font-menlob text-xl md:text-3xl">
+              <h2 className="font font-menlob text-2xl md:text-3xl">
                 {contact.contactInfo}
               </h2>
-              <p className="font-urbanistr text-lg md:text-2xl md:w-2/3 md:pr-10 leading-10 ">
+              <p className="font-urbanistr text-lg md:text-2xl md:w-2/3 lg:w-full 2xl:w-2/3 md:pr-10 leading-10 ">
                 {" "}
                 {contact.adress}{" "}
               </p>

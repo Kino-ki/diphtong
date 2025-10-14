@@ -13,8 +13,9 @@ import HomeHorizontalScroll from "@/components/sectionshome/HomeHorizontalScroll
 import SectionServices from "@/components/sectionshome/SectionServices";
 import Projects from "@/components/sectionshome/Projects";
 import { useEffect } from "react";
+import ScrollSmoother from "gsap/dist/ScrollSmoother";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function HomePage() {
   useEffect(() => {

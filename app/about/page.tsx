@@ -24,11 +24,11 @@ export default function AboutPage() {
   useEffect(() => {
     if (!pinnedRef.current) return;
 
-    ScrollSmoother.create({
-      smooth: 1.2,
-      effects: true,
-      normalizeScroll: true,
-    });
+    // ScrollSmoother.create({
+    //   smooth: 1.2,
+    //   effects: true,
+    //   normalizeScroll: true,
+    // });
 
     const mm = gsap.matchMedia();
     const el = pinnedRef.current;

@@ -21,7 +21,7 @@ export default function Analogizing({ speed }: { speed: string }) {
       data-speed={speed}
       className="h-full bg-[#E5E5E5]  font-urbanistr flex  text-diphblack"
     >
-      <div className="flex flex-col justify-evenly w-2/3  p-20">
+      <div className="flex flex-col justify-evenly w-2/3 p-12 2xl:p-20">
         <div className="  flex justify-center">
           <h1 className="text-8xl text-black font-urbanistr ">
             {" "}
@@ -29,12 +29,12 @@ export default function Analogizing({ speed }: { speed: string }) {
           </h1>
         </div>
         <div className=" px-10  ">
-          <p className="text-2xl/10">
+          <p className="text-xl 2xl:text-2xl/10 pb-12">
             {AnalogProject.content.map(renderContentItem)}
           </p>
         </div>
       </div>
-      <div className="w-1/2 bg-bganalogf h-full my-auto mx-auto flex flex-col justify-center items-center">
+      <div className="w-1/2 bg-bganalogf bg-auto h-full my-auto mx-auto flex flex-col justify-center items-center">
         <div
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}

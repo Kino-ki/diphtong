@@ -14,25 +14,6 @@ import UpcomingProjects from "@/components/projectSection/UpcomingProjects";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function ProjectsPage() {
-  // useLayoutEffect(() => {
-  //   const init = () => {
-  //     if (ScrollSmoother.get()) ScrollSmoother.get()?.kill();
-
-  //     ScrollSmoother.create({
-  //       smooth: 3,
-  //       effects: true,
-  //       smoothTouch: 0.1,
-  //     });
-  //   };
-
-  //   if (document.readyState === "complete") {
-  //     init();
-  //   } else {
-  //     window.addEventListener("load", init);
-  //     return () => window.removeEventListener("load", init);
-  //   }
-  // }, []);
-
   return (
     <div className="flex flex-col bg-diphblack relative">
       <ProjNav />

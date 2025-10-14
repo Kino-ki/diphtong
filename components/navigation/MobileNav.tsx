@@ -36,7 +36,7 @@ export default function MobileNav() {
 
   return (
     <div
-      className={`fixed lg:hidden  top-0 left-0 w-full z-50    ${
+      className={`fixed lg:hidden  top-0 left-0  w-full z-50    ${
         !isOpen
           ? pathname.includes("/home") && scrollY < 200
             ? "mix-blend-normal"
@@ -47,7 +47,7 @@ export default function MobileNav() {
     >
       {!isOpen && (
         <nav
-          className={`flex justify-end w-full transition-colors duration-300 p-5`}
+          className={`flex justify-end w-full transition-colors duration-300 p-5 md:px-12`}
         >
           {/* <Link href="/" className="w-full ">
             <Image src={logo} width={40} height={50} alt="text" className="" />
@@ -56,7 +56,7 @@ export default function MobileNav() {
             <button
               onClick={() => setIsOpen(true)}
               type="button"
-              className="font-akira text-md text-wlite"
+              className="font-akira text-md text-wlite md:text-2xl"
             >
               Menu
             </button>

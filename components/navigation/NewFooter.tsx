@@ -54,17 +54,17 @@ export default function NewFooter() {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col lg:flex-row font-urbanistr  lg:gap-20 md:w-[50%] my-auto justify-center  ">
+        <div className="flex flex-col lg:flex-row font-urbanistr lg:gap-12 2xl:gap-20 md:w-[50%] my-auto justify-center  ">
           <h2 className="font-urbanistmed text-2xl lg:text-3xl tracking-widest text-center md:text-start lg:w-[50%] ">
             {footer.cta.map((c, i) =>
               typeof c === "string" ? c : <span key={i}> {c.br} </span>
             )}
           </h2>
-          <div className=" lg:w-[30%] w-[50%] py-10 lg:py-0 mx-auto md:mx-0">
+          <div className=" 2xl:w-[30%] w-[50%] py-10 lg:py-0 mx-auto md:mx-0">
             <ContactButton
-              textsize="text-xl lg:text-3xl"
+              textsize="text-xl lg:text-2xl 2xl:text-3xl"
               width="w-full"
-              height="lg:h-20 h-16"
+              height="2xl:h-20 h-16"
             />
           </div>
         </div>

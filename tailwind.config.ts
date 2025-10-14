@@ -31,6 +31,7 @@ export default {
         bgslidetwo: "url(/images/backgrounds/bg-slidetwo.svg) ",
         bgdragonmobile: "url(/images/backgrounds/bgdragonmobile.svg) ",
         bgbeances: "url(/images/projectsPage/bgbeances.svg) ",
+        bgbeancesmauve: "url(/images/projectsPage/beancesone.svg) ",
         bganalog: "url(/images/projectsPage/analogall.svg) ",
         bganalogf: "url(/images/projectsPage/analogf.svg) ",
         estherprojmobile: "url(/images/projectsPage/bgesthermobile.svg)",

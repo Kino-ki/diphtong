@@ -18,7 +18,7 @@ export default function Esther({ speed }: { speed: number }) {
   return (
     <div
       data-speed={speed}
-      className="inner  h-[110svh] flex flex-col lg:py-32 p-[5%] pt-16  md:bg-diphblack  bg-top bg-cover"
+      className="inner  h-[110svh] flex flex-col pl-12 lg:py-32 2xl:p-[5%] pt-16  md:bg-diphblack  bg-top bg-cover"
     >
       <div className="flex  flex-col md:flex-row">
         <h1 className="font-estherfont uppercase text-[#CFEB98] text-center md:text-start text-[2.4rem] md:text-7xl ">
@@ -41,20 +41,20 @@ export default function Esther({ speed }: { speed: number }) {
         </div>
         <div className=" flex md:flex-row pt-10 md:py-10 flex-col md:justify-between">
           <div className="flex justify-end md:justify-start  w-2/3 ">
-            <p className=" font-urbanistr md:text-2xl/10 tracking-widest text-pretty ">
+            <p className=" font-urbanistr text-xl 2xl:text-2xl/10 tracking-widest text-pretty ">
               {estherProject.content.map(renderContentItem)}
             </p>
           </div>
-          <div className=" flex flex-col justify-center pb-20 mx-auto ">
+          <div className=" flex flex-col justify-center h-full pb-20  mx-auto w-1/2 items-center">
             <div
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
-              className="w-full"
+              className=""
             >
               <VisitWebsite
                 isHovered={isHovered}
                 href={estherProject.href}
-                divClass="border-[3px] w-96 "
+                divClass="border-[3px] 2xl:w-80 "
                 border="border-graytext"
                 hoverborder="border-wlite"
               />

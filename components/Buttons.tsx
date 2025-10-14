@@ -146,7 +146,11 @@ export function VisitWebsite({
         isHovered ? hoverborder : border
       } `}
     >
-      <a href={href} target="_blank" className="text-2xl font-figtree ">
+      <a
+        href={href}
+        target="_blank"
+        className=" text-xl 2xl:text-2xl font-figtree "
+      >
         {" "}
         <p
           ref={textRef}

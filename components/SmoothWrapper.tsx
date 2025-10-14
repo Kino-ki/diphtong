@@ -28,7 +28,7 @@ export default function SmoothWrapper({
       content: "#smooth-content",
       smooth: 1.2,
       effects: true,
-      normalizeScroll: true,
+      // normalizeScroll: true,
     });
 
     return () => {

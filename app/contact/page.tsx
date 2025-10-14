@@ -54,7 +54,7 @@ export default function Contact() {
 
     return () => {
       mm.revert();
-      smoother.kill();
+      // smoother.kill();
     };
   }, []);
 

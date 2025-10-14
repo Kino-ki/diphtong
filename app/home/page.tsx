@@ -12,22 +12,21 @@ import PreHomeSlides from "@/components/sectionshome/PreHomeSlides";
 import HomeHorizontalScroll from "@/components/sectionshome/HomeHorizontalScroll";
 import SectionServices from "@/components/sectionshome/SectionServices";
 import Projects from "@/components/sectionshome/Projects";
+import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HomePage() {
-  // const bgImageRef = useRef<HTMLDivElement | null>(null);
-  // const bgRef = useRef<HTMLDivElement | null>(null);
-
+  useEffect(() => {
+    ScrollSmoother.create({
+      smooth: 1.2,
+      effects: true,
+      normalizeScroll: true,
+    });
+  }, []);
   return (
     <div>
       <div className="bg-diphblack relative -z-0 ">
-        {/* <div
-          ref={bgImageRef}
-          className=" fixed bottom-5 left-5 opacity-[0.5] z-50 mix-blend-difference"
-        >
-          <Image id="imgdragon" src={diphlogo} width={60} alt="logo" />
-        </div> */}
         <div className="">
           <HeroSection />
           <SectionCta />

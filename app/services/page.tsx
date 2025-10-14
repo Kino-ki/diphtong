@@ -23,6 +23,12 @@ export default function Services() {
   const titleRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    ScrollSmoother.create({
+      smooth: 1.2,
+      effects: true,
+      normalizeScroll: true,
+    });
+    
     scrollToHashOnLoad();
 
     const el = titleRef.current;

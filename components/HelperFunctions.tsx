@@ -47,14 +47,11 @@ export function scrollToHashOnLoad() {
 
     if (!hash) return;
 
-    // const elem = document.querySelector(hash.replace(/([0-9])/g, "\\3$1 "));
-    // if (!elem) return;
-
     gsap.to(smoother, {
       scrollTop: smoother.offset(hash, "top top"),
       duration: 1,
     });
-  }, 50); // check every 50ms until smoother exists
+  }, 50);
 }
 
 export function smoothScrollTo(target: string | null) {

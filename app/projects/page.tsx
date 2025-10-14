@@ -9,10 +9,18 @@ import BeancesProject from "@/components/projectSection/beances";
 import Esther from "@/components/projectSection/esther";
 import CollabProjects from "@/components/projectSection/CollabProjects";
 import UpcomingProjects from "@/components/projectSection/UpcomingProjects";
+import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function ProjectsPage() {
+  useEffect(() => {
+    ScrollSmoother.create({
+      smooth: 1.2,
+      effects: true,
+      normalizeScroll: true,
+    });
+  }, []);
   return (
     <div className="flex flex-col bg-diphblack ">
       {/*  --------------------------------ANALOG----------------------------- */}

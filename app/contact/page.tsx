@@ -19,11 +19,11 @@ export default function Contact() {
   const pinnedRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    // const smoother = ScrollSmoother.create({
-    //   smooth: 1.2,
-    //   effects: true,
-    //   normalizeScroll: true,
-    // });
+    const smoother = ScrollSmoother.create({
+      smooth: 1.2,
+      effects: true,
+      normalizeScroll: true,
+    });
     const mm = gsap.matchMedia();
     mm.add("(min-width:1024px)", () => {
       const st = ScrollTrigger.create({
@@ -54,7 +54,7 @@ export default function Contact() {
 
     return () => {
       mm.revert();
-      // smoother.kill();
+      smoother.kill();
     };
   }, []);
 

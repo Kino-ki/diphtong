@@ -22,13 +22,12 @@ export default function AboutPage() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
   useEffect(() => {
+    ScrollSmoother.create({
+      smooth: 1.2,
+      effects: true,
+      normalizeScroll: true,
+    });
     if (!pinnedRef.current) return;
-
-    // ScrollSmoother.create({
-    //   smooth: 1.2,
-    //   effects: true,
-    //   normalizeScroll: true,
-    // });
 
     const mm = gsap.matchMedia();
     const el = pinnedRef.current;

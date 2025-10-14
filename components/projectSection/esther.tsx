@@ -1,5 +1,3 @@
-import Image from "next/image";
-import estherone from "@/public/images/projectsPage/estherone.svg";
 import gsap from "gsap";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -18,48 +16,39 @@ export default function Esther({ speed }: { speed: number }) {
   return (
     <div
       data-speed={speed}
-      className="inner  h-[110svh] flex flex-col pl-12 lg:py-32 2xl:p-[5%] pt-16  md:bg-diphblack  bg-top bg-cover"
+      className="h-full bg-diphblack  font-urbanistr flex flex-col lg:flex-row "
     >
-      <div className="flex  flex-col md:flex-row">
-        <h1 className="font-estherfont uppercase text-[#CFEB98] text-center md:text-start text-[2.4rem] md:text-7xl ">
-          {estherProject.h1}
-        </h1>
-        <h2 className="uppercase text-lg md:text-2xl flex justify-end  items-end">
-          {estherProject.subtitle}{" "}
-          <span className="capitalize ">&nbsp;portfolio</span>{" "}
-        </h2>
-      </div>
-      <div className="flex flex-col gap-8 mt-[2%]  ">
-        <div className="md:flex flex-col hidden  justify-center h-[25%]  overflow-hidden">
-          <Image
-            src={estherone}
-            width={1800}
-            height={100}
-            alt="first editor picture"
-            className="pointer-events-none"
-          />
+      <div className="flex flex-col justify-evenly h-[70%] md:h-2/3 lg:h-full lg:w-2/3  p-5 md:p-12 2xl:p-20">
+        <div className="  flex justify-center items-center  lg:h-auto">
+          <div className="flex  flex-col 2xl:flex-row  md:px-5 lg:px-0 ">
+            <h1 className="font-estherfont uppercase text-[#CFEB98] text-center md:text-start text-[2.4rem] md:text-7xl lg:text-6xl 2xl:text-7xl ">
+              {estherProject.h1}
+            </h1>
+            <h2 className="uppercase text-lg md:text-2xl flex justify-end  items-end">
+              {estherProject.subtitle}{" "}
+              <span className="capitalize ">&nbsp;portfolio</span>{" "}
+            </h2>
+          </div>
         </div>
-        <div className=" flex md:flex-row pt-10 md:py-10 flex-col md:justify-between">
-          <div className="flex justify-end md:justify-start  w-2/3 ">
-            <p className=" font-urbanistr text-xl 2xl:text-2xl/10 tracking-widest text-pretty ">
-              {estherProject.content.map(renderContentItem)}
-            </p>
-          </div>
-          <div className=" flex flex-col justify-center h-full pb-20  mx-auto w-1/2 items-center">
-            <div
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              className=""
-            >
-              <VisitWebsite
-                isHovered={isHovered}
-                href={estherProject.href}
-                divClass="border-[3px] 2xl:w-80 "
-                border="border-graytext"
-                hoverborder="border-wlite"
-              />
-            </div>
-          </div>
+        <div className=" ">
+          <p className="md:text-xl 2xl:text-2xl/10 pt-10 md:pt-0 pb-12">
+            {estherProject.content.map(renderContentItem)}
+          </p>
+        </div>
+      </div>
+      <div className="  lg:w-[45%] 2xl:w-[44.5%] bg-bgesther bg-left-top bg-auto  h-[30%] md:h-1/2 lg:h-full my-auto  lg:mx-auto flex flex-col md:pt-0 pt-10 md:justify-center items-center">
+        <div
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          className="  "
+        >
+          <VisitWebsite
+            href={estherProject.href}
+            isHovered={isHovered}
+            divClass="shadow-2xl bg-diphblack   "
+            hoverborder="border-graytext"
+            border="border-wlite"
+          />
         </div>
       </div>
     </div>

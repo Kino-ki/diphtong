@@ -28,18 +28,12 @@ export default {
         mobileherogif: "url(/images/mobileherogif.gif)",
         slideone: "url(/images/backgrounds/heroslideone.svg) ",
         slidetwopic: "url(/images/backgrounds/heroslidetwo.svg) ",
-        bgslidetwo: "url(/images/backgrounds/bg-slidetwo.svg) ",
         bgdragonmobile: "url(/images/backgrounds/bgdragonmobile.svg) ",
         bgbeances: "url(/images/projectsPage/bgbeances.svg) ",
+        bgesther: "url(/images/projectsPage/bgWhite.jpg) ",
         bgbeancesmauve: "url(/images/projectsPage/beancesone.svg) ",
-        bganalog: "url(/images/projectsPage/analogall.svg) ",
         bganalogf: "url(/images/projectsPage/analogf.svg) ",
-        estherprojmobile: "url(/images/projectsPage/bgesthermobile.svg)",
-        estherprojmobilellipse:
-          "url(/images/projectsPage/bgesthermobilellipse.svg)",
         beancesprojmobile: "url(/images/projectsPage/bgbeancesmobile.svg)",
-        beancesflowerjmobile:
-          "url(/images/projectsPage/bgbeancesmobileflower.svg)",
       },
     },
     fontFamily: {

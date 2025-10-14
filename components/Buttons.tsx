@@ -16,7 +16,7 @@ export function LangButton() {
       onClick={handleLanguageChange}
     >
       <div>
-        <p className="font-menlor text-[1.1rem]/5  tracking-[0.25rem] w-full h-full ">
+        <p className="font-menlor text-2xl lg:text-[1.1rem]/5 tracking-[0.25rem] w-full h-full ">
           {language === "EN" ? "FR" : "EN"}
         </p>
       </div>
@@ -142,14 +142,14 @@ export function VisitWebsite({
   return (
     <button
       ref={buttonRef}
-      className={` ${divClass}  rounded-xl py-5 px-20  transition-colors ease-in-out duration-200 s ${
+      className={` ${divClass} border-2 md:border-[3px]  rounded-xl py-5 px-12 md:px-20  transition-colors ease-in-out duration-200 s ${
         isHovered ? hoverborder : border
       } `}
     >
       <a
         href={href}
         target="_blank"
-        className=" text-xl 2xl:text-2xl font-figtree "
+        className="text-lg md:text-xl 2xl:text-2xl font-figtree "
       >
         {" "}
         <p

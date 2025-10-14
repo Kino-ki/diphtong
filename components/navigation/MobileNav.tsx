@@ -4,14 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-
+import { useLanguage } from "../language/LangContext";
 import { LangButton } from "../Buttons";
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [scrollY, setScrollY] = useState(0);
-
   const pathname = usePathname();
+  const { dictionary } = useLanguage();
+  const { navbar } = dictionary;
+  const itemsList = Object.values(navbar);
 
   useEffect(() => {
     // if (pathname !== "/home") return;
@@ -49,9 +51,6 @@ export default function MobileNav() {
         <nav
           className={`flex justify-end w-full transition-colors duration-300 p-5 md:px-12`}
         >
-          {/* <Link href="/" className="w-full ">
-            <Image src={logo} width={40} height={50} alt="text" className="" />
-          </Link> */}
           <div>
             <button
               onClick={() => setIsOpen(true)}
@@ -64,7 +63,7 @@ export default function MobileNav() {
         </nav>
       )}
       {isOpen && (
-        <div className="bg-[#E8E5E5] z-50 bg-bgdragonmobile bg-contain bg-right bg-no-repeat h-screen w-screen relative overflow-y-auto ">
+        <div className="bg-[#E8E5E5] z-50 bg-bgdragonmobile bg-contain bg-right bg-no-repeat h-screen w-screen relative overflow-y-auto  ">
           <button
             onClick={() => setIsOpen(false)}
             type="button"
@@ -73,38 +72,29 @@ export default function MobileNav() {
             <Image src={cross} alt="cross" width={40} />
           </button>
           <div className="pt-12 flex flex-col px-2 ">
-            <h1 className="font-akira  text-black text-[3.5rem] text-center">
+            <h1 className="font-akira  text-black text-[13.5vw] text-center">
               <Link href="/">diphtong</Link>
             </h1>
-            <h2 className="uppercase font-menlob text-[2rem] text-end ">
+            <h2 className="uppercase font-menlob text-[8vw] text-end md:-mt-10 -mt-5 ">
               web agency
             </h2>
           </div>
-          <ul className="flex flex-col font-menlor text-xl pt-10 ">
-            <li className="border-b border-gray-400 pb-7 mr-40 tracking-widest pl-5">
-              <Link href="/">HOME</Link>
-            </li>
-
-            <li className="border-b border-gray-400 py-7 mr-36 tracking-widest pl-5">
-              <Link href="/services">SERVICES</Link>
-            </li>
-
-            <li className="border-b border-gray-400 py-7 mr-36 tracking-widest pl-5">
-              <Link href="/about">ABOUT</Link>
-            </li>
-
-            <li className="border-b border-gray-400 py-7 mr-40 tracking-widest pl-5">
-              <Link href="/projects">OUR PROJECTS</Link>
-            </li>
-
-            <li className="py-6 mr-44 tracking-widest pl-5">
-              <Link href="/contact">CONTACT</Link>
-            </li>
+          <ul className="flex flex-col font-menlor text-2xl md:text-4xl pt-10 ">
+            {itemsList.map((item, i) => (
+              <li
+                key={i}
+                className="border-b border-gray-400 py-6 md:py-8 mr-40 tracking-widest uppercase px-5  md:px-12"
+              >
+                <a href={`/${item} `}>{item}</a>
+              </li>
+            ))}
           </ul>
-          <div className=" flex justify-between pt-5 pl-5 pr-10">
-            <p className="font-urbanistl tracking-widest">
+          <div className=" flex justify-between  text-xl md:text(2xl) pr-10 px-5  md:px-12">
+            <p className="font-urbanistl tracking-widest ">
               contact@diphtong.com
             </p>
+          </div>
+          <div className="px-5  md:px-12 py-12 ">
             <LangButton />
           </div>
         </div>

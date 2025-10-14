@@ -19,22 +19,22 @@ export default function Analogizing({ speed }: { speed: string }) {
   return (
     <div
       data-speed={speed}
-      className="h-full bg-[#E5E5E5]  font-urbanistr flex  text-diphblack"
+      className="h-full bg-[#E5E5E5]  font-urbanistr flex flex-col lg:flex-row text-diphblack"
     >
-      <div className="flex flex-col justify-evenly w-2/3 p-12 2xl:p-20">
-        <div className="  flex justify-center">
-          <h1 className="text-8xl text-black font-urbanistr ">
+      <div className="flex flex-col justify-evenly h-[70%] md:h-2/3 lg:h-full lg:w-2/3  p-5 md:p-12 2xl:p-20">
+        <div className="  flex justify-center items-end md:items-center h-full lg:h-auto">
+          <h1 className="text-6xl md:text-8xl text-black font-urbanistr ">
             {" "}
             {AnalogProject.h1}{" "}
           </h1>
         </div>
-        <div className=" px-10  ">
-          <p className="text-xl 2xl:text-2xl/10 pb-12">
+        <div className=" lg:px-10  ">
+          <p className="md:text-xl 2xl:text-2xl/10 pt-10 md:pt-0 lg:pb-12">
             {AnalogProject.content.map(renderContentItem)}
           </p>
         </div>
       </div>
-      <div className="w-1/2 bg-bganalogf bg-auto h-full my-auto mx-auto flex flex-col justify-center items-center">
+      <div className=" lg:w-1/2 bg-bganalogf bg-left-bottom bg-auto h-[30%] md:h-1/2 lg:h-full md:my-auto  lg:mx-auto flex flex-col pt-10 md:pt-0 md:justify-center items-center">
         <div
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -43,7 +43,7 @@ export default function Analogizing({ speed }: { speed: string }) {
           <VisitWebsite
             href={AnalogProject.href}
             isHovered={isHovered}
-            divClass="shadow-2xl border-[3px] "
+            divClass="shadow-2xl  "
             hoverborder="border-graytext"
             border="border-diphblack"
           />

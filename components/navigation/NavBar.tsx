@@ -34,32 +34,65 @@ export default function NavBar() {
       const imageWidth = 350;
       const viewportWidth = window.innerWidth;
       const scaleFactor = imageWidth ? (viewportWidth * 0.95) / imageWidth : 1;
-      gsap.fromTo(
-        logoRef.current,
-        {
-          scale: scaleFactor, // initial big size
-          y: "12rem",
-          x: "-56%",
-          transformOrigin: "center center",
-        },
-        {
-          scale: 1, // normal size when scrolled
-          y: "0rem",
-          x: "0%",
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: document.documentElement,
-            start: "top top",
-            end: "400px top",
-            scrub: true,
-            toggleActions: "play none none none",
+      const mm = gsap.matchMedia();
+      mm.add("(min-width:1536px)", () => {
+        gsap.fromTo(
+          logoRef.current,
+          {
+            scale: scaleFactor, // initial big size
+            y: "12rem",
+            x: "-56%",
+            transformOrigin: "center center",
           },
-        }
-      );
+          {
+            scale: 1, // normal size when scrolled
+            y: "0rem",
+            x: "0%",
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: document.documentElement,
+              start: "top top",
+              end: "400px top",
+              scrub: true,
+              toggleActions: "play none none none",
+            },
+          }
+        );
 
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
+        return () => {
+          mm.revert();
+          window.removeEventListener("scroll", handleScroll);
+        };
+      });
+      mm.add("(max-width:1535px)", () => {
+        gsap.fromTo(
+          logoRef.current,
+          {
+            scale: scaleFactor, // initial big size
+            y: "10rem",
+            x: "-45%",
+            transformOrigin: "center center",
+          },
+          {
+            scale: 1, // normal size when scrolled
+            y: "0rem",
+            x: "0%",
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: document.documentElement,
+              start: "top top",
+              end: "400px top",
+              scrub: true,
+              toggleActions: "play none none none",
+            },
+          }
+        );
+
+        return () => {
+          mm.revert();
+          window.removeEventListener("scroll", handleScroll);
+        };
+      });
     },
     { dependencies: [pathname] }
   );

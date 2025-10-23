@@ -9,9 +9,9 @@ export default function ReachOutSection() {
   const reachout = dictionary.homepage.reachoutsection;
 
   return (
-    <div className="flex  h-full   relative py-40 ">
+    <div id="reachout" className="flex  h-full   relative py-40 ">
       <div className="flex flex-col w-full md:mt-5  items-center relative">
-        <h2 className=" text-[6rem] flex text-center w-[80%] justify-center  my-16 lg:mt-3 font menlor tracking-wide leading-tight  ">
+        <h2 className=" text-[5rem] 2xl:text-[6rem] flex text-center w-[80%] justify-center  my-16 lg:mt-3 font menlor tracking-wide leading-tight  ">
           {reachout.h2}
         </h2>
         <p className="lg:py-10 text-2xl  w-[60%] "> {reachout.content} </p>

@@ -84,10 +84,10 @@ export default function Projects() {
   return (
     <div className=" flex flex-col bg-wlite border-t-8 lg:border-none border-black text-[#1e1e1e] overflow-hidden ">
       <div className="flex flex-col justify-center  relative">
-        <div className="w-full h-fit  border-b-2 md:border-none border-[#999696] mt-20 md:pt-40 mb-20 ">
+        <div className="w-full h-fit  border-b-2 md:border-none border-[#999696] mt-20 md:pt-40 lg:mb-10 2xl:mb-20 ">
           <h2
             ref={titleRef}
-            className="text-[11svw] uppercase md:text-[18vh]  font-urbanistr font-semibold md:underline text-center md:text-start -mb-5 tracking-wider text-[#999696]"
+            className=" lg:text-[10svw] xl:text-[11svw] uppercase 2xl:text-[18vh]  font-urbanistr font-semibold md:underline text-center md:text-start -mb-5 tracking-wider text-[#999696]"
           >
             {works.workstitle}
           </h2>
@@ -95,7 +95,7 @@ export default function Projects() {
         <div className=" relative md:pb-32 pb-20">
           {works.works.map((work, index) => (
             <section
-              onMouseEnter={() => {
+              onPointerMove={() => {
                 setIsHovered(true);
                 setHoveredIndex(index);
               }}
@@ -107,10 +107,10 @@ export default function Projects() {
             >
               <Link
                 href={work.link}
-                className=" px-3 flex flex-col-reverse gap-5 py-6 md:px-10 md:py-8 border-b border-[#999696]"
+                className=" px-3 flex flex-col-reverse gap-5 py-6 md:px-10 2xl:py-8 border-b border-[#999696]"
               >
                 <div className="flex justify-center md:justify-start">
-                  <h3 className="font-menlob  text-center md:text-start font-semibold  text-3xl md:text-6xl uppercase tracking-[0.1rem] md:tracking-[0.2rem] mb-5 ">
+                  <h3 className="font-menlob  text-center md:text-start font-semibold  text-3xl lg:text-5xl 2xl:text-6xl uppercase tracking-[0.1rem] md:tracking-[0.2rem] mb-5 ">
                     {work.title}
                   </h3>
                 </div>
@@ -133,14 +133,13 @@ export default function Projects() {
           <div
             // onMouseEnter={() => setIsHovered(true)}
             ref={floatImgRef}
-            className="absolute  hidden lg:flex h-[55%] bottom-20 lg:w-40 right-36 pointer-events-none "
+            className="absolute  hidden lg:flex  h-[55%] bottom-20 lg:w-32 2xl:w-40 lg:right-5 xl:right-12 2xl:right-36 pointer-events-none "
           >
             <Image
               src={works.works[hoveredIndex].imageSrc}
               alt="image"
-              width={250}
-              height={200}
-              className="object-cover"
+              fill
+              className="lg:object-cover"
             />
           </div>
         )}

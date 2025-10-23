@@ -15,6 +15,7 @@ export default function PreHomeSlides() {
   useGSAP(() => {
     if (!titleRef.current) return;
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    ScrollTrigger.normalizeScroll(true);
 
     if (titleRef.current) {
       const mm = gsap.matchMedia();
@@ -46,31 +47,33 @@ export default function PreHomeSlides() {
   return (
     <div className="bg-wlite md:h-auto  h-[60svh] md:pb-20  ">
       <div className="flex flex-col justify-start w-full pb-40">
-        <div className="border-b md:border-none  border-black my-12 mb-48  ">
+        <div className="border-b md:border-none  border-black my-12 lg:mb-80 2xl:mb-48  ">
           <h2
             data-speed="0.9"
             ref={titleRef}
-            className="flex text-start  w-full text-[16vw]  font-urbanistr font-semibold md:font-medium tracking-wider md:-mb-0  text-black capitalize"
+            className="flex text-start  w-full  text-[16vw]  font-urbanistr font-semibold md:font-medium tracking-wider md:-mb-0  text-black capitalize"
           >
             {phslides.intro.h2}
           </h2>
         </div>
         <div
           ref={sectionsNameRef}
-          className=" flex flex-col  md:flex-row md:justify-between md:py-5 mdparallax "
+          className=" flex flex-col  md:flex-row md:justify-between md:py-5  "
         >
           <div
             data-speed="0.9"
-            className="flex flex-col gap-5 md:w-[45%]  px-2 md:px-12"
+            className="flex flex-col gap-5 lg:w-1/2 2xl:w-[45%]  px-2 lg:px-6 2xl:px-12"
           >
-            <p className="text-[#7a7878]  text-lg md:text-4xl/relaxed text-center md:text-start tracking-wider font-urbanistb  ">
+            <p className="text-[#7a7878]  text-lg lg:text-3xl/10 2xl:text-4xl/relaxed text-center md:text-start tracking-wider font-urbanistb  ">
               {phslides.intro.subtitle}
             </p>
-            <p className="text-2xl/10 text-diphblack">{phslides.intro.text}</p>
+            <p className=" lg:text-xl/8 2xl:text-2xl/10 text-diphblack">
+              {phslides.intro.text}
+            </p>
           </div>
           <div
-            data-speed="0.9"
-            className="parallax bg-diphblack  flex flex-col text-base md:text-xl mx-5 md:mx-0 pt-10 md:pt-0  text-wlite font-figtree md:w-[40%]  "
+            data-speed="1.3"
+            className=" bg-diphblack  flex flex-col text-base lg:text-lg 2xl:text-xl mx-5 md:mx-0 pt-10 md:pt-0  text-wlite font-figtree md:w-[40%] h-fit  "
           >
             <h3 className="md:py-10 py-8 md:pl-5 text-center md:text-start ">
               {" "}
@@ -83,7 +86,7 @@ export default function PreHomeSlides() {
                 typeof p === "string" ? p : p.gray
               )}
             </h3>
-            <h3 className="md:py-10 py-8 md:pl-5 text-center md:text-start ">
+            <h3 className="md:py-10 py-8 md:pl-5 text-center md:text-start h-fit ">
               {phslides.thirdSlide.h3.map((p) =>
                 typeof p === "string" ? p : p.gray
               )}

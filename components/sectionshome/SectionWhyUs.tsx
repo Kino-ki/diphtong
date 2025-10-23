@@ -16,46 +16,22 @@ export default function SectionWhyUs() {
 
     bgRefs.current.forEach((el) => {
       if (!el) return;
-      const mm = gsap.matchMedia();
-      mm.add("min-width:1024px", () => {
-        gsap.fromTo(
-          el,
-          {
-            backgroundColor: "#c3c3c3",
+      gsap.fromTo(
+        el,
+        {
+          backgroundColor: "#c3c3c3",
+        },
+        {
+          backgroundColor: "#191919",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 70%",
+            end: "top 60%",
+            scrub: 1,
+            // markers: true,
           },
-          {
-            backgroundColor: "#191919",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 70%",
-              end: "top 60%",
-              scrub: 1,
-              markers: true,
-            },
-          }
-        );
-      });
-      mm.add("max-width:1023px", () => {
-        gsap.fromTo(
-          el,
-          {
-            backgroundColor: "#c3c3c3",
-          },
-          {
-            backgroundColor: "#191919",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 70%",
-              end: "top 60%",
-              scrub: 1,
-              markers: true,
-            },
-          }
-        );
-      });
-      return () => {
-        mm.revert();
-      };
+        }
+      );
     });
   });
 
@@ -72,18 +48,18 @@ export default function SectionWhyUs() {
             </p>
           </div>
           <div className="h-[50svh] lg:h-full  flex flex-col justify-center px-5 lg:px-[8rem] ">
-            <h4 className="text-black text-center text-2xl md:text-4xl lg:text-4xl 2xl:text-5xl font-urbanistl leading-10 lg:leading-[4rem] font-semibold ">
+            <h4 className="text-black text-center text-2xl md:text-4xl lg:text-4xl 2xl:text-5xl font-urbanistl leading-10 lg:leading-[4rem] 2xl:leading-[5rem]  font-semibold ">
               {whyus.h4}
             </h4>
           </div>
         </div>
         {/* ----------------------------PILLARS---------------------------------- */}
-        <div className="lg:h-[100svh] flex flex-col gap-10 ">
-          <h3 className="font-menlor text-xl lg:text-3xl 2xl:text-4xl text-diphblack px-5 md:px-10 lg:px-14">
+        <div className=" h-[80svh] lg:h-[100svh] flex flex-col gap-10 ">
+          <h3 className="font-menlor text-2xl lg:text-3xl 2xl:text-4xl text-diphblack px-5 md:px-10 lg:px-14">
             {" "}
             {whyus.h3}{" "}
           </h3>
-          <ul className="flex flex-col gap-10 w-full">
+          <ul className="flex flex-col gap-10 w-full px-5 lg:px-0">
             {whyus.pillars.map((pillar, i) => (
               <li
                 key={i}
@@ -93,7 +69,7 @@ export default function SectionWhyUs() {
                   ref={(el) => {
                     bgRefs.current[i] = el;
                   }}
-                  className="flex flex-col justify-center gap-5 lg:text-2xl 2xl:text-3xl text-start w-full lg:w-2/3 bg-diphblack lg:py-8 2xl:py-16 px-20 "
+                  className="flex flex-col justify-center gap-3 md:gap-5 md:text-xl lg:text-2xl 2xl:text-3xl text-start w-full lg:w-2/3 bg-diphblack py-3 md:py-6 lg:py-8 2xl:py-16 px-8 md:px-20 "
                 >
                   <h4>
                     {" "}

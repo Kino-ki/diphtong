@@ -15,6 +15,7 @@ export default function Projects() {
   const works = dictionary.homepage.projservSection;
 
   const titleRef = useRef<HTMLDivElement | null>(null);
+  const triggerRef = useRef<HTMLDivElement | null>(null);
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const floatImgRef = useRef<HTMLDivElement | null>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -55,7 +56,7 @@ export default function Projects() {
           ease: "sine.inOut",
           duration: 2,
           scrollTrigger: {
-            trigger: titleRef.current,
+            trigger: triggerRef.current,
             start: "top 20%",
             end: "bottom top",
             scrub: 1,
@@ -82,12 +83,15 @@ export default function Projects() {
   // }, [isHovered, yPosition]);
 
   return (
-    <div className=" flex flex-col bg-wlite border-t-8 lg:border-none border-black text-[#1e1e1e] overflow-hidden ">
+    <div
+      ref={triggerRef}
+      className=" flex flex-col bg-wlite border-t-8 lg:border-none border-black text-[#1e1e1e] overflow-hidden "
+    >
       <div className="flex flex-col justify-center  relative">
-        <div className="w-full h-fit  border-b-2 md:border-none border-[#999696] mt-20 md:pt-40 lg:mb-10 2xl:mb-20 ">
+        <div className="w-full h-fit  border-b-2 lg:border-none border-[#999696] mt-10 lg:mt-20 md:pt-40 lg:mb-10 2xl:mb-20 ">
           <h2
             ref={titleRef}
-            className=" lg:text-[10svw] xl:text-[11svw] uppercase 2xl:text-[18vh]  font-urbanistr font-semibold md:underline text-center md:text-start -mb-5 tracking-wider text-[#999696]"
+            className="text-[11svw] md:text-[10svw] lg:text-[10svw] xl:text-[11svw] uppercase 2xl:text-[18vh]  font-urbanistr font-semibold lg:underline text-center md:text-start -mb-5 tracking-wider text-[#999696]"
           >
             {works.workstitle}
           </h2>

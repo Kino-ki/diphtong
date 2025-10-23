@@ -1,37 +1,35 @@
 "use client";
 
-import { PopupWidget } from "react-calendly";
+import { PopupModal } from "react-calendly";
 import { useLanguage } from "@/components/language/LangContext";
 import { useEffect, useState } from "react";
 
 export default function CalendlyWidget() {
   const { language } = useLanguage();
   const [isClient, setIsClient] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    setIsClient(true); // now we are sure we are in the browser
+    setIsClient(true);
   }, []);
+
   return (
     <>
       <button
-        onClick={() =>
-          document
-            .querySelector<HTMLDivElement>(".calendly-badge-content")
-            ?.click()
-        }
-        className="px-6 md:px-8 py-4 md:py-5 bg-wlite rounded-xl text-diphblack font-figtree 2xl:text-2xl  hover:bg-white transition-colors ease-in-out duration-400"
+        onClick={() => setOpen(true)}
+        className="px-6 md:px-8 py-4 md:py-5 bg-wlite rounded-xl text-diphblack font-figtree 2xl:text-2xl hover:bg-white transition-colors ease-in-out duration-400"
       >
         {language === "EN"
           ? "Click here to schedule a meeting with us"
           : "Cliquez ici pour prendre un rendez-vous"}
       </button>
-      {isClient && (
-        <PopupWidget
+
+      {isClient && open && (
+        <PopupModal
+          open
           url="https://calendly.com/faiza-fehri-dev/new-meeting"
-          rootElement={document.body} // escape ScrollSmoother
-          text="" // disable Calendly's default floating button
-          color="transparent"
-          textColor="transparent"
+          rootElement={document.body}
+          onModalClose={() => setOpen(false)}
         />
       )}
     </>

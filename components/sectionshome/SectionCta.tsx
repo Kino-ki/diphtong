@@ -17,14 +17,11 @@ export default function SectionCta() {
           </p>
         </div>
         {/* ---------------------secondtext on white bg */}
-        <div className="flex flex-col lg:flex-row justify-between mr-[0.2rem] h-full ">
+        <div className="flex flex-col lg:flex-row justify-between mr-[0.2rem] h-full  px-5 lg:px-0">
           <div data-speed="" className="flex flex-col lg:w-1/3 w-4/5">
             <div className="lg:h-[30svh]  "></div>
-            <div className="bg-wlite relative  w-full flex flex-col justify-center lg:h-full h-[50svh] ">
-              <p
-                data-speed="1.1"
-                className="text-diphblack px-[2rem] text-xl md:text-2xl md:leading-[3rem] 2xl:text-3xl text-start 2xl:leading-[4.6rem] tracking-wider "
-              >
+            <div className="bg-wlite relative  w-full flex flex-col justify-center lg:h-full h-[35svh] ">
+              <p className="text-diphblack px-[2rem] text-xl md:text-2xl md:leading-[3rem] 2xl:text-3xl text-start 2xl:leading-[4.6rem] tracking-wider ">
                 {home.ctaleft.map((part, i) =>
                   typeof part === "string" ? part : <b key={i}>{part.bold}</b>
                 )}
@@ -46,10 +43,7 @@ export default function SectionCta() {
             </div>
             <div className="h-[10svh] lg:h-0 "></div>
 
-            <div
-              data-speed="1.1"
-              className="lg:h-[100svh] h-[50svh] w-4/5 lg:w-full bg-wlite flex flex-col justify-center md:justify-end py-[5rem]  "
-            >
+            <div className="lg:h-[100svh] h-[35svh] w-4/5 lg:w-full bg-wlite flex flex-col justify-center md:justify-end py-[5rem]  ">
               <p className="text-diphblack text-xl md:text-2xl md:leading-[3rem] 2xl:text-3xl px-[2rem] lg:text-center 2xl:leading-[3rem] tracking-wider ">
                 {" "}
                 {home.ctaright.map((part, i) =>

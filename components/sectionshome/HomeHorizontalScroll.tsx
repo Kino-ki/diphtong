@@ -2,13 +2,13 @@
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import one from "@/public/images/1.svg";
 import two from "@/public/images/2.svg";
 import three from "@/public/images/3.svg";
 import Image from "next/image";
 import { useLanguage } from "@/components/language/LangContext";
-
+import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HomeHorizontalScroll() {
@@ -18,7 +18,7 @@ export default function HomeHorizontalScroll() {
   const slidecontent = dictionary.homepage.horizontalScroll;
   const { firstSlide, secondSlide, thirdSlide } = slidecontent;
 
-  useEffect(() => {
+  useGSAP(() => {
     if (!slidesRef.current) return;
     const mm = gsap.matchMedia();
 
@@ -57,9 +57,9 @@ export default function HomeHorizontalScroll() {
     );
 
     return () => {
-      ScrollTrigger.getAll().forEach((st) => st.kill());
+      mm.revert();
     };
-  }, []);
+  });
 
   return (
     <div className="bg-wlite">

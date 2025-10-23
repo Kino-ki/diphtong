@@ -1,3 +1,4 @@
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
@@ -21,29 +22,32 @@ export function BarCode({
 }: VerticalLineProps) {
   const lineRefs = useRef<SVGLineElement | null>(null);
   const svgRef = useRef<SVGSVGElement | null>(null);
-  useEffect(() => {
-    if (!lineRefs.current) return;
+  useGSAP(
+    () => {
+      if (!lineRefs.current) return;
 
-    // set all bars collapsed first
-    gsap.set(lineRefs.current, { attr: { y2: 0 } });
+      // set all bars collapsed first
+      gsap.set(lineRefs.current, { attr: { y2: 0 } });
 
-    // animate to their target heights
-    gsap.to(lineRefs.current, {
-      attr: { y2: height },
-      //   duration: 1,
-      ease: "power2.Out",
-      scrollTrigger: {
-        trigger: svgRef.current,
-        start,
-        end: "bottom 40%",
-        scrub,
-        // markers: true,
-      },
-    });
-  }, [height]);
+      // animate to their target heights
+      gsap.to(lineRefs.current, {
+        attr: { y2: height },
+        //   duration: 1,
+        ease: "power2.Out",
+        scrollTrigger: {
+          trigger: svgRef.current,
+          start,
+          end: "bottom 40%",
+          scrub,
+          // markers: true,
+        },
+      });
+    },
+    { dependencies: [height] }
+  );
 
   return (
-    <svg ref={svgRef} viewBox="0 0 400 400" className="h-full">
+    <svg ref={svgRef} viewBox="0 0 200 400" className="h-full">
       <line
         ref={lineRefs}
         x1={x}
@@ -67,29 +71,32 @@ export function HorizLine({ width, strokeWidth, x }: HorizontalLineProps) {
   const lineRefs = useRef<SVGLineElement | null>(null);
   const svgRef = useRef<SVGSVGElement | null>(null);
 
-  useEffect(() => {
-    if (!lineRefs.current) return;
+  useGSAP(
+    () => {
+      if (!lineRefs.current) return;
 
-    // set all bars collapsed first
-    gsap.set(lineRefs.current, { attr: { x2: 0 } });
+      // set all bars collapsed first
+      gsap.set(lineRefs.current, { attr: { x2: 0 } });
 
-    // animate to their target heights
-    gsap.to(lineRefs.current, {
-      attr: { x2: width },
-      //   duration: 1,
-      ease: "power2.Out",
-      scrollTrigger: {
-        trigger: svgRef.current,
-        start: "top 65%",
-        end: "bottom 40%",
-        scrub: 1,
-        // markers: true,
-      },
-    });
-  }, [width]);
+      // animate to their target heights
+      gsap.to(lineRefs.current, {
+        attr: { x2: width },
+        //   duration: 1,
+        ease: "power2.Out",
+        scrollTrigger: {
+          trigger: svgRef.current,
+          start: "top 65%",
+          end: "bottom 40%",
+          scrub: 1,
+          // markers: true,
+        },
+      });
+    },
+    { dependencies: [width] }
+  );
 
   return (
-    <svg ref={svgRef} viewBox="0 0 400 50" className="">
+    <svg ref={svgRef} viewBox="0 0 400 50" className="overflow-hidden">
       <line
         ref={lineRefs}
         x1={x}

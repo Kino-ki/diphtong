@@ -1,41 +1,43 @@
-// components/SmoothWrapper.tsx
 "use client";
 
-import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollSmoother from "gsap/ScrollSmoother";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { usePathname } from "next/navigation";
+import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+}
 
 let smoother: ScrollSmoother | null = null; // global variable
-
-export function getSmoother() {
-  return smoother;
-}
 
 export default function SmoothWrapper({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  useEffect(() => {
-    // Check if smoother already exists (avoid multiple inits on route changes)
-    if (ScrollSmoother.get()) return;
+  const pathname = usePathname();
+  useGSAP(
+    () => {
+      smoother = ScrollSmoother.create({
+        smooth: 1.3,
+        effects: true,
+      });
+    },
+    {
+      dependencies: [pathname],
+      revertOnUpdate: true,
+    }
+  );
 
-    smoother = ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 1.2,
-      effects: true,
-      // normalizeScroll: true,
-    });
+  return (
+    <div id="smooth-wrapper">
+      <div id="smooth-content">{children}</div>
+    </div>
+  );
+}
 
-    return () => {
-      smoother?.kill();
-      smoother = null;
-    };
-  }, []);
-
-  return <>{children}</>;
+export function getSmoother() {
+  return smoother;
 }

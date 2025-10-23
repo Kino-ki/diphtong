@@ -4,11 +4,12 @@ import Image from "next/image";
 import diphtext from "@/public/images/logo/dIphtongtext.svg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LangButton } from "../Buttons";
 import { useLanguage } from "../language/LangContext";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,18 +22,18 @@ export default function NavBar() {
     navbar: { services, about, contact, proj },
   } = dictionary;
 
-  useEffect(() => {
-    if (pathname !== "/" && pathname !== "/home") return;
-    // ----------------------scroll monitor function
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-    if (window.scrollY > 50) return;
-    const imageWidth = 350;
-    const viewportWidth = window.innerWidth;
-    const scaleFactor = imageWidth ? (viewportWidth * 0.95) / imageWidth : 1;
-    const ctx = gsap.context(() => {
+  useGSAP(
+    () => {
+      if (pathname !== "/" && pathname !== "/home") return;
+      // ----------------------scroll monitor function
+      const handleScroll = () => {
+        setScrollY(window.scrollY);
+      };
+      window.addEventListener("scroll", handleScroll);
+      if (window.scrollY > 50) return;
+      const imageWidth = 350;
+      const viewportWidth = window.innerWidth;
+      const scaleFactor = imageWidth ? (viewportWidth * 0.95) / imageWidth : 1;
       gsap.fromTo(
         logoRef.current,
         {
@@ -55,13 +56,13 @@ export default function NavBar() {
           },
         }
       );
-    });
 
-    return () => {
-      ctx.revert();
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [pathname]);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    },
+    { dependencies: [pathname] }
+  );
 
   return (
     <div

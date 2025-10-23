@@ -1,16 +1,14 @@
 "use client";
 import { GetAQuoteButton } from "@/components/Buttons";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import gsap from "gsap";
 import { useLanguage } from "../../components/language/LangContext";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import ScrollSmoother from "gsap/dist/ScrollSmoother";
 import {
   renderContentItem,
-  scrollToHashOnLoad,
+  // scrollToHashOnLoad,
 } from "@/components/HelperFunctions";
-
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+import { useGSAP } from "@gsap/react";
 
 export default function Services() {
   const { dictionary } = useLanguage();
@@ -22,22 +20,17 @@ export default function Services() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const titleRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    ScrollSmoother.create({
-      smooth: 1.2,
-      effects: true,
-      normalizeScroll: true,
-    });
-    
-    scrollToHashOnLoad();
-
+  // useEffect(() => {
+  //   scrollToHashOnLoad();
+  // }, []);
+  gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
     const el = titleRef.current;
-
     if (el) {
       const mm = gsap.matchMedia();
       mm.add("(min-width: 1024px)", () => {
         gsap.fromTo(
-          titleRef.current,
+          el,
           { scale: 1, xPercent: 0 },
           {
             xPercent: 8,
@@ -80,7 +73,7 @@ export default function Services() {
         mm.revert();
       };
     }
-  }, []);
+  });
 
   return (
     <div className="flex flex-col justify-start   h-auto  bg-diphblack">

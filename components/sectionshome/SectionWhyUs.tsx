@@ -1,8 +1,9 @@
 "use client";
 import { useLanguage } from "@/components/language/LangContext";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function SectionWhyUs() {
@@ -11,7 +12,7 @@ export default function SectionWhyUs() {
 
   const bgRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  useEffect(() => {
+  useGSAP(() => {
     bgRefs.current.forEach((el) => {
       if (!el) return;
       gsap.fromTo(
@@ -31,15 +32,10 @@ export default function SectionWhyUs() {
         }
       );
     });
-
-    // Optional: cleanup on unmount
-    return () => {
-      ScrollTrigger.getAll().forEach((st) => st.kill());
-    };
-  }, []);
+  });
 
   return (
-    <div id="">
+    <div id="" className="">
       <div className="flex flex-col bg-wlite font-urbanistr">
         <div className="h-[95svh] flex flex-col lg:px-10 ">
           <div className="w-2/5 flex flex-col gap-[3rem]  ">

@@ -1,11 +1,9 @@
 "use client";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { useLanguage } from "@/components/language/LangContext";
 import ContactForm from "../ContactForm";
 import CalendlyWidget from "@/components/CalendlyWidget";
 
-gsap.registerPlugin(ScrollTrigger);
 export default function ReachOutSection() {
   const { language, dictionary } = useLanguage();
   const reachout = dictionary.homepage.reachoutsection;

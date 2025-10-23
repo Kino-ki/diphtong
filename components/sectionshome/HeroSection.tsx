@@ -2,12 +2,11 @@
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import diphtexte from "@/public/images/logo/vertical.svg";
 import { useLanguage } from "@/components/language/LangContext";
 import Image from "next/image";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useGSAP } from "@gsap/react";
 
 export default function HeroSection() {
   const { dictionary } = useLanguage();
@@ -15,7 +14,8 @@ export default function HeroSection() {
 
   const heroTextRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: heroTextRef.current,
@@ -36,12 +36,12 @@ export default function HeroSection() {
         ease: "power2.inOut",
       }
     );
-  }, []);
+  });
 
   return (
     <div
       ref={heroTextRef}
-      className="h-[100vh] bg-mobileherogif  bg-left  md:bg-herogif  md:bg-contain relative "
+      className="h-[100svh] w-[100svw] bg-mobileherogif  bg-left  md:bg-herogif  md:bg-contain relative "
     >
       <div className="h-full w-full backdrop-blur-[1px] bg-black/30  ">
         <div className="h-full w-full md:pt-[22rem] md:pb-40 flex justify-center">
@@ -53,7 +53,7 @@ export default function HeroSection() {
               {hero.heroh2}
             </h1>
 
-            <h2 className="font-figtreel lg:px-40 capitalize text-xl md:text-4xl tracking-wider md:tracking-[0.5rem] lg:leading-[4rem] flex justify-center text-center font-semibold ">
+            <h2 className="font-figtreel lg:px-40 capitalize text-xl lg:text-2xl xl:text-4xl tracking-wider md:tracking-[0.5rem] lg:leading-[4rem] flex justify-center text-center font-semibold ">
               {hero.heroh3}
             </h2>
           </div>

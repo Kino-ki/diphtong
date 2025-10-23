@@ -4,13 +4,12 @@ import gsap from "gsap";
 import { useLanguage } from "@/components/language/LangContext";
 import founderPic from "@/public/images/founder.png";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import ScrollSmoother from "gsap/dist/ScrollSmoother";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { GetAQuoteButton } from "@/components/Buttons";
 import { renderContentItem } from "@/components/HelperFunctions";
-
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+import { useGSAP } from "@gsap/react";
+import ScrollSmoother from "gsap/dist/ScrollSmoother";
 
 export default function AboutPage() {
   const { dictionary } = useLanguage();
@@ -18,31 +17,36 @@ export default function AboutPage() {
   const about = dictionary.aboutPage;
 
   const pinnedRef = useRef<HTMLDivElement | null>(null);
+  const endtrigger = useRef<HTMLDivElement | null>(null);
   const bgRefs = useRef<(HTMLElement | null)[]>([]);
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
-  useEffect(() => {
-    ScrollSmoother.create({
-      smooth: 1.2,
-      effects: true,
-      normalizeScroll: true,
-    });
-    if (!pinnedRef.current) return;
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
     const mm = gsap.matchMedia();
-    const el = pinnedRef.current;
 
     mm.add("(min-width:1024px)", () => {
-      // Pin left column
+      gsap.fromTo(
+        pinnedRef.current,
+        { scale: 1 },
+        {
+          scale: 1.01,
+          transformOrigin: "left left",
 
-      ScrollTrigger.create({
-        trigger: el,
-        start: "top top",
-        endTrigger: ".endtrigger",
-        end: "top top",
-        pin: true,
-        // markers: true,
-      });
+          ease: "sine.inOut",
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: pinnedRef.current,
+            start: "top 20%",
+            pin: true,
+            endTrigger: endtrigger.current,
+            end: "top top",
+            scrub: 1,
+            // markers: true,
+          },
+        }
+      );
 
       // Animate background color on values
       const bgTriggers: ScrollTrigger[] = [];
@@ -65,11 +69,6 @@ export default function AboutPage() {
         );
         bgTriggers.push(tween.scrollTrigger as ScrollTrigger);
       });
-
-      return () => {
-        bgTriggers.forEach((st) => st.kill());
-        mm.revert();
-      };
     });
     mm.add("(max-width:1023px)", () => {
       const bgTriggers: ScrollTrigger[] = [];
@@ -92,29 +91,23 @@ export default function AboutPage() {
         );
         bgTriggers.push(tween.scrollTrigger as ScrollTrigger);
       });
-
-      return () => {
-        bgTriggers.forEach((st) => st.kill());
-        mm.revert();
-      };
     });
-
     return () => {
       mm.revert();
     };
-  }, []);
+  });
 
   return (
     <div className=" bg-diphblack text-wlite font-urbanistl">
       <div className="flex flex-col">
         <div className="flex flex-col lg:flex-row px-5 md:px-10 lg:px-12 2xl:px-20">
           {/* ----------------------------LEFT SIDE flex col ----------------------------------------------- */}
-          <div
-            ref={pinnedRef}
-            className="lg:w-[40%]  flex flex-col lg:h-[100svh] "
-          >
+          <div className="lg:w-[40%]  flex flex-col lg:h-[100svh] ">
             <div className=" lg:h-[20svh] " />
-            <h1 className=" text-8xl md:text-9xl lg:text-8xl/normal 2xl:text-9xl/normal lg:h-[80%] 2xl:pr-20 pt-20 md:py-12 lg:py-0  ">
+            <h1
+              ref={pinnedRef}
+              className=" text-8xl md:text-9xl lg:text-8xl/normal 2xl:text-9xl/normal  2xl:pr-20 pt-20 md:py-12 lg:py-0  "
+            >
               {about.h1}{" "}
             </h1>
           </div>
@@ -152,7 +145,10 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="2xl:h-[100svh] flex flex-col justify-end p-10 md:px-20 2xl:p-20 pb-40  border-b-8 border-diphblack endtrigger">
+            <div
+              ref={endtrigger}
+              className="2xl:h-[100svh] flex flex-col justify-end p-10 md:px-20 2xl:p-20 pb-40  border-b-8 border-diphblack "
+            >
               <h2 className=" text-3xl/relaxed md:text-5xl/relaxed lg:text-5xl/relaxed tracking-widest font-urbanistr pb-12 2xl:py-20">
                 {about.thirdSectionhow.h3}
               </h2>

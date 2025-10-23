@@ -6,6 +6,7 @@ import { LanguageProvider } from "../components/language/LangContext";
 import MobileNav from "@/components/navigation/MobileNav";
 import NewFooter from "@/components/navigation/NewFooter";
 import ProjNav from "@/components/navigation/ProjNav";
+import SmoothWrapper from "@/components/SmoothWrapper";
 
 export const metadata: Metadata = {
   title: "Diphtong Web Agency | Agence Web Diphtong",
@@ -21,23 +22,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-diphblack ">
+      <body className="bg-diphblack relative ">
         <LanguageProvider>
-          <div id="smooth-wrapper">
-            <header className="">
-              <NavBar />
-              <MobileNav />
-              <ProjNav />
-            </header>
-            <div id="smooth-content">
-              {/* <SmoothWrapper> */}
-              <main className="text-wlite z-10 ">{children}</main>
-              {/* </SmoothWrapper> */}
-              <footer className="">
-                <NewFooter />
-              </footer>
-            </div>
-          </div>
+          <header className="">
+            <NavBar />
+            <MobileNav />
+            <ProjNav />
+          </header>
+          <SmoothWrapper>
+            <main className="text-wlite ">{children}</main>
+            <footer className="">
+              <NewFooter />
+            </footer>
+          </SmoothWrapper>
         </LanguageProvider>
       </body>
     </html>

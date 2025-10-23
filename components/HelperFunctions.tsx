@@ -9,19 +9,12 @@ type ContentItem =
   | { a: { txt: string; href: string } };
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-// export function initScrollSmoother() {
-//   const smoother = ScrollSmoother.create({
-//     smooth: 1.2,
-//     effects: true,
-//   });
-
-//   return smoother;
-// }
-
 export function waitForSmoother(timeout = 100): Promise<ScrollSmoother | null> {
   return new Promise((resolve) => {
     const interval = setInterval(() => {
       const smoother = getSmoother();
+      console.log("smoother", smoother);
+
       if (smoother) {
         clearInterval(interval);
         resolve(smoother);

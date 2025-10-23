@@ -2,10 +2,11 @@
 import { useLanguage } from "@/components/language/LangContext";
 import Image from "next/image";
 import gsap from "gsap";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 // import { useMousePosition } from "../MousePosition";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Projects() {
@@ -19,7 +20,7 @@ export default function Projects() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   // const yPosition = useMousePosition(isHovered);
 
-  useEffect(() => {
+  useGSAP(() => {
     if (!titleRef.current) return;
     const mm = gsap.matchMedia();
 
@@ -63,7 +64,10 @@ export default function Projects() {
         });
       }
     );
-  }, []);
+    return () => {
+      mm.revert();
+    };
+  });
 
   // useEffect(() => {
   //   if (!isHovered) return;

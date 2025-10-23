@@ -12,22 +12,13 @@ import PreHomeSlides from "@/components/sectionshome/PreHomeSlides";
 import HomeHorizontalScroll from "@/components/sectionshome/HomeHorizontalScroll";
 import SectionServices from "@/components/sectionshome/SectionServices";
 import Projects from "@/components/sectionshome/Projects";
-import { useEffect } from "react";
-import ScrollSmoother from "gsap/dist/ScrollSmoother";
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function HomePage() {
-  useEffect(() => {
-    ScrollSmoother.create({
-      smooth: 1.2,
-      effects: true,
-      normalizeScroll: true,
-    });
-  }, []);
   return (
     <div>
-      <div className="bg-diphblack relative -z-0 ">
+      <div className="relative">
         <div className="">
           <HeroSection />
           <SectionCta />

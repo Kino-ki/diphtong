@@ -8,8 +8,8 @@ export default function SectionCta() {
   const home = dictionary.homepage;
 
   return (
-    <div>
-      <div className=" bg-diphblack flex flex-col ">
+    <div className="overflow-hidden">
+      <div className=" bg-diphblack flex flex-col w-[100svw]">
         {/* ---------------------firsttext on black bg */}
         <div className="h-[85svh] text-white flex flex-col justify-center ">
           <p className="pl-[3.4rem]  pr-[10rem] text-4xl font-urbanistr leading-[4.25rem] tracking-wide ">
@@ -18,9 +18,9 @@ export default function SectionCta() {
         </div>
         {/* ---------------------secondtext on white bg */}
         <div className="flex justify-between mr-[0.2rem] h-full ">
-          <div data-speed="" className="flex flex-col w-1/3">
+          <div data-speed="" className="flex flex-col w-1/3 ">
             <div className="h-[30svh]  "></div>
-            <div className="bg-wlite relative  h-[100svh] w-full flex flex-col justify-center">
+            <div className="bg-wlite relative h-full w-full flex flex-col justify-center">
               <p className="text-diphblack px-[2rem] text-3xl text-start leading-[4.6rem] tracking-wider ">
                 {home.ctaleft.map((part, i) =>
                   typeof part === "string" ? part : <b key={i}>{part.bold}</b>
@@ -28,8 +28,8 @@ export default function SectionCta() {
               </p>
             </div>
           </div>
-          <div className="w-1/2 flex flex-col justify-start mx-[3rem] relative">
-            <div className="absolute h-full w-full  ">
+          <div className="w-1/2 flex flex-col justify-start mx-[3rem] relative ">
+            <div className="absolute h-full w-full overflow-hidden ">
               <BarCode
                 height={400}
                 strokeWidth={25}
@@ -38,7 +38,7 @@ export default function SectionCta() {
                 scrub={0.2}
               />
             </div>
-            <div className="absolute top-[35%] h-fit w-full  ">
+            <div className="absolute top-[35%] h-fit w-full overflow-hidden  ">
               <HorizLine width={400} strokeWidth={50} x={0} />
             </div>
             <div className="h-[100svh] bg-wlite flex flex-col justify-end py-[5rem] ">

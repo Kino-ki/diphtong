@@ -6,10 +6,10 @@ import Link from "next/link";
 import CalendlyWidget from "@/components/CalendlyWidget";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import ScrollSmoother from "gsap/dist/ScrollSmoother";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Contact() {
   const { language, dictionary } = useLanguage();
@@ -18,12 +18,12 @@ export default function Contact() {
 
   const pinnedRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    const smoother = ScrollSmoother.create({
-      smooth: 1.2,
-      effects: true,
-      normalizeScroll: true,
-    });
+  useGSAP(() => {
+    // const smoother = ScrollSmoother.create({
+    //   smooth: 1.2,
+    //   effects: true,
+    //   normalizeScroll: true,
+    // });
     const mm = gsap.matchMedia();
     mm.add("(min-width:1024px)", () => {
       const st = ScrollTrigger.create({
@@ -54,9 +54,9 @@ export default function Contact() {
 
     return () => {
       mm.revert();
-      smoother.kill();
+      // smoother.kill();
     };
-  }, []);
+  });
 
   return (
     <div className="bg-diphblack px-3  md:px-10 text-wlite  ">
@@ -75,7 +75,7 @@ export default function Contact() {
           </h2>
         </div>
 
-        <div className="flex flex-col gap-20 lg:gap-20 2xl:gap-52 lg:py-24 lg:w-[60%] md:items-end overflow-y-auto  ">
+        <div className="flex flex-col gap-20 lg:gap-20 2xl:gap-20 lg:py-24 lg:w-[60%] md:items-end overflow-y-auto  ">
           <div className=" lg:w-full h-[80svh] md:h-[100svh]  mx-auto lg:px-10 ">
             <h3 className="lg:font-urbanistmed  uppercase text-lg md:text-3xl lg:text-2xl 2xl:text-3xl  py-10 md:py-20 lg:py-12 xl:py-16 md:pb-32 tracking-wider text-center">
               {contact.h3}
@@ -86,7 +86,7 @@ export default function Contact() {
             <CalendlyWidget />
           </div>
           {/* ----------------------------contact info------------------- */}
-          <div className="flex md:flex-row flex-col text-center md:text-start gap-10 mx-auto text-wlite  pb-20">
+          <div className="flex md:flex-row flex-col text-center md:text-start  gap-10 mx-auto text-wlite  py-20">
             <div className="flex flex-col justify-between  gap-5 md:w-1/2 ">
               <h2 className="font font-menlob text-2xl md:text-3xl">
                 {contact.contactInfo}

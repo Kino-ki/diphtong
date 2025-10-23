@@ -20,7 +20,7 @@ export default function CollabProjects({ speed }: { speed: string }) {
     >
       <div className="flex h-full justify-between bg-diphblack  ">
         <div className="flex flex-col text-wlite px-5 md:px-16 2xl:px-24   py-10 lg:w-3/4">
-          <h2 className=" text-4xl md:text-6xl 2xl:text-8xl capitalize py-12 md:py-20  underline underline-offset-8">
+          <h2 className=" text-4xl md:text-6xl 2xl:text-7xl capitalize py-12 md:py-20  underline underline-offset-8">
             {collavoratives.h1}
           </h2>
           {projArray.map((p, i) => (

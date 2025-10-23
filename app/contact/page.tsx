@@ -37,7 +37,7 @@ export default function Contact() {
             endTrigger: ".endtrigger",
             end: "top 50%",
             scrub: 1,
-            markers: true,
+            // markers: true,
           },
         }
       );

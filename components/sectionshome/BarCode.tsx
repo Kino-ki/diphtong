@@ -11,8 +11,6 @@ type VerticalLineProps = {
   scrub: number;
 };
 
-gsap.registerPlugin(ScrollTrigger);
-
 export function BarCode({
   height,
   strokeWidth,
@@ -24,6 +22,8 @@ export function BarCode({
   const svgRef = useRef<SVGSVGElement | null>(null);
   useGSAP(
     () => {
+      gsap.registerPlugin(ScrollTrigger);
+
       if (!lineRefs.current) return;
 
       // set all bars collapsed first
@@ -73,6 +73,8 @@ export function HorizLine({ width, strokeWidth, x }: HorizontalLineProps) {
 
   useGSAP(
     () => {
+      gsap.registerPlugin(ScrollTrigger);
+
       if (!lineRefs.current) return;
 
       // set all bars collapsed first

@@ -31,7 +31,7 @@ export default function AboutPage() {
         pinnedRef.current,
         { scale: 1 },
         {
-          scale: 1.01,
+          scale: 1,
           transformOrigin: "left left",
 
           ease: "sine.inOut",

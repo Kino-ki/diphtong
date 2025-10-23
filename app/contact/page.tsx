@@ -19,27 +19,31 @@ export default function Contact() {
   const pinnedRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(() => {
-    // const smoother = ScrollSmoother.create({
-    //   smooth: 1.2,
-    //   effects: true,
-    //   normalizeScroll: true,
-    // });
     const mm = gsap.matchMedia();
     mm.add("(min-width:1024px)", () => {
-      const st = ScrollTrigger.create({
-        trigger: pinnedRef.current,
-        start: "top top",
-        endTrigger: ".endtrigger",
-        end: "top 80%",
-        pin: true,
-        // markers: true,
-      });
-      return () => {
-        st.kill();
-      };
+      gsap.fromTo(
+        pinnedRef.current,
+        { scale: 1 },
+        {
+          scale: 1,
+          transformOrigin: "left left",
+
+          ease: "sine.inOut",
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: pinnedRef.current,
+            start: "top 20%",
+            pin: true,
+            endTrigger: ".endtrigger",
+            end: "top 50%",
+            scrub: 1,
+            markers: true,
+          },
+        }
+      );
     });
     mm.add("(max-width:1023px)", () => {
-      const st = ScrollTrigger.create({
+      ScrollTrigger.create({
         trigger: pinnedRef.current,
         start: "top top",
         // endTrigger: ".endtrigger",
@@ -47,14 +51,9 @@ export default function Contact() {
         pin: false,
         // markers: true,
       });
-      return () => {
-        st.kill();
-      };
     });
-
     return () => {
       mm.revert();
-      // smoother.kill();
     };
   });
 
@@ -63,7 +62,7 @@ export default function Contact() {
       <div className="flex flex-col gap-12 lg:flex-row  ">
         <div
           ref={pinnedRef}
-          className="flex flex-col lg:h-[100svh] w-full lg:w-[40%] lg:sticky md:top-0 md:self-start items-center md:bg-diphblack"
+          className="flex flex-col   w-full lg:w-[40%] lg:sticky md:top-0 md:self-start items-center md:bg-diphblack "
         >
           <div className="lg:h-[20%] h-10  " />
           <h1 className="font-menlob  text-[20vw] md:text-[9rem] lg:text-[7rem] 2xl:text-[9rem] uppercase ">

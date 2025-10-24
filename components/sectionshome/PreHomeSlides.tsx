@@ -69,7 +69,6 @@ export default function PreHomeSlides() {
           }
         );
       });
-
       return () => mm.revert();
     }
   }, []);

@@ -37,12 +37,14 @@ export default function ProjectsPage() {
       </section>
       {/* ---------------------------OTHER ------------------------------------ */}
       <section
+        id="collaborations"
         data-speed="1"
         className=" outer h-[120svh]  overflow-hidden bg-auto lg:bg-diphblack "
       >
         <CollabProjects speed="0.5" />
       </section>
       <section
+        id="upcoming"
         data-speed="1"
         className=" outer h-[110svh]  overflow-hidden bg-auto lg:bg-diphblack "
       >

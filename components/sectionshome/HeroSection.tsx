@@ -14,6 +14,8 @@ export default function HeroSection() {
   const [isPlaying, setIsPlaying] = useState<boolean>(true);
   const heroTextRef = useRef<HTMLDivElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const txtRef = useRef<HTMLHeadingElement | null>(null);
+  const creativRef = useRef<HTMLHeadingElement | null>(null);
 
   const handlePause = () => {
     setIsPlaying(!isPlaying);
@@ -26,27 +28,46 @@ export default function HeroSection() {
   };
 
   useGSAP(() => {
+    gsap.set(videoRef.current, { opacity: 0 }); // start hidden
+
     gsap.registerPlugin(ScrollTrigger);
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: heroTextRef.current,
-        start: "bottom 80%",
-        end: "bottom 70%",
-        // markers: true,
-        scrub: 1,
+    // Delay fade-in slightly to match splash fade out
+    gsap.to(videoRef.current, {
+      opacity: 1,
+      duration: 1.5,
+      ease: "power2.out",
+      delay: 0.2,
+      onComplete: () => {
+        gsap.fromTo(
+          txtRef.current,
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, delay: 0.3 }
+        );
+        gsap.fromTo(
+          creativRef.current,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0 }
+        );
+        gsap.fromTo(
+          heroTextRef.current,
+          {
+            opacity: 1,
+          },
+          {
+            opacity: 0,
+            ease: "power2.inOut",
+            scrollTrigger: {
+              trigger: heroTextRef.current,
+              start: "bottom 80%",
+              end: "bottom 70%",
+              // markers: true,
+              scrub: 1,
+              toggleActions: "play reverse play reverse",
+            },
+          }
+        );
       },
     });
-    tl.fromTo(
-      heroTextRef.current,
-      {
-        opacity: 1,
-        ease: "power2.inOut",
-      },
-      {
-        opacity: 0,
-        ease: "power2.inOut",
-      }
-    );
   });
 
   return (
@@ -66,18 +87,18 @@ export default function HeroSection() {
         </video>
         <button
           onClick={handlePause}
-          className="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-30 p-2 rounded-full opacity-70"
+          className="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-30 p-2 rounded-full opacity-60"
         >
           {isPlaying ? (
             <Image
-              src="/images/icons/pause.png"
+              src="/images/ICONS/pause.png"
               alt="pause icon"
               width={50}
               height={50}
             />
           ) : (
             <Image
-              src="/images/icons/playicon.png"
+              src="/images/ICONS/playicon.png"
               alt="play icon"
               width={50}
               height={50}
@@ -91,11 +112,17 @@ export default function HeroSection() {
             <div className="lg:hidden flex justify-center  h-[50svh] md:h-[60svh] w-[60svw] md:w-[80svw] mx-auto relative ">
               <Image src={diphtexte} alt="diph logo" fill />
             </div>
-            <h1 className=" font-figtree  capitalize tracking-widest md:tracking-[0.6rem] lg:tracking-[0.3rem] 2xl:tracking-[0.6rem]  text-3xl md:text-3xl/5  2xl:text-4xl/5 flex justify-center lg:justify-end  ">
+            <h1
+              ref={creativRef}
+              className=" font-figtree opacity-0  capitalize tracking-widest md:tracking-[0.6rem] lg:tracking-[0.3rem] 2xl:tracking-[0.6rem]  text-3xl md:text-3xl/5  2xl:text-4xl/5 flex justify-center lg:justify-end  "
+            >
               {hero.heroh2}
             </h1>
 
-            <h2 className="font-figtreel lg:px-20 2xl:px-40 capitalize text-xl md:text-2xl lg:text-3xl 2xl:text-4xl tracking-wider md:tracking-[0.4rem] 2xl:tracking-[0.5rem] 2xl:leading-[4rem] flex justify-center text-center font-semibold ">
+            <h2
+              ref={txtRef}
+              className="font-figtreel opacity-0 lg:px-20 2xl:px-40 capitalize text-xl md:text-2xl lg:text-3xl 2xl:text-4xl tracking-wider md:tracking-[0.4rem] 2xl:tracking-[0.5rem] 2xl:leading-[4rem] flex justify-center text-center font-semibold "
+            >
               {hero.heroh3}
             </h2>
           </div>

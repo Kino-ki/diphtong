@@ -12,8 +12,7 @@ export default function MobileNav() {
   const [scrollY, setScrollY] = useState(0);
   const pathname = usePathname();
   const { dictionary } = useLanguage();
-  const { navbar } = dictionary;
-  const itemsList = Object.values(navbar);
+  const { mobilenav } = dictionary;
 
   useEffect(() => {
     // if (pathname !== "/home") return;
@@ -80,12 +79,12 @@ export default function MobileNav() {
             </h2>
           </div>
           <ul className="flex flex-col font-menlor text-2xl md:text-4xl pt-10 ">
-            {itemsList.map((item, i) => (
+            {mobilenav.map((item, i) => (
               <li
                 key={i}
                 className="border-b border-gray-400 py-6 md:py-8 mr-40 tracking-widest uppercase px-5  md:px-12"
               >
-                <a href={`/${item} `}>{item}</a>
+                <a href={`${item.href} `}>{item.txt}</a>
               </li>
             ))}
           </ul>

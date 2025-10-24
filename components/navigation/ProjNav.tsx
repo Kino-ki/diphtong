@@ -7,6 +7,8 @@ import { useRef, useState } from "react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { smoothScrollTo } from "../HelperFunctions";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 export default function ProjNav() {
@@ -24,13 +26,13 @@ export default function ProjNav() {
     }));
 
   return (
-    <div>
+    <div className="">
       {pathname.includes("projects") && (
         <div
           ref={sectionRef}
-          className=" fixed text-diphblack w-fit h-full top-10 left-10 z-20"
+          className=" fixed text-diphblack w-fit h-full top-10 left-12 z-20 md:flex hidden mix-blend-difference"
         >
-          <div>
+          <div className="">
             {projList.map((p, i) => (
               <div
                 onMouseEnter={() => setIsHovered(i)}
@@ -38,13 +40,26 @@ export default function ProjNav() {
                 className="py-1 "
                 key={i}
               >
-                <a href={`/projects/#${p.id}`} className="">
+                <Link
+                  href={`/projects/${p.id}`}
+                  onClick={(e) => {
+                    smoothScrollTo(e.currentTarget.getAttribute("href"));
+                    // e.preventDefault();
+                  }}
+                  className=""
+                >
                   {isHovered === i ? (
-                    <Image src={dash} width={25} height={50} alt="dash" />
+                    <Image
+                      src={dash}
+                      width={25}
+                      height={50}
+                      alt="dash"
+                      className=""
+                    />
                   ) : (
                     <Image src={dash} width={25} height={50} alt="dash" />
                   )}
-                </a>
+                </Link>
               </div>
             ))}
           </div>

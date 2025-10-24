@@ -21,7 +21,7 @@ export default function ReachOutSection() {
           {" "}
           {reachout.content}{" "}
         </p>
-        <div className=" flex justify-center items-center w-full lg:w-3/5 md:mt-20 mt-10  lg:h-[80svh] ">
+        <div className=" flex justify-center items-center w-full lg:w-3/5 md:mt-20 mt-10 h-[80svh] lg:h-[80svh] ">
           <ContactForm lang={language} />
         </div>
         <div className="w-full flex justify-center py-5 lg:py-0">

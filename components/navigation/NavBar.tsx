@@ -15,6 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function NavBar() {
   const logoRef = useRef<HTMLImageElement | null>(null);
+  const navRef = useRef<HTMLDivElement | null>(null);
   const [scrollY, setScrollY] = useState(0);
   const pathname = usePathname();
   const { dictionary } = useLanguage();
@@ -25,27 +26,38 @@ export default function NavBar() {
   useGSAP(
     () => {
       if (pathname !== "/" && pathname !== "/home") return;
-      // ----------------------scroll monitor function
-      const handleScroll = () => {
-        setScrollY(window.scrollY);
-      };
+      gsap.set(navRef.current, { opacity: 0 }); // start hidden
+
+      // Delay fade-in slightly to match splash fade out
+      gsap.to(navRef.current, {
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        delay: 1, // tweak to match your splash timing
+      });
+
+      const handleScroll = () => setScrollY(window.scrollY);
       window.addEventListener("scroll", handleScroll);
+
       if (window.scrollY > 50) return;
+
       const imageWidth = 350;
       const viewportWidth = window.innerWidth;
       const scaleFactor = imageWidth ? (viewportWidth * 0.95) / imageWidth : 1;
+
       const mm = gsap.matchMedia();
+
       mm.add("(min-width:1536px)", () => {
         gsap.fromTo(
           logoRef.current,
           {
-            scale: scaleFactor, // initial big size
+            scale: scaleFactor,
             y: "12rem",
             x: "-56%",
             transformOrigin: "center center",
           },
           {
-            scale: 1, // normal size when scrolled
+            scale: 1,
             y: "0rem",
             x: "0%",
             ease: "power2.out",
@@ -54,27 +66,22 @@ export default function NavBar() {
               start: "top top",
               end: "400px top",
               scrub: true,
-              toggleActions: "play none none none",
             },
           }
         );
-
-        return () => {
-          mm.revert();
-          window.removeEventListener("scroll", handleScroll);
-        };
       });
+
       mm.add("(max-width:1535px)", () => {
         gsap.fromTo(
           logoRef.current,
           {
-            scale: scaleFactor, // initial big size
+            scale: scaleFactor,
             y: "10rem",
             x: "-45%",
             transformOrigin: "center center",
           },
           {
-            scale: 1, // normal size when scrolled
+            scale: 1,
             y: "0rem",
             x: "0%",
             ease: "power2.out",
@@ -83,22 +90,23 @@ export default function NavBar() {
               start: "top top",
               end: "400px top",
               scrub: true,
-              toggleActions: "play none none none",
             },
           }
         );
-
-        return () => {
-          mm.revert();
-          window.removeEventListener("scroll", handleScroll);
-        };
       });
+
+      // ✅ clean up ONCE here (not inside mm.add)
+      return () => {
+        mm.revert();
+        window.removeEventListener("scroll", handleScroll);
+      };
     },
     { dependencies: [pathname] }
   );
 
   return (
     <div
+      ref={navRef}
       id="navbar"
       key={pathname}
       className={`fixed top-0 z-40 w-full  text-wlite px-5 2xl:pl-16 pr-3 text-[1.1rem]/5 font-menlor uppercase lg:flex hidden ${

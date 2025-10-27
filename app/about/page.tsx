@@ -2,10 +2,10 @@
 
 import gsap from "gsap";
 import { useLanguage } from "@/components/language/LangContext";
-import founderPic from "@/public/images/founder.png";
+// import founderPic from "@/public/images/founder.png";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useRef, useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { GetAQuoteButton } from "@/components/Buttons";
 import { renderContentItem } from "@/components/HelperFunctions";
 import { useGSAP } from "@gsap/react";
@@ -124,7 +124,7 @@ export default function AboutPage() {
             </div>
 
             <div className="2xl:h-[100svh] flex flex-col  justify-end  p-10 md:p-20 2xl:pb-40">
-              <h2 className="text-3xl/relaxed md:text-5xl/relaxed lg:text-4xl/relaxed 2xl:text-5xl/relaxed tracking-widest font-urbanistr pb-12 2xl:py-20">
+              <h2 className="text-3xl/relaxed md:text-5xl/relaxed lg:text-4xl/relaxed 2xl:text-5xl/relaxed tracking-widest font-urbanistr pb-5 md:pb-12 2xl:py-20">
                 {about.secondSectionspecial.h3}
               </h2>
               <p className="md:text-xl/8 2xl:text-2xl/10 tracking-wider ">
@@ -132,7 +132,7 @@ export default function AboutPage() {
                   renderContentItem
                 )}
               </p>
-              <ul className="md:text-xl/8 2xl:text-2xl font-urbanistmed py-8 2xl:py-12 tracking-wider">
+              <ul className="md:text-xl/8 2xl:text-2xl font-urbanistmed py-4 md:py-8 2xl:py-12 tracking-wider">
                 {about.secondSectionspecial.specialarray.map((spacial, i) => (
                   <li className="py-1" key={i}>
                     {" "}
@@ -149,13 +149,13 @@ export default function AboutPage() {
               ref={endtrigger}
               className="2xl:h-[100svh] flex flex-col justify-end p-10 md:px-20 2xl:p-20 pb-40  border-b-8 border-diphblack "
             >
-              <h2 className=" text-3xl/relaxed md:text-5xl/relaxed lg:text-5xl/relaxed tracking-widest font-urbanistr pb-12 2xl:py-20">
+              <h2 className=" text-3xl/relaxed md:text-5xl/relaxed lg:text-5xl/relaxed tracking-widest font-urbanistr pb-5 md:pb-12 2xl:py-20">
                 {about.thirdSectionhow.h3}
               </h2>
               <p className="md:text-xl/8 2xl:text-2xl/10 tracking-wider ">
                 {about.thirdSectionhow.howcontent.map(renderContentItem)}
               </p>
-              <ul className="md:text-lg/8 2xl:text-xl/9 font-urbanistr py-10 tracking-wider">
+              <ul className="md:text-lg/8 2xl:text-xl/9 font-urbanistr py-4 md:py-10 tracking-wider">
                 {about.thirdSectionhow.howarray.map((how, i) => (
                   <li className="py-1 first-letter:capitalize " key={i}>
                     {typeof how === "string" ? how : <b key={i}>{how.bold}</b>}
@@ -197,7 +197,7 @@ export default function AboutPage() {
           </div>
           <div className="w-full md:h-[100svh] flex flex-col md:flex-row justify-between py-10 ">
             <div className="flex flex-col md:w-1/2 ">
-              <h2 className="text-5xl md:text-6xl tracking-widest font-urbanistr py-20">
+              <h2 className="text-5xl md:text-6xl tracking-widest font-urbanistr md:py-20 pb-10">
                 {about.founderNote.h3}
               </h2>
               <p className="text-lg/loose md:text-2xl 2xl:text-3xl/loose">
@@ -205,12 +205,12 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="">
-              <Image
+              {/* <Image
                 src={founderPic}
-                width={500}
+                width={500} 
                 height={500}
                 alt="founder picture"
-              />
+              /> */}
             </div>
           </div>
           {/* ----------------------------RIGHT SIDE flex col ----------------------------------------------- */}

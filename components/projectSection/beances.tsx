@@ -20,7 +20,7 @@ export default function BeancesProject({ speed }: { speed: string }) {
       data-speed={speed}
       className="inner h-[110svh] bg-[#E5E5E5] flex flex-col lg:flex-row text-[#4c4c4c]  md:bg-cover md:bg-bgbeances"
     >
-      <div className="2xl:px-[7%]  lg:py-0 flex flex-col justify-center gap-16 2xl:gap-0 2xl:justify-evenly h-[70%] md:h-2/3 lg:h-full lg:w-2/3 p-5 md:p-12 2xl:p-20 ">
+      <div className="2xl:px-[7%]  lg:py-0 flex flex-col justify-center gap-4 lg:gap-12 2xl:gap-0 2xl:justify-evenly h-[70%] md:h-2/3 lg:h-full lg:w-2/3 p-5 md:p-12 2xl:p-20 pt-10 ">
         <div>
           <Image
             src={beancestitle}
@@ -33,6 +33,11 @@ export default function BeancesProject({ speed }: { speed: string }) {
             {beancesProject.subtitle}
           </h1>
         </div>
+        <ul className="flex  text-graytext capitalize gap-6 md:text-xl justify-center md:justify-start ">
+          {beancesProject.services.map((s, i) => (
+            <li key={i}>{s} </li>
+          ))}
+        </ul>
         <p className=" font-urbanistr md:text-xl 2xl:text-2xl/10 md:tracking-widest text-pretty ">
           {" "}
           {beancesProject.content.map(renderContentItem)}

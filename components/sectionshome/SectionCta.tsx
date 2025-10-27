@@ -8,7 +8,7 @@ export default function SectionCta() {
   const home = dictionary.homepage;
 
   return (
-    <div className="overflow-hidden">
+    <div className="">
       <div className=" bg-diphblack flex flex-col w-[100svw]">
         {/* ---------------------firsttext on black bg */}
         <div className="h-[85svh] text-wlite flex flex-col justify-center ">
@@ -18,9 +18,9 @@ export default function SectionCta() {
         </div>
         {/* ---------------------secondtext on white bg */}
         <div className="flex flex-col lg:flex-row justify-between mr-[0.2rem] h-full  px-5 lg:px-0">
-          <div data-speed="" className="flex flex-col lg:w-1/3 w-4/5">
-            <div className="lg:h-[30svh]  "></div>
-            <div className="bg-wlite relative  w-full flex flex-col justify-center lg:h-full h-[35svh] ">
+          <div data-speed="" className="flex flex-col lg:w-1/3 w-4/5 ">
+            <div className="lg:h-[30svh] "></div>
+            <div className="bg-wlite relative  w-full flex flex-col justify-center lg:h-full h-[35svh] mt-32 ">
               <p className="text-diphblack px-[2rem] text-xl md:text-2xl md:leading-[3rem] 2xl:text-3xl text-start 2xl:leading-[4.6rem] tracking-wider ">
                 {home.ctaleft.map((part, i) =>
                   typeof part === "string" ? part : <b key={i}>{part.bold}</b>
@@ -31,7 +31,7 @@ export default function SectionCta() {
           <div className=" lg:w-1/2 flex flex-col justify-start lg:mx-[3rem] relative items-end ">
             <div className="absolute h-full w-full overflow-hidden  lg:flex hidden">
               <BarCode
-                height={400}
+                height={320}
                 strokeWidth={25}
                 x={0}
                 start="top 50%"
@@ -51,8 +51,8 @@ export default function SectionCta() {
                 )}
               </p>
             </div>
-            <div className="h-[16rem] flex flex-col justify-center mx-auto ">
-              <button className="bg-wlite mx-auto px-[1.5rem] py-6 md:py-[2rem] md:w-[25rem] rounded-md hover:bg-wlite/85 transition-all ease-in-out duration-400">
+            <div className="h-[16rem] flex flex-col justify-center mx-auto z-10">
+              <button className="bg-wlite mx-auto px-[1.5rem] py-6 md:py-[2rem] md:w-[25rem] rounded-md hover:bg-white transition-all ease-in-out duration-400">
                 <Link href="/contact">
                   <p className="text-diphblack font-urbanistmed text-xl md:text-2xl">
                     Start Your Project Today

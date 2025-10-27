@@ -85,7 +85,7 @@ export default function Contact() {
             <CalendlyWidget />
           </div>
           {/* ----------------------------contact info------------------- */}
-          <div className="flex md:flex-row flex-col text-center md:text-start  gap-10 mx-auto text-wlite  py-20">
+          <div className="flex md:flex-row flex-col text-center md:text-start  gap-10 mx-auto text-wlite  md:py-20 pb-10">
             <div className="flex flex-col justify-between  gap-5 md:w-1/2 ">
               <h2 className="font font-menlob text-2xl md:text-3xl">
                 {contact.contactInfo}

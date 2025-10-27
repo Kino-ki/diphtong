@@ -21,15 +21,20 @@ export default function Analogizing({ speed }: { speed: string }) {
       data-speed={speed}
       className="h-full bg-[#E5E5E5]  font-urbanistr flex flex-col lg:flex-row text-diphblack"
     >
-      <div className="flex flex-col justify-evenly h-[70%] md:h-2/3 lg:h-full lg:w-2/3  p-5 md:p-12 2xl:p-20">
-        <div className="  flex justify-center items-end md:items-center h-full lg:h-auto">
+      <div className="flex flex-col justify-center gap-4 lg:justify-evenly h-[70%] md:h-2/3 lg:h-full lg:w-2/3  p-5 md:p-12 2xl:p-20">
+        <div className=" px-10  flex justify-center lg:justify-start items-end md:items-center h-full lg:h-auto">
           <h1 className="text-6xl md:text-8xl text-black font-urbanistr ">
             {" "}
             {AnalogProject.h1}{" "}
           </h1>
         </div>
-        <div className=" lg:px-10  ">
-          <p className="md:text-xl 2xl:text-2xl/10 pt-10 md:pt-0 lg:pb-12">
+        <ul className="flex  text-graytext capitalize gap-6 md:text-xl justify-center md:justify-start lg:px-10 ">
+          {AnalogProject.services.map((s, i) => (
+            <li key={i}>{s} </li>
+          ))}
+        </ul>
+        <div className=" lg:px-10 pt-10 md:pt-0 ">
+          <p className="md:text-xl 2xl:text-2xl/10  lg:pb-12">
             {AnalogProject.content.map(renderContentItem)}
           </p>
         </div>

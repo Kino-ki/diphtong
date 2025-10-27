@@ -34,7 +34,7 @@ export default function PreHomeSlides() {
           titleRef.current,
           { scale: 1, xPercent: 0.5 },
           {
-            scale: 0.4,
+            scale: 0.3,
             transformOrigin: "left left",
             ease: "power1.inOut",
             scrollTrigger: {
@@ -76,11 +76,11 @@ export default function PreHomeSlides() {
   return (
     <div className="bg-wlite md:h-auto  lg:pb-20  ">
       <div className="flex flex-col justify-start w-full pb-40">
-        <div className=" my-12 mb-20 lg:mb-80 2xl:mb-48  ">
+        <div className=" my-12 mb-20 lg:mb-80 2xl:mb-52  ">
           <h2
             data-speed="0.9"
             ref={titleRef}
-            className="flex text-start  w-full  text-[16vw]  font-urbanistr font-semibold md:font-medium tracking-wider md:-mb-0  text-black capitalize"
+            className="flex text-start  w-full  text-[16vw]  font-urbanistl  tracking-wider text-black capitalize"
           >
             {phslides.intro.h2}
           </h2>

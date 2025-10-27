@@ -44,9 +44,9 @@ export default function NewFooter() {
                 {footer.projects}
               </a>
             </li>
-            <li>
+            {/* <li>
               <p> {footer.sitemap}</p>
-            </li>
+            </li> */}
             <li>
               <a className="hover:underline" href="/contact" target="_blank">
                 {footer.contact}

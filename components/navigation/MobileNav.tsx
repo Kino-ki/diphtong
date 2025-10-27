@@ -82,16 +82,19 @@ export default function MobileNav() {
             {mobilenav.map((item, i) => (
               <li
                 key={i}
-                className="border-b border-gray-400 py-6 md:py-8 mr-40 tracking-widest uppercase px-5  md:px-12"
+                className=" py-4 md:py-8 tracking-widest uppercase px-5  md:px-12"
               >
                 <a href={`${item.href} `}>{item.txt}</a>
               </li>
             ))}
           </ul>
-          <div className=" flex justify-between  text-xl md:text(2xl) pr-10 px-5  md:px-12">
-            <p className="font-urbanistl tracking-widest ">
+          <div className="   text-xl md:text-2xl pr-10  absolute bottom-20 right-0 ">
+            <a
+              href="mailto:contact@diphtong.ca"
+              className="font-urbanistl tracking-widest underline underline-offset-4 "
+            >
               contact@diphtong.com
-            </p>
+            </a>
           </div>
           <div className="px-5  md:px-12 py-12 ">
             <LangButton />

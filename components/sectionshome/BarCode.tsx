@@ -47,7 +47,7 @@ export function BarCode({
   );
 
   return (
-    <svg ref={svgRef} viewBox="0 0 200 400" className="h-full">
+    <svg ref={svgRef} viewBox="0 0 200 400" className="">
       <line
         ref={lineRefs}
         x1={x}

@@ -71,21 +71,26 @@ export default function HomeHorizontalScroll() {
           {/* -------------------SLIDE ONE ------------------------- */}
           <section className="slide flex lg:flex-row flex-col gap-5 lg:gap-0 lg:h-[103svh] lg:w-[100svw] bg-wlite  lg:shrink-0 relative ">
             <div className="h-full w-[30%] hidden lg:flex  bg-slideone bg-cover "></div>
-            <Image
-              src={one}
-              width={250}
-              height={100}
-              alt="one"
-              className="relative lg:absolute lg:bottom-10 lg:right-10"
-            />
+            <div className="relative lg:absolute lg:bottom-10 lg:right-10">
+              <Image
+                src={one}
+                width={250}
+                height={100}
+                alt="one"
+                className="w-[60%] md:w-full px-5"
+              />
+            </div>
 
             <div className="h-full flex flex-col lg:justify-center lg:gap-16  2xl:gap-10  text-diphblack  lg:w-[60%] lg:px-20 2xl:px-40 ">
-              <h4 className=" font-menlor capitalize absolute lg:relative lg:top-0 px-5 top-[5%] text-start  font-medium text-[3rem] md:text-[3.5rem]  hyphens-auto  lg:tracking-wider  ">
+              <h4 className=" font-menlor capitalize absolute lg:relative lg:top-0 px-5 top-[5%] text-start  font-medium text-[2.5rem] md:text-[3.5rem]  hyphens-auto  lg:tracking-wider  ">
                 {firstSlide.h3.map((p, i) =>
                   typeof p === "string" ? (
                     p
                   ) : (
-                    <span key={i} className="text-[#999696] text-[3.5rem] ">
+                    <span
+                      key={i}
+                      className="text-[#999696] text-[2.5rem] md:text-[3.4rem] "
+                    >
                       {" "}
                       {p.gray} <br />{" "}
                     </span>
@@ -102,20 +107,25 @@ export default function HomeHorizontalScroll() {
           {/* -------------------SLIDE TWO ------------------------- */}
 
           <section className="slide px-5 lg:px-0 flex lg:flex-row flex-col gap-10 relative lg:shrink-0  lg:w-[80svw] lg:h-[103svh] text-black lg:py-40 ">
-            <Image
-              src={two}
-              width={250}
-              height={100}
-              alt="3"
-              className="relative lg:absolute md:flex md:justify-end lg:bottom-10 lg:left-[70%]"
-            />
+            <div className="relative lg:absolute md:flex md:justify-end lg:bottom-10 lg:left-[70%]">
+              <Image
+                src={two}
+                width={250}
+                height={100}
+                alt="3"
+                className="w-[60%] md:w-full "
+              />
+            </div>
             <div className="h-full flex flex-col justify-center lg:gap-10 lg:w-[70%]">
-              <h4 className=" absolute lg:relative lg:top-0  top-[5%]  md:w-2/3 lg:w-full font-menlor text-[3.4rem] text-start capitalize  ">
+              <h4 className=" absolute lg:relative lg:top-0  top-[5%]  md:w-2/3 lg:w-full font-menlor text-[2.5rem] md:text-[3.4rem] text-start capitalize  ">
                 {secondSlide.h3.map((p, i) =>
                   typeof p === "string" ? (
                     p
                   ) : (
-                    <span key={i} className="text-[#999696]">
+                    <span
+                      key={i}
+                      className="text-[#999696] text-[2.5rem] md:text-[3.4rem]"
+                    >
                       {" "}
                       {p.gray} <br />{" "}
                     </span>
@@ -132,16 +142,18 @@ export default function HomeHorizontalScroll() {
           {/* -------------------SLIDE THREE ------------------------- */}
 
           <section className=" flex lg:flex-row flex-col gap-5 relative slide lg:h-[103svh] lg:shrink-0 w-screen lg:w-[100svw]  px-5 lg:px-0">
-            <Image
-              src={three}
-              width={250}
-              height={100}
-              alt="3"
-              className=" relative lg:absolute lg:bottom-10 lg:right-10"
-            />
+            <div className="relative lg:absolute lg:bottom-10 lg:right-10">
+              <Image
+                src={three}
+                width={250}
+                height={100}
+                alt="3"
+                className=" w-[60%] md:w-full "
+              />
+            </div>
             <div className=" bg-slidetwopic  bg-cover lg:w-[50%] "></div>
             <div className="flex flex-col justify-center  lg:pl-20 w-full text-black lg:gap-10 ">
-              <h4 className="absolute  md:w-2/3 lg:w-full lg:relative lg:top-0  top-[5%] capitalize  font-menlor text-[3.4rem] text-start">
+              <h4 className="absolute  md:w-2/3 lg:w-full lg:relative lg:top-0  top-[5%] capitalize  font-menlor text-[2.5rem] md:text-[3.4rem] text-start">
                 {thirdSlide.h3.map((p, i) =>
                   typeof p === "string" ? (
                     <span key={i}>
@@ -149,7 +161,10 @@ export default function HomeHorizontalScroll() {
                       {p} <br />
                     </span>
                   ) : (
-                    <span key={i} className="text-[#999696]">
+                    <span
+                      key={i}
+                      className="text-[#999696] text-[2.5rem] md:text-[3.4rem]"
+                    >
                       {" "}
                       {p.gray}{" "}
                     </span>

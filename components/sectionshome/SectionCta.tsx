@@ -20,8 +20,8 @@ export default function SectionCta() {
         <div className="flex flex-col lg:flex-row justify-between mr-[0.2rem] h-full  px-5 lg:px-0">
           <div data-speed="" className="flex flex-col lg:w-1/3 w-4/5 ">
             <div className="lg:h-[30svh] "></div>
-            <div className="bg-wlite relative  w-full flex flex-col justify-center lg:h-full min-h-[35svh]  mt-32 ">
-              <p className="text-diphblack px-[2rem] text-xl md:text-2xl md:leading-[3rem] 2xl:text-3xl text-start 2xl:leading-[4.6rem] tracking-wider ">
+            <div className="bg-wlite relative  w-full flex flex-col justify-center lg:h-full min-h-[60svh]   mt-32 ">
+              <p className="text-diphblack px-[2rem] text-xl md:text-2xl md:leading-[3rem] 2xl:text-3xl text-start  2xl:leading-[4.6rem] tracking-wider ">
                 {home.ctaleft.map((part, i) =>
                   typeof part === "string" ? part : <b key={i}>{part.bold}</b>
                 )}

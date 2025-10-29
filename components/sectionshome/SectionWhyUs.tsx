@@ -69,7 +69,7 @@ export default function SectionWhyUs() {
                   ref={(el) => {
                     bgRefs.current[i] = el;
                   }}
-                  className="flex flex-col justify-center gap-3 md:gap-5 md:text-xl lg:text-2xl 2xl:text-3xl text-start w-full lg:w-2/3 bg-diphblack py-3 md:py-6 lg:py-8 2xl:py-16 px-8 md:px-20 "
+                  className="flex flex-col justify-center gap-3 md:gap-5 md:text-xl lg:text-2xl 2xl:text-3xl text-start w-full lg:w-2/3 bg-diphblack py-5 md:py-6 lg:py-8 2xl:py-16 px-8 md:px-20 "
                 >
                   <h4>
                     {" "}

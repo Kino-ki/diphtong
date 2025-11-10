@@ -76,6 +76,14 @@ export const dictionaries = {
         workstitle: "featured works",
         works: [
           {
+            id: "3",
+            title: "Analogizing",
+            serv: ["full stack develoment", "Web design"],
+            imageSrc: "/images/projserv/analogizing.svg",
+
+            link: "/projects#collaboratives",
+          },
+          {
             id: "0",
             title: "Béances Editions",
             serv: ["full stack develoment", "Web design"],
@@ -83,14 +91,7 @@ export const dictionaries = {
 
             link: "/projects#beances",
           },
-          {
-            id: "1",
-            title: "Esther Lhuillery Video Editor",
-            serv: ["full stack develoment", "Web design"],
-            imageSrc: "/images/projserv/infraredContact.svg",
 
-            link: "/projects#portfolio",
-          },
           {
             id: "2",
             title: "Plein la tête studio éclaté",
@@ -100,12 +101,12 @@ export const dictionaries = {
             link: "/projects#collaboratives",
           },
           {
-            id: "3",
-            title: "Analogizing",
+            id: "1",
+            title: "Esther Lhuillery Video Editor",
             serv: ["full stack develoment", "Web design"],
-            imageSrc: "/images/projserv/analogizing.svg",
+            imageSrc: "/images/projserv/infraredContact.svg",
 
-            link: "/projects#collaboratives",
+            link: "/projects#portfolio",
           },
         ],
       },
@@ -617,6 +618,14 @@ export const dictionaries = {
         workstitle: "Réalisations",
         works: [
           {
+            id: "3",
+            title: "Analogizing",
+            serv: ["Développmenet full stack", "design Web"],
+            imageSrc: "/images/projserv/analogizing.svg",
+
+            link: "/projects#collaboratives",
+          },
+          {
             id: "0",
             title: "Béances Editions",
             serv: ["Développmenet full stack", "design Web"],
@@ -624,14 +633,7 @@ export const dictionaries = {
 
             link: "/projects#beances",
           },
-          {
-            id: "1",
-            title: "Esther Lhuillery Monteuse Video",
-            serv: ["Développmenet full stack", "design Web"],
-            imageSrc: "/images/projserv/infraredContact.svg",
 
-            link: "/projects#portfolio",
-          },
           {
             id: "2",
             title: "Plein la tête studio éclaté",
@@ -641,12 +643,12 @@ export const dictionaries = {
             link: "/projects#collaboratives",
           },
           {
-            id: "3",
-            title: "Analogizing",
+            id: "1",
+            title: "Esther Lhuillery Monteuse Video",
             serv: ["Développmenet full stack", "design Web"],
-            imageSrc: "/images/projserv/analogizing.svg",
+            imageSrc: "/images/projserv/infraredContact.svg",
 
-            link: "/projects#collaboratives",
+            link: "/projects#portfolio",
           },
         ],
       },

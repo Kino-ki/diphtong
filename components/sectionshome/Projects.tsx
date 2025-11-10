@@ -30,10 +30,11 @@ export default function Projects() {
       "(min-width: 1024px)",
       () => {
         gsap.to(titleRef.current, {
-          xPercent: -34.2,
-          yPercent: 30,
+          xPercent: 2,
+          // yPercent: 35,
           scale: 0.3,
           ease: "sine.inOut",
+          transformOrigin: "left bottom",
           duration: 2,
           scrollTrigger: {
             trigger: titleRef.current,
@@ -88,15 +89,15 @@ export default function Projects() {
       className=" flex flex-col bg-wlite border-t-8 lg:border-none border-black text-[#1e1e1e] overflow-hidden "
     >
       <div className="flex flex-col justify-center  relative">
-        <div className="w-full h-fit  border-b-2 lg:border-none border-[#999696] mt-10 lg:mt-20 md:pt-40 lg:mb-10 2xl:mb-20 ">
+        <div className="w-full h-fit  border-b-2 lg:border-none border-[#999696] my-10 lg:mt-20 md:pt-40  lg:mb-10 2xl:mb-10 ">
           <h2
             ref={titleRef}
-            className="text-[11svw] md:text-[10svw] lg:text-[10svw] xl:text-[11svw] uppercase 2xl:text-[18vh]  font-urbanistr font-semibold lg:underline text-center md:text-start -mb-5 tracking-wider text-[#999696]"
+            className="text-[11svw]  md:text-[10svw] lg:text-[10svw] xl:text-[11svw] uppercase 2xl:text-[18vh]   font-urbanistr font-semibold lg:underline text-center md:text-start -mb-5 tracking-wider text-[#999696]"
           >
             {works.workstitle}
           </h2>
         </div>
-        <div className=" relative md:pb-32 pb-20">
+        <div className=" relative md:pb-32 pb-20 ">
           {works.works.map((work, index) => (
             <section
               onPointerMove={() => {
@@ -137,7 +138,11 @@ export default function Projects() {
           <div
             // onMouseEnter={() => setIsHovered(true)}
             ref={floatImgRef}
-            className="absolute  hidden lg:flex  h-[55%] bottom-20 lg:w-32 2xl:w-40 lg:right-5 xl:right-12 2xl:right-36 pointer-events-none "
+            className={`absolute  hidden lg:flex  h-[55%] bottom-20 ${
+              works.works[hoveredIndex].id === "3"
+                ? "lg:w-80 lg:right-5 xl:right-1 2xl:right-20  2xl:scale-125 "
+                : "lg:w-32 2xl:w-40 lg:right-5 xl:right-12 2xl:right-36 "
+            }  pointer-events-none`}
           >
             <Image
               src={works.works[hoveredIndex].imageSrc}

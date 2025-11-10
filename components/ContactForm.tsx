@@ -49,7 +49,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
   return (
     <div className="w-full h-full font-urbanistr text-start text-xl">
       <form
-        className="flex flex-col gap-[4vh] h-full "
+        className="flex flex-col justify-center gap-[4vh] h-full "
         onSubmit={handleSubmit(onSubmit)}
         action=""
       >

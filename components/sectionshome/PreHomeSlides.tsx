@@ -11,7 +11,7 @@ export default function PreHomeSlides() {
 
   const { dictionary } = useLanguage();
   const phslides = dictionary.homepage.horizontalScroll;
-  const [speed, setSpeed] = useState("1.3");
+  const [speed, setSpeed] = useState("0.9");
 
   useEffect(() => {
     const updateSpeed = () => {
@@ -32,7 +32,7 @@ export default function PreHomeSlides() {
       mm.add("(min-width: 1024px)", () => {
         gsap.fromTo(
           titleRef.current,
-          { scale: 1, xPercent: 0.5 },
+          { scale: 1, xPercent: 0.8 },
           {
             scale: 0.3,
             transformOrigin: "left left",
@@ -52,10 +52,10 @@ export default function PreHomeSlides() {
       mm.add("(max-width: 1023px)", () => {
         gsap.fromTo(
           titleRef.current,
-          { scale: 1, xPercent: 0.5 },
+          { scale: 1 },
           {
             scale: 0.9,
-            transformOrigin: "left left",
+            transformOrigin: "center center",
             ease: "power1.inOut",
             scrollTrigger: {
               trigger: titleRef.current,
@@ -80,7 +80,7 @@ export default function PreHomeSlides() {
           <h2
             data-speed="0.9"
             ref={titleRef}
-            className="flex text-start  w-full  text-[16vw]  font-urbanistl  tracking-wider text-black capitalize"
+            className="flex  text-center md:text-start  w-full  text-[16vw]  font-urbanistl  tracking-wider text-black capitalize"
           >
             {phslides.intro.h2}
           </h2>

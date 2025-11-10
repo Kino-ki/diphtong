@@ -17,11 +17,9 @@ export default function CalendlyWidget() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="px-6 md:px-8 py-4 md:py-5 bg-wlite rounded-xl text-diphblack font-figtree 2xl:text-2xl hover:bg-white transition-colors ease-in-out duration-400"
+        className="px-6 md:px-8 py-4 md:py-5 bg-wlite rounded-xl text-diphblack font-figtree uppercase 2xl:text-xl hover:bg-white transition-colors ease-in-out duration-400"
       >
-        {language === "EN"
-          ? "Click here to schedule a meeting with us"
-          : "Cliquez ici pour prendre un rendez-vous"}
+        {language === "EN" ? "or book a meeting" : "or prendre rdv"}
       </button>
 
       {isClient && open && (

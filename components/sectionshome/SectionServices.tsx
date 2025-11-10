@@ -7,7 +7,7 @@ export default function SectionServices() {
   const services = dictionary.homepage.services;
 
   return (
-    <div className="flex flex-col-reverse lg:flex-row lg:min-h-[220svh] font-urbanistr border-b border-wlite ">
+    <div className="flex flex-col-reverse lg:flex-row lg:min-h-[220svh] font-urbanistr   ">
       {/* ----------------------ARTISTS ---------------------- */}
       <div className="bg-wlite lg:w-1/2  text-diphblack py-20  lg:py-[50svh] px-5 md:px-10">
         <div className="flex flex-col text-xl md:text-2xl">

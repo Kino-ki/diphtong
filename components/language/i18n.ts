@@ -41,7 +41,7 @@ export const dictionaries = {
 
       horizontalScroll: {
         intro: {
-          h2: "Our Process",
+          h2: "Our Flow",
           subtitle:
             "From Idea to Launch, we keep the process smooth, transparent, and stress-free",
           text: "Building a website might sound complicated, but with us, it’s a simple journey. From the first conversation to the moment your site goes live, we guide you step by step, always clear, always human.",
@@ -576,7 +576,7 @@ export const dictionaries = {
       },
       horizontalScroll: {
         intro: {
-          h2: "Notre Processus",
+          h2: "Notre Flow",
           subtitle:
             "De l’idée au lancement, nous gardons le processus fluide, transparent et sans stress",
           text: "Créer un site web peut sembler compliqué, mais avec nous, c’est un parcours simple. De la première conversation jusqu’à la mise en ligne de votre site, nous vous guidons étape par étape — toujours avec clarté, toujours avec une approche humaine.",

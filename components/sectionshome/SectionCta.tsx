@@ -8,7 +8,7 @@ import { useRef } from "react";
 // import { BarCode, HorizLine } from "./BarCode";
 
 export default function SectionCta() {
-  const { dictionary } = useLanguage();
+  const { dictionary, language } = useLanguage();
   const home = dictionary.homepage;
 
   const txtRef = useRef<HTMLDivElement | null>(null);
@@ -54,10 +54,7 @@ export default function SectionCta() {
     <div className="">
       <div className=" bg-diphblack h-[120svh] flex flex-col justify-center">
         {/* ---------------------firsttext on black bg */}
-        <div
-          ref={txtRef}
-          className=" text-wlite  lg:pb-60 px-5 md:pl-[3.4rem]  md:pr-[10rem]"
-        >
+        <div ref={txtRef} className=" text-wlite  lg:pb-60 px-5 md:px-40 ">
           <p className=" opa text-xl md:text-3xl 2xl:text-4xl font-urbanistr leading-9 md:leading-[3.5rem] 2xl:leading-[4.25rem] tracking-wide text-center ">
             {home.firsttext}
           </p>
@@ -65,7 +62,9 @@ export default function SectionCta() {
             <button className="bg-wlite mx-auto px-[1.5rem] py-6 md:py-[1.8rem] md:w-[25rem] rounded-md hover:bg-white transition-all ease-in-out duration-400">
               <Link href="/contact">
                 <p className="text-diphblack font-urbanistmed text-xl md:text-2xl ">
-                  Start Your Project Today
+                  {language === "EN"
+                    ? "Start Your Project Today"
+                    : "Contactez-nous"}
                 </p>
               </Link>
             </button>

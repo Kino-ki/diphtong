@@ -32,7 +32,7 @@ export default function PreHomeSlides() {
       mm.add("(min-width: 1024px)", () => {
         gsap.fromTo(
           titleRef.current,
-          { scale: 1, xPercent: 0.8 },
+          { scale: 1, xPercent: 0.5 },
           {
             scale: 0.3,
             transformOrigin: "left left",

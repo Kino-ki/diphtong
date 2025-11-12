@@ -4,6 +4,7 @@ import NavBar from "@/components/navigation/NavBar";
 
 import { LanguageProvider } from "../components/language/LangContext";
 import MobileNav from "@/components/navigation/MobileNav";
+import { Analytics } from "@vercel/analytics/next";
 import NewFooter from "@/components/navigation/NewFooter";
 // import ProjNav from "@/components/navigation/ProjNav";
 import SmoothWrapper from "@/components/SmoothWrapper";
@@ -32,7 +33,11 @@ export default function RootLayout({
               {/* <ProjNav /> */}
             </header>
             <SmoothWrapper>
-              <main className="text-wlite  ">{children}</main>
+              <main className="text-wlite  ">
+                {children}
+
+                <Analytics />
+              </main>
               <footer className="">
                 <NewFooter />
               </footer>

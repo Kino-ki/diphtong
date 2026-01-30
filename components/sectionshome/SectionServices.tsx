@@ -1,5 +1,6 @@
 "use client";
 import { useLanguage } from "@/components/language/LangContext";
+import Link from "next/link";
 
 export default function SectionServices() {
   const { dictionary } = useLanguage();
@@ -7,70 +8,37 @@ export default function SectionServices() {
   const services = dictionary.homepage.services;
 
   return (
-    <div className="flex flex-col-reverse lg:flex-row lg:min-h-[220svh] font-urbanistr   ">
-      {/* ----------------------ARTISTS ---------------------- */}
-      <div className="bg-wlite lg:w-1/2  text-diphblack py-20  lg:py-[50svh] px-5 md:px-10">
-        <div className="flex flex-col text-xl md:text-2xl">
-          <h3 className=" text-4xl md:text-5xl  lg:text-[5rem] 2xl:text-[6rem]  ">
-            {" "}
-            {services.artists.h3}{" "}
-          </h3>
-          <p className="py-10  lg:py-20">
-            {services.artists.content.map((part, i) =>
-              typeof part === "string" ? part : <b key={i}>{part.bold}</b>
-            )}{" "}
-          </p>
-          <div className="flex flex-col gap-5">
-            <h4 className="text-graytext underline">
-              {services.artists.delivery}
-            </h4>
-            {services.artists.deliveryarray.map((service, i) => (
-              <p className="md:py-1 text-lg lg:text-xl" key={i}>
-                {service}
-              </p>
-            ))}
-            <p className="py-10 lg:py-20">
-              {services.artists.h4.map((part, i) =>
-                typeof part === "string" ? part : <b key={i}>{part.bold}</b>
-              )}{" "}
-            </p>
-          </div>
+    <div className="flex flex-col gap-10 font-urbanistr text-xl  py-16 text-wlite px-5 md:px-10">
+      <div className="flex flex-col gap-2">
+        <h2 className="text-5xl md:text-[3.4rem] xl:text-8xl ">
+          {services.h2}{" "}
+        </h2>
+        <p className="text-base md:text-xl ">{services.h2content}</p>
+      </div>
+      <div className="flex flex-col justify-center  xl:py-20  lg:bg-rectangleservices bg-center bg-contain bg-no-repeat ">
+        <div className=" h-full flex flex-col gap-20 md:grid lg:grid-cols-2 md:gap-32">
+          {services.servarray.map((serv, i) => (
+            <div key={i} className="flex flex-col gap-5 2xl:px-[150px] ">
+              <div className="flex flex-col md:flex-row  md:gap-5 align-middle font-akira md:text-3xl">
+                <p className=" text-3xl md:text-5xl flex flex-col justify-center">
+                  {" "}
+                  {serv.id}
+                  {""}
+                </p>
+                <h3 className="text-2xl md:text-3xl flex flex-col justify-center">
+                  {" "}
+                  {serv.h3}{" "}
+                </h3>
+              </div>
+              <p className=" text-lg md:text-xl">{serv.content} </p>
+            </div>
+          ))}
         </div>
       </div>
-
-      {/* ----------------------BUSINESS ---------------------- */}
-      <div className="lg:w-1/2 flex flex-col text-wlite py-20 lg:py-[9rem] ">
-        <h2 className="font-menlor text-[11svw] md:text-[10svw] lg:text-[4rem] 2xl:text-[6rem]  text-center">
-          {services.h2}
-        </h2>
-        <div className=" pt-20 lg:pt-[40svh] 2xl:pt-[70svh] px-5 md:px-10 ">
-          <h3 className=" text-4xl md:text-5xl lg:text-[5rem] 2xl:text-[6rem]  ">
-            {" "}
-            {services.business.h3}{" "}
-          </h3>
-          <div className="flex flex-col text-xl  md:text-2xl">
-            <p className=" py-10 lg:py-20">
-              {services.business.content.map((part, i) =>
-                typeof part === "string" ? part : <b key={i}>{part.bold}</b>
-              )}{" "}
-            </p>
-            <div className="flex flex-col gap-5">
-              <h4 className="text-graytext underline">
-                {services.business.delivery}
-              </h4>
-              {services.business.deliveryarray.map((service, i) => (
-                <p className="md:py-1 text-lg lg:text-xl" key={i}>
-                  {service}
-                </p>
-              ))}
-              <p className="py-10 lg:py-20">
-                {services.business.h4.map((part, i) =>
-                  typeof part === "string" ? part : <b key={i}>{part.bold}</b>
-                )}{" "}
-              </p>
-            </div>
-          </div>
-        </div>
+      <div className="flex justify-center md:justify-start  2xl:px-[150px]">
+        <Link href="/services" className="btn hover:ring-1 hover:ring-wlite ">
+          <p className="text-base md:text-xl">{services.button}</p>
+        </Link>
       </div>
     </div>
   );

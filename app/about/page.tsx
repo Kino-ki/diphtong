@@ -106,15 +106,15 @@ export default function AboutPage() {
             <div className=" lg:h-[20svh] " />
             <h1
               ref={pinnedRef}
-              className=" text-8xl md:text-9xl lg:text-8xl/normal 2xl:text-9xl/normal  2xl:pr-20 pt-20 md:py-12 lg:py-0  "
+              className=" text-8xl md:text-9xl lg:text-8xl/normal 2xl:text-9xl/none  2xl:pr-20 pt-20 md:py-12 lg:py-0  "
             >
               {about.h1}{" "}
             </h1>
           </div>
           {/* ----------------------------RIGHT SIDE flex col ----------------------------------------------- */}
 
-          <div className="lg:w-[60%] flex flex-col bg-wlite text-diphblack">
-            <div className="h-[100svh] lg:h-[100svh] flex flex-col justify-end gap-12 2xl:gap-20 p-10 md:p-20 2xl:pb-40 border-b-8 border-diphblack">
+          <div className="lg:w-[60%] flex flex-col  text-diphblack">
+            <div className=" bg-wlite min-h-[100svh] lg:min-h-[100svh] flex flex-col justify-end gap-12 2xl:gap-20 p-10 md:p-20 2xl:pb-40 border-b-8 border-diphblack">
               <h2 className=" text-3xl/relaxed md:text-5xl/relaxed lg:text-4xl/relaxed 2xl:text-5xl/relaxed tracking-widest font-urbanistr">
                 {about.h1description}
               </h2>
@@ -123,7 +123,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="2xl:h-[100svh] flex flex-col  justify-end  p-10 md:p-20 2xl:pb-40">
+            <div className=" 2xl:min-h-[100svh] flex flex-col  justify-end  p-10 md:p-20 2xl:pb-40 bg-wlite ">
               <h2 className="text-3xl/relaxed md:text-5xl/relaxed lg:text-4xl/relaxed 2xl:text-5xl/relaxed tracking-widest font-urbanistr pb-5 md:pb-12 2xl:py-20">
                 {about.secondSectionspecial.h3}
               </h2>
@@ -144,10 +144,15 @@ export default function AboutPage() {
                 {about.secondSectionspecial.specialend.map(renderContentItem)}
               </p>
             </div>
+            <button className="min-h-[30svh] border-x-4  border-wlite hover:border-x-[16px] transition-all ease-in-out duration-200">
+              <h2 className="text-wlite text-6xl flex flex-col justify-center items-center hover:scale-110 h-full w-full transition-all ease-in-out duration-200">
+                Check out our projects
+              </h2>
+            </button>
 
             <div
               ref={endtrigger}
-              className="2xl:h-[100svh] flex flex-col justify-end p-10 md:px-20 2xl:p-20 pb-40  border-b-8 border-diphblack "
+              className="2xl:min-h-[100svh] flex flex-col justify-end p-10 md:px-20 2xl:p-20 pb-40  border-b-8 border-diphblack bg-wlite  "
             >
               <h2 className=" text-3xl/relaxed md:text-5xl/relaxed lg:text-5xl/relaxed tracking-widest font-urbanistr pb-5 md:pb-12 2xl:py-20">
                 {about.thirdSectionhow.h3}
@@ -186,7 +191,7 @@ export default function AboutPage() {
                       ref={(el) => {
                         bgRefs.current[i] = el;
                       }}
-                      className="md:text-xl 2xl:text-4xl py-8 md:py-10 px-5 bg-diphblack text-wlite"
+                      className="md:text-xl 2xl:text-3xl py-8 md:py-10 px-5 bg-diphblack text-wlite"
                     >
                       {value.map(renderContentItem)}
                     </h3>
@@ -215,7 +220,7 @@ export default function AboutPage() {
           </div>
           {/* ----------------------------RIGHT SIDE flex col ----------------------------------------------- */}
         </div>
-        <div className="bg-diphblack text-wlite h-[60svh] md:h-[50svh] lg:h-[80svh] flex flex-col gap-20 justify-center px-5 md:px-12 lg:px-0">
+        <div className="bg-diphblack text-wlite h-[60svh] md:h-[50svh] lg:h-[70svh] flex flex-col gap-20 justify-center px-5 md:px-12 lg:px-32">
           <h3 className="text-3xl md:text-5xl lg:text-6xl  text-center">
             {about.cta}
           </h3>

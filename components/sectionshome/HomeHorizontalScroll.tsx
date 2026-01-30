@@ -53,7 +53,7 @@ export default function HomeHorizontalScroll() {
             },
           },
         });
-      }
+      },
     );
 
     return () => {
@@ -94,7 +94,7 @@ export default function HomeHorizontalScroll() {
                       {" "}
                       {p.gray} <br />{" "}
                     </span>
-                  )
+                  ),
                 )}
               </h4>
               <div className="flex flex-col gap-8 text-lg px-5 md:text-xl  2xl:text-2xl/normal font-urbanistr  ">
@@ -129,7 +129,7 @@ export default function HomeHorizontalScroll() {
                       {" "}
                       {p.gray} <br />{" "}
                     </span>
-                  )
+                  ),
                 )}
               </h4>
               <div className="flex flex-col gap-8  text-lg md:text-xl lg:w-[80%] 2xl:text-2xl/normal font-urbanistr   ">
@@ -168,7 +168,7 @@ export default function HomeHorizontalScroll() {
                       {" "}
                       {p.gray}{" "}
                     </span>
-                  )
+                  ),
                 )}
               </h4>
               <div className="flex flex-col gap-8  text-lg md:text-xl lg:w-[80%] 2xl:text-2xl/normal font-urbanistr">

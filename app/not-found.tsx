@@ -8,7 +8,7 @@ export default function NotFound() {
     <div className="h-[100svh] flex flex-col items-center justify-center ">
       <div className="flex flex-col gap-12 md:items-center md:px-0 px-2">
         <h1 className="font-akira text-6xl md:w-full w-2/3">
-          404
+          404 -
           {language === "EN"
             ? " this page does not exist"
             : " cette page n'existe pas"}
@@ -18,7 +18,7 @@ export default function NotFound() {
             {language === "EN" ? "Return to " : "Revenir à la "}
           </p>
           <Link href="/home">
-            <p className="font-urbanistl text-4xl capitalize underline underline-offset-4">
+            <p className="font-urbanistl text-4xl  hover:underline underline-offset-4">
               {" "}
               {language === "EN" ? " home page" : " page d'accueil"}{" "}
             </p>

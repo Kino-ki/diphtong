@@ -41,12 +41,12 @@ export default function HeroSection() {
         gsap.fromTo(
           txtRef.current,
           { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, delay: 0.3 }
+          { opacity: 1, y: 0, delay: 0.3 },
         );
         gsap.fromTo(
           creativRef.current,
           { opacity: 0, y: 20 },
-          { opacity: 1, y: 0 }
+          { opacity: 1, y: 0 },
         );
         gsap.fromTo(
           heroTextRef.current,
@@ -64,7 +64,7 @@ export default function HeroSection() {
               scrub: 1,
               toggleActions: "play reverse play reverse",
             },
-          }
+          },
         );
       },
     });
@@ -87,7 +87,7 @@ export default function HeroSection() {
         </video>
         <button
           onClick={handlePause}
-          className="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-30 p-2 rounded-full opacity-60"
+          className="absolute bottom-1 right-2 md:bottom-8 md:right-8 z-30  rounded-full opacity-60"
         >
           {isPlaying ? (
             <Image

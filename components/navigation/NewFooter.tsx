@@ -1,6 +1,5 @@
 "use client";
-import Image from "next/image";
-import logo from "@/public/images/logo/logofooter.svg";
+
 import { ContactButton } from "../Buttons";
 import { useLanguage } from "../language/LangContext";
 
@@ -8,12 +7,12 @@ export default function NewFooter() {
   const { dictionary } = useLanguage();
   const footer = dictionary.footer;
   return (
-    <div className=" md:h-[50svh] lg:h-[80svh] bg-diphblack text-wlite border-y-4 border-y-wlite flex flex-col lg:gap-6 lg:px-5 py-10 lg:py-5   ">
-      <div className="flex flex-col gap-12 md:flex-row justify-evenly md:h-1/2 px-5 lg:py-5">
+    <div className=" md:h-[50svh]  bg-diphblack text-wlite border-y-2 border-y-wlite flex flex-col lg:gap-6 lg:px-5 py-10 lg:py-5   ">
+      <div className="flex flex-col gap-12 md:flex-row justify-evenly px-5 lg:py-5">
         <div className="md:hidden flex flex-col font-urbanistr gap-5  justify-end ">
           <h2 className="font-urbanistmed text-2xl  tracking-widest text-center   ">
             {footer.cta.map((c, i) =>
-              typeof c === "string" ? c : <span key={i}> {c.br} </span>
+              typeof c === "string" ? c : <span key={i}> {c.br} </span>,
             )}
           </h2>
           <div className=" 2xl:w-[30%] w-[50%]  mx-auto ">
@@ -65,27 +64,27 @@ export default function NewFooter() {
         <div className=" hidden md:flex flex-col lg:flex-row font-urbanistr lg:gap-12 2xl:gap-20 md:w-[50%] my-auto justify-center  ">
           <h2 className="font-urbanistmed text-xl lg:text-3xl tracking-widest text-center md:text-start lg:w-[50%] ">
             {footer.cta.map((c, i) =>
-              typeof c === "string" ? c : <span key={i}> {c.br} </span>
+              typeof c === "string" ? c : <span key={i}> {c.br} </span>,
             )}
           </h2>
           <div className=" 2xl:w-[30%] w-[50%] py-10 lg:py-0 mx-auto md:mx-0">
             <ContactButton
-              textsize="text-xl lg:text-2xl 2xl:text-3xl"
+              textsize="text-xl lg:text-2xl 2xl:text-xl"
               width="w-full"
-              height="2xl:h-20 h-16"
+              height="2xl:h-16 h-16"
             />
           </div>
         </div>
       </div>
-      <div className="relative flex items-center px-5  w-full h-[65%] md:pt-0 pt-12  pointer-events-none">
+      {/* <div className="relative flex items-center px-5  w-full h-[65%] md:pt-0 pt-12  pointer-events-none">
         <Image
           src={logo}
           alt="logo footer"
           width={1900}
           height={900}
-          className="  object-fill object-center pointer-events-none"
+          className="  object-fill object-center pointer-events-none opacity-85"
         />
-      </div>
+      </div> */}
     </div>
   );
 }

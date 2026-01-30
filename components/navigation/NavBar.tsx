@@ -129,7 +129,7 @@ export default function NavBar() {
           </li>
         </ul>
         <div id="" className=" top-2">
-          <Link href="/">
+          <Link href="/home">
             <Image
               ref={logoRef}
               src={diphtext}

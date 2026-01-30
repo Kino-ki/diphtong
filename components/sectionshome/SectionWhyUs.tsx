@@ -4,11 +4,11 @@ import { useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import Link from "next/link";
 
 export default function SectionWhyUs() {
   const { dictionary } = useLanguage();
   const whyus = dictionary.homepage.whyus;
-
   const bgRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useGSAP(() => {
@@ -19,67 +19,97 @@ export default function SectionWhyUs() {
       gsap.fromTo(
         el,
         {
-          backgroundColor: "#c3c3c3",
+          backgroundColor: "#E5E5E5",
         },
         {
           backgroundColor: "#191919",
           scrollTrigger: {
             trigger: el,
-            start: "top 70%",
+            start: "top 65%",
             end: "top 60%",
             scrub: 1,
             // markers: true,
           },
-        }
+        },
       );
     });
   });
 
   return (
     <div id="" className="">
-      <div className="flex flex-col bg-wlite font-urbanistr">
-        <div className="lg:h-[95svh] flex flex-col px-5 lg:px-10 ">
-          <div className=" md:w-4/5 lg:w-1/2 2xl:w-2/5 flex flex-col gap-6 md:gap-12 lg:gap-[3rem]  ">
-            <h2 className=" text-3xl md:text-5xl lg:text-4xl 2xl:text-5xl text-diphblack pt-12 md:pt-20 lg:pt-[10.75rem] ">
-              {whyus.h2}
-            </h2>
-            <p className="text-[#595959]  text-lg md:text-2xl  2xl:text-3xl">
-              {whyus.content}
-            </p>
-          </div>
-          <div className="h-[50svh] lg:h-full  flex flex-col justify-center px-5 lg:px-[8rem] ">
-            <h4 className="text-black text-center text-2xl md:text-4xl lg:text-4xl 2xl:text-5xl font-urbanistl leading-10 lg:leading-[4rem] 2xl:leading-[5rem]  font-semibold ">
-              {whyus.h4}
-            </h4>
-          </div>
+      {/* why choose us */}
+      <div
+        data-speed="1"
+        className=" md:h-[100svh]  flex md:flex-row flex-col  "
+      >
+        <div className="md:w-1/2 h-[100svh] bg-diphblack flex flex-col justify-center pb-20  px-5 lg:px-10">
+          <h2
+            data-speed="0.6"
+            className=" text-4xl md:text-5xl lg:text-5xl 2xl:text-7xl/relaxed text-wlite pt-12 md:pt-20 lg:pt-[10.75rem] text-end "
+          >
+            {whyus.h21}
+          </h2>
         </div>
-        {/* ----------------------------PILLARS---------------------------------- */}
-        <div className=" h-[80svh] lg:h-[100svh] flex flex-col gap-10 ">
-          <h3 className="font-menlor text-2xl lg:text-3xl 2xl:text-4xl text-diphblack px-5 md:px-10 lg:px-14">
-            {" "}
-            {whyus.h3}{" "}
-          </h3>
-          <ul className="flex flex-col gap-10 w-full px-5 lg:px-0">
-            {whyus.pillars.map((pillar, i) => (
-              <li
-                key={i}
-                className={`flex ${i === 1 ? "justify-end" : "justify-start"}`}
+        <div className="h-[100svh] md:w-1/2 md:h-full z-10 bg-wlite text-diphblack flex flex-col justify-start md:justify-center pb-20 px-5 lg:px-10">
+          <h2
+            data-speed="0.6"
+            className=" text-4xl md:text-5xl lg:text-5xl 2xl:text-7xl/relaxed pt-12 md:pt-20 lg:pt-[10.75rem]  "
+          >
+            {whyus.h22}
+          </h2>
+        </div>
+      </div>
+      <div className="flex flex-col bg-wlite font-urbanistr ">
+        {/* content */}
+        <div className="flex flex-col md:flex-row ">
+          <div className="  md:w-1/2 flex flex-col justify-center h-[100svh] overflow-hidden">
+            <ul
+              data-speed="0.5"
+              className="text-diphblack  px-5 lg:px-6 2xl:px-12 flex flex-col gap-32"
+            >
+              {whyus.pillars.slice(0, 2).map((pillar, i) => (
+                <li key={i} className="flex md:flex-row flex-col  gap-5 ">
+                  <p className="font-akira text-3xl md:text-5xl flex flex-col justify-center">
+                    0{i + 1}{" "}
+                  </p>
+                  <div className="flex flex-col">
+                    <h4 className="text-4xl"> {pillar.title}</h4>
+                    <p className="text-lg  lg:text-xl/8 2xl:text-2xl/10">
+                      {pillar.content}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="h-[100svh] md:w-1/2 bg-diphblack flex flex-col justify-evenly gap-60 md:gap-10  px-5 lg:px-10 overflow-hidden">
+            <ul data-speed="0.4" className="text-wlite flex flex-col">
+              {whyus.pillars.slice(2).map((pillar, i) => (
+                <li key={i} className="flex md:flex-row flex-col gap-5">
+                  <p className="font-akira text-3xl md:text-5xl flex flex-col justify-center">
+                    0{i + 3}{" "}
+                  </p>
+                  <div className="flex flex-col">
+                    <h4 className="text-4xl">{pillar.title}</h4>
+                    <p className="text-lg lg:text-xl/8 2xl:text-2xl/10">
+                      {pillar.content}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <div className="flex justify-center">
+              <Link
+                data-speed="0.4"
+                href="/about"
+                className="btn flex justify-center hover:ring-1 hover:ring-wlite "
               >
-                <div
-                  ref={(el) => {
-                    bgRefs.current[i] = el;
-                  }}
-                  className="flex flex-col justify-center gap-3 md:gap-5 md:text-xl lg:text-2xl 2xl:text-3xl text-start w-full lg:w-2/3 bg-diphblack py-5 md:py-6 lg:py-8 2xl:py-16 px-8 md:px-20 "
-                >
-                  <h4>
-                    {" "}
-                    <b> {pillar.title} </b>
-                  </h4>
-                  <p> {pillar.content} </p>
-                </div>
-              </li>
-            ))}
-          </ul>
+                <p className="font-urbanistmed text-base lg:text-xl ">
+                  {whyus.button}
+                </p>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

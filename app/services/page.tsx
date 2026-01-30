@@ -45,7 +45,7 @@ export default function Services() {
               pin: true,
               // markers: true,
             },
-          }
+          },
         );
       });
       mm.add("(max-width: 1023px)", () => {
@@ -65,7 +65,7 @@ export default function Services() {
               pin: true,
               // markers: true,
             },
-          }
+          },
         );
       });
 
@@ -101,8 +101,8 @@ export default function Services() {
               key={service.id}
               className={`flex flex-col  py-6 md:py-24 px-3 md:px-5  text-start   ${
                 i % 2 === 0
-                  ? "bg-diphblack text-wlite border-8 border-wlite/90"
-                  : "bg-wlite/90 text-diphblack"
+                  ? "bg-diphblack text-wlite border-8 border-wlite"
+                  : "bg-wlite text-diphblack"
               } `}
             >
               <div className="flex md:gap-10 justify-between md:justify-start h-fit pb-10 ">
@@ -135,7 +135,7 @@ export default function Services() {
                   <div className="flex justify-between">
                     <p className=" font-urbanistr  px-2 md:px-5 md:text-2xl md:tracking-wide md:leading-loose">
                       {service.serv.conclusion.map((c, i) =>
-                        typeof c === "string" ? c : <b key={i}>{c.bold}</b>
+                        typeof c === "string" ? c : <b key={i}>{c.bold}</b>,
                       )}
                     </p>
                   </div>

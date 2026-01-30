@@ -17,11 +17,8 @@ export const dictionaries = {
         { bold: " their story " },
       ],
       whyus: {
-        h2: "Why Choose Us for Your Website?",
-        content:
-          "Your website is more than a digital business card—it’s the foundation of your brand identity. We understand the unique needs of artists showcasing portfolios and small businesses building trust with customers.",
-        h4: "We craft each site with precision and artistry, making sure your online presence feels authentic and unforgettable.",
-        h3: "We focus on three pillars:",
+        h21: "Why Choose Us",
+        h22: "for Your Website?",
         pillars: [
           {
             title: "Design Excellence",
@@ -37,6 +34,7 @@ export const dictionaries = {
               " Fast-loading, mobile-optimized, and intuitive to navigate.",
           },
         ],
+        button: "more about us",
       },
 
       horizontalScroll: {
@@ -109,56 +107,43 @@ export const dictionaries = {
             link: "/projects#portfolio",
           },
         ],
+        button: "discover all our projects",
       },
       services: {
-        h2: "Our Services",
-        artists: {
-          h3: "For Artists",
-          content: [
-            { bold: " Your portfolio is your story " },
-            "it deserves to be seen. We help artists of all discipline painters, photographers, musicians, dancers, and writers showcase their work",
-            { bold: " with elegance and clarity. " },
-          ],
-          delivery: "What we deliver for artists:",
-          deliveryarray: [
-            "Custom Portfolio Websites with gallery features",
-            "Minimalist, design-oriented layouts that put your work first",
-            "Mobile-friendly to reach audiences everywhere",
-            "SEO optimization so your art is discoverable",
-            "Easy content management to update your portfolio anytime",
-          ],
-          h4: [
-            "Your website becomes",
-            { bold: "   a stage for your art " },
-            "leaving visitors with a lasting impression.",
-          ],
-        },
-        business: {
-          h3: "For Small Businesses",
-          content: [
-            "We help small businesses",
-            { bold: " stand out in competitive markets " },
-            "with websites that combine",
-            { bold: " design, strategy, and performance." },
-          ],
-          delivery: "What we deliver for businesses:",
-          deliveryarray: [
-            "Conversion-driven website design that turns visitors into clients",
-            "Professional branding integration for credibility and trust",
-            "Fast, secure, and SEO-optimized websites for higher rankings",
-            "Scalable platforms that grow as your business grows",
-            "Custom features such as blogs, booking systems, or e-commerce",
-          ],
-          h4: [
-            "Whether you’re a café, a local boutique, a wellness studio, or a service provider, we’ll craft a site that ",
-            { bold: " reflects your values and drives measurable growth" },
-          ],
-        },
+        h2: "What we build",
+        h2content: "Websites designed to grow, evolve, and perform over time.",
+        servarray: [
+          {
+            id: "01",
+            h3: "Web design",
+            content:
+              "Elegant, clear interfaces designed to guide users and drive conversions. Every design decision serves a purpose: understanding, engagement, trust.",
+          },
+          {
+            id: "02",
+            h3: "web development",
+            content:
+              "Fast, stable and scalable websites built with modern technologies chosen for your real needs.",
+          },
+          {
+            id: "03",
+            h3: "Maintenance & optimization",
+            content:
+              "We keep your website secure, fast and reliable over time, while continuously improving performance and stability.",
+          },
+          {
+            id: "04",
+            h3: "Content & SEO strategy",
+            content:
+              "Clear, strategic content designed for both users and search engines, helping you increase visibility and turn traffic into results.",
+          },
+        ],
+        button: "explore our services",
       },
       reachoutsection: {
         h2: "Ready to Elevate Your Online Presence?",
         content:
-          "Whether you’re an artist who wants a portfolio that shines or a small business looking to grow, we’re here to help. Our expertise in design, development, and SEO ensures your website isn’t just beautiful—it works for you.",
+          "Whether you’re an artist who wants a portfolio that shines or a small business looking to grow, we’re here to help. Our expertise in design, development, and SEO ensures your website isn’t just beautiful, it works for you.",
       },
     },
     aboutPage: {
@@ -553,11 +538,8 @@ export const dictionaries = {
         { bold: " leur histoire " },
       ],
       whyus: {
-        h2: "Pourquoi nous choisir pour votre site web ?",
-        content:
-          "Votre site est bien plus qu’une carte de visite numérique : c’est la base de votre identité de marque. Nous comprenons les besoins uniques des artistes qui souhaitent présenter leurs portfolios et des petites entreprises qui veulent instaurer la confiance auprès de leurs clients.",
-        h4: "Nous créons chaque site avec précision et sens artistique, pour que votre présence en ligne soit authentique et mémorable.",
-        h3: "Nous nous appuyons sur trois piliers :",
+        h21: "Pourquoi nous choisir",
+        h22: "pour votre site web ?",
         pillars: [
           {
             title: "Excellence du design",
@@ -573,6 +555,7 @@ export const dictionaries = {
               "Rapidité de chargement, optimisation mobile et navigation intuitive.",
           },
         ],
+        button: "nous découvrir",
       },
       horizontalScroll: {
         intro: {
@@ -651,53 +634,38 @@ export const dictionaries = {
             link: "/projects#portfolio",
           },
         ],
+        button: "découvrez tous nos projets",
       },
       services: {
-        h2: "Nos services",
-        artists: {
-          h3: "Pour les artistes",
-          content: [
-            { bold: " Votre portfolio est votre histoire " },
-            " il mérite d’être vu. Nous aidons les artistes de toutes disciplines — peintres, photographes, musiciens, danseurs, écrivains — à mettre en valeur leur travail",
-            { bold: " avec élégance et clarté. " },
-          ],
-          delivery: "Ce que nous proposons aux artistes :",
-          deliveryarray: [
-            "Sites portfolios sur mesure",
-            "Mises en page minimalistes et orientées design qui valorisent vos œuvres",
-            "Compatibilité mobile pour toucher votre audience partout",
-            "Optimisation SEO pour rendre votre art facilement découvrable",
-            "Gestion de contenu simple pour mettre à jour votre portfolio à tout moment",
-          ],
-          h4: [
-            "Votre site devient",
-            { bold: "   une véritable scène pour votre art " },
-            "et laisse une impression durable à vos visiteurs.",
-          ],
-        },
-        business: {
-          h3: "Pour les petites entreprises",
-          content: [
-            "Nous aidons les petites entreprises à",
-            { bold: " se démarquer dans des marchés compétitifs " },
-            "grâce à des sites qui allient",
-            { bold: " design, stratégie et performance." },
-          ],
-          delivery: "Ce que nous proposons aux entreprises :",
-          deliveryarray: [
-            "Sites conçus pour convertir vos visiteurs en clients",
-            "Intégration d’une identité visuelle professionnelle pour crédibilité et confiance",
-            "Sites rapides, sécurisés et optimisés SEO pour un meilleur classement",
-            "Plateformes évolutives qui grandissent avec votre activité",
-            "Fonctionnalités personnalisées : blog, réservation en ligne, e-commerce",
-          ],
-          h4: [
-            "Que vous soyez un café, une boutique locale, un studio bien-être ou un prestataire de services, nous créons un site qui ",
-            {
-              bold: " reflète vos valeurs et favorise une croissance mesurable",
-            },
-          ],
-        },
+        h2: "Services",
+        h2content: "Des sites web évolutifs, performants et pensés pour durer.",
+        servarray: [
+          {
+            id: "01",
+            h3: "Design web",
+            content:
+              "Des interfaces élégantes, claires et orientées conversion. Chaque décision de design sert un objectif précis : compréhension, engagement, confiance.",
+          },
+          {
+            id: "02",
+            h3: "developpement web",
+            content:
+              "Des sites rapides, stables et évolutifs, construits avec des technologies modernes adaptées à vos besoins réels.",
+          },
+          {
+            id: "03",
+            h3: "Maintenance & optimisation",
+            content:
+              "Nous assurons la stabilité, la sécurité et l’optimisation de votre site pour qu’il reste rapide, fiable et efficace",
+          },
+          {
+            id: "04",
+            h3: "Content & strategie SEO",
+            content:
+              "Des contenus clairs et stratégiques, pensés pour vos utilisateurs et les moteurs de recherche, afin d’augmenter votre visibilité et vos conversions.",
+          },
+        ],
+        button: "explorez nos services",
       },
       reachoutsection: {
         h2: "Prêt·e à booster votre présence en ligne ?",

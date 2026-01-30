@@ -8,20 +8,21 @@ export default function SplashScreenWrapper({
 }: {
   children: React.ReactNode;
 }) {
-  const [showSplash, setShowSplash] = useState<boolean>(true);
+  const [showSplash, setShowSplash] = useState<boolean>(false);
+
   const pathname = usePathname();
 
   useEffect(() => {
     const hasSeenSplash = sessionStorage.getItem("hasSeenSplash") === "true";
-    const timeoutDuration = hasSeenSplash ? 1000 : 4000;
-    if (pathname === "/" || pathname === "/home") {
+    const timeoutDuration = hasSeenSplash ? 0 : 4000;
+    if (pathname === "/home") {
       setShowSplash(true);
 
       const timeout = setTimeout(() => {
         setShowSplash(false);
       }, timeoutDuration);
       return () => clearTimeout(timeout);
-    } else {
+    } else if (pathname !== "/home") {
       setShowSplash(false);
     }
   }, [pathname]);

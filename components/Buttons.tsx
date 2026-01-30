@@ -39,10 +39,10 @@ export function ContactButton({
   return (
     <button
       type="button"
-      className={`bg-wlite hover:bg-white transition-all ease-in-out duration-200 p-3 px-6 capitalize rounded-md font-figtree ${height} ${width}`}
+      className={`btn flex flex-col justify-center ${height} ${width}`}
     >
-      <a href="/contact">
-        <p className={`text-black  ${textsize}`}>
+      <a href="/contact" className="">
+        <p className={`text-wlite  ${textsize}`}>
           {" "}
           {language === "EN" ? "hit us up" : "contactez-nous"}{" "}
         </p>
@@ -65,7 +65,7 @@ export function GetAQuoteButton({
     if (!buttonRef.current || !textRef.current) return;
 
     const overlay = buttonRef.current.querySelector(
-      "span.absolute"
+      "span.absolute",
     ) as HTMLElement;
 
     if (isHovered) {

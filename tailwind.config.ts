@@ -18,10 +18,12 @@ export default {
         marquee: "marquee 15s linear infinite",
       },
       colors: {
-        wlite: "#c3c3c3",
-        diphblack: "#191919",
+        wlite: "#E5E5E5",
+        diphblack: "#161616",
         graytext: "#898787",
         rouge: "#4f0000",
+        jaune: "#E0BC00",
+        orange: "#f3701e",
       },
       backgroundImage: {
         herogif: "url(/images/herogif.gif)",
@@ -34,6 +36,7 @@ export default {
         bgbeancesmauve: "url(/images/projectsPage/beancesone.svg) ",
         bganalogf: "url(/images/projectsPage/analogf.svg) ",
         beancesprojmobile: "url(/images/projectsPage/bgbeancesmobile.svg)",
+        rectangleservices: "url(/images/backgrounds/homeservices.svg) "
       },
     },
     fontFamily: {

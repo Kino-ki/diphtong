@@ -56,7 +56,7 @@ export default function SectionCta() {
           ref={txtRef}
           className=" text-wlite  lg:pb-60 px-5 md:px-32 lg:px-40 flex flex-col gap-16"
         >
-          <p className=" opa text-xl md:text-xl 2xl:text-3xl font-urbanistr leading-9 md:leading-[2.5rem] 2xl:leading-[3.5rem] tracking-wide text-start ">
+          <p className=" opa text-lg md:text-xl xl:text-2xl 2xl:text-3xl font-urbanistr leading-9 md:leading-[2.5rem] xl:leading-[3rem] 2xl:leading-[3.5rem] tracking-wide text-start ">
             {home.firsttext}
           </p>
           <div className="  z-10  flex justify-start   ">

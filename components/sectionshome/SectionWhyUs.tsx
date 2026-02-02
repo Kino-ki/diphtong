@@ -68,13 +68,16 @@ export default function SectionWhyUs() {
               className="text-diphblack  px-5 lg:px-6 2xl:px-12 flex flex-col gap-32"
             >
               {whyus.pillars.slice(0, 2).map((pillar, i) => (
-                <li key={i} className="flex md:flex-row flex-col  gap-5 ">
-                  <p className="font-akira text-3xl md:text-5xl flex flex-col justify-center">
+                <li key={i} className="flex lg:flex-row flex-col  gap-5 ">
+                  <p className="font-akira text-4xl md:text-5xl flex flex-col justify-center">
                     0{i + 1}{" "}
                   </p>
-                  <div className="flex flex-col">
-                    <h4 className="text-4xl"> {pillar.title}</h4>
-                    <p className="text-lg  lg:text-xl/8 2xl:text-2xl/10">
+                  <div className="flex flex-col gap-2 2xl:gap-0">
+                    <h4 className=" text-4xl md:text-3xl lg:text-4xl">
+                      {" "}
+                      {pillar.title}
+                    </h4>
+                    <p className="text-lg lg:text-xl/8 2xl:text-2xl/10">
                       {pillar.content}
                     </p>
                   </div>
@@ -85,12 +88,14 @@ export default function SectionWhyUs() {
           <div className="h-[100svh] md:w-1/2 bg-diphblack flex flex-col justify-evenly gap-60 md:gap-10  px-5 lg:px-10 overflow-hidden">
             <ul data-speed="0.4" className="text-wlite flex flex-col">
               {whyus.pillars.slice(2).map((pillar, i) => (
-                <li key={i} className="flex md:flex-row flex-col gap-5">
-                  <p className="font-akira text-3xl md:text-5xl flex flex-col justify-center">
+                <li key={i} className="flex lg:flex-row flex-col gap-5">
+                  <p className="font-akira text-4xl md:text-5xl flex flex-col justify-center">
                     0{i + 3}{" "}
                   </p>
-                  <div className="flex flex-col">
-                    <h4 className="text-4xl">{pillar.title}</h4>
+                  <div className="flex flex-col gap-2 2xl:gap-0">
+                    <h4 className="text-4xl md:text-3xl lg:text-4xl">
+                      {pillar.title}
+                    </h4>
                     <p className="text-lg lg:text-xl/8 2xl:text-2xl/10">
                       {pillar.content}
                     </p>

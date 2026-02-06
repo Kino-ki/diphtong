@@ -74,7 +74,7 @@ export default function Projects() {
       className=" flex flex-col bg-wlite border-t-8 lg:border-none border-black text-[#1e1e1e] overflow-hidden "
     >
       <div className="flex flex-col justify-center  relative ">
-        <div className="w-full h-fit  border-b-2 lg:border-none border-[#999696] my-10 lg:mt-20 md:pt-40  lg:mb-10 2xl:mb-10 ">
+        <div className="w-full h-fit  my-10 lg:mt-20  lg:mb-10 2xl:mb-10 ">
           <h2
             ref={titleRef}
             className="text-[11svw]  md:text-[10svw] lg:text-[10svw] xl:text-[11svw] uppercase 2xl:text-[18vh]   font-urbanistr font-semibold lg:underline text-center md:text-start -mb-5 tracking-wider text-[#999696]"
@@ -93,10 +93,10 @@ export default function Projects() {
               setHoveredIndex(null);
             }}
             key={index}
-            className={`flex gap-8 flex-row items-center ${index !== len - 1 && "border-b border-[#999696]"} px-3 md:px-10`}
+            className={`flex gap-8 flex-row items-center ${index !== len - 1 && "border-b border-[#999696]"} px-5 lg:px-10`}
           >
             {isHovered && hoveredIndex === index && (
-              <div className="w-[260px] h-[161px] relative border  border-[#999696] ">
+              <div className=" h-[100px] w-[62px] md:w-[194px] md:h-[120px] lg:w-[260px] lg:h-[161px] relative border  border-[#999696] ">
                 <Image
                   src={work.imageSrc}
                   alt="image"
@@ -109,8 +109,8 @@ export default function Projects() {
               href={work.link}
               className={` flex flex-col-reverse gap-5 py-6  2xl:py-8  `}
             >
-              <div className="flex justify-center md:justify-start">
-                <h3 className="font-menlob  text-center md:text-start font-semibold  text-3xl lg:text-5xl 2xl:text-6xl uppercase tracking-[0.1rem] md:tracking-[0.2rem] mb-5 ">
+              <div className="flex justify-start">
+                <h3 className="font-menlob text-start font-semibold  text-3xl lg:text-5xl 2xl:text-6xl uppercase tracking-[0.1rem] md:tracking-[0.2rem] mb-5 ">
                   {work.title}
                 </h3>
               </div>

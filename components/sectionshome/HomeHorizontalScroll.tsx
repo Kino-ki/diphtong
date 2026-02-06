@@ -77,7 +77,7 @@ export default function HomeHorizontalScroll() {
                 width={250}
                 height={100}
                 alt="one"
-                className="w-[60%] md:w-[35%] lg:w-full px-5"
+                className="w-[50%] md:w-[30%] lg:w-full px-5"
               />
             </div>
 
@@ -113,7 +113,7 @@ export default function HomeHorizontalScroll() {
                 width={250}
                 height={100}
                 alt="3"
-                className="w-[60%] md:w-[30%] lg:w-full "
+                className="w-[45%] md:w-[25%] lg:w-full "
               />
             </div>
             <div className="h-full flex flex-col justify-center lg:gap-10 lg:w-[70%]">
@@ -148,7 +148,7 @@ export default function HomeHorizontalScroll() {
                 width={250}
                 height={100}
                 alt="3"
-                className=" w-[60%] md:w-[35%] lg:w-full  "
+                className=" w-[40%] md:w-[30%] lg:w-full  "
               />
             </div>
             <div className=" bg-slidetwopic  bg-cover lg:w-[50%] "></div>

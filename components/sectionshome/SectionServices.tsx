@@ -8,7 +8,7 @@ export default function SectionServices() {
   const services = dictionary.homepage.services;
 
   return (
-    <div className="flex flex-col gap-10 font-urbanistr text-xl  py-16 text-wlite px-5 md:px-10">
+    <div className="flex flex-col gap-24 xl:gap-10 font-urbanistr text-xl  py-16 text-wlite px-5 lg:px-10">
       <div className="flex flex-col gap-2">
         <h2 className="text-5xl md:text-[3.4rem] xl:text-8xl ">
           {services.h2}{" "}
@@ -16,16 +16,16 @@ export default function SectionServices() {
         <p className="text-base md:text-xl ">{services.h2content}</p>
       </div>
       <div className="flex flex-col justify-center  xl:py-20  lg:bg-rectangleservices bg-center bg-contain bg-no-repeat ">
-        <div className=" h-full flex flex-col gap-20 md:grid lg:grid-cols-2 md:gap-32">
+        <div className=" h-full flex flex-col gap-16 md:grid lg:grid-cols-2 lg:gap-32">
           {services.servarray.map((serv, i) => (
             <div key={i} className="flex flex-col gap-5 2xl:px-[150px] ">
-              <div className="flex flex-col md:flex-row  md:gap-5 align-middle font-akira md:text-3xl">
+              <div className="flex flex-col lg:flex-row  md:gap-5 align-middle font-akira md:text-3xl">
                 <p className=" text-3xl md:text-5xl flex flex-col justify-center">
                   {" "}
                   {serv.id}
                   {""}
                 </p>
-                <h3 className="text-2xl md:text-3xl flex flex-col justify-center">
+                <h3 className="text-2xl md:text-3xl flex flex-col justify-center md:w-[50%] lg:w-full">
                   {" "}
                   {serv.h3}{" "}
                 </h3>

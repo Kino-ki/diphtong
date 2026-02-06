@@ -62,20 +62,20 @@ export default function Contact() {
       <div className="flex flex-col gap-12 lg:flex-row  ">
         <div
           ref={pinnedRef}
-          className="flex flex-col justify-between  w-full lg:w-[40%] lg:sticky md:top-0 md:self-start items-center lg:h-[60svh] "
+          className="flex flex-col justify-center  w-full lg:w-[40%] lg:sticky md:top-0 md:self-start items-center lg:h-[60svh] "
         >
           {/* <div className="lg:h-[20%] h-10  " /> */}
-          <div className="flex flex-col ">
+          <div className="flex flex-col gap-8 ">
             <h1 className="font-menlob  text-[20vw] md:text-[9rem] lg:text-[7rem] 2xl:text-[9rem] uppercase ">
               {" "}
               {contact.PageTitle}{" "}
             </h1>
-            <h2 className="md:font-figtree font-urbanistl lg:uppercase 2xl:w-2/3 text-xl md:text-3xl tracking-wider text-end mx-auto ">
+            <h2 className="md:font-figtree font-urbanistl lg:uppercase  text-xl md:text-3xl tracking-wider text-start mx-auto ">
               {contact.h2}
             </h2>
-          </div>
-          <div className=" w-full flex justify-center endtrigger">
-            <CalendlyWidget />
+            <div className=" w-full flex justify-start endtrigger">
+              <CalendlyWidget />
+            </div>
           </div>
         </div>
 

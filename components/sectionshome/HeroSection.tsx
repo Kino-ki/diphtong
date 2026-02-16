@@ -41,12 +41,12 @@ export default function HeroSection() {
         gsap.fromTo(
           txtRef.current,
           { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, delay: 0.3 }
+          { opacity: 1, y: 0, delay: 0.3 },
         );
         gsap.fromTo(
           creativRef.current,
           { opacity: 0, y: 20 },
-          { opacity: 1, y: 0 }
+          { opacity: 1, y: 0 },
         );
         gsap.fromTo(
           heroTextRef.current,
@@ -64,7 +64,7 @@ export default function HeroSection() {
               scrub: 1,
               toggleActions: "play reverse play reverse",
             },
-          }
+          },
         );
       },
     });
@@ -87,7 +87,7 @@ export default function HeroSection() {
         </video>
         <button
           onClick={handlePause}
-          className="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-30 p-2 rounded-full opacity-60"
+          className="absolute bottom-1 right-2 md:bottom-8 md:right-8 z-30  rounded-full opacity-60"
         >
           {isPlaying ? (
             <Image
@@ -121,7 +121,7 @@ export default function HeroSection() {
 
             <h2
               ref={txtRef}
-              className="font-figtreel opacity-0 lg:px-20 2xl:px-40 capitalize text-xl md:text-2xl lg:text-3xl 2xl:text-4xl tracking-wider md:tracking-[0.4rem] 2xl:tracking-[0.5rem] 2xl:leading-[4rem] flex justify-center text-center font-semibold "
+              className="font-urbanistl opacity-0 lg:px-20 2xl:px-40  text-xl md:text-2xl lg:text-3xl 2xl:text-4xl tracking-wider md:tracking-[0.3rem] 2xl:tracking-[0.3rem] 2xl:leading-[4rem] flex justify-center text-center font-semibold "
             >
               {hero.heroh3}
             </h2>

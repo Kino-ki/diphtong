@@ -39,7 +39,7 @@ export default function Contact() {
             scrub: 1,
             // markers: true,
           },
-        }
+        },
       );
     });
     mm.add("(max-width:1023px)", () => {
@@ -62,16 +62,21 @@ export default function Contact() {
       <div className="flex flex-col gap-12 lg:flex-row  ">
         <div
           ref={pinnedRef}
-          className="flex flex-col   w-full lg:w-[40%] lg:sticky md:top-0 md:self-start items-center md:bg-diphblack "
+          className="flex flex-col justify-center  w-full lg:w-[40%] lg:sticky md:top-0 md:self-start items-center lg:h-[60svh] "
         >
-          <div className="lg:h-[20%] h-10  " />
-          <h1 className="font-menlob  text-[20vw] md:text-[9rem] lg:text-[7rem] 2xl:text-[9rem] uppercase ">
-            {" "}
-            {contact.PageTitle}{" "}
-          </h1>
-          <h2 className="md:font-figtree font-urbanistl lg:uppercase 2xl:w-2/3 text-xl md:text-3xl tracking-wider text-end mx-auto ">
-            {contact.h2}
-          </h2>
+          {/* <div className="lg:h-[20%] h-10  " /> */}
+          <div className="flex flex-col gap-8 ">
+            <h1 className="font-menlob  text-[20vw] md:text-[9rem] lg:text-[7rem] 2xl:text-[9rem] uppercase ">
+              {" "}
+              {contact.PageTitle}{" "}
+            </h1>
+            <h2 className="md:font-figtree font-urbanistl lg:uppercase  text-xl md:text-3xl tracking-wider text-start xl:px-4">
+              {contact.h2}
+            </h2>
+            <div className=" w-full flex justify-start endtrigger xl:px-4">
+              <CalendlyWidget />
+            </div>
+          </div>
         </div>
 
         <div className="flex flex-col gap-20 lg:gap-20 2xl:gap-20 lg:py-24 lg:w-[60%] md:items-end overflow-y-auto  ">
@@ -81,9 +86,7 @@ export default function Contact() {
             </h3>
             <ContactForm lang={language} />
           </div>
-          <div className=" w-full flex justify-center endtrigger">
-            <CalendlyWidget />
-          </div>
+
           {/* ----------------------------contact info------------------- */}
           <div className="flex md:flex-row flex-col text-center md:text-start  gap-10 mx-auto text-wlite  md:py-20 pb-10">
             <div className="flex flex-col justify-between  gap-5 md:w-1/2 ">

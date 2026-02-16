@@ -53,7 +53,7 @@ export default function HomeHorizontalScroll() {
             },
           },
         });
-      }
+      },
     );
 
     return () => {
@@ -66,18 +66,18 @@ export default function HomeHorizontalScroll() {
       <div className=" overflow-hidden pb-10 lg:pb-0">
         <div
           ref={slidesRef}
-          className="flex flex-col gap-0 lg:gap-5 lg:flex-row "
+          className="flex flex-col gap-16 lg:gap-5 lg:flex-row "
         >
           {/* -------------------SLIDE ONE ------------------------- */}
           <section className="slide flex lg:flex-row flex-col gap-5 lg:gap-0 lg:h-[103svh] lg:w-[100svw] bg-wlite  lg:shrink-0 relative ">
             <div className="h-full w-[30%] hidden lg:flex  bg-slideone bg-cover "></div>
-            <div className="relative lg:absolute lg:bottom-10 lg:right-10">
+            <div className="relative flex justify-end lg:absolute lg:bottom-10 lg:right-10">
               <Image
                 src={one}
                 width={250}
                 height={100}
                 alt="one"
-                className="w-[60%] md:w-full px-5"
+                className="w-[50%] md:w-[30%] lg:w-[90%] px-5"
               />
             </div>
 
@@ -94,7 +94,7 @@ export default function HomeHorizontalScroll() {
                       {" "}
                       {p.gray} <br />{" "}
                     </span>
-                  )
+                  ),
                 )}
               </h4>
               <div className="flex flex-col gap-8 text-lg px-5 md:text-xl  2xl:text-2xl/normal font-urbanistr  ">
@@ -106,14 +106,14 @@ export default function HomeHorizontalScroll() {
           </section>
           {/* -------------------SLIDE TWO ------------------------- */}
 
-          <section className="slide px-5 lg:px-0 flex lg:flex-row flex-col gap-10 relative lg:shrink-0  lg:w-[80svw] lg:h-[103svh] text-black lg:py-40 ">
-            <div className="relative lg:absolute md:flex md:justify-end lg:bottom-10 lg:left-[70%]">
+          <section className="slide px-5 lg:px-0 flex lg:flex-row flex-col gap-10 relative lg:shrink-0  lg:w-[90svw] lg:h-[103svh] text-black lg:py-40 ">
+            <div className="relative flex justify-end  lg:absolute md:flex md:justify-end lg:bottom-10 lg:left-[70%]">
               <Image
                 src={two}
                 width={250}
                 height={100}
                 alt="3"
-                className="w-[60%] md:w-full "
+                className="w-[45%] md:w-[25%] lg:w-[90%] "
               />
             </div>
             <div className="h-full flex flex-col justify-center lg:gap-10 lg:w-[70%]">
@@ -129,7 +129,7 @@ export default function HomeHorizontalScroll() {
                       {" "}
                       {p.gray} <br />{" "}
                     </span>
-                  )
+                  ),
                 )}
               </h4>
               <div className="flex flex-col gap-8  text-lg md:text-xl lg:w-[80%] 2xl:text-2xl/normal font-urbanistr   ">
@@ -142,13 +142,13 @@ export default function HomeHorizontalScroll() {
           {/* -------------------SLIDE THREE ------------------------- */}
 
           <section className=" flex lg:flex-row flex-col gap-5 relative slide lg:h-[103svh] lg:shrink-0 w-screen lg:w-[100svw]  px-5 lg:px-0">
-            <div className="relative lg:absolute lg:bottom-10 lg:right-10">
+            <div className="relative flex justify-end lg:absolute lg:bottom-10 lg:right-10">
               <Image
                 src={three}
                 width={250}
                 height={100}
                 alt="3"
-                className=" w-[60%] md:w-full "
+                className=" w-[40%] md:w-[30%] lg:w-[90%]  "
               />
             </div>
             <div className=" bg-slidetwopic  bg-cover lg:w-[50%] "></div>
@@ -168,7 +168,7 @@ export default function HomeHorizontalScroll() {
                       {" "}
                       {p.gray}{" "}
                     </span>
-                  )
+                  ),
                 )}
               </h4>
               <div className="flex flex-col gap-8  text-lg md:text-xl lg:w-[80%] 2xl:text-2xl/normal font-urbanistr">

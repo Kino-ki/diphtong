@@ -10,6 +10,7 @@ import { GetAQuoteButton } from "@/components/Buttons";
 import { renderContentItem } from "@/components/HelperFunctions";
 import { useGSAP } from "@gsap/react";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
+import Link from "next/link";
 
 export default function AboutPage() {
   const { dictionary } = useLanguage();
@@ -45,7 +46,7 @@ export default function AboutPage() {
             scrub: 1,
             // markers: true,
           },
-        }
+        },
       );
 
       // Animate background color on values
@@ -65,7 +66,7 @@ export default function AboutPage() {
               // scrub: 1,
               // markers: true,
             },
-          }
+          },
         );
         bgTriggers.push(tween.scrollTrigger as ScrollTrigger);
       });
@@ -87,7 +88,7 @@ export default function AboutPage() {
               // scrub: 1,
               // markers: true,
             },
-          }
+          },
         );
         bgTriggers.push(tween.scrollTrigger as ScrollTrigger);
       });
@@ -106,30 +107,30 @@ export default function AboutPage() {
             <div className=" lg:h-[20svh] " />
             <h1
               ref={pinnedRef}
-              className=" text-8xl md:text-9xl lg:text-8xl/normal 2xl:text-9xl/normal  2xl:pr-20 pt-20 md:py-12 lg:py-0  "
+              className=" text-8xl md:text-9xl lg:text-8xl/normal 2xl:text-9xl/none  2xl:pr-20 pt-20 md:py-12 lg:py-0  "
             >
               {about.h1}{" "}
             </h1>
           </div>
           {/* ----------------------------RIGHT SIDE flex col ----------------------------------------------- */}
 
-          <div className="lg:w-[60%] flex flex-col bg-wlite text-diphblack">
-            <div className="h-[100svh] lg:h-[100svh] flex flex-col justify-end gap-12 2xl:gap-20 p-10 md:p-20 2xl:pb-40 border-b-8 border-diphblack">
+          <div className="lg:w-[60%] flex flex-col  text-diphblack ">
+            <div className=" bg-wlite min-h-[100svh] lg:min-h-[100svh] flex flex-col justify-end gap-12 2xl:gap-20 p-10 md:p-20 2xl:pb-40 border-b-8 border-diphblack">
               <h2 className=" text-3xl/relaxed md:text-5xl/relaxed lg:text-4xl/relaxed 2xl:text-5xl/relaxed tracking-widest font-urbanistr">
                 {about.h1description}
               </h2>
               <p className="md:text-xl/8 2xl:text-2xl/10 tracking-wider md:pb-32 pb-0 lg:pb-0 ">
-                {about.firsttext.map(renderContentItem)}
+                {about.firsttext}
               </p>
             </div>
 
-            <div className="2xl:h-[100svh] flex flex-col  justify-end  p-10 md:p-20 2xl:pb-40">
+            <div className=" 2xl:min-h-[100svh] flex flex-col  justify-end  p-10 md:p-20 2xl:pb-40 bg-wlite ">
               <h2 className="text-3xl/relaxed md:text-5xl/relaxed lg:text-4xl/relaxed 2xl:text-5xl/relaxed tracking-widest font-urbanistr pb-5 md:pb-12 2xl:py-20">
                 {about.secondSectionspecial.h3}
               </h2>
               <p className="md:text-xl/8 2xl:text-2xl/10 tracking-wider ">
                 {about.secondSectionspecial.specialcontent.map(
-                  renderContentItem
+                  renderContentItem,
                 )}
               </p>
               <ul className="md:text-xl/8 2xl:text-2xl font-urbanistmed py-4 md:py-8 2xl:py-12 tracking-wider">
@@ -144,24 +145,28 @@ export default function AboutPage() {
                 {about.secondSectionspecial.specialend.map(renderContentItem)}
               </p>
             </div>
+            <Link
+              href="/projects"
+              className=" min-h-[15svh] md:min-h-[20svh] lg:min-h-[30svh] border-x-4 flex flex-col justify-center border-wlite hover:border-x-[24px] transition-all ease-in-out duration-200"
+            >
+              <p className="text-wlite text-xl md:text-5xl lg:text-6xl flex flex-col justify-center items-center hover:scale-110 h-full w-full transition-all ease-in-out duration-200">
+                {about.projcta}
+              </p>
+            </Link>
 
             <div
               ref={endtrigger}
-              className="2xl:h-[100svh] flex flex-col justify-end p-10 md:px-20 2xl:p-20 pb-40  border-b-8 border-diphblack "
+              className=" flex flex-col justify-end p-10 md:px-20 2xl:p-20    bg-wlite  "
             >
               <h2 className=" text-3xl/relaxed md:text-5xl/relaxed lg:text-5xl/relaxed tracking-widest font-urbanistr pb-5 md:pb-12 2xl:py-20">
                 {about.thirdSectionhow.h3}
               </h2>
-              <p className="md:text-xl/8 2xl:text-2xl/10 tracking-wider ">
+              <p className="md:text-xl/8 2xl:text-2xl/10 tracking-wider">
                 {about.thirdSectionhow.howcontent.map(renderContentItem)}
               </p>
-              <ul className="md:text-lg/8 2xl:text-xl/9 font-urbanistr py-4 md:py-10 tracking-wider">
-                {about.thirdSectionhow.howarray.map((how, i) => (
-                  <li className="py-1 first-letter:capitalize " key={i}>
-                    {typeof how === "string" ? how : <b key={i}>{how.bold}</b>}
-                  </li>
-                ))}
-              </ul>
+              <p className="md:text-xl/8 2xl:text-2xl/10  py-4 md:py-10 tracking-wider">
+                {about.thirdSectionhow.howarray.map(renderContentItem)}
+              </p>
               <p className="md:text-xl/8 2xl:text-2xl/10 font-urbanistr pb-10">
                 {about.thirdSectionhow.maintenance.map(renderContentItem)}
               </p>
@@ -169,12 +174,20 @@ export default function AboutPage() {
                 {about.thirdSectionhow.creationend.map(renderContentItem)}
               </p>
             </div>
+            <Link
+              href="/services"
+              className="min-h-[15svh] md:min-h-[20svh] lg:min-h-[30svh] flex flex-col justify-center border-x-4 border-b-[12px]  border-wlite hover:border-x-[24px] transition-all ease-in-out duration-200"
+            >
+              <p className="text-wlite text-xl md:text-5xl lg:text-6xl flex flex-col justify-center items-center hover:scale-110 h-full w-full transition-all ease-in-out duration-200">
+                {about.servcta}
+              </p>
+            </Link>
           </div>
         </div>
         {/* -------------------------------Second section VALUES & FOUNDER ------------------------------------------------- */}
         <div className="bg-wlite pl-5 md:pl-12 2xl:pl-20 text-diphblack mx-5 md:mx-10 lg:mr-12 2xl:mr-20 flex flex-col gap-12 2xl:gap-0">
           {/* ----------------------------LEFT SIDE flex col ----------------------------------------------- */}
-          <div className="w-full 2xl:h-[100svh] flex flex-col justify-start py-10 ">
+          <div className="w-full 2xl:min-h-[100svh] flex flex-col justify-start py-10 ">
             <h2 className="text-5xl md:text-6xl tracking-widest font-urbanistr py-12 md:py-20">
               {about.fourthsectionValues.h3}
             </h2>
@@ -186,7 +199,7 @@ export default function AboutPage() {
                       ref={(el) => {
                         bgRefs.current[i] = el;
                       }}
-                      className="md:text-xl 2xl:text-4xl py-8 md:py-10 px-5 bg-diphblack text-wlite"
+                      className="md:text-xl 2xl:text-3xl py-8 md:py-10 px-5 bg-diphblack text-wlite"
                     >
                       {value.map(renderContentItem)}
                     </h3>
@@ -195,8 +208,8 @@ export default function AboutPage() {
               </ul>
             </div>
           </div>
-          <div className="w-full md:h-[100svh] flex flex-col md:flex-row justify-between py-10 ">
-            <div className="flex flex-col md:w-1/2 ">
+          <div className="w-full md:h-[100svh] flex flex-col lg:flex-row justify-between pb-8 px-5 ">
+            <div className="flex flex-col lg:w-1/2 ">
               <h2 className="text-5xl md:text-6xl tracking-widest font-urbanistr md:py-20 pb-10">
                 {about.founderNote.h3}
               </h2>
@@ -204,18 +217,11 @@ export default function AboutPage() {
                 {about.founderNote.content}
               </p>
             </div>
-            <div className="">
-              {/* <Image
-                src={founderPic}
-                width={500} 
-                height={500}
-                alt="founder picture"
-              /> */}
-            </div>
+            <div className=""></div>
           </div>
           {/* ----------------------------RIGHT SIDE flex col ----------------------------------------------- */}
         </div>
-        <div className="bg-diphblack text-wlite h-[60svh] md:h-[50svh] lg:h-[80svh] flex flex-col gap-20 justify-center px-5 md:px-12 lg:px-0">
+        <div className="bg-diphblack text-wlite h-[60svh] md:h-[50svh] lg:h-[70svh] flex flex-col gap-20 justify-center px-5 md:px-12 lg:px-32">
           <h3 className="text-3xl md:text-5xl lg:text-6xl  text-center">
             {about.cta}
           </h3>

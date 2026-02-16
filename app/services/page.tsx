@@ -20,9 +20,6 @@ export default function Services() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const titleRef = useRef<HTMLDivElement | null>(null);
 
-  // useEffect(() => {
-  //   scrollToHashOnLoad();
-  // }, []);
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     const el = titleRef.current;
@@ -45,7 +42,7 @@ export default function Services() {
               pin: true,
               // markers: true,
             },
-          }
+          },
         );
       });
       mm.add("(max-width: 1023px)", () => {
@@ -65,7 +62,7 @@ export default function Services() {
               pin: true,
               // markers: true,
             },
-          }
+          },
         );
       });
 
@@ -87,11 +84,14 @@ export default function Services() {
             {services.h1}{" "}
           </h1>
           <p
-            data-speed="1.2"
-            className="text-xl/10 md:text-2xl/10 lg:text-4xl/normal tracking-wide px-[10%] py-10 lg:py-20"
+            data-speed="1.1"
+            className="text-xl/10 md:text-2xl/10 lg:text-4xl/normal tracking-wide px-[10%] py-10 "
           >
             {services.textintro.map(renderContentItem)}
           </p>
+          <div className="flex flex-col md:flex-row px-[10%] md:justify-center gap-2  ">
+            {services.introarray.map(renderContentItem)}
+          </div>
         </div>
         {/* ------------------------------SERVICE ARRAY -------------------------------------------------- */}
         <div className="flex flex-col lg:px-[10%]">
@@ -101,8 +101,8 @@ export default function Services() {
               key={service.id}
               className={`flex flex-col  py-6 md:py-24 px-3 md:px-5  text-start   ${
                 i % 2 === 0
-                  ? "bg-diphblack text-wlite border-8 border-wlite/90"
-                  : "bg-wlite/90 text-diphblack"
+                  ? "bg-diphblack text-wlite border-8 border-wlite"
+                  : "bg-wlite text-diphblack"
               } `}
             >
               <div className="flex md:gap-10 justify-between md:justify-start h-fit pb-10 ">
@@ -135,7 +135,7 @@ export default function Services() {
                   <div className="flex justify-between">
                     <p className=" font-urbanistr  px-2 md:px-5 md:text-2xl md:tracking-wide md:leading-loose">
                       {service.serv.conclusion.map((c, i) =>
-                        typeof c === "string" ? c : <b key={i}>{c.bold}</b>
+                        typeof c === "string" ? c : <b key={i}>{c.bold}</b>,
                       )}
                     </p>
                   </div>
@@ -145,7 +145,7 @@ export default function Services() {
           ))}
         </div>
       </div>
-      <div className="bg-diphblack text-wlite h-[60svh] md:h-[50svh] lg:h-[80svh] flex flex-col gap-20 justify-center ">
+      <div className="bg-diphblack text-wlite h-[60svh] md:h-[50svh] lg:h-[6 0svh] flex flex-col gap-20 justify-center px-5 ">
         <h3 className="text-3xl md:text-5xl lg:text-6xl text-center">{cta}</h3>
         <div
           onMouseEnter={() => setIsHovered(true)}

@@ -67,7 +67,7 @@ export default function NavBar() {
               end: "400px top",
               scrub: true,
             },
-          }
+          },
         );
       });
 
@@ -91,7 +91,7 @@ export default function NavBar() {
               end: "400px top",
               scrub: true,
             },
-          }
+          },
         );
       });
 
@@ -101,7 +101,7 @@ export default function NavBar() {
         window.removeEventListener("scroll", handleScroll);
       };
     },
-    { dependencies: [pathname] }
+    { dependencies: [pathname] },
   );
 
   return (
@@ -109,7 +109,7 @@ export default function NavBar() {
       ref={navRef}
       id="navbar"
       key={pathname}
-      className={`fixed top-0 z-40 w-full  text-wlite px-5 2xl:pl-16 pr-3 text-[1.1rem]/5 font-menlor uppercase lg:flex hidden ${
+      className={`fixed top-0 z-40 w-full  text-wlite px-5 2xl:pl-5 pr-3 text-[1.1rem]/5 font-menlor uppercase lg:flex hidden ${
         pathname.includes("/home") && scrollY < 400
           ? ""
           : "mix-blend-difference"
@@ -129,7 +129,7 @@ export default function NavBar() {
           </li>
         </ul>
         <div id="" className=" top-2">
-          <Link href="/">
+          <Link href="/home">
             <Image
               ref={logoRef}
               src={diphtext}

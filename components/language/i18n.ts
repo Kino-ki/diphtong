@@ -17,11 +17,8 @@ export const dictionaries = {
         { bold: " their story " },
       ],
       whyus: {
-        h2: "Why Choose Us for Your Website?",
-        content:
-          "Your website is more than a digital business card—it’s the foundation of your brand identity. We understand the unique needs of artists showcasing portfolios and small businesses building trust with customers.",
-        h4: "We craft each site with precision and artistry, making sure your online presence feels authentic and unforgettable.",
-        h3: "We focus on three pillars:",
+        h21: "Why Choose Us",
+        h22: "for Your Website?",
         pillars: [
           {
             title: "Design Excellence",
@@ -37,6 +34,7 @@ export const dictionaries = {
               " Fast-loading, mobile-optimized, and intuitive to navigate.",
           },
         ],
+        button: "more about us",
       },
 
       horizontalScroll: {
@@ -109,76 +107,50 @@ export const dictionaries = {
             link: "/projects#portfolio",
           },
         ],
+        button: "discover all our projects",
       },
       services: {
-        h2: "Our Services",
-        artists: {
-          h3: "For Artists",
-          content: [
-            { bold: " Your portfolio is your story " },
-            "it deserves to be seen. We help artists of all discipline painters, photographers, musicians, dancers, and writers showcase their work",
-            { bold: " with elegance and clarity. " },
-          ],
-          delivery: "What we deliver for artists:",
-          deliveryarray: [
-            "Custom Portfolio Websites with gallery features",
-            "Minimalist, design-oriented layouts that put your work first",
-            "Mobile-friendly to reach audiences everywhere",
-            "SEO optimization so your art is discoverable",
-            "Easy content management to update your portfolio anytime",
-          ],
-          h4: [
-            "Your website becomes",
-            { bold: "   a stage for your art " },
-            "leaving visitors with a lasting impression.",
-          ],
-        },
-        business: {
-          h3: "For Small Businesses",
-          content: [
-            "We help small businesses",
-            { bold: " stand out in competitive markets " },
-            "with websites that combine",
-            { bold: " design, strategy, and performance." },
-          ],
-          delivery: "What we deliver for businesses:",
-          deliveryarray: [
-            "Conversion-driven website design that turns visitors into clients",
-            "Professional branding integration for credibility and trust",
-            "Fast, secure, and SEO-optimized websites for higher rankings",
-            "Scalable platforms that grow as your business grows",
-            "Custom features such as blogs, booking systems, or e-commerce",
-          ],
-          h4: [
-            "Whether you’re a café, a local boutique, a wellness studio, or a service provider, we’ll craft a site that ",
-            { bold: " reflects your values and drives measurable growth" },
-          ],
-        },
+        h2: "What we build",
+        h2content: "Websites designed to grow, evolve, and perform over time.",
+        servarray: [
+          {
+            id: "01",
+            h3: "Web design",
+            content:
+              "Elegant, clear interfaces designed to guide users and drive conversions. Every design decision serves a purpose: understanding, engagement, trust.",
+          },
+          {
+            id: "02",
+            h3: "web development",
+            content:
+              "Fast, stable and scalable websites built with modern technologies chosen for your real needs.",
+          },
+          {
+            id: "03",
+            h3: "Maintenance & optimization",
+            content:
+              "We keep your website secure, fast and reliable over time, while continuously improving performance and stability.",
+          },
+          {
+            id: "04",
+            h3: "Content & SEO strategy",
+            content:
+              "Clear, strategic content designed for both users and search engines, helping you increase visibility and turn traffic into results.",
+          },
+        ],
+        button: "explore our services",
       },
       reachoutsection: {
         h2: "Ready to Elevate Your Online Presence?",
         content:
-          "Whether you’re an artist who wants a portfolio that shines or a small business looking to grow, we’re here to help. Our expertise in design, development, and SEO ensures your website isn’t just beautiful—it works for you.",
+          "Whether you’re an artist who wants a portfolio that shines or a small business looking to grow, we’re here to help. Our expertise in design, development, and SEO ensures your website isn’t just beautiful, it works for you.",
       },
     },
     aboutPage: {
       h1: "About us",
       h1description: "Web Design for Artists & Small Businesses in Montreal",
-      firsttext: [
-        "We’re a ",
-        {
-          bold: "young, women-led web development company based in Montreal ",
-        },
-        "dedicated to helping ",
-        {
-          bold: "artists and small businesses ",
-        },
-        "build websites that are both ",
-        { bold: "beautiful and functional. " },
-        "Our mission is simple: to provide solutions that match your ",
-        { bold: "vision, style, and budget. " },
-        "Whether you want a fully custom experience or a practical, easy-to-manage site, we ensure your online presence reflects your brand and connects with your audience.",
-      ],
+      firsttext:
+        "We’re a women-led web development company based in Montreal. We help artists and small businesses build beautiful, functional websites, with solutions tailored to your vision, needs, and budget.",
       secondSectionspecial: {
         h3: "Why We Do What We Do",
         specialcontent: [
@@ -188,7 +160,7 @@ export const dictionaries = {
         ],
         specialarray: [
           "Portfolio websites for artists",
-          "Websites for small businesses",
+          "Websites for small and medium-sized  businesses",
           "Updating and maintaining existing websites",
         ],
         specialend: [
@@ -199,16 +171,15 @@ export const dictionaries = {
       thirdSectionhow: {
         h3: "How We Work",
         howcontent: [
-          "We create ",
-          { bold: "websites tailored to your needs and vision, " },
-          "offering ",
-          { bold: "two main paths:" },
+          "We offer ",
+          { bold: "two website options " },
+          "to fit your needs and budget:",
         ],
         howarray: [
-          { bold: "Custom “sur mesure” websites " },
-          "fully bespoke, with smooth animations, elegant design, and advanced features for a high-end, standout presence. Perfect for clients seeking a truly unique digital experience.",
-          { bold: "WordPress websites  " },
-          "a more accessible option that is professional, easy to update, and can grow with your business. Ideal for artists and small businesses with tighter budgets.",
+          { bold: "Custom websites " },
+          "with advanced design and animations, and ",
+          { bold: "WordPress websites " },
+          "that are accessible and easy to manage.",
         ],
         creationend: [
           "No matter which option you choose, every website is ",
@@ -218,8 +189,8 @@ export const dictionaries = {
         ],
         maintenance: [
           "We also provide ",
-          { bold: "ongoing support and maintenance for existing websites, " },
-          "including updates, performance optimization, and minor redesigns to keep your site fresh and secure.",
+          { bold: "maintenance and updates " },
+          "to keep your site fast, secure, and up to date.",
         ],
       },
       fourthsectionValues: {
@@ -255,6 +226,8 @@ export const dictionaries = {
           "If you’re looking for a website that feels personal, professional, and designed around your vision, we’d love to collaborate  whether it’s a brand-new site or an update to your existing one.",
       },
       cta: "Reach out today,  let’s bring your ideas online.",
+      projcta: "Check out our projects",
+      servcta: "Discover our services",
     },
     contactPage: {
       PageTitle: "Contact",
@@ -273,30 +246,31 @@ export const dictionaries = {
       textintro: [
         "We create websites that are both ",
         { bold: "visually striking and technically flawless. " },
-        " Whether you’re an artist, a small business, or an organization in the creative world our services cover everything you need: ",
+        " Whether you’re an artist, a small or medium-sized business, our services cover everything you need: ",
+      ],
+      introarray: [
         {
-          a: {
+          b: {
             txt: " web development",
             href: "#dev",
           },
         },
         {
-          a: {
+          b: {
             txt: "design",
             href: "#design",
           },
         },
         {
-          a: {
+          b: {
             txt: "maintenance",
             href: "#maintenance",
           },
         },
-        "and",
         {
-          a: {
-            txt: "responsiveness",
-            href: "#responsiveness",
+          b: {
+            txt: "Content & SEO strategy ",
+            href: "#seo",
           },
         },
       ],
@@ -309,7 +283,7 @@ export const dictionaries = {
             content: [
               "We build ",
               { bold: "custom websites tailored to your goals. " },
-              "Whether you’re looking for a high-end Next.js website with ",
+              "Whether you’re looking for a high-end website with ",
               { bold: "animations and cutting-edge performance, " },
               "or an ",
               { bold: "affordable WordPress site that’s easy to manage, " },
@@ -324,7 +298,7 @@ export const dictionaries = {
             ],
             conclusion: [
               {
-                bold: "From artists in Montreal to small businesses worldwide, ",
+                bold: "From artists in Montreal to small and medium-sized businesses worldwide, ",
               },
               "we help you launch a website that’s both beautiful and functional.",
             ],
@@ -335,13 +309,13 @@ export const dictionaries = {
           serv: {
             h2: "Web Design",
             content: [
-              "We believe design is more than just looks, it’s ",
+              "Design is more than just looks, it’s ",
               { bold: "how people experience your brand online. " },
-              "Our approach blends ",
+              "We craft websites shaped by ",
               {
-                bold: "clean, modern aesthetics with user-friendly navigation ",
+                bold: "who you are and who you’re speaking to, ",
               },
-              " so your website feels effortless to use. ",
+              "ensuring every interaction feels natural and purposeful.",
             ],
             h3: "What we offer:",
             webdevarray: [
@@ -387,26 +361,28 @@ export const dictionaries = {
           },
         },
         {
-          id: "responsiveness",
+          id: "seo",
           serv: {
-            h2: "Responsive Design",
+            h2: "Content & SEO strategy",
             content: [
-              "Today, over 60% of web traffic comes from mobile devices. That’s why we make sure every website we deliver is ",
-              { bold: "fully responsive and tested across devices" },
+              "Search engines are often the first place people discover your business. A well-optimized website ensures ",
+              {
+                bold: "you’re visible to the right audience at the right time.",
+              },
             ],
             h3: "With us, you get:",
             webdevarray: [
-              "Seamless experiences on phones, tablets, and desktops",
-              "Optimized layouts that adapt to any screen size",
-              "Faster loading and better SEO rankings with mobile-first design",
-              "Accessibility standards that make your site inclusive",
+              "Strategic keyword research based on your industry, audience, and goals.",
+              "Optimized site structure and technical foundations that support long-term visibility.",
+              "Clear, persuasive content designed for both users and search engines.",
+              "Performance optimization to improve rankings and user experience.",
             ],
             conclusion: [
-              "A website that looks good on every screen means more ",
+              "A strong SEO foundation means ",
               {
-                bold: "engagement, conversions, and trust ",
+                bold: "more qualified traffic, better visibility, and sustainable growth ",
               },
-              "from your visitors.",
+              "for your business.",
             ],
           },
         },
@@ -510,8 +486,8 @@ export const dictionaries = {
             h3: "Maintenance",
           },
           {
-            id: "responsiveness",
-            h3: "Responsive Design",
+            id: "seo",
+            h3: "Content & SEO strategy",
           },
         ],
       },
@@ -553,11 +529,8 @@ export const dictionaries = {
         { bold: " leur histoire " },
       ],
       whyus: {
-        h2: "Pourquoi nous choisir pour votre site web ?",
-        content:
-          "Votre site est bien plus qu’une carte de visite numérique : c’est la base de votre identité de marque. Nous comprenons les besoins uniques des artistes qui souhaitent présenter leurs portfolios et des petites entreprises qui veulent instaurer la confiance auprès de leurs clients.",
-        h4: "Nous créons chaque site avec précision et sens artistique, pour que votre présence en ligne soit authentique et mémorable.",
-        h3: "Nous nous appuyons sur trois piliers :",
+        h21: "Pourquoi nous choisir",
+        h22: "pour votre site web ?",
         pillars: [
           {
             title: "Excellence du design",
@@ -573,6 +546,7 @@ export const dictionaries = {
               "Rapidité de chargement, optimisation mobile et navigation intuitive.",
           },
         ],
+        button: "nous découvrir",
       },
       horizontalScroll: {
         intro: {
@@ -651,53 +625,38 @@ export const dictionaries = {
             link: "/projects#portfolio",
           },
         ],
+        button: "découvrez tous nos projets",
       },
       services: {
-        h2: "Nos services",
-        artists: {
-          h3: "Pour les artistes",
-          content: [
-            { bold: " Votre portfolio est votre histoire " },
-            " il mérite d’être vu. Nous aidons les artistes de toutes disciplines — peintres, photographes, musiciens, danseurs, écrivains — à mettre en valeur leur travail",
-            { bold: " avec élégance et clarté. " },
-          ],
-          delivery: "Ce que nous proposons aux artistes :",
-          deliveryarray: [
-            "Sites portfolios sur mesure",
-            "Mises en page minimalistes et orientées design qui valorisent vos œuvres",
-            "Compatibilité mobile pour toucher votre audience partout",
-            "Optimisation SEO pour rendre votre art facilement découvrable",
-            "Gestion de contenu simple pour mettre à jour votre portfolio à tout moment",
-          ],
-          h4: [
-            "Votre site devient",
-            { bold: "   une véritable scène pour votre art " },
-            "et laisse une impression durable à vos visiteurs.",
-          ],
-        },
-        business: {
-          h3: "Pour les petites entreprises",
-          content: [
-            "Nous aidons les petites entreprises à",
-            { bold: " se démarquer dans des marchés compétitifs " },
-            "grâce à des sites qui allient",
-            { bold: " design, stratégie et performance." },
-          ],
-          delivery: "Ce que nous proposons aux entreprises :",
-          deliveryarray: [
-            "Sites conçus pour convertir vos visiteurs en clients",
-            "Intégration d’une identité visuelle professionnelle pour crédibilité et confiance",
-            "Sites rapides, sécurisés et optimisés SEO pour un meilleur classement",
-            "Plateformes évolutives qui grandissent avec votre activité",
-            "Fonctionnalités personnalisées : blog, réservation en ligne, e-commerce",
-          ],
-          h4: [
-            "Que vous soyez un café, une boutique locale, un studio bien-être ou un prestataire de services, nous créons un site qui ",
-            {
-              bold: " reflète vos valeurs et favorise une croissance mesurable",
-            },
-          ],
-        },
+        h2: "Services",
+        h2content: "Des sites web évolutifs, performants et pensés pour durer.",
+        servarray: [
+          {
+            id: "01",
+            h3: "Design web",
+            content:
+              "Des interfaces élégantes, claires et orientées conversion. Chaque décision de design sert un objectif précis : compréhension, engagement, confiance.",
+          },
+          {
+            id: "02",
+            h3: "developpement web",
+            content:
+              "Des sites rapides, stables et évolutifs, construits avec des technologies modernes adaptées à vos besoins réels.",
+          },
+          {
+            id: "03",
+            h3: "Maintenance & optimisation",
+            content:
+              "Nous assurons la stabilité, la sécurité et l’optimisation de votre site pour qu’il reste rapide, fiable et efficace",
+          },
+          {
+            id: "04",
+            h3: "Contenu & stratégie SEO",
+            content:
+              "Des contenus clairs et stratégiques, pensés pour vos utilisateurs et les moteurs de recherche, afin d’augmenter votre visibilité et vos conversions.",
+          },
+        ],
+        button: "explorez nos services",
       },
       reachoutsection: {
         h2: "Prêt·e à booster votre présence en ligne ?",
@@ -708,22 +667,9 @@ export const dictionaries = {
     aboutPage: {
       h1: "Qui sommes nous?",
       h1description:
-        "Conception de sites web pour artistes et petites entreprises à Montréal et à l’international",
-      firsttext: [
-        "Nous sommes une ",
-        {
-          bold: "jeune entreprise de développement web dirigée par des femmes et basée à Montréal ",
-        },
-        "dédiée à accompagner ",
-        {
-          bold: "les artistes et les petites entreprises ",
-        },
-        "dans la création de sites web à la fois ",
-        { bold: "esthétiques et fonctionnels. " },
-        "Notre mission est simple : offrir des solutions qui respectent votre ",
-        { bold: "vision, votre style et votre budget. " },
-        "Que vous souhaitiez une expérience entièrement sur mesure ou un site pratique et facile à gérer, nous veillons à ce que votre présence en ligne reflète votre marque et crée un lien authentique avec votre audience.",
-      ],
+        "Conception de sites web pour artistes et petites entreprises à Montréal",
+      firsttext:
+        "Nous sommes une entreprise de développement web dirigée par des femmes, basée à Montréal. Nous accompagnons les artistes et les petites entreprises dans la création de sites web esthétiques, performants et alignés avec leur identité, en proposant des solutions sur mesure ou faciles à gérer, selon vos besoins et votre budget.",
       secondSectionspecial: {
         h3: "Pourquoi nous faisons ce que nous faisons",
         specialcontent: [
@@ -733,7 +679,7 @@ export const dictionaries = {
         ],
         specialarray: [
           "Sites portfolio pour artistes",
-          "Sites web pour petites entreprises",
+          "Sites web pour petites et moyennes entreprises",
           "Mise à jour et maintenance de sites existants",
         ],
         specialend: [
@@ -802,6 +748,8 @@ export const dictionaries = {
           "Si vous cherchez un site web à la fois personnel, professionnel et pensé pour refléter votre vision, nous serions ravies de collaborer avec vous — qu’il s’agisse d’un tout nouveau projet ou de l’amélioration de votre site existant.",
       },
       cta: "Contactez-nous dès aujourd’hui et donnons vie à vos idées en ligne.",
+      projcta: "Explorez nos projets",
+      servcta: "Découvrez nos services",
     },
     contactPage: {
       PageTitle: "Contact",
@@ -820,30 +768,31 @@ export const dictionaries = {
       textintro: [
         "Nous créons des sites web à la fois ",
         { bold: "visuellement percutants et techniquement irréprochables. " },
-        " Que vous soyez un artiste, une petite entreprise ou une organisation du monde créatifnos services couvrent tout ce dont vous avez besoin : ",
+        " Que vous soyez un artiste, une petite ou moyenne entreprise, nos services couvrent tout ce dont vous avez besoin : ",
+      ],
+      introarray: [
         {
-          a: {
+          b: {
             txt: " développement web",
             href: "#dev",
           },
         },
         {
-          a: {
+          b: {
             txt: "design",
             href: "#design",
           },
         },
         {
-          a: {
+          b: {
             txt: "maintenance",
             href: "#maintenance",
           },
         },
-        "et",
         {
-          a: {
-            txt: "adaptabilité",
-            href: "#responsiveness",
+          b: {
+            txt: "contenu & strategie SEO",
+            href: "#seo",
           },
         },
       ],
@@ -856,7 +805,7 @@ export const dictionaries = {
             content: [
               "Nous créons ",
               { bold: "des sites web sur mesure adaptés à vos objectifs. " },
-              "Que vous recherchiez un site Next.js haut de gamme avec ",
+              "Que vous recherchiez un site haut de gamme avec ",
               { bold: "animations et performance de pointe, " },
               "ou un ",
               { bold: "site WordPress abordable et facile à gérer, " },
@@ -882,15 +831,15 @@ export const dictionaries = {
           serv: {
             h2: "Design Web",
             content: [
-              "Nous pensons que le design est plus qu’une apparence, c’est ",
+              "Le design ne se limite pas à l’apparence: ",
               {
-                bold: "la manière dont les gens vivent votre marque en ligne. ",
+                bold: "il structure la manière dont votre marque est perçue en ligne. ",
               },
-              "Notre approche combine ",
+              "Nous concevons des sites alignés sur ",
               {
-                bold: "esthétique moderne et épurée avec une navigation intuitive ",
+                bold: "votre identité, vos objectifs et les attentes de votre clientèle, ",
               },
-              " pour que votre site soit facile et agréable à utiliser. ",
+              "afin de créer une expérience cohérente, fluide et engageante.",
             ],
             h3: "Ce que nous offrons :",
             webdevarray: [
@@ -938,28 +887,27 @@ export const dictionaries = {
           },
         },
         {
-          id: "responsiveness",
+          id: "seo",
           serv: {
-            h2: "Design Responsive",
+            h2: "Contenu & stratégie SEO",
             content: [
-              "Aujourd’hui, plus de 60% du trafic web provient des appareils mobiles. C’est pourquoi nous veillons à ce que chaque site que nous livrons soit ",
+              "Les moteurs de recherche sont souvent le premier point de contact entre votre entreprise et vos futurs clients. Un site bien optimisé vous permet d’être ",
               {
-                bold: "entièrement responsive et testé sur tous les appareils",
+                bold: "visible auprès des bonnes personnes, au bon moment. ",
               },
             ],
             h3: "Avec nous, vous bénéficiez de :",
             webdevarray: [
-              "Des expériences fluides sur téléphones, tablettes et ordinateurs",
-              "Des mises en page optimisées qui s’adaptent à toutes les tailles d’écran",
-              "Un chargement plus rapide et un meilleur référencement grâce au design mobile-first",
-              "Des normes d’accessibilité qui rendent votre site inclusif",
+              "Une recherche de mots-clés stratégique alignée sur votre activité, votre audience et vos objectifs.",
+              "Une structure de site optimisée et des bases techniques solides pour soutenir votre visibilité à long terme. ",
+              "Un contenu clair et persuasif, pensé à la fois pour vos visiteurs et pour les moteurs de recherche.",
+              "Une optimisation des performances pour améliorer votre positionnement et l’expérience utilisateur.",
             ],
             conclusion: [
-              "Un site qui s’affiche parfaitement sur tous les écrans génère plus ",
+              "Un référencement solide, c’est ",
               {
-                bold: "d’engagement, de conversions et de confiance ",
+                bold: "plus de trafic qualifié, une meilleure visibilité et une croissance durable pour votre entreprise.",
               },
-              "de la part de vos visiteurs.",
             ],
           },
         },
@@ -1063,8 +1011,8 @@ export const dictionaries = {
             h3: "Maintenance",
           },
           {
-            id: "responsiveness",
-            h3: "Design Responsive",
+            id: "seo",
+            h3: "Contenu & stratégie SEO",
           },
         ],
       },

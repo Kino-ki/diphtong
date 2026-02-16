@@ -20,9 +20,6 @@ export default function Services() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const titleRef = useRef<HTMLDivElement | null>(null);
 
-  // useEffect(() => {
-  //   scrollToHashOnLoad();
-  // }, []);
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     const el = titleRef.current;
@@ -87,11 +84,14 @@ export default function Services() {
             {services.h1}{" "}
           </h1>
           <p
-            data-speed="1.2"
-            className="text-xl/10 md:text-2xl/10 lg:text-4xl/normal tracking-wide px-[10%] py-10 lg:py-20"
+            data-speed="1.1"
+            className="text-xl/10 md:text-2xl/10 lg:text-4xl/normal tracking-wide px-[10%] py-10 "
           >
             {services.textintro.map(renderContentItem)}
           </p>
+          <div className="flex flex-col md:flex-row px-[10%] md:justify-center gap-2  ">
+            {services.introarray.map(renderContentItem)}
+          </div>
         </div>
         {/* ------------------------------SERVICE ARRAY -------------------------------------------------- */}
         <div className="flex flex-col lg:px-[10%]">
@@ -145,7 +145,7 @@ export default function Services() {
           ))}
         </div>
       </div>
-      <div className="bg-diphblack text-wlite h-[60svh] md:h-[50svh] lg:h-[80svh] flex flex-col gap-20 justify-center ">
+      <div className="bg-diphblack text-wlite h-[60svh] md:h-[50svh] lg:h-[6 0svh] flex flex-col gap-20 justify-center px-5 ">
         <h3 className="text-3xl md:text-5xl lg:text-6xl text-center">{cta}</h3>
         <div
           onMouseEnter={() => setIsHovered(true)}

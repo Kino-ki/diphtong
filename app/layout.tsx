@@ -28,12 +28,10 @@ export default function RootLayout({
             <header className="">
               <NavBar />
               <MobileNav />
-              {/* <ProjNav /> */}
             </header>
             <SmoothWrapper>
               <main className="text-wlite  ">
                 {children}
-
                 <Analytics />
               </main>
               <footer className="">

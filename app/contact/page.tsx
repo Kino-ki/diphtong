@@ -70,10 +70,10 @@ export default function Contact() {
               {" "}
               {contact.PageTitle}{" "}
             </h1>
-            <h2 className="md:font-figtree font-urbanistl lg:uppercase  text-xl md:text-3xl tracking-wider text-start mx-auto ">
+            <h2 className="md:font-figtree font-urbanistl lg:uppercase  text-xl md:text-3xl tracking-wider text-start xl:px-4">
               {contact.h2}
             </h2>
-            <div className=" w-full flex justify-start endtrigger">
+            <div className=" w-full flex justify-start endtrigger xl:px-4">
               <CalendlyWidget />
             </div>
           </div>
@@ -86,9 +86,7 @@ export default function Contact() {
             </h3>
             <ContactForm lang={language} />
           </div>
-          {/* <div className=" w-full flex justify-center endtrigger">
-            <CalendlyWidget />
-          </div> */}
+
           {/* ----------------------------contact info------------------- */}
           <div className="flex md:flex-row flex-col text-center md:text-start  gap-10 mx-auto text-wlite  md:py-20 pb-10">
             <div className="flex flex-col justify-between  gap-5 md:w-1/2 ">

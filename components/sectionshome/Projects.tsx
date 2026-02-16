@@ -96,7 +96,7 @@ export default function Projects() {
             className={`flex gap-8 flex-row items-center ${index !== len - 1 && "border-b border-[#999696]"} px-5 lg:px-10`}
           >
             {isHovered && hoveredIndex === index && (
-              <div className=" h-[100px] w-[62px] md:w-[194px] md:h-[120px] lg:w-[260px] lg:h-[161px] relative border  border-[#999696] ">
+              <div className=" h-[100px] w-[62px] md:w-[194px] md:h-[120px]  2xl:w-[260px] 2xl:h-[161px] relative border  border-[#999696] ">
                 <Image
                   src={work.imageSrc}
                   alt="image"

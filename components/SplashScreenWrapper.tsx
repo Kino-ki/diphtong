@@ -8,9 +8,10 @@ export default function SplashScreenWrapper({
 }: {
   children: React.ReactNode;
 }) {
-  const [showSplash, setShowSplash] = useState<boolean>(false);
-
   const pathname = usePathname();
+  const [showSplash, setShowSplash] = useState<boolean>(
+    pathname === "/home" ? true : false,
+  );
 
   useEffect(() => {
     const hasSeenSplash = sessionStorage.getItem("hasSeenSplash") === "true";

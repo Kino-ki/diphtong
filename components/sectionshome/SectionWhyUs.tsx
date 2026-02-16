@@ -61,7 +61,7 @@ export default function SectionWhyUs() {
       </div>
       <div className="flex flex-col bg-wlite font-urbanistr ">
         {/* content */}
-        <div className="flex flex-col md:flex-row ">
+        <div className="flex flex-col md:flex-row bg-wlite  ">
           <div className="  md:w-1/2 flex flex-col justify-center h-[100svh] overflow-hidden">
             <ul
               data-speed="0.5"

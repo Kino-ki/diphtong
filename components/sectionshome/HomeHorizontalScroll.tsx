@@ -77,7 +77,7 @@ export default function HomeHorizontalScroll() {
                 width={250}
                 height={100}
                 alt="one"
-                className="w-[50%] md:w-[30%] lg:w-full px-5"
+                className="w-[50%] md:w-[30%] lg:w-[90%] px-5"
               />
             </div>
 
@@ -106,14 +106,14 @@ export default function HomeHorizontalScroll() {
           </section>
           {/* -------------------SLIDE TWO ------------------------- */}
 
-          <section className="slide px-5 lg:px-0 flex lg:flex-row flex-col gap-10 relative lg:shrink-0  lg:w-[80svw] lg:h-[103svh] text-black lg:py-40 ">
+          <section className="slide px-5 lg:px-0 flex lg:flex-row flex-col gap-10 relative lg:shrink-0  lg:w-[90svw] lg:h-[103svh] text-black lg:py-40 ">
             <div className="relative flex justify-end  lg:absolute md:flex md:justify-end lg:bottom-10 lg:left-[70%]">
               <Image
                 src={two}
                 width={250}
                 height={100}
                 alt="3"
-                className="w-[45%] md:w-[25%] lg:w-full "
+                className="w-[45%] md:w-[25%] lg:w-[90%] "
               />
             </div>
             <div className="h-full flex flex-col justify-center lg:gap-10 lg:w-[70%]">
@@ -148,7 +148,7 @@ export default function HomeHorizontalScroll() {
                 width={250}
                 height={100}
                 alt="3"
-                className=" w-[40%] md:w-[30%] lg:w-full  "
+                className=" w-[40%] md:w-[30%] lg:w-[90%]  "
               />
             </div>
             <div className=" bg-slidetwopic  bg-cover lg:w-[50%] "></div>

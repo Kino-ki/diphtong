@@ -12,10 +12,10 @@ export default function ReachOutSection() {
     <div id="widget" className="flex  relative py-10 lg:py-20 px-5 lg:px-10 ">
       <div className="flex flex-col lg:flex-row justify-between md:mt-5 gap-5 lg:gap-0 font-urbanistr  relative">
         <div className="flex flex-col lg:w-1/2 gap-8 lg:gap-0 ">
-          <h2 className=" text-[2.5rem] lg:text-[4rem] 2xl:text-8xl flex  md:w-[80%]  lg:mt-3  text-start ">
+          <h2 className=" text-[2.5rem]  lg:text-[3.5rem] xl:text-[4rem] 2xl:text-8xl flex  md:w-[80%]  lg:mt-3  text-start ">
             {reachout.h2}
           </h2>
-          <p className="lg:py-10 md:text-xl   lg:w-[80%] ">
+          <p className="lg:py-10 text-lg md:text-xl   lg:w-[80%] ">
             {" "}
             {reachout.content}{" "}
           </p>

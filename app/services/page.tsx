@@ -85,11 +85,11 @@ export default function Services() {
           </h1>
           <p
             data-speed="1.1"
-            className="text-xl/10 md:text-2xl/10 lg:text-4xl/normal tracking-wide px-[10%] py-10 "
+            className="text-xl/10 md:text-2xl/10 lg:text-4xl/normal tracking-wide px-[10%] py-20 "
           >
             {services.textintro.map(renderContentItem)}
           </p>
-          <div className="flex flex-col md:flex-row px-[10%] md:justify-center gap-2  ">
+          <div className="flex flex-col md:flex-row px-[10%] md:justify-center gap-2   ">
             {services.introarray.map(renderContentItem)}
           </div>
         </div>

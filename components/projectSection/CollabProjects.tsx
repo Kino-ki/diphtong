@@ -24,16 +24,13 @@ export default function CollabProjects({ speed }: { speed: string }) {
             {collavoratives.h1}
           </h2>
           {projArray.map((p, i) => (
-            <div className="flex flex-col gap-5 " key={i}>
+            <div className="flex flex-col gap-5 pb-6 " key={i}>
               <a href={p.href} target="_blank">
-                <h3 className=" border-b border-transparent hover:border-wlite w-fit transition-all ease-in-out duration-300 text-2xl md:text-4xl 2xl:text-6xl capitalize">
+                <h3 className=" border-b border-transparent hover:border-wlite w-fit transition-all ease-in-out duration-300 text-2xl md:text-4xl lg:text-3xl capitalize">
                   {p.projectName}
                 </h3>
               </a>
-              <p className="md:text-xl 2xl:text-2xl/10 ">
-                {" "}
-                {p.projecDescription}{" "}
-              </p>
+              <p className="md:text-xl lg:text-lg "> {p.projecDescription} </p>
             </div>
           ))}
         </div>

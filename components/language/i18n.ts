@@ -456,6 +456,14 @@ export const dictionaries = {
               "Front-end development and motion design for a digital marketing agency based in Lévis, Québec.",
             href: "https://pleinlatete.ca/",
           },
+          {
+            id: 1,
+            projectName: "Chambre de commerce de Lotbinière",
+            services: ["Front-end integration: Wordpress/Elementor"],
+            projecDescription:
+              "Collaborated with the agency Plein la Tête to integrate the client’s custom design into a WordPress site using Elementor, ensuring responsive layouts and a faithful representation of the UI/UX for the Chambre de Commerce Lotbinière, Quebec.",
+            href: "https://cclotbiniere.com/",
+          },
         ],
       },
       upcomingProjects: {
@@ -981,6 +989,14 @@ export const dictionaries = {
             projecDescription:
               "Front-end development and motion design for a digital marketing agency based in Lévis, Québec.",
             href: "https://pleinlatete.ca/",
+          },
+          {
+            id: 1,
+            projectName: "Chambre de commerce de Lotbinière",
+            services: ["Intégration de maquette: Wordpress/Elementor"],
+            projecDescription:
+              "En collaboration avec l’agence Plein la Tête, intégration du design personnalisé du client dans un site WordPress utilisant Elementor, avec des mises en page responsives et une reproduction fidèle de l’UI/UX pour la Chambre de Commerce Lotbinière, Québec.",
+            href: "https://cclotbiniere.com/",
           },
         ],
       },

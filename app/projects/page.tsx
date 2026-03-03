@@ -21,7 +21,7 @@ export default function ProjectsPage() {
       {/*  --------------------------------BEANCES----------------------------- */}
       <section
         data-speed="1"
-        id="beances_editions"
+        id="beances"
         className="outer relative h-[120svh] bg-beancesprojmobile overflow-hidden  "
       >
         <BeancesProject speed="0.5" />

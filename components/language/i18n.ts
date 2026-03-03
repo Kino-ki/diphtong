@@ -79,7 +79,7 @@ export const dictionaries = {
             serv: ["full stack develoment", "Web design"],
             imageSrc: "/images/projserv/analogizing.svg",
 
-            link: "/projects#collaboratives",
+            link: "/projects#analogizing",
           },
           {
             id: "0",
@@ -96,7 +96,7 @@ export const dictionaries = {
             serv: ["collavorative project", "Font-End develoment"],
             imageSrc: "/images/projserv/plt.svg",
 
-            link: "/projects#collaboratives",
+            link: "/projects#collaborations",
           },
           {
             id: "1",
@@ -104,7 +104,7 @@ export const dictionaries = {
             serv: ["full stack develoment", "Web design"],
             imageSrc: "/images/projserv/infraredContact.svg",
 
-            link: "/projects#portfolio",
+            link: "/projects#esther_portfolio",
           },
         ],
         button: "discover all our projects",
@@ -584,16 +584,13 @@ export const dictionaries = {
             "Vous n’avez pas à vous soucier de l’aspect technique : nous nous occupons de tout, tout en vous tenant informé pour que vous soyez toujours impliqué dans le processus.",
         },
         thirdSlide: {
-          h3: [
-            "Lancement & accompagnement pour ",
-            { gray: "la croissance de votre entreprise" },
-          ],
+          h3: ["Lancement & accompagnement "],
           txtone:
             "Voici la partie la plus excitante : votre site web est en ligne !",
           txttwo:
             "Mais notre travail ne s’arrête pas là. Si vous avez besoin de mises à jour, de nouvelles fonctionnalités ou d’un support continu, nous sommes là pour vous.",
           txtthree:
-            "Votre site n’est pas seulement un projet — c’est la base de votre croissance en ligne. Nous vous aidons à en tirer le meilleur parti.",
+            "Votre site n’est pas seulement un projet, c’est la base de votre croissance en ligne. Nous vous aidons à en tirer le meilleur parti.",
         },
       },
       projservSection: {
@@ -605,7 +602,7 @@ export const dictionaries = {
             serv: ["Développmenet full stack", "design Web"],
             imageSrc: "/images/projserv/analogizing.svg",
 
-            link: "/projects#collaboratives",
+            link: "/projects#analogizing",
           },
           {
             id: "0",
@@ -622,7 +619,7 @@ export const dictionaries = {
             serv: ["projet collaboratif", "Développment Font-End"],
             imageSrc: "/images/projserv/plt.svg",
 
-            link: "/projects#collaboratives",
+            link: "/projects#collaborations",
           },
           {
             id: "1",
@@ -630,7 +627,7 @@ export const dictionaries = {
             serv: ["Développmenet full stack", "design Web"],
             imageSrc: "/images/projserv/infraredContact.svg",
 
-            link: "/projects#portfolio",
+            link: "/projects#esther_portfolio",
           },
         ],
         button: "découvrez tous nos projets",
@@ -659,7 +656,7 @@ export const dictionaries = {
           },
           {
             id: "04",
-            h3: "Contenu & stratégie SEO",
+            h3: "Contenu & strategie SEO",
             content:
               "Des contenus clairs et stratégiques, pensés pour vos utilisateurs et les moteurs de recherche, afin d’augmenter votre visibilité et vos conversions.",
           },
@@ -667,7 +664,7 @@ export const dictionaries = {
         button: "explorez nos services",
       },
       reachoutsection: {
-        h2: "Prêt·e à booster votre présence en ligne ?",
+        h2: "Donnez une nouvelle dimension à votre présence en ligne",
         content:
           "Que vous soyez un artiste souhaitant un portfolio qui brille ou une petite entreprise cherchant à se développer, nous sommes là pour vous aider. Notre expertise en design, développement et SEO garantit que votre site n’est pas seulement beau : il travaille pour vous.",
       },

@@ -47,7 +47,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
   }, [isSent, lang]);
 
   return (
-    <div className="w-full h-full font-urbanistr text-start text-xl">
+    <div className="w-full h-full font-urbanistr text-start text-xl flex flex-col justify-center">
       <form
         className="flex flex-col w gap-[4vh] h-full "
         onSubmit={handleSubmit(onSubmit)}

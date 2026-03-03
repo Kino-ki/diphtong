@@ -24,7 +24,7 @@ export default function ReachOutSection() {
           </div>
         </div>
         <div className="flex flex-col justify-center lg:w-1/2">
-          <div className=" flex justify-center items-center w-full  md:mt-20 mt-10 h-[80svh] lg:h-[80svh] ">
+          <div className=" flex  justify-center items-center w-full  md:mt-20 mt-10 h-[80svh] lg:h-[80svh] ">
             <ContactForm lang={language} />
           </div>
         </div>

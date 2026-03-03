@@ -19,7 +19,7 @@ export default function HomePage() {
           <div className="z-0">
             <SectionWhyUs />
           </div>
-          <div className=" bg-wlite z-10 relative ">   
+          <div className=" bg-wlite z-10 relative ">
             <PreHomeSlides />
             <HomeHorizontalScroll />
             <Projects />

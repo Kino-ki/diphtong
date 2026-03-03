@@ -44,7 +44,7 @@ export function ContactButton({
       <a href="/contact" className="">
         <p className={`text-wlite  ${textsize}`}>
           {" "}
-          {language === "EN" ? "hit us up" : "contactez-nous"}{" "}
+          {language === "EN" ? "contact me" : "me contacter"}{" "}
         </p>
       </a>
     </button>

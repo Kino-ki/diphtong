@@ -231,8 +231,8 @@ export const dictionaries = {
     },
     contactPage: {
       PageTitle: "Contact",
-      h2: "we would love to hear about your projects",
-      h3: "ask us your question or book a meeting with us",
+      h2: "Let’s talk about your project",
+      h3: "Ask your questions or schedule a meeting to explore how we can move forward.",
       form: {
         name: "name",
         email: "email (required)",
@@ -340,11 +340,11 @@ export const dictionaries = {
             content: [
               "Already have a website? I’ll help you  ",
               { bold: "keep it fresh and secure. " },
-              "Many of my clients come to me with existing sites that need ",
+              "Many clients reach out for ",
               { bold: "updates, bug fixes, or content changes. " },
-              " and I make sure everything runs smoothly. ",
+              " I make sure everything runs smoothly so your website remains reliable and effective. ",
             ],
-            h3: " maintenance plans cover:",
+            h3: "My maintenance services include: ",
             webdevarray: [
               "Security updates & plugin management",
               "Regular backups to prevent data loss",
@@ -352,7 +352,7 @@ export const dictionaries = {
               "Performance audits & speed optimization",
             ],
             conclusion: [
-              "Whether your site was built on WordPress or custom code, we offer ",
+              "Whether your site was built on WordPress or custom code, I offer ",
               {
                 bold: "flexible maintenance plans ",
               },
@@ -370,7 +370,7 @@ export const dictionaries = {
                 bold: "you’re visible to the right audience at the right time.",
               },
             ],
-            h3: "With us, you get:",
+            h3: "What you can expect:",
             webdevarray: [
               "Strategic keyword research based on your industry, audience, and goals.",
               "Optimized site structure and technical foundations that support long-term visibility.",
@@ -396,10 +396,10 @@ export const dictionaries = {
         services: [" web design ", "full stack develoment"],
         content: [
           "Analogizing is the digital portfolio of a ",
-          { bold: "multidisciplinary queer artist based in Montreal. " },
+          { bold: "multidisciplinary artist based in Montreal. " },
           "Their practice spans writing, translation, photography, collage, and sculpture.",
           {
-            br: "We designed a minimalist website offering ",
+            br: "I designed a minimalist website offering ",
           },
           { bold: "an elegant and fluid experience," },
           " with smooth animations, no visual noise, and a layout inspired by contemporary art galleries. ",
@@ -418,7 +418,7 @@ export const dictionaries = {
           "Béances Éditions is a Montreal-based publishing house amplifying ",
           { bold: "lesbo-queer, lesbian, and trans voices " },
           "rarely heard in the Francophone world. Their mission: to reclaim space, pleasure, and time for stories that inspire, challenge, and resist erasure.",
-          { br: "We designed a bold, characterful website that echoes " },
+          { br: "I designed a bold, characterful website that echoes " },
           { bold: " feminist punk and grunge aesthetics: " },
           "vibrant colors, stencil-style visuals, and unapologetic energy. The result is a platform that feels both rebellious and accessible, staying true to Béances’ vision of literature as a space for liberation and collective expression.",
         ],
@@ -433,7 +433,7 @@ export const dictionaries = {
         services: [" web design ", "full stack develoment"],
         content: [
           "Esther Lhuillery is a Montreal-based video editor specializing in movie trailers. Her work blends precision and emotion, capturing the essence of each film in just a few minutes. ",
-          { br: "We designed a " },
+          { br: "I designed a " },
           { bold: "minimalist one-page website " },
           "that mirrors the atmosphere of a dark cinema room : elegant, and focused entirely on the moving image. ",
           {
@@ -479,7 +479,7 @@ export const dictionaries = {
     },
     footer: {
       services: {
-        h2: "our services",
+        h2: "Services",
         servicearray: [
           {
             id: "dev",
@@ -499,11 +499,11 @@ export const dictionaries = {
           },
         ],
       },
-      h22: "Our Company",
-      about: "about us",
-      projects: "our projects",
-      sitemap: "sitemap",
-      contact: "contact info",
+      h22: "About",
+      about: "about me",
+      projects: "my work",
+      // sitemap: "sitemap",
+      contact: "contact me",
       cta: ["let's talk about your next", { br: "project" }],
     },
     navbar: {
@@ -757,7 +757,7 @@ export const dictionaries = {
     },
     contactPage: {
       PageTitle: "Contact",
-      h2: "Nous aimerions beaucoup découvrir vos projets",
+      h2: "Parlons de votre projet.",
       h3: "Posez-nous vos questions ou réservez une rencontre avec nous",
       form: {
         name: "name",
@@ -770,9 +770,9 @@ export const dictionaries = {
     servicesPage: {
       h1: "Mes services",
       textintro: [
-        "Nous créons des sites web à la fois ",
-        { bold: "visuellement percutants et techniquement irréprochables. " },
-        " Que vous soyez un artiste, une petite ou moyenne entreprise, nos services couvrent tout ce dont vous avez besoin : ",
+        "Je crée des sites qui allient ",
+        { bold: "identité visuelle forte et performance technique. " },
+        "Du portfolio créatif aux petites et moyennes entreprises, j’offre les services essentiels pour faire de votre site un véritable levier de croissance :",
       ],
       introarray: [
         {
@@ -826,7 +826,7 @@ export const dictionaries = {
               {
                 bold: "Des artistes de Montréal aux entreprises du monde entier, ",
               },
-              "Je vous aide à lancer un site web à la fois beau et fonctionnel.",
+              "Je vous aide à lancer un site web à la fois élégant et fonctionnel.",
             ],
           },
         },
@@ -866,15 +866,15 @@ export const dictionaries = {
           serv: {
             h2: "Maintenance & Mises à jour",
             content: [
-              "Vous avez déjà un site web ? Nous vous aidons à ",
+              "Vous avez déjà un site web ? Je vous aide à ",
               { bold: "le garder à jour et sécurisé. " },
-              "De nombreux clients viennent à nous avec des sites existants nécessitant ",
+              "De nombreux clients me contactent pour ",
               {
-                bold: "des mises à jour, corrections de bugs ou changements de contenu. ",
+                bold: "des mises à jour, des corrections de bugs ou des ajustements de contenu. ",
               },
-              " et nous nous assurons que tout fonctionne parfaitement. ",
+              " Je m'assure que tout fonctionne parfaitement, afin que votre site reste fiable et efficace au quotidien. ",
             ],
-            h3: "Nos forfaits de maintenance couvrent :",
+            h3: "Mes services de maintenance incluent :",
             webdevarray: [
               "Mises à jour de sécurité et gestion des plugins",
               "Sauvegardes régulières pour éviter toute perte de données",
@@ -882,11 +882,11 @@ export const dictionaries = {
               "Audits de performance et optimisation de la vitesse",
             ],
             conclusion: [
-              "Que votre site ait été développé sous WordPress ou en code personnalisé, nous proposons ",
+              "Que votre site ait été développé sous WordPress ou en code personnalisé, je propose ",
               {
                 bold: "des forfaits de maintenance flexibles ",
               },
-              "afin que vous puissiez vous concentrer sur votre activité pendant que nous gérons la technique.",
+              "afin que vous puissiez vous concentrer sur votre activité pendant que je gére la partie technique.",
             ],
           },
         },
@@ -900,7 +900,7 @@ export const dictionaries = {
                 bold: "visible auprès des bonnes personnes, au bon moment. ",
               },
             ],
-            h3: "Avec nous, vous bénéficiez de :",
+            h3: "Ce que je vous apporte :",
             webdevarray: [
               "Une recherche de mots-clés stratégique alignée sur votre activité, votre audience et vos objectifs.",
               "Une structure de site optimisée et des bases techniques solides pour soutenir votre visibilité à long terme. ",
@@ -925,10 +925,10 @@ export const dictionaries = {
         services: [" web design ", "full stack develoment"],
         content: [
           "Analogizing est le portfolio numérique d’un·e ",
-          { bold: "artiste queer pluridisciplinaire basé·e à Montréal. " },
+          { bold: "artiste pluridisciplinaire basé·e à Montréal. " },
           "Sa pratique englobe l’écriture, la traduction, la photographie, le collage et la sculpture.",
           {
-            br: "Nous avons conçu un site web minimaliste offrant ",
+            br: "J'ai conçu un site web minimaliste offrant ",
           },
           { bold: "une expérience élégante et fluide," },
           " avec des animations douces, aucune distraction visuelle, et une mise en page inspirée des galeries d’art contemporain. ",
@@ -948,7 +948,7 @@ export const dictionaries = {
           { bold: "des voix lesbo-queer, lesbiennes et trans " },
           "rarement entendues dans le monde francophone. Leur mission : réinvestir l’espace, le plaisir et le temps pour des récits qui inspirent, bousculent et résistent à l’effacement.",
           {
-            br: "Nous avons conçu un site web audacieux et plein de caractère, qui fait écho aux ",
+            br: "J'ai conçu un site web qui fait écho aux ",
           },
           { bold: "esthétiques féministes punk et grunge : " },
           "couleurs vibrantes, visuels inspirés du pochoir et énergie revendicatrice. Le résultat : une plateforme à la fois rebelle et accessible, fidèle à la vision de Béances, où la littérature devient un espace de libération et d’expression collective.",
@@ -963,7 +963,7 @@ export const dictionaries = {
         services: [" web design ", "full stack develoment"],
         content: [
           "Esther Lhuillery est une monteuse vidéo basée à Montréal, spécialisée dans les bandes-annonces de films. Son travail allie précision et émotion, capturant l’essence de chaque œuvre en quelques minutes seulement. ",
-          { br: "Nous avons conçu un " },
+          { br: "J'ai conçu un " },
           { bold: "site web minimaliste d’une seule page " },
           "qui évoque l’atmosphère d’une salle de cinéma sombre : élégant, et entièrement centré sur l’image en mouvement. ",
           {
@@ -983,7 +983,7 @@ export const dictionaries = {
             projectSubtitle: " studio éclaté",
             services: ["Front-End develoment"],
             projecDescription:
-              "Front-end development and motion design for a digital marketing agency based in Lévis, Québec.",
+              "Développement Front-End et motion design pour une agence de marketing digital basée à Lévis, Québec.",
             href: "https://pleinlatete.ca/",
           },
           {
@@ -997,7 +997,7 @@ export const dictionaries = {
         ],
       },
       upcomingProjects: {
-        h1: "A venir",
+        h1: "À venir",
         id: "upcoming",
         projects: [
           "Espace art nature",
@@ -1008,7 +1008,7 @@ export const dictionaries = {
     },
     footer: {
       services: {
-        h2: "nos services",
+        h2: "Services",
         servicearray: [
           {
             id: "dev",
@@ -1029,11 +1029,11 @@ export const dictionaries = {
         ],
       },
 
-      h22: "la compagnie",
-      about: "qui sommes-nous",
-      projects: "nos projets",
-      sitemap: "sitemap",
-      contact: "contactez-nous",
+      h22: "À propos",
+      about: "qui suis-je?",
+      projects: "mes projets",
+      // sitemap: "sitemap",
+      contact: "me contacter",
       cta: ["Discutons de votre prochain ", { br: "projet en ligne" }],
     },
     navbar: {

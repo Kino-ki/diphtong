@@ -471,7 +471,7 @@ export const dictionaries = {
         id: "upcoming",
 
         projects: [
-          "Chambre de commerce de Lotbinière",
+          "Espace art nature",
           "Christian Maria Brun Del Re Portfolio",
           "Physiothérapie Hélène Morin",
         ],
@@ -1001,7 +1001,7 @@ export const dictionaries = {
         h1: "A venir",
         id: "upcoming",
         projects: [
-          "Chambre de commerce de Lotbinière",
+          "Espace art nature",
           "Christian Maria Brun Del Re Portfolio",
           "Physiothérapie Hélène Morin",
         ],

@@ -5,7 +5,7 @@ export const dictionaries = {
       heroh3:
         "Elegant, High-Performance Websites for Artists and Small Businesses",
       firsttext:
-        "We are a Montréal-based web agency, crafting custom websites that blend creativity, performance, and strategy. Whether you’re an artist in need of a stunning portfolio or a small business owner ready to grow your brand, we design and develop websites that captivate your audience, load at lightning speed, and are built with SEO in mind to deliver measurable results.",
+        "I’m a Montréal-based web designer and developer, crafting custom websites that blend creativity, performance, and strategy. Whether you’re an artist in need of a stunning portfolio or a small business owner ready to grow your brand, I design and build websites that captivate your audience, load at lightning speed, and are built with SEO in mind to deliver measurable results.",
       ctaright: [
         "Built with ",
         { bold: " modern design " },
@@ -17,8 +17,8 @@ export const dictionaries = {
         { bold: " their story " },
       ],
       whyus: {
-        h21: "Why Choose Us",
-        h22: "for Your Website?",
+        h21: "Why trust me",
+        h22: "with your project?",
         pillars: [
           {
             title: "Design Excellence",
@@ -34,40 +34,40 @@ export const dictionaries = {
               " Fast-loading, mobile-optimized, and intuitive to navigate.",
           },
         ],
-        button: "more about us",
+        button: "about me",
       },
 
       horizontalScroll: {
         intro: {
-          h2: "Our Flow",
+          h2: "Together",
           subtitle:
             "From Idea to Launch, we keep the process smooth, transparent, and stress-free",
-          text: "Building a website might sound complicated, but with us, it’s a simple journey. From the first conversation to the moment your site goes live, we guide you step by step, always clear, always human.",
+          text: "Building a website might seem complex, but I make the process clear and straightforward. From our first conversation to launch day, I guide you step by step, with transparency, strategy, and a human touch.",
         },
         firstSlide: {
           h3: [{ gray: " Discovery:" }, " Understanding Your Needs"],
           txtone:
-            "This is where everything begins. We take the time to really listen who you are, what your business or art is about, and what you want your website to achieve.",
+            "This is where everything begins. I take the time to truly understand who you are, what your business or art is about, and what you want your website to achieve.",
           txttwo: "Think of it as a conversation, not a technical meeting.",
           txtthree:
-            "We’ll talk about your vision, your audience, your style, and even your budget. By the end of this step, you’ll know exactly what we’ll create together a website that reflects your unique identity and sets the right goals from the start.",
+            "We’ll talk about your vision, your audience, your style, and even your budget. By the end of this step, you’ll have a clear direction and a solid foundation for a website that reflects your identity and supports your goals from day one.",
         },
         secondSlide: {
           h3: [{ gray: "Creating a Website " }, "Your Users Will Love"],
           txtone:
-            "This is where ideas turn into reality. While we handle the design and development, you’ll see your future website come to life step by step",
+            "This is where ideas take shape.While I handle the design and development, you’ll see your website come to life step by step.",
           txttwo:
-            "We focus on design that looks beautiful, performance that feels fast, and a user experience that’s easy for everyone. ",
+            "I focus on thoughtful design, strong performance, and a seamless user experience that feels natural and intuitive.",
           txtthree:
-            "You don’t have to worry about the technical side, we take care of everything, keeping you updated so you always feel in the loop.",
+            "You don’t have to worry about the technical side, I take care of everything, keeping you informed throughout the process so you always feel confident and involved.",
         },
         thirdSlide: {
           h3: ["Launching & Helping ", { gray: "Your Business Grow" }],
           txtone: "Here comes the exciting part: your website goes live!  ",
           txttwo:
-            "But we don’t stop there. If you ever need updates, new features, or ongoing support, we’re here for you.",
+            "But it doesn’t end there. If you need updates, improvements, or ongoing support,I make sure it continues to evolve with your business.",
           txtthree:
-            "Your website isn’t just a project — it’s the foundation of your online growth. We help you make the most of it.",
+            "Your website isn’t just a project, it’s the foundation of your online growth. We help you make the most of it.",
         },
       },
       projservSection: {
@@ -107,10 +107,10 @@ export const dictionaries = {
             link: "/projects#esther_portfolio",
           },
         ],
-        button: "discover all our projects",
+        button: "view my work",
       },
       services: {
-        h2: "What we build",
+        h2: "What I build",
         h2content: "Websites designed to grow, evolve, and perform over time.",
         servarray: [
           {
@@ -138,12 +138,12 @@ export const dictionaries = {
               "Clear, strategic content designed for both users and search engines, helping you increase visibility and turn traffic into results.",
           },
         ],
-        button: "explore our services",
+        button: "discover my services",
       },
       reachoutsection: {
         h2: "Ready to Elevate Your Online Presence?",
         content:
-          "Whether you’re an artist who wants a portfolio that shines or a small business looking to grow, we’re here to help. Our expertise in design, development, and SEO ensures your website isn’t just beautiful, it works for you.",
+          "Whether you’re an artist who wants a portfolio that shines or a small business looking to grow, I'm here to help. With expertise in design, development, and SEO, I create websites that don’t just look beautiful, they’re built to perform and support your goals.",
       },
     },
     aboutPage: {
@@ -242,11 +242,11 @@ export const dictionaries = {
       adress: "2861 Ontario St E , Montréal (QC),H21X6  (514) 265-6791",
     },
     servicesPage: {
-      h1: "Our Web Services",
+      h1: "My Services",
       textintro: [
-        "We create websites that are both ",
-        { bold: "visually striking and technically flawless. " },
-        " Whether you’re an artist, a small or medium-sized business, our services cover everything you need: ",
+        "I create websites that are both ",
+        { bold: "visually striking and technically solid. " },
+        " Whether you’re an artist or a growing business, I offer everything you need to build a strong and effective online presence: ",
       ],
       introarray: [
         {
@@ -281,15 +281,15 @@ export const dictionaries = {
           serv: {
             h2: "web development",
             content: [
-              "We build ",
+              "I build ",
               { bold: "custom websites tailored to your goals. " },
               "Whether you’re looking for a high-end website with ",
               { bold: "animations and cutting-edge performance, " },
               "or an ",
               { bold: "affordable WordPress site that’s easy to manage, " },
-              "we adapt to your needs and budget.",
+              "I adapt to your needs and budget.",
             ],
-            h3: "Our development ensures:",
+            h3: "My development ensures:",
             webdevarray: [
               "SEO-friendly code for better visibility on Google",
               "Fast load times and optimized performance",
@@ -298,9 +298,9 @@ export const dictionaries = {
             ],
             conclusion: [
               {
-                bold: "From artists in Montreal to small and medium-sized businesses worldwide, ",
+                bold: "From artists in Montreal to growing businesses worldwide, ",
               },
-              "we help you launch a website that’s both beautiful and functional.",
+              "I help you launch a website that’s both beautiful and functional.",
             ],
           },
         },
@@ -311,13 +311,13 @@ export const dictionaries = {
             content: [
               "Design is more than just looks, it’s ",
               { bold: "how people experience your brand online. " },
-              "We craft websites shaped by ",
+              "I craft websites shaped by ",
               {
                 bold: "who you are and who you’re speaking to, ",
               },
               "ensuring every interaction feels natural and purposeful.",
             ],
-            h3: "What we offer:",
+            h3: "What I offer:",
             webdevarray: [
               "Custom layouts that reflect your brand’s personality",
               "Accessible and inclusive design for all audiences",
@@ -325,7 +325,7 @@ export const dictionaries = {
               "Integration of visual identity, typography, and colors",
             ],
             conclusion: [
-              "We design websites that ",
+              "I design websites that ",
               {
                 bold: "inspire trust and engage visitors, ",
               },
@@ -338,13 +338,13 @@ export const dictionaries = {
           serv: {
             h2: "Maintenance & Updates",
             content: [
-              "Already have a website? We’ll help you  ",
+              "Already have a website? I’ll help you  ",
               { bold: "keep it fresh and secure. " },
-              "Many of our clients come to us with existing sites that need ",
-              { bold: "updates, bug fixes, orcontentchanges. " },
-              " and we make sure everything runs smoothly. ",
+              "Many of my clients come to me with existing sites that need ",
+              { bold: "updates, bug fixes, or content changes. " },
+              " and I make sure everything runs smoothly. ",
             ],
-            h3: "Our maintenance plans cover:",
+            h3: " maintenance plans cover:",
             webdevarray: [
               "Security updates & plugin management",
               "Regular backups to prevent data loss",
@@ -525,7 +525,7 @@ export const dictionaries = {
       heroh3:
         "Sites élégants et performants pour artistes et petites entreprises",
       firsttext:
-        "Nous sommes une agence web basée à Montréal et travaillant à l’international, spécialisée dans la création de sites web sur mesure qui allient créativité, performance et stratégie. Que vous soyez un artiste à la recherche d’un portfolio en ligne captivant ou une petite entreprise souhaitant développer sa marque, nous concevons et développons des sites qui séduisent votre audience, se chargent à une vitesse éclair, et sont pensés pour le référencement (SEO) afin de générer des résultats concrets.",
+        "Je suis conceptrice et développeuse web basée à Montréal, travaillant à l’international. Je crée des sites web sur mesure qui allient créativité, performance et stratégie. Que vous soyez un artiste à la recherche d’un portfolio en ligne captivant ou une petite entreprise souhaitant développer sa marque, je conçois et développe des sites qui séduisent votre audience, se chargent rapidement et sont pensés pour le référencement (SEO) afin de générer des résultats concrets.",
       ctaright: [
         "Conçus avec",
         { bold: " un design moderne " },
@@ -537,8 +537,8 @@ export const dictionaries = {
         { bold: " leur histoire " },
       ],
       whyus: {
-        h21: "Pourquoi nous choisir",
-        h22: "pour votre site web ?",
+        h21: "Pourquoi me confier",
+        h22: "votre site web ?",
         pillars: [
           {
             title: "Excellence du design",
@@ -554,22 +554,22 @@ export const dictionaries = {
               "Rapidité de chargement, optimisation mobile et navigation intuitive.",
           },
         ],
-        button: "nous découvrir",
+        button: "à propos de moi",
       },
       horizontalScroll: {
         intro: {
-          h2: "Notre Flow",
+          h2: "Ensemble",
           subtitle:
             "De l’idée au lancement, nous gardons le processus fluide, transparent et sans stress",
-          text: "Créer un site web peut sembler compliqué, mais avec nous, c’est un parcours simple. De la première conversation jusqu’à la mise en ligne de votre site, nous vous guidons étape par étape — toujours avec clarté, toujours avec une approche humaine.",
+          text: "Créer un site web peut sembler complexe, mais je rends le processus clair et fluide. De notre première discussion jusqu’à la mise en ligne, je vous accompagne étape par étape, avec transparence, stratégie et une vraie dimension humaine.",
         },
         firstSlide: {
           h3: [{ gray: " Découverte: " }, "comprendre vos besoins"],
           txtone:
-            "C’est ici que tout commence. Nous prenons le temps de vraiment écouter : qui vous êtes, ce que représente votre entreprise ou votre art, et ce que vous souhaitez que votre site web accomplisse.",
+            "C’est ici que tout commence. Je prends le temps de comprendre qui vous êtes, ce que représente votre activité ou votre univers artistique, et ce que vous attendez réellement de votre site web.",
           txttwo: "Voyez cela comme une discussion, pas une réunion technique.",
           txtthree:
-            "Nous parlerons de votre vision, de votre audience, de votre style et même de votre budget. À la fin de cette étape, vous saurez exactement ce que nous allons créer ensemble : un site web qui reflète votre identité unique et fixe les bons objectifs dès le départ.",
+            "Nous parlerons de votre vision, de votre audience, de votre style et même de votre budget. À l’issue de cette étape, vous avez une direction claire et des bases solides pour créer un site qui reflète votre identité et sert vos objectifs dès le départ.",
         },
         secondSlide: {
           h3: [
@@ -577,20 +577,19 @@ export const dictionaries = {
             "que vos utilisateurs vont adorer",
           ],
           txtone:
-            "C’est ici que les idées prennent vie. Pendant que nous nous occupons du design et du développement, vous verrez votre futur site se concrétiser étape par étape.",
+            "C’est ici que les idées prennent forme. Je prends en charge le design et le développement pendant que vous voyez votre futur site web évoluer étape par étape.",
           txttwo:
-            "Nous mettons l’accent sur un design esthétique, des performances rapides et une expérience utilisateur intuitive pour tous.",
+            "Je veille à créer un design soigné, une performance fluide et une expérience utilisateur intuitive.",
           txtthree:
-            "Vous n’avez pas à vous soucier de l’aspect technique : nous nous occupons de tout, tout en vous tenant informé pour que vous soyez toujours impliqué dans le processus.",
+            "Vous n’avez pas à vous soucier de l’aspect technique, je m'occupe de tout, en vous tenant informé à chaque étape pour que vous soyez toujours impliqué dans le processus.",
         },
         thirdSlide: {
           h3: ["Lancement & accompagnement "],
-          txtone:
-            "Voici la partie la plus excitante : votre site web est en ligne !",
+          txtone: "Voici le moment tant attendu : votre site est en ligne.",
           txttwo:
-            "Mais notre travail ne s’arrête pas là. Si vous avez besoin de mises à jour, de nouvelles fonctionnalités ou d’un support continu, nous sommes là pour vous.",
+            "Mais l’accompagnement ne s’arrête pas là. Si vous avez besoin de mises à jour, d’améliorations ou d’un suivi continu, je reste disponible.",
           txtthree:
-            "Votre site n’est pas seulement un projet, c’est la base de votre croissance en ligne. Nous vous aidons à en tirer le meilleur parti.",
+            "Votre site n’est pas seulement un projet, c’est la base de votre croissance en ligne. Je vous aide à le faire évoluer dans le temps.",
         },
       },
       projservSection: {
@@ -630,7 +629,7 @@ export const dictionaries = {
             link: "/projects#esther_portfolio",
           },
         ],
-        button: "découvrez tous nos projets",
+        button: "voir mes projets",
       },
       services: {
         h2: "Services",
@@ -661,12 +660,12 @@ export const dictionaries = {
               "Des contenus clairs et stratégiques, pensés pour vos utilisateurs et les moteurs de recherche, afin d’augmenter votre visibilité et vos conversions.",
           },
         ],
-        button: "explorez nos services",
+        button: "découvrir mes services",
       },
       reachoutsection: {
         h2: "Donnez une nouvelle dimension à votre présence en ligne",
         content:
-          "Que vous soyez un artiste souhaitant un portfolio qui brille ou une petite entreprise cherchant à se développer, nous sommes là pour vous aider. Notre expertise en design, développement et SEO garantit que votre site n’est pas seulement beau : il travaille pour vous.",
+          "Que vous soyez un artiste souhaitant un portfolio qui brille ou une petite entreprise cherchant à se développer, je suis là pour vous accompagner. Grâce à mon expertise en design, développement et référencement (SEO), je crée des sites qui ne sont pas seulement esthétiques : ils sont pensés pour soutenir vos objectifs.",
       },
     },
     aboutPage: {
@@ -769,7 +768,7 @@ export const dictionaries = {
       adress: "2861 Rue Ontario Est , Montréal (QC),H21X6  (514) 265-6791",
     },
     servicesPage: {
-      h1: "Nos Services Web",
+      h1: "Mes services",
       textintro: [
         "Nous créons des sites web à la fois ",
         { bold: "visuellement percutants et techniquement irréprochables. " },
@@ -808,15 +807,15 @@ export const dictionaries = {
           serv: {
             h2: "Développement Web",
             content: [
-              "Nous créons ",
+              "Je crée ",
               { bold: "des sites web sur mesure adaptés à vos objectifs. " },
               "Que vous recherchiez un site haut de gamme avec ",
               { bold: "animations et performance de pointe, " },
               "ou un ",
               { bold: "site WordPress abordable et facile à gérer, " },
-              "nous nous adaptons à vos besoins et à votre budget.",
+              "je m'adapte à vos besoins et à votre budget.",
             ],
-            h3: "Notre développement garantit :",
+            h3: "Mon développement garantit :",
             webdevarray: [
               "Un code optimisé pour le SEO et une meilleure visibilité sur Google",
               "Des temps de chargement rapides et des performances optimisées",
@@ -825,9 +824,9 @@ export const dictionaries = {
             ],
             conclusion: [
               {
-                bold: "Des artistes de Montréal aux petites entreprises du monde entier, ",
+                bold: "Des artistes de Montréal aux entreprises du monde entier, ",
               },
-              "nous vous aidons à lancer un site web à la fois beau et fonctionnel.",
+              "Je vous aide à lancer un site web à la fois beau et fonctionnel.",
             ],
           },
         },
@@ -840,13 +839,13 @@ export const dictionaries = {
               {
                 bold: "il structure la manière dont votre marque est perçue en ligne. ",
               },
-              "Nous concevons des sites alignés sur ",
+              "Je conçois des sites alignés sur ",
               {
                 bold: "votre identité, vos objectifs et les attentes de votre clientèle, ",
               },
               "afin de créer une expérience cohérente, fluide et engageante.",
             ],
-            h3: "Ce que nous offrons :",
+            h3: "Ce que j'offre :",
             webdevarray: [
               "Des maquettes personnalisées qui reflètent la personnalité de votre marque",
               "Un design accessible et inclusif pour tous les publics",
@@ -854,7 +853,7 @@ export const dictionaries = {
               "L’intégration de l’identité visuelle, de la typographie et des couleurs",
             ],
             conclusion: [
-              "Nous concevons des sites web qui ",
+              "Je conçois des sites web qui ",
               {
                 bold: "inspirent confiance et engagent les visiteurs, ",
               },

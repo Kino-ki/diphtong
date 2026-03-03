@@ -65,7 +65,7 @@ export default function SectionCta() {
                 <p className="text-wlite font-urbanistmed text-base lg:text-xl ">
                   {language === "EN"
                     ? "start your project today"
-                    : "contactez-nous"}
+                    : "discutons de votre projet"}
                 </p>
               </Link>
             </button>

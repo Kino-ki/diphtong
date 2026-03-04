@@ -1,7 +1,7 @@
 export const dictionaries = {
   EN: {
     homepage: {
-      heroh2: "creative web agency",
+      heroh2: "Freelance Web Developer",
       heroh3:
         "Elegant, High-Performance Websites for Artists and Small Businesses",
       firsttext:
@@ -55,7 +55,7 @@ export const dictionaries = {
         secondSlide: {
           h3: [{ gray: "Creating a Website " }, "Your Users Will Love"],
           txtone:
-            "This is where ideas take shape.While I handle the design and development, you’ll see your website come to life step by step.",
+            "This is where ideas take shape. While I handle the design and development, you’ll see your website come to life step by step.",
           txttwo:
             "I focus on thoughtful design, strong performance, and a seamless user experience that feels natural and intuitive.",
           txtthree:
@@ -147,54 +147,44 @@ export const dictionaries = {
       },
     },
     aboutPage: {
-      h1: "About us",
-      h1description: "Web Design for Artists & Small Businesses in Montreal",
+      h1: "About me",
+      h1description:
+        "Web Services for Artists & Growing Businesses in Montreal",
       firsttext:
-        "We’re a women-led web development company based in Montreal. We help artists and small businesses build beautiful, functional websites, with solutions tailored to your vision, needs, and budget.",
+        "Based in Montréal, I design and develop websites for artists and small businesses looking to combine aesthetics, performance, and brand clarity. Each project is crafted with intention, whether you need a fully custom solution or something simple and manageable. ",
       secondSectionspecial: {
-        h3: "Why We Do What We Do",
+        h3: "The Purpose Behind My Work",
         specialcontent: [
-          "We believe that a website is more than a digital placeholder, ",
-          { bold: "it’s your portfolio, your showcase, your stage. " },
-          "That’s why we specialize in:",
+          "A website isn’t just a page on the internet, it’s a strategic tool that represents your work, your credibility, and your growth.",
+          "I specialize in:",
         ],
         specialarray: [
-          "Portfolio websites for artists",
-          "Websites for small and medium-sized  businesses",
-          "Updating and maintaining existing websites",
+          "Portfolio websites for creatives",
+          "Websites for growing businesses",
+          "Optimization and maintenance of existing sites",
         ],
         specialend: [
-          "Whether you’re launching a new site or need support for an existing one, we make sure your online presence stays ",
+          "Whether you’re launching a new site or need support for an existing one, I make sure your online presence stays ",
           { bold: "modern, functional, and aligned with your goals." },
         ],
       },
       thirdSectionhow: {
-        h3: "How We Work",
+        h3: "What Sets Me Apart",
         howcontent: [
-          "We offer ",
-          { bold: "two website options " },
-          "to fit your needs and budget:",
-        ],
-        howarray: [
-          { bold: "Custom websites " },
-          "with advanced design and animations, and ",
-          { bold: "WordPress websites " },
-          "that are accessible and easy to manage.",
-        ],
-        creationend: [
-          "No matter which option you choose, every website is ",
+          "I combine design sensitivity with technical precision. As a musician and someone who has worked within growing businesses, I understand both ",
           {
-            bold: "carefully designed, responsive, and aligned with your brand.",
+            bold: "the creative mindset and the strategic demands of building something that lasts.",
           },
-        ],
-        maintenance: [
-          "We also provide ",
-          { bold: "maintenance and updates " },
-          "to keep your site fast, secure, and up to date.",
+          {
+            br: "You’re not hiring an agency with layers of communication, you’re working directly with the person building your website.",
+          },
+          {
+            br: "Clear communication, thoughtful execution, and long-term thinking guide every project.",
+          },
         ],
       },
       fourthsectionValues: {
-        h3: "Our Values",
+        h3: "My Values",
         valuesArray: [
           [
             { bold: "Creativity with clarity " },
@@ -216,9 +206,9 @@ export const dictionaries = {
         ],
       },
       founderNote: {
-        h3: "A Note from Our Founder",
+        h3: "A Personal Note",
         content:
-          "“As both a creative and an entrepreneur, I know how important it is to have a website that feels authentic and professional. I started this company to help artists and small businesses share their vision online  whether through high-end custom sites or more accessible WordPress solutions. Every project is crafted with care, creativity, and attention to detail.”",
+          "“As both a creative and an entrepreneur, I understand how important it is to have a website that feels authentic and professional. I created my practice to help artists and growing businesses share their vision work with clarity and confidence whether through fully custom experiences or accessible, easy-to-manage solutions. Every project I take on is built with intention, care, and attention to detail.“",
       },
       conclusion: {
         h3: "Let’s Create Something Together",
@@ -226,8 +216,8 @@ export const dictionaries = {
           "If you’re looking for a website that feels personal, professional, and designed around your vision, we’d love to collaborate  whether it’s a brand-new site or an update to your existing one.",
       },
       cta: "Reach out today,  let’s bring your ideas online.",
-      projcta: "Check out our projects",
-      servcta: "Discover our services",
+      projcta: "View my work",
+      servcta: "Discover my services",
     },
     contactPage: {
       PageTitle: "Contact",
@@ -242,7 +232,7 @@ export const dictionaries = {
       adress: "2861 Ontario St E , Montréal (QC),H21X6  (514) 265-6791",
     },
     servicesPage: {
-      h1: "My Services",
+      h1: ["My ", "Services"],
       textintro: [
         "I create websites that are both ",
         { bold: "visually striking and technically solid. " },
@@ -509,7 +499,7 @@ export const dictionaries = {
     navbar: {
       services: "services",
       about: "about",
-      proj: "our projects",
+      proj: "projects",
       contact: "contact",
     },
     mobilenav: [
@@ -521,7 +511,7 @@ export const dictionaries = {
   },
   FR: {
     homepage: {
-      heroh2: "agence web créative",
+      heroh2: "Développeuse Web Freelance",
       heroh3:
         "Sites élégants et performants pour artistes et petites entreprises",
       firsttext:
@@ -560,7 +550,7 @@ export const dictionaries = {
         intro: {
           h2: "Ensemble",
           subtitle:
-            "De l’idée au lancement, nous gardons le processus fluide, transparent et sans stress",
+            "De l’idée au lancement, le processus sera fluide, transparent et sans stress",
           text: "Créer un site web peut sembler complexe, mais je rends le processus clair et fluide. De notre première discussion jusqu’à la mise en ligne, je vous accompagne étape par étape, avec transparence, stratégie et une vraie dimension humaine.",
         },
         firstSlide: {
@@ -669,58 +659,43 @@ export const dictionaries = {
       },
     },
     aboutPage: {
-      h1: "Qui sommes nous?",
+      h1: "À propos",
       h1description:
-        "Conception de sites web pour artistes et petites entreprises à Montréal",
+        "Conception de sites web pour artistes et entreprises à Montréal",
       firsttext:
-        "Nous sommes une entreprise de développement web dirigée par des femmes, basée à Montréal. Nous accompagnons les artistes et les petites entreprises dans la création de sites web esthétiques, performants et alignés avec leur identité, en proposant des solutions sur mesure ou faciles à gérer, selon vos besoins et votre budget.",
+        "Développeuse web basée à Montréal, j’aide les artistes et les petites entreprises à créer des sites web à la fois esthétiques, performants et stratégiquement pensés pour refléter leur identité. Je propose des solutions sur mesure ou évolutives, adaptées à vos objectifs et à votre budget.",
       secondSectionspecial: {
-        h3: "Pourquoi nous faisons ce que nous faisons",
+        h3: "Ma vision du web",
         specialcontent: [
-          "Nous croyons qu’un site web est bien plus qu’une simple carte de visite numérique, ",
-          { bold: "c’est votre portfolio, votre vitrine, votre scène. " },
-          "C’est pourquoi nous nous spécialisons dans :",
+          "Un site web n’est pas qu’une présence en ligne : c’est un outil stratégique au service de votre image et de votre développement.",
+          "C’est pourquoi je me spécialise dans :",
         ],
         specialarray: [
           "Sites portfolio pour artistes",
           "Sites web pour petites et moyennes entreprises",
-          "Mise à jour et maintenance de sites existants",
+          "L’optimisation et le suivi technique",
         ],
         specialend: [
-          "Que vous lanciez un nouveau site ou que vous cherchiez du soutien pour un site déjà en ligne, nous faisons en sorte que votre présence numérique reste ",
-          { bold: "moderne, fonctionnelle et alignée avec vos objectifs." },
+          "De la création à l’évolution continue, je vous accompagne pour bâtir une présence digitale solide et durable.",
         ],
       },
       thirdSectionhow: {
-        h3: "Notre approche",
+        h3: "Ce qui me distingue",
         howcontent: [
-          "Nous créons des ",
-          { bold: "sites web adaptés à vos besoins et à votre vision, " },
-          "en vous offrant ",
-          { bold: "deux principales options :" },
-        ],
-        howarray: [
-          { bold: "Sites web sur mesure " },
-          "entièrement personnalisés, avec animations fluides, design élégant et fonctionnalités avancées pour une présence haut de gamme et unique. Parfait pour les clients recherchant une expérience digitale distinctive.",
-          { bold: "Sites WordPress " },
-          "une solution plus accessible, professionnelle, facile à mettre à jour et évolutive avec votre entreprise. Idéal pour les artistes et les petites entreprises ayant un budget limité.",
-        ],
-        creationend: [
-          "Peu importe l’option choisie, chaque site est ",
+          "J’allie sensibilité créative et rigueur technique. En tant que musicienne et après avoir évolué au sein d’entreprises en croissance, je comprends à la fois ",
           {
-            bold: "soigneusement conçu, responsive et aligné avec votre identité de marque.",
+            bold: "les enjeux créatifs et les impératifs stratégiques liés au développement d’un projet.",
           },
-        ],
-        maintenance: [
-          "Nous proposons également ",
           {
-            bold: "un service continu de maintenance et de support pour les sites existants, ",
+            br: "Vous travaillez directement avec la personne qui conçoit et développe votre site, sans intermédiaire.",
           },
-          "incluant mises à jour, optimisation des performances et petits redesigns pour garder votre site moderne et sécurisé.",
+          {
+            br: "Chaque projet repose sur une communication claire, une exécution soignée et une vision durable.",
+          },
         ],
       },
       fourthsectionValues: {
-        h3: "Nos valeurs",
+        h3: "Mes valeurs",
         valuesArray: [
           [
             { bold: "Créativité avec clarté " },
@@ -742,18 +717,18 @@ export const dictionaries = {
         ],
       },
       founderNote: {
-        h3: "Un mot de la fondatrice",
+        h3: "Une note personnelle",
         content:
-          "« En tant que créative et entrepreneure, je sais combien il est essentiel d’avoir un site web à la fois authentique et professionnel. J’ai fondé cette entreprise pour aider les artistes et les petites entreprises à partager leur vision en ligne — que ce soit via des sites entièrement sur mesure ou des solutions WordPress plus accessibles. Chaque projet est conçu avec soin, créativité et une grande attention aux détails. »",
+          "« En tant que créative et entrepreneure, je sais à quel point il est essentiel d’avoir un site web à la fois authentique et professionnel. J’ai lancé mon activité pour aider les artistes et les petites entreprises à partager leur vision avec clarté et assurance, à travers des solutions sur mesure ou accessibles et simples à gérer. Chaque projet est conçu avec intention, exigence et attention aux détails.»",
       },
       conclusion: {
         h3: "Créons ensemble votre site",
         content:
           "Si vous cherchez un site web à la fois personnel, professionnel et pensé pour refléter votre vision, nous serions ravies de collaborer avec vous — qu’il s’agisse d’un tout nouveau projet ou de l’amélioration de votre site existant.",
       },
-      cta: "Contactez-nous dès aujourd’hui et donnons vie à vos idées en ligne.",
-      projcta: "Explorez nos projets",
-      servcta: "Découvrez nos services",
+      cta: "Donnons vie à vos idées en ligne.",
+      projcta: "Explorer mon travail",
+      servcta: "Découvrir mes services",
     },
     contactPage: {
       PageTitle: "Contact",
@@ -768,7 +743,7 @@ export const dictionaries = {
       adress: "2861 Rue Ontario Est , Montréal (QC),H21X6  (514) 265-6791",
     },
     servicesPage: {
-      h1: "Mes services",
+      h1: ["Mes", "Services"],
       textintro: [
         "Je crée des sites qui allient ",
         { bold: "identité visuelle forte et performance technique. " },
@@ -1039,7 +1014,7 @@ export const dictionaries = {
     navbar: {
       services: "services",
       about: "a propos",
-      proj: "nos projets",
+      proj: "projets",
       contact: "contact",
     },
     mobilenav: [

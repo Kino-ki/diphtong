@@ -153,25 +153,15 @@ export default function AboutPage() {
                 {about.projcta}
               </p>
             </Link>
-
             <div
               ref={endtrigger}
-              className=" flex flex-col justify-end p-10 md:px-20 2xl:p-20    bg-wlite  "
+              className=" flex flex-col justify-end p-10 md:px-20 2xl:py-40  bg-wlite  "
             >
-              <h2 className=" text-3xl/relaxed md:text-5xl/relaxed lg:text-5xl/relaxed tracking-widest font-urbanistr pb-5 md:pb-12 2xl:py-20">
+              <h2 className=" text-3xl/relaxed md:text-5xl/relaxed lg:text-5xl/relaxed tracking-widest font-urbanistr pb-5 md:pb-12 2xl:pb-20">
                 {about.thirdSectionhow.h3}
               </h2>
               <p className="md:text-xl/8 2xl:text-2xl/10 tracking-wider">
                 {about.thirdSectionhow.howcontent.map(renderContentItem)}
-              </p>
-              <p className="md:text-xl/8 2xl:text-2xl/10  py-4 md:py-10 tracking-wider">
-                {about.thirdSectionhow.howarray.map(renderContentItem)}
-              </p>
-              <p className="md:text-xl/8 2xl:text-2xl/10 font-urbanistr pb-10">
-                {about.thirdSectionhow.maintenance.map(renderContentItem)}
-              </p>
-              <p className="text-xl md:text-2xl/8 2xl:text-3xl/10 ">
-                {about.thirdSectionhow.creationend.map(renderContentItem)}
               </p>
             </div>
             <Link
@@ -208,16 +198,15 @@ export default function AboutPage() {
               </ul>
             </div>
           </div>
-          <div className="w-full md:h-[100svh] flex flex-col lg:flex-row justify-between pb-8 px-5 ">
-            <div className="flex flex-col lg:w-1/2 ">
+          <div className="w-full md:h-[70svh] flex flex-col  pb-8 px-5 ">
+            <div className="flex flex-col  ">
               <h2 className="text-5xl md:text-6xl tracking-widest font-urbanistr md:py-20 pb-10">
                 {about.founderNote.h3}
               </h2>
-              <p className="text-lg/loose md:text-2xl 2xl:text-3xl/loose">
+              <p className="text-lg/loose md:text-2xl 2xl:text-3xl/loose ">
                 {about.founderNote.content}
               </p>
             </div>
-            <div className=""></div>
           </div>
           {/* ----------------------------RIGHT SIDE flex col ----------------------------------------------- */}
         </div>

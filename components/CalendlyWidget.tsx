@@ -19,7 +19,7 @@ export default function CalendlyWidget() {
         onClick={() => setOpen(true)}
         className="btn hover:ring-1 hover:ring-wlite"
       >
-        {language === "EN" ? "book a meeting" : "prenez un rendez-vous"}
+        {language === "EN" ? "book a meeting" : "prendre un rendez-vous"}
       </button>
 
       {isClient && open && (

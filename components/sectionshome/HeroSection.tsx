@@ -114,7 +114,7 @@ export default function HeroSection() {
             </div>
             <h1
               ref={creativRef}
-              className=" font-figtree opacity-0  capitalize tracking-widest md:tracking-[0.6rem] lg:tracking-[0.3rem] 2xl:tracking-[0.6rem]  text-3xl md:text-3xl/5  2xl:text-4xl/5 flex justify-center lg:justify-end  "
+              className=" font-figtree opacity-0  capitalize tracking-widest md:tracking-[0.4rem] lg:tracking-[0.3rem] 2xl:tracking-[0.4rem]  text-3xl md:text-3xl/5  2xl:text-4xl/5 flex justify-center lg:justify-end  "
             >
               {hero.heroh2}
             </h1>

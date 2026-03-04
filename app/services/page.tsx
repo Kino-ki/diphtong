@@ -75,17 +75,19 @@ export default function Services() {
   return (
     <div className="flex flex-col justify-start   h-auto  bg-diphblack">
       <div className="  ">
-        <div className="flex flex-col pb-12 lg:pb-32 pt-[6%]">
+        <div className="flex flex-col pb-12  lg:pb-32 pt-[5%]">
           <h1
             ref={titleRef}
-            className="lg:h-[100svh] font-menlob uppercase text-[15vw] lg:text-[12vw] px-5 md:px-[5%] "
+            className="lg:h-[100svh] font-menlob  uppercase text-[15vw] lg:text-[12vw]  px-5 md:px-[5%] "
           >
             {" "}
-            {services.h1}{" "}
+            {services.h1.map((h, i) => (
+              <p key={i}>{h} </p>
+            ))}{" "}
           </h1>
           <p
             data-speed="1.1"
-            className="text-xl/10 md:text-2xl/10 lg:text-4xl/normal tracking-wide px-[10%] py-20 "
+            className="text-xl/10 md:text-2xl/10 lg:text-4xl/normal tracking-wide px-[10%]  py-20 lg:py-40 "
           >
             {services.textintro.map(renderContentItem)}
           </p>

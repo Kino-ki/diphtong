@@ -53,7 +53,7 @@ export default function NavBar() {
           {
             scale: scaleFactor,
             y: "12rem",
-            x: "-56%",
+            x: "-45%",
             transformOrigin: "center center",
           },
           {
@@ -95,7 +95,6 @@ export default function NavBar() {
         );
       });
 
-      // ✅ clean up ONCE here (not inside mm.add)
       return () => {
         mm.revert();
         window.removeEventListener("scroll", handleScroll);

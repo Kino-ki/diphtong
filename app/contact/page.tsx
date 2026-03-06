@@ -59,21 +59,21 @@ export default function Contact() {
 
   return (
     <div className="bg-diphblack px-3  md:px-10 text-wlite  ">
-      <div className="flex flex-col gap-12 lg:flex-row  ">
+      <div className="flex flex-col gap-4 md:gap-12 lg:flex-row  ">
         <div
           ref={pinnedRef}
           className="flex flex-col justify-center  w-full lg:w-[40%] lg:sticky md:top-0 md:self-start items-center lg:h-[60svh] "
         >
           {/* <div className="lg:h-[20%] h-10  " /> */}
-          <div className="flex flex-col gap-8 ">
-            <h1 className="font-menlob  text-[20vw] md:text-[9rem] lg:text-[7rem] 2xl:text-[9rem] uppercase ">
+          <div className="flex flex-col gap-4 md:gap-8 pt-8 md:pt-0">
+            <h1 className="font-menlob text-[5rem] md:text-[9rem] lg:text-[7rem] 2xl:text-[9rem] uppercase flex justify-center lg:justify-start ">
               {" "}
               {contact.PageTitle}{" "}
             </h1>
-            <h2 className="md:font-figtree font-urbanistl lg:uppercase  text-xl md:text-3xl tracking-wider text-start xl:px-4">
+            <h2 className="md:font-figtree font-urbanistl lg:uppercase  md:text-3xl tracking-wider text-start xl:px-4 ">
               {contact.h2}
             </h2>
-            <div className=" w-full flex justify-start endtrigger xl:px-4">
+            <div className=" w-full flex justify-center lg:justify-start endtrigger xl:px-4 pt-6 md:pt-0">
               <CalendlyWidget />
             </div>
           </div>
@@ -81,7 +81,7 @@ export default function Contact() {
 
         <div className="flex flex-col gap-20 lg:gap-20 2xl:gap-20 lg:py-24 lg:w-[60%] md:items-end overflow-y-auto  ">
           <div className=" lg:w-full h-[80svh] md:h-[100svh]  mx-auto lg:px-10 ">
-            <h3 className="lg:font-urbanistmed  uppercase text-lg md:text-3xl lg:text-2xl 2xl:text-3xl  py-10 md:py-20 lg:py-12 xl:py-16 md:pb-32 tracking-wider text-center">
+            <h3 className="lg:font-urbanistmed  uppercase md:text-3xl lg:text-2xl 2xl:text-3xl  py-10 md:py-20 lg:py-12 xl:py-16 md:pb-32 tracking-wider text-center">
               {contact.h3}
             </h3>
             <ContactForm lang={language} />

@@ -77,9 +77,9 @@ export default function AboutPage() {
         if (!el) return;
         const tween = gsap.fromTo(
           el,
-          { backgroundColor: "#c3c3c3" },
+          { backgroundColor: "#E5E5E5" },
           {
-            backgroundColor: "#191919",
+            backgroundColor: "#161616",
             scrollTrigger: {
               trigger: el,
               start: "top 70%",
@@ -99,7 +99,7 @@ export default function AboutPage() {
   });
 
   return (
-    <div className=" bg-diphblack text-wlite font-urbanistl">
+    <div className=" bg-diphblack text-wlite font-urbanistr">
       <div className="flex flex-col">
         <div className="flex flex-col lg:flex-row px-5 md:px-10 lg:px-12 2xl:px-20">
           {/* ----------------------------LEFT SIDE flex col ----------------------------------------------- */}
@@ -107,7 +107,7 @@ export default function AboutPage() {
             <div className=" lg:h-[20svh] " />
             <h1
               ref={pinnedRef}
-              className=" text-8xl md:text-9xl lg:text-8xl/normal 2xl:text-9xl/none  2xl:pr-20 pt-20 md:py-12 lg:py-0  "
+              className=" text-8xl md:text-9xl lg:text-8xl/normal 2xl:text-9xl/none  2xl:pr-20 pt-20 md:py-12 lg:py-0 font-urbanistl  "
             >
               {about.h1}{" "}
             </h1>
@@ -175,7 +175,7 @@ export default function AboutPage() {
           </div>
         </div>
         {/* -------------------------------Second section VALUES & FOUNDER ------------------------------------------------- */}
-        <div className="bg-wlite pl-5 md:pl-12 2xl:pl-20 text-diphblack mx-5 md:mx-10 lg:mr-12 2xl:mr-20 flex flex-col gap-12 2xl:gap-0">
+        <div className="bg-wlite pl-5 md:pl-12 2xl:pl-20 text-diphblack mx-5 md:mx-10 lg:mx-12 2xl:mx-20 flex flex-col gap-12 2xl:gap-0">
           {/* ----------------------------LEFT SIDE flex col ----------------------------------------------- */}
           <div className="w-full 2xl:min-h-[100svh] flex flex-col justify-start py-10 ">
             <h2 className="text-5xl md:text-6xl tracking-widest font-urbanistr py-12 md:py-20">

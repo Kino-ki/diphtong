@@ -26,7 +26,7 @@ export default function SplashScreen({
       rotation: 360,
       repeat: -1,
       ease: "none",
-      duration: 30,
+      duration: 20,
     });
     gsap.to(logoRef.current, {
       scale: 1.1,
@@ -39,15 +39,15 @@ export default function SplashScreen({
 
   return (
     <div
-      className={`fixed inset-0 flex items-center justify-center bg-diphblack transition-opacity ease-out duration-500 ${
+      className={`fixed inset-0 flex items-center justify-center bg-diphblack transition-opacity  ease-out duration-500 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
       <Image
         ref={logoRef}
         src={dragon}
-        width={600}
-        height={600}
+        width={100}
+        height={100}
         alt="logo"
         className=""
       />

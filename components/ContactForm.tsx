@@ -138,7 +138,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
         <div className="flex flex-col gap-5 h-[30%]">
           {lang === "EN" ? (
             <label htmlFor="content">
-              let us know <span className="text-base">(required)</span>
+              how can we help <span className="text-base">(required)</span>
             </label>
           ) : (
             <label htmlFor="content">

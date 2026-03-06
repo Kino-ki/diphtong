@@ -100,7 +100,7 @@ export function renderContentItem(a: ContentItem, i: number) {
   if ("b" in a)
     return (
       <a
-        className="btn text-sm md:text-base lg:text-2xl btn uppercase hover:ring-1 ring-wlite"
+        className="btn text-sm md:text-base lg:text-2xl btn uppercase  hover:ring-1 ring-wlite"
         key={i}
         href={a.b.href}
         onClick={(e) => {

@@ -30,11 +30,11 @@ export const metadata: Metadata = {
     description:
       "I design and develop websites for artists and small businesses looking to combine aesthetics, performance, and brand clarity.",
     type: "website",
-    url: "https://diphtongweb.com/home",
+    url: "https://diphtong.ca/home",
     siteName: "Diphtong Web",
     images: [
       {
-        url: "https://diphtongweb.com/images/bgdragon.svg",
+        url: "https://diphtong.ca/images/bgdragon.svg",
         width: 1000,
         height: 1000,
         alt: "diphtong web opengraph photo",

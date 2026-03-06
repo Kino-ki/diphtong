@@ -97,7 +97,7 @@ export function GetAQuoteButton({
   return (
     <button
       ref={buttonRef}
-      className={` relative overflow-hidden border ${divclass}  border-wlite rounded-md  `}
+      className={` relative overflow-hidden border ${divclass}  border-wlite   `}
     >
       <a
         href="/contact"
@@ -142,7 +142,7 @@ export function VisitWebsite({
   return (
     <button
       ref={buttonRef}
-      className={` ${divClass} border-2 md:border-[3px]  rounded-xl py-5 px-12 md:px-20  transition-colors ease-in-out duration-200 s ${
+      className={` ${divClass} border-2 md:border-[2px]   py-5 px-12 md:px-20  transition-colors ease-in-out duration-200 s ${
         isHovered ? hoverborder : border
       } `}
     >

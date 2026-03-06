@@ -28,8 +28,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       document.documentElement.classList.remove("EN");
     }
     localStorage.setItem("language", language);
-
-    console.log("setItem", language);
   }, [language]);
 
   const handleLanguageChange = () => {

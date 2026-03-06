@@ -15,8 +15,9 @@ export default function SplashScreenWrapper({
 
   useEffect(() => {
     const hasSeenSplash = sessionStorage.getItem("hasSeenSplash") === "true";
+
     const timeoutDuration = hasSeenSplash ? 0 : 4000;
-    if (pathname === "/home") {
+    if (pathname === "/home" && !hasSeenSplash) {
       setShowSplash(true);
 
       const timeout = setTimeout(() => {

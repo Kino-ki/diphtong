@@ -29,7 +29,6 @@ export default function NewFooter() {
               <li key={i} className="md:text-start text-center">
                 <a
                   className="hover:underline capitalize"
-                  target="_blank"
                   href={`/services/#${s.id}`}
                 >
                   {s.h3}
@@ -44,18 +43,18 @@ export default function NewFooter() {
           </h2>
           <ul className="capitalize lg:text-lg 2xl:text-xl font-menlor flex flex-col gap-3 w-1/2 md:w-full md:text-start text-center ">
             <li>
-              <a className="hover:underline" href="/about" target="_blank">
+              <a className="hover:underline" href="/about">
                 {footer.about}
               </a>
             </li>
             <li>
-              <a className="hover:underline" href="/projects" target="_blank">
+              <a className="hover:underline" href="/projects">
                 {footer.projects}
               </a>
             </li>
 
             <li>
-              <a className="hover:underline" href="/contact" target="_blank">
+              <a className="hover:underline" href="/contact">
                 {footer.contact}
               </a>
             </li>

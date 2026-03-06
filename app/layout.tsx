@@ -9,10 +9,37 @@ import NewFooter from "@/components/navigation/NewFooter";
 import SmoothWrapper from "@/components/SmoothWrapper";
 import SplashScreenWrapper from "@/components/SplashScreenWrapper";
 export const metadata: Metadata = {
-  title: "Diphtong Web Agency | Agence Web Diphtong",
-  description: "Creative web agency",
+  title: "Diphtong Web",
+  description:
+    "Freelance Web Developer. I design and develop websites for artists and small businesses looking to combine aesthetics, performance, and brand clarity.",
+  keywords: [
+    "web development",
+    "artist",
+    "growing business ",
+    "custom",
+    "WordPress",
+    "accessibility",
+    "portfolio",
+    "Montreal",
+  ],
   icons: {
     icon: "/images/bgdragon.svg",
+  },
+  openGraph: {
+    title: "Home | Diphtong Web",
+    description:
+      "I design and develop websites for artists and small businesses looking to combine aesthetics, performance, and brand clarity.",
+    type: "website",
+    url: "https://diphtongweb.com/home",
+    siteName: "Diphtong Web",
+    images: [
+      {
+        url: "https://diphtongweb.com/images/bgdragon.svg",
+        width: 1000,
+        height: 1000,
+        alt: "diphtong web opengraph photo",
+      },
+    ],
   },
 };
 export default function RootLayout({

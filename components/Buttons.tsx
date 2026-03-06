@@ -44,7 +44,7 @@ export function ContactButton({
       <a href="/contact" className="">
         <p className={`text-wlite  ${textsize}`}>
           {" "}
-          {language === "EN" ? "hit us up" : "contactez-nous"}{" "}
+          {language === "EN" ? "contact me" : "me contacter"}{" "}
         </p>
       </a>
     </button>
@@ -107,7 +107,7 @@ export function GetAQuoteButton({
           ref={textRef}
           className="relative z-10 text-wlite text-base tracking-wider flex justify-start w-full uppercase font-figtree  py-5"
         >
-          {language === "EN" ? "Get a free quote" : "Évaluation"}
+          {language === "EN" ? "Get a free quote" : "Demander un devis gratuit"}
         </p>
         <Image
           src={isHovered ? blackarrow : arrow}

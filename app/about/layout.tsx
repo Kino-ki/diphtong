@@ -1,27 +1,25 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | Diphtong Web Agency",
+  title: "About | Diphtong Web",
   description:
-    "We are a young, women-led web development company from Montreal. We specialize in sleek, custom websites for artists, creatives, and small businesses, offering both affordable WordPress solutions and high-end Next.js websites with animations.",
+    "I design and develop websites for artists and small businesses looking to combine aesthetics, performance, and brand clarity.",
   keywords: [
-    "Montreal web development",
-    "artist websites",
-    "small business websites",
-    "affordable web design",
-    "custom Next.js websites",
-    "WordPress websites Montreal",
-    "women-led web agency",
-    "modern website design",
-    "portfolio websites for artists",
-    "website maintenance services",
+    "web development",
+    "artist",
+    "growing business ",
+    "custom",
+    "WordPress",
+    "modern",
+    "portfolio",
+    "Montreal",
   ],
   openGraph: {
-    title: "About Us | Diphtong Web Agency",
+    title: "About | Diphtong Web",
     description:
-      "Meet our Montreal-based, women-led web studio. We create sleek, modern websites for artists and small businesses, combining design, performance, and accessibility.",
+      "Sleek, modern websites for artists and growing businesses, combining design, performance, and accessibility.",
     url: "https://diphtongweb.com/about",
-    siteName: "Diphtong Web Agency",
+    siteName: "Diphtong Web",
   },
 };
 

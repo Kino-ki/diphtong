@@ -147,7 +147,7 @@ export const dictionaries = {
       },
     },
     aboutPage: {
-      h1: "About me",
+      h1: "About ",
       h1description:
         "Web Services for Artists & Growing Businesses in Montreal",
       firsttext:

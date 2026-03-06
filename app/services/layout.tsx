@@ -1,26 +1,24 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Custom Web Development, Design & Website Maintenance | Diphtong Web Agency",
+  title: "My services | Diphtong Web",
   description:
-    "Discover our tailored web services for artists and small businesses. From custom web development with Next.js and WordPress sites to sleek design, ongoing maintenance, and responsive solutions—we help you shine online.",
+    "Discover my tailored web services. From custom web development and WordPress sites to SEO and maintenance",
   keywords: [
-    "custom websites",
-    "Next.js websites",
-    "WordPress websites",
-    "artist portfolio websites",
-    "small business websites",
-    "website design",
-    "website maintenance",
-    "responsive websites",
+    "custom ",
+    "WordPress ",
+    "artist portfolio ",
+    "growing business ",
+    "web design",
+    " maintenance",
+    "SEO",
   ],
   openGraph: {
-    title: "Our Web Services | Diphtong Web Agency",
+    title: "My services | Diphtong Web",
     description:
-      "Explore our services: web development, design, maintenance, and responsive websites for artists and small businesses.",
+      "Explore our services: web development, design, maintenance, and SEO.",
     url: "https://diphtongweb.com/services",
-    siteName: "Diphtong Web Agency",
+    siteName: "Diphtong Web",
   },
 };
 

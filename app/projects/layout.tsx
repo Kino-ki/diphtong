@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "My Works | Diphtong Web",
     description:
       "I design and develop websites for artists and small businesses looking to combine aesthetics, performance, and brand clarity.",
-    url: "https://diphtongweb.com/projects",
+    url: "https://diphtong.ca/projects",
     siteName: "Diphtong Web",
   },
 };

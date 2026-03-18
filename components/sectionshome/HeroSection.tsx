@@ -109,12 +109,17 @@ export default function HeroSection() {
       <div className="h-full w-full backdrop-blur-[1px] bg-black/20 z-10 absolute inset-0 ">
         <div className="h-full w-full lg:pt-[18rem] 2xl:pt-[22rem] lg:pb-32 2xl:pb-40 flex justify-center">
           <div className=" flex flex-col justify-evenly lg:justify-between w-[95%] font-figtree">
-            <div className="lg:hidden flex justify-center  h-[50svh] md:h-[60svh] w-[60svw] md:w-[80svw] mx-auto relative ">
-              <Image src={diphtexte} alt="diph logo" fill />
+            <div className="lg:hidden flex justify-center  h-[50svh] md:h-[50svh] w-[50svw] md:w-[40svw] mx-auto relative ">
+              <Image
+                src={diphtexte}
+                alt="diph logo"
+                fill
+                className="opacity-80"
+              />
             </div>
             <h1
               ref={creativRef}
-              className=" font-figtree opacity-0  capitalize tracking-widest md:tracking-[0.4rem] lg:tracking-[0.3rem] 2xl:tracking-[0.4rem]  text-3xl md:text-3xl/5  2xl:text-4xl/5 flex justify-center lg:justify-end  "
+              className=" font-figtree opacity-0  capitalize tracking-widest md:tracking-[0.4rem] lg:tracking-[0.3rem] 2xl:tracking-[0.4rem]  text-3xl md:text-3xl/5  2xl:text-4xl/5  flex text-center lg:text-end justify-center lg:justify-end  "
             >
               {hero.heroh2}
             </h1>

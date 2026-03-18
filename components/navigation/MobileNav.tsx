@@ -1,7 +1,6 @@
 "use client";
 import cross from "@/public/images/ICONS/cross.svg";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "../language/LangContext";
@@ -15,8 +14,6 @@ export default function MobileNav() {
   const { mobilenav } = dictionary;
 
   useEffect(() => {
-    // if (pathname !== "/home") return;
-
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
@@ -70,34 +67,29 @@ export default function MobileNav() {
           >
             <Image src={cross} alt="cross" width={40} />
           </button>
-          <div className="pt-12 flex flex-col px-2 ">
-            <h1 className="font-akira  text-black text-[13.5vw] text-center">
-              <Link href="/">diphtong</Link>
-            </h1>
-            <h2 className="uppercase font-menlob text-[8vw] text-end md:-mt-10 -mt-5 ">
-              web agency
-            </h2>
-          </div>
-          <ul className="flex flex-col font-menlor text-2xl md:text-4xl pt-10 ">
-            {mobilenav.map((item, i) => (
-              <li
-                key={i}
-                className=" py-4 md:py-8 tracking-widest uppercase px-5  md:px-12"
+
+          <div className=" h-full flex flex-col justify-center">
+            <ul className="flex flex-col text-center font-menlor text-2xl md:text-4xl pt-10 ">
+              {mobilenav.map((item, i) => (
+                <li
+                  key={i}
+                  className=" py-4 md:py-8 tracking-widest uppercase px-5  md:px-12"
+                >
+                  <a href={`${item.href} `}>{item.txt}</a>
+                </li>
+              ))}
+            </ul>
+            <div className="flex justify-center py-12 pb-32">
+              <LangButton />
+            </div>
+            <div className=" flex justify-center   text-xl md:text-2xl  ">
+              <a
+                href="mailto:contact@diphtong.ca"
+                className="font-urbanistl tracking-widest underline underline-offset-4 "
               >
-                <a href={`${item.href} `}>{item.txt}</a>
-              </li>
-            ))}
-          </ul>
-          <div className="   text-xl md:text-2xl pr-10  absolute bottom-20 right-0 ">
-            <a
-              href="mailto:contact@diphtong.ca"
-              className="font-urbanistl tracking-widest underline underline-offset-4 "
-            >
-              contact@diphtong.com
-            </a>
-          </div>
-          <div className="px-5  md:px-12 py-12 ">
-            <LangButton />
+                contact@diphtong.com
+              </a>
+            </div>
           </div>
         </div>
       )}

@@ -42,7 +42,7 @@ export default function SectionWhyUs() {
         data-speed="1"
         className=" md:h-[100svh]  flex md:flex-row flex-col  "
       >
-        <div className="md:w-1/2 h-[100svh] bg-diphblack flex flex-col justify-center pb-20  px-5 lg:px-10">
+        <div className="md:w-1/2 md:h-[100svh] h-[70svh] bg-diphblack  flex flex-col justify-center pb-20  px-5 lg:px-10">
           <h2
             data-speed="0.6"
             className=" text-4xl md:text-5xl lg:text-5xl 2xl:text-7xl/relaxed text-wlite pt-12 md:pt-20 lg:pt-[10.75rem] text-end "
@@ -50,7 +50,7 @@ export default function SectionWhyUs() {
             {whyus.h21}
           </h2>
         </div>
-        <div className="h-[100svh] md:w-1/2 md:h-full z-10 bg-wlite text-diphblack flex flex-col justify-start md:justify-center pb-20 px-5 lg:px-10">
+        <div className="h-[100svh] md:w-1/2 overflow-hidden z-10 bg-wlite text-diphblack flex flex-col justify-start md:justify-center pt-20 md:pt-0 md:pb-20 px-5 lg:px-10">
           <h2
             data-speed="0.6"
             className=" text-4xl md:text-5xl lg:text-5xl 2xl:text-7xl/relaxed pt-12 md:pt-20 lg:pt-[10.75rem]  "

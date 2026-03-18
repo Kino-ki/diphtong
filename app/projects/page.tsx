@@ -5,50 +5,61 @@ import BeancesProject from "@/components/projectSection/beances";
 import Esther from "@/components/projectSection/esther";
 import CollabProjects from "@/components/projectSection/CollabProjects";
 import UpcomingProjects from "@/components/projectSection/UpcomingProjects";
+import { scrollToHashOnLoad } from "@/components/HelperFunctions";
+import { useEffect } from "react";
 
 export default function ProjectsPage() {
+  useEffect(() => {
+    scrollToHashOnLoad();
+  }, []);
+
   return (
     <div className="flex flex-col bg-diphblack ">
       {/*  --------------------------------ANALOG----------------------------- */}
 
-      <section
-        id="analogizing"
-        data-speed="1"
-        className="h-[110svh] overflow-hidden "
-      >
-        <Analogizing speed="0.5" />
+      <section data-speed="1" className=" outer h-[110svh]  ">
+        <div data-speed="0.5" className="h-full  overflow-hidden inner">
+          <Analogizing />
+        </div>
       </section>
       {/*  --------------------------------BEANCES----------------------------- */}
       <section
-        data-speed="1"
         id="beances"
-        className="outer relative h-[120svh] bg-beancesprojmobile overflow-hidden  "
+        data-speed="1"
+        className="outer relative h-[120svh] bg-beancesprojmobile overflow-hidden"
       >
-        <BeancesProject speed="0.5" />
+        <div data-speed="0.5" className="inner h-full">
+          <BeancesProject />
+        </div>
       </section>
 
       {/* ------------------------esther ----------------------------------- */}
       <section
         id="esther_portfolio"
+        className=" outer h-[120svh] overflow-hidden bg-auto lg:bg-black "
         data-speed="1"
-        className=" outer h-[120svh]  overflow-hidden bg-auto lg:bg-black "
       >
-        <Esther speed={0.5} />
+        <div data-speed="0.5" className=" h-full inner">
+          <Esther />
+        </div>
       </section>
       {/* ---------------------------OTHER ------------------------------------ */}
       <section
         id="collaborations"
-        data-speed="1"
         className=" outer h-[120svh]  overflow-hidden bg-auto lg:bg-diphblack "
+        data-speed="1"
       >
-        <CollabProjects speed="0.5" />
+        <div data-speed="0.5" className="inner h-full">
+          <CollabProjects />
+        </div>
       </section>
       <section
-        id="upcoming"
+        className=" outer h-[110svh]  bg-auto lg:bg-diphblack overflow-hidden"
         data-speed="1"
-        className=" outer h-[110svh]  overflow-hidden bg-auto lg:bg-diphblack "
       >
-        <UpcomingProjects speed="0.5" />
+        <div data-speed="0.5" className="inner h-full">
+          <UpcomingProjects />
+        </div>
       </section>
     </div>
   );

@@ -89,19 +89,19 @@ export default function PreHomeSlides() {
               {phslides.intro.text}
             </p>
           </div>
-          <div className=" bg-diphblack  flex flex-col justify-center text-base md:text-xl lg:text-lg 2xl:text-xl mx-5 lg:mx-0 mt-20 lg:mt-0  text-wlite font-figtree w-full lg:w-[40%] h-fit">
-            <h3 className="md:py-10 py-8 px-5  md:text-start h-fit ">
+          <div className=" lg:bg-diphblack  flex flex-col justify-center text-base md:text-xl lg:text-lg 2xl:text-xl mx-5 lg:mx-0 mt-20 lg:mt-0 text-diphblack lg:text-wlite font-figtree w-full lg:w-[40%] h-fit">
+            <h3 className="md:py-10 py-8 px-5 text-center lg:text-start h-fit border border-diphblack ">
               {" "}
               {phslides.firstSlide.h3.map((p) =>
                 typeof p === "string" ? p : p.gray,
               )}
             </h3>
-            <h3 className="w-full px-5 border-b border-t border-wlite md:py-10 py-8  md:text-start ">
+            <h3 className="w-full px-5 border-b border-t lg:border-wlite md:py-10 py-8 text-center lg:text-start">
               {phslides.secondSlide.h3.map((p) =>
                 typeof p === "string" ? p : p.gray,
               )}
             </h3>
-            <h3 className="md:py-10 py-8 px-5  md:text-start h-fit ">
+            <h3 className="md:py-10 py-8 px-5  lg:text-start h-fit text-center border border-diphblack">
               {phslides.thirdSlide.h3.map((p) =>
                 typeof p === "string" ? p : p.gray,
               )}

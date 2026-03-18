@@ -8,14 +8,14 @@ import { useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-export default function Esther({ speed }: { speed: number }) {
+export default function Esther() {
   const { dictionary } = useLanguage();
   const estherProject = dictionary.projectsPage.estherProject;
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
   return (
     <div
-      data-speed={speed}
+      
       className="h-full bg-diphblack  font-urbanistr flex flex-col lg:flex-row "
     >
       <div className="flex flex-col justify-center gap-4 lg:gap-16 2xl:gap-12 h-[70%] lg:h-full md:h-2/3  lg:w-2/3  p-5 md:p-12 2xl:p-20 pt-20">
@@ -36,7 +36,7 @@ export default function Esther({ speed }: { speed: number }) {
           ))}
         </ul>
         <div className=" ">
-          <p className="md:text-xl 2xl:text-2xl/10 pt-10 md:pt-0 pb-12">
+          <p className="md:text-xl 2xl:text-2xl/10 ">
             {estherProject.content.map(renderContentItem)}
           </p>
         </div>

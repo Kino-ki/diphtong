@@ -28,7 +28,7 @@ export default function SmoothWrapper({
     {
       dependencies: [pathname],
       revertOnUpdate: true,
-    }
+    },
   );
 
   return (

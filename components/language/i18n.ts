@@ -3,7 +3,7 @@ export const dictionaries = {
     homepage: {
       heroh2: "Freelance Web Developer",
       heroh3:
-        "Elegant, High-Performance Websites for Artists and Small Businesses",
+        "Elegant, high-performance websites for artists and growing businesses",
       firsttext:
         "I’m a Montréal-based web designer and developer, crafting custom websites that blend creativity, performance, and strategy. Whether you’re an artist in need of a stunning portfolio or a small business owner ready to grow your brand, I design and build websites that captivate your audience, load at lightning speed, and are built with SEO in mind to deliver measurable results.",
       ctaright: [
@@ -79,7 +79,8 @@ export const dictionaries = {
             serv: ["full stack develoment", "Web design"],
             imageSrc: "/images/projserv/analogizing.svg",
 
-            link: "/projects#analogizing",
+            path: "/projects",
+            hash: "analogizing",
           },
           {
             id: "0",
@@ -87,7 +88,7 @@ export const dictionaries = {
             serv: ["full stack develoment", "Web design"],
             imageSrc: "/images/projserv/beancesthree.svg",
 
-            link: "/projects#beances",
+            hash: "beances",
           },
 
           {
@@ -96,7 +97,7 @@ export const dictionaries = {
             serv: ["collavorative project", "Font-End develoment"],
             imageSrc: "/images/projserv/plt.svg",
 
-            link: "/projects#collaborations",
+            hash: "collaborations",
           },
           {
             id: "1",
@@ -104,7 +105,7 @@ export const dictionaries = {
             serv: ["full stack develoment", "Web design"],
             imageSrc: "/images/projserv/infraredContact.svg",
 
-            link: "/projects#esther_portfolio",
+            hash: "esther_portfolio",
           },
         ],
         button: "view my work",
@@ -503,9 +504,10 @@ export const dictionaries = {
       contact: "contact",
     },
     mobilenav: [
+      { txt: "home", href: "/home" },
+      { txt: "projects", href: "/projects" },
       { txt: "services", href: "/services" },
       { txt: "about", href: "/about" },
-      { txt: "our projects", href: "/projects" },
       { txt: "contact", href: "/contact" },
     ],
   },
@@ -591,7 +593,7 @@ export const dictionaries = {
             serv: ["Développmenet full stack", "design Web"],
             imageSrc: "/images/projserv/analogizing.svg",
 
-            link: "/projects#analogizing",
+            hash: "analogizing",
           },
           {
             id: "0",
@@ -599,7 +601,7 @@ export const dictionaries = {
             serv: ["Développmenet full stack", "design Web"],
             imageSrc: "/images/projserv/beancesthree.svg",
 
-            link: "/projects#beances",
+            hash: "beances",
           },
 
           {
@@ -608,7 +610,7 @@ export const dictionaries = {
             serv: ["projet collaboratif", "Développment Font-End"],
             imageSrc: "/images/projserv/plt.svg",
 
-            link: "/projects#collaborations",
+            hash: "collaborations",
           },
           {
             id: "1",
@@ -616,7 +618,7 @@ export const dictionaries = {
             serv: ["Développmenet full stack", "design Web"],
             imageSrc: "/images/projserv/infraredContact.svg",
 
-            link: "/projects#esther_portfolio",
+            hash: "esther_portfolio",
           },
         ],
         button: "voir mes projets",
@@ -733,7 +735,7 @@ export const dictionaries = {
     contactPage: {
       PageTitle: "Contact",
       h2: "Parlons de votre projet.",
-      h3: "Posez-nous vos questions ou réservez une rencontre avec nous",
+      h3: "Posez-moi vos questions ou réservez une rencontre",
       form: {
         name: "name",
         email: "email (required)",
@@ -1018,9 +1020,10 @@ export const dictionaries = {
       contact: "contact",
     },
     mobilenav: [
+      { txt: "accueil", href: "/home" },
+      { txt: "projets", href: "/projects" },
       { txt: "services", href: "/services" },
       { txt: "a propos", href: "/about" },
-      { txt: "nos projets", href: "/projects" },
       { txt: "contact", href: "/contact" },
     ],
   },

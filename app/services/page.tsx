@@ -1,12 +1,12 @@
 "use client";
 import { GetAQuoteButton } from "@/components/Buttons";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { useLanguage } from "../../components/language/LangContext";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import {
   renderContentItem,
-  // scrollToHashOnLoad,
+  scrollToHashOnLoad,
 } from "@/components/HelperFunctions";
 import { useGSAP } from "@gsap/react";
 
@@ -19,6 +19,10 @@ export default function Services() {
 
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const titleRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    scrollToHashOnLoad();
+  }, []);
 
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
@@ -78,7 +82,7 @@ export default function Services() {
         <div className="flex flex-col pb-12  lg:pb-32 pt-[5%]">
           <h1
             ref={titleRef}
-            className="lg:h-[100svh] font-menlob  uppercase text-[15vw] lg:text-[12vw]  px-5 md:px-[5%] "
+            className=" lg:h-[100svh] font-menlob  uppercase text-[15vw] lg:text-[12vw]  px-5 md:px-[5%] "
           >
             {" "}
             {services.h1.map((h, i) => (
@@ -86,12 +90,15 @@ export default function Services() {
             ))}{" "}
           </h1>
           <p
-            data-speed="1.1"
-            className="text-xl/10 md:text-2xl/10 lg:text-4xl/normal tracking-wide px-[10%]  py-20 lg:py-40 "
+            data-speed="1.33"
+            className="text-lg md:text-xl xl:text-2xl 2xl:text-3xl tracking-wide px-[10%] pt-20 md:pb-10 lg:pt-0 lg:pb-32  "
           >
             {services.textintro.map(renderContentItem)}
           </p>
-          <div className="flex flex-col md:flex-row px-[10%] md:justify-center gap-2   ">
+          <div
+            data-speed="1.2"
+            className="flex flex-col lg:flex-row px-[10%] md:justify-center gap-2 pb-10  lg:pb-10"
+          >
             {services.introarray.map(renderContentItem)}
           </div>
         </div>

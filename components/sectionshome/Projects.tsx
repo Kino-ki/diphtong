@@ -6,14 +6,15 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { navigateWithScroll } from "../HelperFunctions";
+import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Projects() {
   const { dictionary } = useLanguage();
-
+  const router = useRouter();
   const works = dictionary.homepage.projservSection;
   const len = works.works.length;
-
   const titleRef = useRef<HTMLDivElement | null>(null);
   const triggerRef = useRef<HTMLDivElement | null>(null);
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -93,10 +94,10 @@ export default function Projects() {
               setHoveredIndex(null);
             }}
             key={index}
-            className={`flex gap-8 flex-row items-center ${index !== len - 1 && "border-b border-[#999696]"} px-5 lg:px-10`}
+            className={`flex gap-8 flex-row items-center  ${index !== len - 1 && "border-b border-[#999696]"} px-5 lg:px-10 `}
           >
             {isHovered && hoveredIndex === index && (
-              <div className=" h-[100px] w-[62px] md:w-[194px] md:h-[120px]  2xl:w-[260px] 2xl:h-[161px] relative border  border-[#999696] ">
+              <div className=" h-[80px] w-[129px] md:w-[194px] md:h-[120px]  2xl:w-[260px] 2xl:h-[161px] relative border my-2 border-[#999696] ">
                 <Image
                   src={work.imageSrc}
                   alt="image"
@@ -105,12 +106,14 @@ export default function Projects() {
                 />
               </div>
             )}
-            <Link
-              href={work.link}
+            <button
+              onClick={() => {
+                navigateWithScroll(router, "/projects", work.hash);
+              }}
               className={` flex flex-col-reverse gap-5 py-6  2xl:py-8  `}
             >
-              <div className="flex justify-start">
-                <h3 className="font-menlob text-start font-semibold  text-3xl lg:text-5xl 2xl:text-6xl uppercase tracking-[0.1rem] md:tracking-[0.2rem] mb-5 ">
+              <div className="flex justify-start  ">
+                <h3 className="font-menlob text-start font-semibold  text-3xl lg:text-5xl 2xl:text-6xl uppercase tracking-[0.1rem] md:tracking-[0.2rem]  ">
                   {work.title}
                 </h3>
               </div>
@@ -125,7 +128,7 @@ export default function Projects() {
                     </p>
                   ))}
               </div>
-            </Link>
+            </button>
           </section>
         ))}
       </div>

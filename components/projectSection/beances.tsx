@@ -10,15 +10,15 @@ import { useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-export default function BeancesProject({ speed }: { speed: string }) {
+export default function BeancesProject() {
   const { dictionary } = useLanguage();
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
   const beancesProject = dictionary.projectsPage.beancesProject;
   return (
     <div
-      data-speed={speed}
-      className="inner h-[110svh] bg-[#E5E5E5] flex flex-col lg:flex-row text-[#4c4c4c]  md:bg-cover md:bg-bgbeances"
+      // id="beances"
+      className=" h-[110svh] bg-[#E5E5E5] flex flex-col lg:flex-row text-[#4c4c4c]  md:bg-cover md:bg-bgbeances"
     >
       <div className="2xl:px-[7%]  lg:py-0 flex flex-col justify-center gap-4 lg:gap-12 2xl:gap-0 2xl:justify-evenly h-[70%] md:h-2/3 lg:h-full lg:w-2/3 p-5 md:p-12 2xl:p-20 pt-10 ">
         <div>

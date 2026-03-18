@@ -2,6 +2,7 @@ import gsap from "gsap";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { getSmoother } from "./SmoothWrapper";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 type ContentItem =
   | string
   | { bold: string }
@@ -48,17 +49,13 @@ export function scrollToHashOnLoad() {
 }
 
 export function smoothScrollTo(target: string | null) {
-  const smoother = ScrollSmoother.create({
-    smooth: 1.2,
-    effects: true,
-  });
+  const smoother = getSmoother();
+
   if (!smoother) {
     console.warn("ScrollSmoother not initialized yet.");
     return;
   }
-
   if (!target) return;
-
   // If target starts with "#", remove it to avoid double ##
   const id = target.startsWith("#") ? target.slice(1) : target;
   const elem = document.getElementById(id);
@@ -69,6 +66,28 @@ export function smoothScrollTo(target: string | null) {
   }
 
   smoother.scrollTo(elem, true, "top top");
+}
+
+export function navigateWithScroll(
+  router: AppRouterInstance,
+  path: string,
+  hash: string,
+) {
+  // 1. navigate sans hash (important)
+  router.push(path);
+
+  // 2. attendre que la page soit prête
+  const interval = setInterval(() => {
+    const smoother = getSmoother();
+    const elem = document.getElementById(hash);
+
+    if (!smoother || !elem) return;
+
+    clearInterval(interval);
+
+    // 3. scroll GSAP propre
+    smoother.scrollTo(elem, false, "top top");
+  }, 100);
 }
 
 export function renderContentItem(a: ContentItem, i: number) {
@@ -100,7 +119,7 @@ export function renderContentItem(a: ContentItem, i: number) {
   if ("b" in a)
     return (
       <a
-        className="btn text-sm md:text-base lg:text-2xl btn uppercase  hover:ring-1 ring-wlite"
+        className="btn text-lg md:text-xl xl:text-2xl 2xl:text-3xl btn uppercase  hover:ring-1 ring-wlite"
         key={i}
         href={a.b.href}
         onClick={(e) => {

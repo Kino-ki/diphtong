@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-export default function UpcomingProjects({ speed }: { speed: string }) {
+export default function UpcomingProjects() {
   const { dictionary } = useLanguage();
   const {
     projectsPage: { upcomingProjects },
@@ -15,8 +15,7 @@ export default function UpcomingProjects({ speed }: { speed: string }) {
   return (
     <div
       id={upcomingProjects.id}
-      data-speed={speed}
-      className="inner h-[110svh] bg-diphblack  md:px-12 px-5  "
+      className=" h-[110svh] bg-diphblack  md:px-12 px-5  "
     >
       <div className="flex h-full justify-between  bg-wlite text-diphblack">
         <div className="flex flex-col px-5 md:px-16 2xl:px-24 py-10 lg:w-3/4">

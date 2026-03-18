@@ -9,7 +9,7 @@ import { useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-export default function Analogizing({ speed }: { speed: string }) {
+export default function Analogizing() {
   const { dictionary } = useLanguage();
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const {
@@ -18,8 +18,8 @@ export default function Analogizing({ speed }: { speed: string }) {
 
   return (
     <div
-      data-speed={speed}
       className="h-full bg-[#E5E5E5]  font-urbanistr flex flex-col lg:flex-row text-diphblack"
+      id="analogizing"
     >
       <div className="flex flex-col justify-center gap-4 lg:justify-evenly h-[70%] md:h-2/3 lg:h-full lg:w-2/3  p-5 md:p-12 2xl:p-20">
         <div className=" px-10  flex justify-center lg:justify-start items-end md:items-center h-full lg:h-auto">

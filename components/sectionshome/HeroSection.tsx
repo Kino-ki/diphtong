@@ -108,7 +108,7 @@ export default function HeroSection() {
       </div>
       <div className="h-full w-full backdrop-blur-[1px] bg-black/20 z-10 absolute inset-0 ">
         <div className="h-full w-full lg:pt-[18rem] 2xl:pt-[22rem] lg:pb-32 2xl:pb-40 flex justify-center">
-          <div className=" flex flex-col justify-evenly lg:justify-between w-[95%] font-figtree">
+          <div className=" flex flex-col py-10 md:py-20 lg:py-0 justify-evenly lg:justify-between w-[95%]  font-figtree">
             <div className="lg:hidden flex justify-center  h-[50svh] md:h-[50svh] w-[50svw] md:w-[40svw] mx-auto relative ">
               <Image
                 src={diphtexte}
@@ -126,7 +126,7 @@ export default function HeroSection() {
 
             <h2
               ref={txtRef}
-              className="font-urbanistl opacity-0 lg:px-20 2xl:px-40  text-xl md:text-2xl lg:text-3xl 2xl:text-4xl tracking-wider md:tracking-[0.3rem] 2xl:tracking-[0.3rem] 2xl:leading-[4rem] flex justify-center text-center font-semibold "
+              className="font-urbanistl opacity-0 lg:px-20 2xl:px-40  text-md md:text-xl lg:text-3xl 2xl:text-4xl tracking-wider md:tracking-[0.3rem] 2xl:tracking-[0.3rem] 2xl:leading-[4rem] flex justify-center text-center font-semibold "
             >
               {hero.heroh3}
             </h2>

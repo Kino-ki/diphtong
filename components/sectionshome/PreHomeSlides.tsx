@@ -26,7 +26,7 @@ export default function PreHomeSlides() {
           {
             scale: 0.3,
             transformOrigin: "left left",
-            ease: "power1.inOut",
+            ease: "power2.out",
             scrollTrigger: {
               trigger: titleRef.current,
               start: "top 480px",
@@ -44,15 +44,18 @@ export default function PreHomeSlides() {
           titleRef.current,
           { scale: 1 },
           {
-            scale: 0.9,
-            transformOrigin: "center center",
-            ease: "power1.inOut",
+            scale: 0.5,
+            yPercent: 40,
+            transformOrigin: "left left",
+            ease: "power2.out",
             scrollTrigger: {
               trigger: titleRef.current,
               start: "top 70%",
               end: "+=500",
               scrub: 1,
               pin: true,
+              pinSpacing: true,
+
               // markers: true,
             },
           },
@@ -65,21 +68,21 @@ export default function PreHomeSlides() {
   return (
     <div className="bg-wlite md:h-auto  lg:pb-20  ">
       <div className="flex flex-col justify-start w-full pb-40 ">
-        <div className=" my-12 mb-20 lg:mb-80 2xl:mb-52  ">
+        <div className=" mt-4 lg:mb-80 2xl:mb-52 px-5 md:px-10 lg:px-0 flex flex-col justify-end ">
           <h2
-            data-speed="0.9"
+            // data-speed="0.9"
             ref={titleRef}
-            className="flex  text-center md:text-start  w-full  text-[16vw]  font-urbanistl  tracking-wider text-diphblack capitalize"
+            className="flex  text-center md:text-start w-full  text-[16vw]  font-urbanistl  tracking-wider text-diphblack capitalize"
           >
             {phslides.intro.h2}
           </h2>
         </div>
         <div
           ref={sectionsNameRef}
-          className=" flex flex-col  lg:flex-row md:justify-between items-center md:py-5  "
+          className=" flex flex-col  lg:flex-row md:justify-between items-center   "
         >
           <div
-            data-speed="0.9"
+            // data-speed="0.9"
             className="flex flex-col gap-5 lg:w-1/2 2xl:w-[45%]  px-5 md:px-10"
           >
             <p className="text-[#7a7878]  text-lg md:text-3xl lg:text-3xl/10 2xl:text-4xl/10 text-start tracking-wider font-urbanistb  ">

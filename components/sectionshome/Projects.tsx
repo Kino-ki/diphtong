@@ -97,7 +97,7 @@ export default function Projects() {
             className={`flex gap-8 flex-row items-center  ${index !== len - 1 && "border-b border-[#999696]"} px-5 lg:px-10 `}
           >
             {isHovered && hoveredIndex === index && (
-              <div className=" h-[80px] w-[129px] md:w-[194px] md:h-[120px]  2xl:w-[260px] 2xl:h-[161px] relative border my-2 border-[#999696] ">
+              <div className=" hidden md:flex md:w-[194px] md:h-[120px]  2xl:w-[260px] 2xl:h-[161px] relative border my-2 border-[#999696] ">
                 <Image
                   src={work.imageSrc}
                   alt="image"
@@ -112,7 +112,7 @@ export default function Projects() {
               }}
               className={` flex flex-col-reverse gap-5 py-6  2xl:py-8  `}
             >
-              <div className="flex justify-start  ">
+              <div className="flex justify-center lg:justify-start  ">
                 <h3 className="font-menlob text-start font-semibold  text-3xl lg:text-5xl 2xl:text-6xl uppercase tracking-[0.1rem] md:tracking-[0.2rem]  ">
                   {work.title}
                 </h3>

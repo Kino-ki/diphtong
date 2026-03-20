@@ -3,7 +3,7 @@
 import Image from "next/image";
 import diphtext from "@/public/images/logo/dIphtongtext.svg";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

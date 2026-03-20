@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useRef } from "react";
 import { useLanguage } from "@/components/language/LangContext";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
@@ -34,7 +34,7 @@ export default function PreHomeSlides() {
               scrub: 1,
               pin: true,
               pinSpacing: false,
-              markers: true,
+              // markers: true,
             },
           },
         );

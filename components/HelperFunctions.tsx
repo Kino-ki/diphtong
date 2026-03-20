@@ -1,17 +1,15 @@
 import gsap from "gsap";
-import ScrollSmoother from "gsap/dist/ScrollSmoother";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { getSmoother } from "./SmoothWrapper";
-import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+import type { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 type ContentItem =
   | string
   | { bold: string }
   | { br: string }
   | { a: { txt: string; href: string } }
   | { b: { txt: string; href: string } };
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+type SmootherInstance = NonNullable<ReturnType<typeof getSmoother>>;
 
-export function waitForSmoother(timeout = 100): Promise<ScrollSmoother | null> {
+export function waitForSmoother(timeout = 100): Promise<SmootherInstance | null> {
   return new Promise((resolve) => {
     const interval = setInterval(() => {
       const smoother = getSmoother();

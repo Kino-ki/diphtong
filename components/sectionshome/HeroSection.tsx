@@ -1,7 +1,7 @@
 "use client";
 
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useRef, useState } from "react";
 import diphtexte from "@/public/images/logo/vertical.svg";
 import { useLanguage } from "@/components/language/LangContext";

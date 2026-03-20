@@ -1,9 +1,9 @@
 "use client";
 
 import gsap from "gsap";
-import ScrollSmoother from "gsap/ScrollSmoother";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { usePathname } from "next/navigation";
+import ScrollSmoother from "gsap/dist/ScrollSmoother";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+// import { usePathname } from "next/navigation";
 import { useGSAP } from "@gsap/react";
 
 if (typeof window !== "undefined") {
@@ -17,19 +17,17 @@ export default function SmoothWrapper({
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname();
-  useGSAP(
-    () => {
-      smoother = ScrollSmoother.create({
-        smooth: 1.3,
-        effects: true,
-      });
-    },
-    {
-      dependencies: [pathname],
-      revertOnUpdate: true,
-    },
-  );
+  // const pathname = usePathname();
+  useGSAP(() => {
+    smoother = ScrollSmoother.create({
+      smooth: 1.3,
+      effects: true,
+    });
+    return () => {
+      smoother?.kill();
+      smoother = null;
+    };
+  });
 
   return (
     <div id="smooth-wrapper">

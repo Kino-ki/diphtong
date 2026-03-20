@@ -12,7 +12,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HomeHorizontalScroll() {
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const pinRef = useRef<HTMLDivElement | null>(null);
   const slidesRef = useRef<HTMLDivElement | null>(null);
   const isPausedRef = useRef(false);
   const pauseTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -21,18 +21,18 @@ export default function HomeHorizontalScroll() {
   const { firstSlide, secondSlide, thirdSlide } = slidecontent;
 
   useGSAP(() => {
-    if (!containerRef.current || !slidesRef.current) return;
+    if (!pinRef.current || !slidesRef.current) return;
     const mm = gsap.matchMedia();
 
     mm.add(
       // Desktop
       "(min-width: 1024px)",
       () => {
-        const container = containerRef.current;
+        const pin = pinRef.current;
         const track = slidesRef.current;
         const slides = gsap.utils.toArray(".slide");
 
-        if (!container || !track) return;
+        if (!pin || !track) return;
 
         function pauseScroll() {
           if (!isPausedRef.current) {
@@ -47,10 +47,11 @@ export default function HomeHorizontalScroll() {
           xPercent: -100 * (slides.length - 1),
           ease: "power1.inOut",
           scrollTrigger: {
-            trigger: container,
+            trigger: pin,
             start: "top top",
             end: () => `+=${track.offsetWidth}`,
             pin: true,
+            pinSpacing: true,
             scrub: 1.5,
             anticipatePin: 1,
             invalidateOnRefresh: true,
@@ -60,8 +61,6 @@ export default function HomeHorizontalScroll() {
             },
           },
         });
-
-        ScrollTrigger.refresh();
 
         return () => {
           tween.kill();
@@ -81,11 +80,12 @@ export default function HomeHorizontalScroll() {
 
   return (
     <div className="bg-wlite">
-      <div ref={containerRef} className="overflow-hidden pb-10 lg:pb-0">
-        <div
-          ref={slidesRef}
-          className="flex flex-col gap-16 lg:gap-5 lg:flex-row "
-        >
+      <div ref={pinRef} className="pb-10 lg:pb-0 lg:h-[103svh]">
+        <div className="overflow-hidden h-full">
+          <div
+            ref={slidesRef}
+            className="flex flex-col gap-16 lg:gap-5 lg:flex-row h-full"
+          >
           {/* -------------------SLIDE ONE ------------------------- */}
           <section className="slide flex lg:flex-row flex-col gap-5 lg:gap-0 lg:h-[103svh] lg:w-[100svw] bg-wlite  lg:shrink-0 relative ">
             <div className="h-full w-[30%] hidden lg:flex  bg-slideone bg-cover "></div>
@@ -196,6 +196,7 @@ export default function HomeHorizontalScroll() {
               </div>
             </div>
           </section>
+          </div>
         </div>
       </div>
     </div>

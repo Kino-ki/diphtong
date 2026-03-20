@@ -1,5 +1,9 @@
 "use client";
 
+import { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { scrollToHashOnLoad } from "@/components/HelperFunctions";
 import Analogizing from "@/components/projectSection/analogizing";
 import BeancesProject from "@/components/projectSection/beances";
 import Esther from "@/components/projectSection/esther";
@@ -7,6 +11,19 @@ import CollabProjects from "@/components/projectSection/CollabProjects";
 import UpcomingProjects from "@/components/projectSection/UpcomingProjects";
 
 export default function ProjectsPage() {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const raf = requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+      scrollToHashOnLoad();
+    });
+
+    return () => {
+      cancelAnimationFrame(raf);
+    };
+  }, []);
+
   return (
     <div className="flex flex-col bg-diphblack ">
       {/*  --------------------------------ANALOG----------------------------- */}

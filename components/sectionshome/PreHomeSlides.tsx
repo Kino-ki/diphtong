@@ -68,7 +68,7 @@ export default function PreHomeSlides() {
   return (
     <div className="bg-wlite md:h-auto  lg:pb-20  ">
       <div className="flex flex-col justify-start w-full pb-40 ">
-        <div className=" mt-4 mb-10 lg:mb-80 2xl:mb-52 px-5 md:px-10 lg:px-0 flex flex-col justify-end ">
+        <div className=" pt-8 mb-10 lg:mb-80 2xl:mb-52 px-5 md:px-10 lg:px-0 flex flex-col justify-end ">
           <h2
             data-speed="0.9"
             ref={titleRef}

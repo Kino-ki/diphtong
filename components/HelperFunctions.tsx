@@ -1,6 +1,7 @@
-import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { getSmoother } from "./SmoothWrapper";
 import type { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+
 type ContentItem =
   | string
   | { bold: string }
@@ -8,6 +9,16 @@ type ContentItem =
   | { a: { txt: string; href: string } }
   | { b: { txt: string; href: string } };
 type SmootherInstance = NonNullable<ReturnType<typeof getSmoother>>;
+
+const PENDING_SCROLL_KEY = "diphtong:pending-scroll-target";
+
+function getHashId(target: string | null) {
+  if (!target) return null;
+  if (target.startsWith("#")) return target.slice(1);
+
+  const hashIndex = target.indexOf("#");
+  return hashIndex >= 0 ? target.slice(hashIndex + 1) : null;
+}
 
 export function waitForSmoother(timeout = 100): Promise<SmootherInstance | null> {
   return new Promise((resolve) => {
@@ -20,7 +31,6 @@ export function waitForSmoother(timeout = 100): Promise<SmootherInstance | null>
       }
     }, 50);
 
-    // Fallback in case smoother never exists
     setTimeout(() => {
       clearInterval(interval);
       resolve(null);
@@ -29,19 +39,31 @@ export function waitForSmoother(timeout = 100): Promise<SmootherInstance | null>
 }
 
 export function scrollToHashOnLoad() {
+  const startedAt = Date.now();
   const interval = setInterval(() => {
     const smoother = getSmoother();
-    if (!smoother) return;
+    const locationHash = getHashId(window.location.hash);
+    const pendingHash = sessionStorage.getItem(PENDING_SCROLL_KEY);
+    const targetId = locationHash || pendingHash;
+    const elem = targetId ? document.getElementById(targetId) : null;
+
+    if (!smoother || !targetId || !elem) {
+      if (Date.now() - startedAt > 3000) {
+        clearInterval(interval);
+        sessionStorage.removeItem(PENDING_SCROLL_KEY);
+      }
+      return;
+    }
 
     clearInterval(interval);
+    sessionStorage.removeItem(PENDING_SCROLL_KEY);
 
-    const hash = window.location.hash;
-
-    if (!hash) return;
-
-    gsap.to(smoother, {
-      scrollTop: smoother.offset(hash, "top top"),
-      duration: 1,
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+      smoother.scrollTo(elem, false, "top top");
+      requestAnimationFrame(() => {
+        ScrollTrigger.refresh();
+      });
     });
   }, 50);
 }
@@ -53,9 +75,10 @@ export function smoothScrollTo(target: string | null) {
     console.warn("ScrollSmoother not initialized yet.");
     return;
   }
-  if (!target) return;
-  // If target starts with "#", remove it to avoid double ##
-  const id = target.startsWith("#") ? target.slice(1) : target;
+
+  const id = getHashId(target);
+  if (!id) return;
+
   const elem = document.getElementById(id);
 
   if (!elem) {
@@ -63,7 +86,10 @@ export function smoothScrollTo(target: string | null) {
     return;
   }
 
-  smoother.scrollTo(elem, true, "top top");
+  requestAnimationFrame(() => {
+    ScrollTrigger.refresh();
+    smoother.scrollTo(elem, true, "top top");
+  });
 }
 
 export function navigateWithScroll(
@@ -71,21 +97,8 @@ export function navigateWithScroll(
   path: string,
   hash: string,
 ) {
-  // 1. navigate sans hash (important)
+  sessionStorage.setItem(PENDING_SCROLL_KEY, hash);
   router.push(path);
-
-  // 2. attendre que la page soit prête
-  const interval = setInterval(() => {
-    const smoother = getSmoother();
-    const elem = document.getElementById(hash);
-
-    if (!smoother || !elem) return;
-
-    clearInterval(interval);
-
-    // 3. scroll GSAP propre
-    smoother.scrollTo(elem, false, "top top");
-  }, 100);
 }
 
 export function renderContentItem(a: ContentItem, i: number) {
@@ -106,8 +119,12 @@ export function renderContentItem(a: ContentItem, i: number) {
         key={i}
         href={a.a.href}
         onClick={(e) => {
-          smoothScrollTo(e.currentTarget.getAttribute("href"));
-          // e.preventDefault();
+          const href = e.currentTarget.getAttribute("href");
+
+          if (href?.startsWith("#")) {
+            e.preventDefault();
+            smoothScrollTo(href);
+          }
         }}
       >
         {" "}
@@ -121,8 +138,12 @@ export function renderContentItem(a: ContentItem, i: number) {
         key={i}
         href={a.b.href}
         onClick={(e) => {
-          smoothScrollTo(e.currentTarget.getAttribute("href"));
-          // e.preventDefault();
+          const href = e.currentTarget.getAttribute("href");
+
+          if (href?.startsWith("#")) {
+            e.preventDefault();
+            smoothScrollTo(href);
+          }
         }}
       >
         {" "}

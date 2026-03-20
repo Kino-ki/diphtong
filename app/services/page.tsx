@@ -21,7 +21,14 @@ export default function Services() {
   const titleRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    scrollToHashOnLoad();
+    const raf = requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+      scrollToHashOnLoad();
+    });
+
+    return () => {
+      cancelAnimationFrame(raf);
+    };
   }, []);
 
   gsap.registerPlugin(ScrollTrigger);

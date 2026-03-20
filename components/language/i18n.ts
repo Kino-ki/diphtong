@@ -382,7 +382,7 @@ export const dictionaries = {
     projectsPage: {
       AnalogProject: {
         h1: "Analogizing",
-        id: "#analogizing",
+        id: "analogizing",
         subtitle: "Artist Portfolio",
         services: [" web design ", "full stack develoment"],
         content: [
@@ -402,7 +402,7 @@ export const dictionaries = {
       },
       beancesProject: {
         h1: "béances éditions",
-        id: "#beances_editions",
+        id: "beances_editions",
         subtitle: "QUEER ZINES EDITIONS",
         services: [" web design ", "full stack develoment"],
         content: [
@@ -897,7 +897,7 @@ export const dictionaries = {
     projectsPage: {
       AnalogProject: {
         h1: "Analogizing",
-        id: "#analogizing",
+        id: "analogizing",
         subtitle: "Artist Portfolio",
         services: [" web design ", "full stack develoment"],
         content: [
@@ -917,7 +917,7 @@ export const dictionaries = {
       },
       beancesProject: {
         h1: "béances éditions",
-        id: "#beances_editions",
+        id: "beances_editions",
         subtitle: "QUEER ZINES EDITIONS",
         services: [" web design ", "full stack develoment"],
         content: [

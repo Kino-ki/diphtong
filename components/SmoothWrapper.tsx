@@ -3,7 +3,7 @@
 import gsap from "gsap";
 import ScrollSmoother from "gsap/ScrollSmoother";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import { useGSAP } from "@gsap/react";
 
 if (typeof window !== "undefined") {
@@ -17,7 +17,7 @@ export default function SmoothWrapper({
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname();
+  // const pathname = usePathname();
   useGSAP(
     () => {
       smoother = ScrollSmoother.create({
@@ -25,10 +25,10 @@ export default function SmoothWrapper({
         effects: true,
       });
     },
-    {
-      dependencies: [pathname],
-      revertOnUpdate: true,
-    },
+    // {
+    //   dependencies: [pathname],
+    //   revertOnUpdate: true,
+    // },
   );
 
   return (

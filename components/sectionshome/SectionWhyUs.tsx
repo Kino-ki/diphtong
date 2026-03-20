@@ -62,7 +62,7 @@ export default function SectionWhyUs() {
       <div className="flex flex-col bg-wlite font-urbanistr ">
         {/* content */}
         <div className="flex flex-col md:flex-row bg-wlite  ">
-          <div className="  md:w-1/2 flex flex-col justify-center h-[100svh] overflow-hidden">
+          <div className="  md:w-1/2 flex flex-col justify-center h-[110svh] overflow-hidden">
             <ul
               data-speed="0.5"
               className="text-diphblack  px-5 lg:px-6 2xl:px-12 flex flex-col gap-32"
@@ -85,7 +85,7 @@ export default function SectionWhyUs() {
               ))}
             </ul>
           </div>
-          <div className="h-[100svh] md:w-1/2 bg-diphblack flex flex-col justify-evenly gap-60 md:gap-10  px-5 lg:px-10 overflow-hidden">
+          <div className="h-[110svh] md:w-1/2 bg-diphblack flex flex-col justify-evenly gap-60 md:gap-10  px-5 lg:px-10 overflow-hidden">
             <ul data-speed="0.4" className="text-wlite flex flex-col">
               {whyus.pillars.slice(2).map((pillar, i) => (
                 <li key={i} className="flex lg:flex-row flex-col gap-5">

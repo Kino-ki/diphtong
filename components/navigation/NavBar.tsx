@@ -11,6 +11,8 @@ import { LangButton } from "../Buttons";
 import { useLanguage } from "../language/LangContext";
 import { useGSAP } from "@gsap/react";
 
+const SPLASH_HIDDEN_EVENT = "diphtong:splash-hidden";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function NavBar() {
@@ -26,20 +28,9 @@ export default function NavBar() {
   useGSAP(
     () => {
       if (pathname !== "/" && pathname !== "/home") return;
-      gsap.set(navRef.current, { opacity: 0 }); // start hidden
-
-      // Delay fade-in slightly to match splash fade out
-      gsap.to(navRef.current, {
-        opacity: 1,
-        duration: 1,
-        ease: "power2.out",
-        delay: 1, // tweak to match your splash timing
-      });
 
       const handleScroll = () => setScrollY(window.scrollY);
       window.addEventListener("scroll", handleScroll);
-
-      if (window.scrollY > 50) return;
 
       const imageWidth = 350;
       const viewportWidth = window.innerWidth;
@@ -47,12 +38,12 @@ export default function NavBar() {
 
       const mm = gsap.matchMedia();
 
-      mm.add("(min-width:1536px)", () => {
+      const createScrollAnimation = (startY: string) => {
         gsap.fromTo(
           logoRef.current,
           {
             scale: scaleFactor,
-            y: "12rem",
+            y: startY,
             x: "-45%",
             transformOrigin: "center center",
           },
@@ -69,35 +60,43 @@ export default function NavBar() {
             },
           },
         );
-      });
+      };
 
-      mm.add("(max-width:1535px)", () => {
+      const startNavIntro = () => {
+        mm.revert();
+
+        mm.add("(min-width:1536px)", () => {
+          createScrollAnimation("12rem");
+        });
+
+        mm.add("(max-width:1535px)", () => {
+          createScrollAnimation("10rem");
+        });
+
         gsap.fromTo(
-          logoRef.current,
+          navRef.current,
+          { opacity: 0 },
           {
-            scale: scaleFactor,
-            y: "10rem",
-            x: "-45%",
-            transformOrigin: "center center",
-          },
-          {
-            scale: 1,
-            y: "0rem",
-            x: "0%",
+            opacity: 1,
+            duration: 1,
             ease: "power2.out",
-            scrollTrigger: {
-              trigger: document.documentElement,
-              start: "top top",
-              end: "400px top",
-              scrub: true,
-            },
           },
         );
-      });
+      };
+
+      if (sessionStorage.getItem("hasSeenSplash") === "true") {
+        startNavIntro();
+      } else {
+        gsap.set(navRef.current, { opacity: 0 });
+        window.addEventListener(SPLASH_HIDDEN_EVENT, startNavIntro, {
+          once: true,
+        });
+      }
 
       return () => {
         mm.revert();
         window.removeEventListener("scroll", handleScroll);
+        window.removeEventListener(SPLASH_HIDDEN_EVENT, startNavIntro);
       };
     },
     { dependencies: [pathname] },

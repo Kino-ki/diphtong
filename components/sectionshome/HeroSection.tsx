@@ -2,11 +2,14 @@
 
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import diphtexte from "@/public/images/logo/vertical.svg";
 import { useLanguage } from "@/components/language/LangContext";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
+
+const HERO_READY_EVENT = "diphtong:hero-ready";
+const SPLASH_HIDDEN_EVENT = "diphtong:splash-hidden";
 
 export default function HeroSection() {
   const { dictionary } = useLanguage();
@@ -16,6 +19,30 @@ export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const txtRef = useRef<HTMLHeadingElement | null>(null);
   const creativRef = useRef<HTMLHeadingElement | null>(null);
+  const introStartedRef = useRef(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    if (!video) return;
+
+    const dispatchReady = () => {
+      window.dispatchEvent(new Event(HERO_READY_EVENT));
+    };
+
+    if (video.readyState >= 2) {
+      dispatchReady();
+      return;
+    }
+
+    video.addEventListener("loadeddata", dispatchReady, { once: true });
+    video.addEventListener("canplay", dispatchReady, { once: true });
+
+    return () => {
+      video.removeEventListener("loadeddata", dispatchReady);
+      video.removeEventListener("canplay", dispatchReady);
+    };
+  }, []);
 
   const handlePause = () => {
     setIsPlaying(!isPlaying);
@@ -28,50 +55,92 @@ export default function HeroSection() {
   };
 
   useGSAP(() => {
-    gsap.set(videoRef.current, { opacity: 0 }); // start hidden
-
     gsap.registerPlugin(ScrollTrigger);
-    // Delay fade-in slightly to match splash fade out
-    gsap.to(videoRef.current, {
-      opacity: 1,
-      duration: 1.5,
-      ease: "power2.out",
-      delay: 0.2,
-      onComplete: () => {
-        gsap.fromTo(
-          txtRef.current,
-          { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, delay: 0.3 },
-        );
-        gsap.fromTo(
-          creativRef.current,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0 },
-        );
-        gsap.fromTo(
-          heroTextRef.current,
-          {
-            opacity: 1,
-          },
-          {
-            opacity: 0,
-            ease: "power2.inOut",
-            scrollTrigger: {
-              trigger: heroTextRef.current,
-              start: "bottom 80%",
-              end: "bottom 70%",
-              // markers: true,
-              scrub: 1,
-              toggleActions: "play reverse play reverse",
-            },
-          },
-        );
+    const shouldAnimateIntro =
+      sessionStorage.getItem("hasSeenSplash") !== "true";
+
+    gsap.fromTo(
+      heroTextRef.current,
+      {
+        opacity: 1,
       },
-    });
-  });
+      {
+        opacity: 0,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: heroTextRef.current,
+          start: "bottom 80%",
+          end: "bottom 70%",
+          // markers: true,
+          scrub: 1,
+          toggleActions: "play reverse play reverse",
+        },
+      },
+    );
+
+    if (!shouldAnimateIntro) {
+      gsap.set(videoRef.current, { opacity: 1 });
+      gsap.set(txtRef.current, { opacity: 1, y: 0 });
+      gsap.set(creativRef.current, { opacity: 1, y: 0 });
+      introStartedRef.current = true;
+      return;
+    }
+
+    gsap.set(videoRef.current, { opacity: 0 });
+    gsap.set(txtRef.current, { opacity: 0, y: 50 });
+    gsap.set(creativRef.current, { opacity: 0, y: 20 });
+
+    const introTl = gsap
+      .timeline({ paused: true })
+      .to(videoRef.current, {
+        opacity: 1,
+        duration: 1.5,
+        ease: "power2.out",
+      })
+      .to(
+        creativRef.current,
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power2.out",
+        },
+        ">0.1",
+      )
+      .to(
+        txtRef.current,
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power2.out",
+        },
+        ">0.1",
+      );
+
+    const startIntro = () => {
+      if (introStartedRef.current) return;
+      introStartedRef.current = true;
+      introTl.play(0);
+    };
+
+    if (sessionStorage.getItem("hasSeenSplash") === "true") {
+      startIntro();
+    } else {
+      window.addEventListener(SPLASH_HIDDEN_EVENT, startIntro, { once: true });
+    }
+
+    return () => {
+      introTl.kill();
+      window.removeEventListener(SPLASH_HIDDEN_EVENT, startIntro);
+    };
+  }, []);
 
   return (
-    <div ref={heroTextRef} className="h-[100svh] w-[100svw] relative ">
+    <div
+      ref={heroTextRef}
+      className="h-[100svh] w-full relative overflow-x-hidden"
+    >
       <div className="w-full h-full">
         <video
           ref={videoRef}
@@ -79,6 +148,7 @@ export default function HeroSection() {
           autoPlay
           playsInline
           muted
+          preload="auto"
           poster="/images/poster.jpg"
           className="h-full w-full object-cover "
         >

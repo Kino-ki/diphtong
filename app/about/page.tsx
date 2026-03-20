@@ -166,7 +166,7 @@ export default function AboutPage() {
             </div>
             <Link
               href="/services"
-              className="min-h-[15svh] md:min-h-[20svh] lg:min-h-[30svh] flex flex-col justify-center border-x-4 border-b-[12px]  border-wlite hover:border-x-[24px] transition-all ease-in-out duration-200"
+              className="min-h-[15svh] md:min-h-[20svh] lg:min-h-[30svh] flex flex-col justify-center border-x-4  border-wlite hover:border-x-[24px] transition-all ease-in-out duration-200"
             >
               <p className="text-wlite text-xl md:text-5xl lg:text-6xl flex flex-col justify-center items-center hover:scale-110 h-full w-full transition-all ease-in-out duration-200">
                 {about.servcta}
@@ -175,7 +175,7 @@ export default function AboutPage() {
           </div>
         </div>
         {/* -------------------------------Second section VALUES & FOUNDER ------------------------------------------------- */}
-        <div className="bg-wlite pl-5 md:pl-12 2xl:pl-20 text-diphblack mx-5 md:mx-10 lg:mx-12 2xl:mx-20 flex flex-col gap-12 2xl:gap-0">
+        <div className="bg-wlite pl-5 md:pl-12 2xl:pl-20 text-diphblack mx-5 md:mx-10 lg:mx-12 2xl:mx-20 flex flex-col gap-12 2xl:gap-0 lg:-mt-2">
           {/* ----------------------------LEFT SIDE flex col ----------------------------------------------- */}
           <div className="w-full 2xl:min-h-[100svh] flex flex-col justify-start py-10 ">
             <h2 className="text-5xl md:text-6xl tracking-widest font-urbanistr py-12 md:py-20">

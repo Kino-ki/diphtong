@@ -39,7 +39,7 @@ export const dictionaries = {
 
       horizontalScroll: {
         intro: {
-          h2: "Together",
+          h2: "Together.",
           subtitle:
             "From Idea to Launch, we keep the process smooth, transparent, and stress-free",
           text: "Building a website might seem complex, but I make the process clear and straightforward. From our first conversation to launch day, I guide you step by step, with transparency, strategy, and a human touch.",

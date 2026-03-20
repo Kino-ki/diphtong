@@ -1,47 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* html {
-  scroll-behavior: auto !important;
-} */
 
-@layer base {
-  @font-face {
-    font-family: "akira-expanded";
-    src: url("/fonts/akira-expanded-demo.otf");
-  }
-  @font-face {
-    font-family: "menlo-regular";
-    src: url("/fonts/Menlo-Regular.ttf");
-  }
-  @font-face {
-    font-family: "menlo-bold";
-    src: url("/fonts/Menlo-Bold.ttf");
-  }
-  @font-face {
-    font-family: "urbanist-light";
-    src: url("/fonts/Urbanist-Light.ttf");
-  }
-  @font-face {
-    font-family: "urbanist-regular";
-    src: url("/fonts/Urbanist-Regular.ttf");
-  }
-  @font-face {
-    font-family: "urbanist-medium";
-    src: url("/fonts/Urbanist-Medium.ttf");
-  }
-  @font-face {
-    font-family: "figtree-bold";
-    src: url("/fonts/Figtree-SemiBold.ttf");
-  }
-  @font-face {
-    font-family: "figtree-light";
-    src: url("/fonts/Figtree-Light.ttf");
-  }
-}
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,

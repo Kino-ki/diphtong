@@ -8,10 +8,6 @@ import PreHomeSlides from "@/components/sectionshome/PreHomeSlides";
 import HomeHorizontalScroll from "@/components/sectionshome/HomeHorizontalScroll";
 import SectionServices from "@/components/sectionshome/SectionServices";
 import Projects from "@/components/sectionshome/Projects";
-// import gsap from "gsap";
-// import { ScrollSmoother, ScrollTrigger } from "gsap/all";
-
-// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function HomePage() {
   return (
@@ -23,7 +19,7 @@ export default function HomePage() {
           <div className="z-0">
             <SectionWhyUs />
           </div>
-          <div className=" bg-wlite z-10 relative ">
+          <div className=" bg-wlite z-10 relative lg:-mt-2 ">
             <PreHomeSlides />
             <HomeHorizontalScroll />
             <Projects />

@@ -5,14 +5,8 @@ import BeancesProject from "@/components/projectSection/beances";
 import Esther from "@/components/projectSection/esther";
 import CollabProjects from "@/components/projectSection/CollabProjects";
 import UpcomingProjects from "@/components/projectSection/UpcomingProjects";
-import { scrollToHashOnLoad } from "@/components/HelperFunctions";
-import { useEffect } from "react";
 
 export default function ProjectsPage() {
-  useEffect(() => {
-    scrollToHashOnLoad();
-  }, []);
-
   return (
     <div className="flex flex-col bg-diphblack ">
       {/*  --------------------------------ANALOG----------------------------- */}

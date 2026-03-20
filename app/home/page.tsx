@@ -8,10 +8,10 @@ import PreHomeSlides from "@/components/sectionshome/PreHomeSlides";
 import HomeHorizontalScroll from "@/components/sectionshome/HomeHorizontalScroll";
 import SectionServices from "@/components/sectionshome/SectionServices";
 import Projects from "@/components/sectionshome/Projects";
-import gsap from "gsap";
-import { ScrollSmoother, ScrollTrigger } from "gsap/all";
+// import gsap from "gsap";
+// import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function HomePage() {
   return (

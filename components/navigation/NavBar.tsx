@@ -135,6 +135,7 @@ export default function NavBar() {
               width={350}
               height={50}
               alt="text"
+              loading="eager"
               className=""
             />
           </Link>

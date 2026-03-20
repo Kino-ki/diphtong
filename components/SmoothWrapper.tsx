@@ -10,7 +10,7 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 }
 
-let smoother: ScrollSmoother | null = null; // global variable
+let smoother: ScrollSmoother | null = null;
 
 export default function SmoothWrapper({
   children,

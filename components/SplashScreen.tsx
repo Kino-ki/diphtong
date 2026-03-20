@@ -49,6 +49,7 @@ export default function SplashScreen({
         width={100}
         height={100}
         alt="logo"
+        loading="eager"
         className=""
       />
     </div>

@@ -34,7 +34,7 @@ export default function PreHomeSlides() {
               scrub: 1,
               pin: true,
               pinSpacing: false,
-              // markers: true,
+              markers: true,
             },
           },
         );
@@ -70,7 +70,7 @@ export default function PreHomeSlides() {
       <div className="flex flex-col justify-start w-full pb-40 ">
         <div className=" mt-4 lg:mb-80 2xl:mb-52 px-5 md:px-10 lg:px-0 flex flex-col justify-end ">
           <h2
-            // data-speed="0.9"
+            data-speed="0.9"
             ref={titleRef}
             className="flex  text-center md:text-start w-full  text-[16vw]  font-urbanistl  tracking-wider text-diphblack capitalize"
           >
@@ -82,7 +82,7 @@ export default function PreHomeSlides() {
           className=" flex flex-col  lg:flex-row md:justify-between items-center   "
         >
           <div
-            // data-speed="0.9"
+            data-speed="0.9"
             className="flex flex-col gap-5 lg:w-1/2 2xl:w-[45%]  px-5 md:px-10"
           >
             <p className="text-[#7a7878]  text-lg md:text-3xl lg:text-3xl/10 2xl:text-4xl/10 text-start tracking-wider font-urbanistb  ">

@@ -27,7 +27,6 @@ export default function HomeHorizontalScroll() {
       "(min-width: 1024px)",
       () => {
         const slides = gsap.utils.toArray(".slide");
-
         function pauseScroll() {
           if (!isPaused.current) {
             isPaused.current = true;

@@ -15,7 +15,7 @@ export default function PreHomeSlides() {
   useGSAP(() => {
     if (!titleRef.current) return;
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-    ScrollTrigger.normalizeScroll(true);
+    // ScrollTrigger.normalizeScroll(true);
 
     if (titleRef.current) {
       const mm = gsap.matchMedia();
@@ -34,7 +34,7 @@ export default function PreHomeSlides() {
               scrub: 1,
               pin: true,
               pinSpacing: false,
-              // markers: true,
+              markers: true,
             },
           },
         );

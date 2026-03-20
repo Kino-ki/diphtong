@@ -34,7 +34,7 @@ export default function PreHomeSlides() {
               scrub: 1,
               pin: true,
               pinSpacing: false,
-              markers: true,
+              // markers: true,
             },
           },
         );

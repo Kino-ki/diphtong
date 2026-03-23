@@ -15,7 +15,8 @@ export default function SplashScreenWrapper({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const [isCheckingSplash, setIsCheckingSplash] = useState(false);
+  const isHome = pathname === "/home";
+  const [isCheckingSplash, setIsCheckingSplash] = useState(isHome);
   const [showSplash, setShowSplash] = useState(false);
   const [timerDone, setTimerDone] = useState(false);
   const [heroReady, setHeroReady] = useState(false);
@@ -24,7 +25,6 @@ export default function SplashScreenWrapper({
 
   useLayoutEffect(() => {
     const hasSeenSplash = sessionStorage.getItem("hasSeenSplash") === "true";
-    const isHome = pathname === "/home";
     let minTimer: ReturnType<typeof setTimeout> | null = null;
     let maxTimer: ReturnType<typeof setTimeout> | null = null;
 
@@ -60,8 +60,10 @@ export default function SplashScreenWrapper({
         return;
       }
 
-      setIsCheckingSplash(false);
       setShowSplash(true);
+      requestAnimationFrame(() => {
+        setIsCheckingSplash(false);
+      });
 
       minTimer = setTimeout(() => {
         setTimerDone(true);

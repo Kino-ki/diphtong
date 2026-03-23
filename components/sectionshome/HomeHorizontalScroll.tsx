@@ -16,67 +16,69 @@ export default function HomeHorizontalScroll() {
   const slidesRef = useRef<HTMLDivElement | null>(null);
   const isPausedRef = useRef(false);
   const pauseTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const { dictionary } = useLanguage();
+  const { dictionary, language } = useLanguage();
   const slidecontent = dictionary.homepage.horizontalScroll;
   const { firstSlide, secondSlide, thirdSlide } = slidecontent;
 
-  useGSAP(() => {
-    if (!pinRef.current || !slidesRef.current) return;
-    const mm = gsap.matchMedia();
+  useGSAP(
+    () => {
+      if (!pinRef.current || !slidesRef.current) return;
+      const mm = gsap.matchMedia();
 
-    mm.add(
-      // Desktop
-      "(min-width: 1024px)",
-      () => {
-        const pin = pinRef.current;
-        const track = slidesRef.current;
-        const slides = gsap.utils.toArray(".slide");
+      mm.add(
+        "(min-width: 1024px)",
+        () => {
+          const pin = pinRef.current;
+          const track = slidesRef.current;
+          const slides = track?.querySelectorAll(".slide");
 
-        if (!pin || !track) return;
+          if (!pin || !track || !slides) return;
 
-        function pauseScroll() {
-          if (!isPausedRef.current) {
-            isPausedRef.current = true;
-            pauseTimeoutRef.current = setTimeout(() => {
-              isPausedRef.current = false;
-            }, 1000);
+          function pauseScroll() {
+            if (!isPausedRef.current) {
+              isPausedRef.current = true;
+              pauseTimeoutRef.current = setTimeout(() => {
+                isPausedRef.current = false;
+              }, 1000);
+            }
           }
-        }
 
-        const tween = gsap.to(track, {
-          xPercent: -100 * (slides.length - 1),
-          ease: "power1.inOut",
-          scrollTrigger: {
-            trigger: pin,
-            start: "top top",
-            end: () => `+=${track.offsetWidth}`,
-            pin: true,
-            pinSpacing: true,
-            scrub: 1.5,
-            anticipatePin: 1,
-            invalidateOnRefresh: true,
-            refreshPriority: 1,
-            onUpdate: (self) => {
-              if (self.direction !== 0) pauseScroll();
+          const tween = gsap.to(track, {
+            xPercent: -100 * (slides.length - 1),
+            ease: "power1.inOut",
+            scrollTrigger: {
+              trigger: pin,
+              start: "top top",
+              end: () => `+=${track.offsetWidth}`,
+              pin: true,
+              pinSpacing: true,
+              scrub: 1.5,
+              anticipatePin: 1,
+              invalidateOnRefresh: true,
+              refreshPriority: 1,
+              onUpdate: (self) => {
+                if (self.direction !== 0) pauseScroll();
+              },
             },
-          },
-        });
+          });
 
-        return () => {
-          tween.kill();
-        };
-      },
-    );
+          return () => {
+            tween.kill();
+          };
+        },
+      );
 
-    return () => {
-      if (pauseTimeoutRef.current) {
-        clearTimeout(pauseTimeoutRef.current);
-        pauseTimeoutRef.current = null;
-      }
-      isPausedRef.current = false;
-      mm.revert();
-    };
-  }, [slidecontent]);
+      return () => {
+        if (pauseTimeoutRef.current) {
+          clearTimeout(pauseTimeoutRef.current);
+          pauseTimeoutRef.current = null;
+        }
+        isPausedRef.current = false;
+        mm.revert();
+      };
+    },
+    { scope: pinRef, dependencies: [language] },
+  );
 
   return (
     <div className="bg-wlite">

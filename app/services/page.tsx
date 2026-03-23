@@ -1,17 +1,18 @@
 "use client";
 import { GetAQuoteButton } from "@/components/Buttons";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { useLanguage } from "../../components/language/LangContext";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import {
+  getSmoother,
   renderContentItem,
   scrollToHashOnLoad,
 } from "@/components/HelperFunctions";
 import { useGSAP } from "@gsap/react";
 
 export default function Services() {
-  const { dictionary } = useLanguage();
+  const { dictionary, language } = useLanguage();
   const services = dictionary.servicesPage;
   const {
     aboutPage: { cta },
@@ -19,22 +20,44 @@ export default function Services() {
 
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const titleRef = useRef<HTMLDivElement | null>(null);
+  const [isRouteReady, setIsRouteReady] = useState(false);
 
-  useEffect(() => {
-    const raf = requestAnimationFrame(() => {
-      ScrollTrigger.refresh();
-      scrollToHashOnLoad();
-    });
+  useLayoutEffect(() => {
+    setIsRouteReady(false);
+
+    const startedAt = Date.now();
+    const interval = setInterval(() => {
+      const smoother = getSmoother();
+
+      if (!smoother) {
+        if (Date.now() - startedAt > 3000) {
+          clearInterval(interval);
+        }
+        return;
+      }
+
+      clearInterval(interval);
+      smoother.scrollTo(0, false);
+      requestAnimationFrame(() => {
+        ScrollTrigger.refresh();
+        scrollToHashOnLoad();
+        setIsRouteReady(true);
+      });
+    }, 50);
 
     return () => {
-      cancelAnimationFrame(raf);
+      clearInterval(interval);
     };
   }, []);
 
   gsap.registerPlugin(ScrollTrigger);
-  useGSAP(() => {
-    const el = titleRef.current;
-    if (el) {
+  useGSAP(
+    () => {
+      if (!isRouteReady) return;
+
+      const el = titleRef.current;
+      if (!el) return;
+
       const mm = gsap.matchMedia();
       mm.add("(min-width: 1024px)", () => {
         gsap.fromTo(
@@ -58,7 +81,7 @@ export default function Services() {
       });
       mm.add("(max-width: 1023px)", () => {
         gsap.fromTo(
-          titleRef.current,
+          el,
           { scale: 1, xPercent: 0 },
           {
             xPercent: 8,
@@ -80,8 +103,9 @@ export default function Services() {
       return () => {
         mm.revert();
       };
-    }
-  });
+    },
+    { scope: titleRef, dependencies: [language, isRouteReady] },
+  );
 
   return (
     <div className="flex flex-col justify-start   h-auto  bg-diphblack">

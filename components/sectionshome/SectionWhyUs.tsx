@@ -7,33 +7,36 @@ import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 
 export default function SectionWhyUs() {
-  const { dictionary } = useLanguage();
+  const { dictionary, language } = useLanguage();
   const whyus = dictionary.homepage.whyus;
   const bgRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  useGSAP(
+    () => {
+      gsap.registerPlugin(ScrollTrigger);
 
-    bgRefs.current.forEach((el) => {
-      if (!el) return;
-      gsap.fromTo(
-        el,
-        {
-          backgroundColor: "#E5E5E5",
-        },
-        {
-          backgroundColor: "#191919",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 65%",
-            end: "top 60%",
-            scrub: 1,
-            // markers: true,
+      bgRefs.current.forEach((el) => {
+        if (!el) return;
+        gsap.fromTo(
+          el,
+          {
+            backgroundColor: "#E5E5E5",
           },
-        },
-      );
-    });
-  });
+          {
+            backgroundColor: "#191919",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 65%",
+              end: "top 60%",
+              scrub: 1,
+              // markers: true,
+            },
+          },
+        );
+      });
+    },
+    { dependencies: [language] },
+  );
 
   return (
     <div id="" className="">

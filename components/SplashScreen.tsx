@@ -14,25 +14,28 @@ export default function SplashScreen({
 }) {
   const logoRef = useRef<HTMLImageElement | null>(null);
 
-  useGSAP(() => {
-    gsap.to(logoRef.current, {
-      rotation: 360,
-      repeat: -1,
-      ease: "none",
-      duration: 20,
-    });
-    gsap.to(logoRef.current, {
-      scale: 1.1,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-      duration: 10,
-    });
+  useGSAP(
+    () => {
+      gsap.to(logoRef.current, {
+        rotation: 360,
+        repeat: -1,
+        ease: "none",
+        duration: 20,
+      });
+      gsap.to(logoRef.current, {
+        scale: 1.1,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+        duration: 10,
+      });
 
-    return () => {
-      gsap.killTweensOf(logoRef.current);
-    };
-  });
+      return () => {
+        gsap.killTweensOf(logoRef.current);
+      };
+    },
+    { dependencies: [] },
+  );
 
   return (
     <div

@@ -46,7 +46,7 @@ export default function SectionCta() {
       });
       return () => mm.revert();
     },
-    { scope: txtRef },
+    { scope: txtRef, dependencies: [language] },
   );
   return (
     <div className="">

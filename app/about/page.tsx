@@ -4,16 +4,16 @@ import gsap from "gsap";
 import { useLanguage } from "@/components/language/LangContext";
 // import founderPic from "@/public/images/founder.png";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 // import Image from "next/image";
 import { GetAQuoteButton } from "@/components/Buttons";
-import { renderContentItem } from "@/components/HelperFunctions";
+import { getSmoother, renderContentItem } from "@/components/HelperFunctions";
 import { useGSAP } from "@gsap/react";
 import ScrollSmoother from "gsap/dist/ScrollSmoother";
 import Link from "next/link";
 
 export default function AboutPage() {
-  const { dictionary } = useLanguage();
+  const { dictionary, language } = useLanguage();
 
   const about = dictionary.aboutPage;
 
@@ -21,82 +21,115 @@ export default function AboutPage() {
   const endtrigger = useRef<HTMLDivElement | null>(null);
   const bgRefs = useRef<(HTMLElement | null)[]>([]);
   const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [isRouteReady, setIsRouteReady] = useState(false);
 
-  useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  useLayoutEffect(() => {
+    setIsRouteReady(false);
 
-    const mm = gsap.matchMedia();
+    const startedAt = Date.now();
+    const interval = setInterval(() => {
+      const smoother = getSmoother();
 
-    mm.add("(min-width:1024px)", () => {
-      gsap.fromTo(
-        pinnedRef.current,
-        { scale: 1 },
-        {
-          scale: 1,
-          transformOrigin: "left left",
+      if (!smoother) {
+        if (Date.now() - startedAt > 3000) {
+          clearInterval(interval);
+        }
+        return;
+      }
 
-          ease: "sine.inOut",
-          duration: 0.5,
-          scrollTrigger: {
-            trigger: pinnedRef.current,
-            start: "top 20%",
-            pin: true,
-            endTrigger: endtrigger.current,
-            end: "top top",
-            scrub: 1,
-            // markers: true,
-          },
-        },
-      );
-
-      // Animate background color on values
-      const bgTriggers: ScrollTrigger[] = [];
-      bgRefs.current.forEach((el) => {
-        if (!el) return;
-        const tween = gsap.fromTo(
-          el,
-          { backgroundColor: "#c3c3c3" },
-          {
-            backgroundColor: "#191919",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 70%",
-              end: "top 60%",
-              toggleActions: "play none none none",
-              // scrub: 1,
-              // markers: true,
-            },
-          },
-        );
-        bgTriggers.push(tween.scrollTrigger as ScrollTrigger);
+      clearInterval(interval);
+      smoother.scrollTo(0, false);
+      requestAnimationFrame(() => {
+        ScrollTrigger.refresh();
+        setIsRouteReady(true);
       });
-    });
-    mm.add("(max-width:1023px)", () => {
-      const bgTriggers: ScrollTrigger[] = [];
-      bgRefs.current.forEach((el) => {
-        if (!el) return;
-        const tween = gsap.fromTo(
-          el,
-          { backgroundColor: "#E5E5E5" },
-          {
-            backgroundColor: "#161616",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 70%",
-              end: "top 60%",
-              toggleActions: "play none none none",
-              // scrub: 1,
-              // markers: true,
-            },
-          },
-        );
-        bgTriggers.push(tween.scrollTrigger as ScrollTrigger);
-      });
-    });
+    }, 50);
+
     return () => {
-      mm.revert();
+      clearInterval(interval);
     };
-  });
+  }, []);
+
+  useGSAP(
+    () => {
+      if (!isRouteReady) return;
+
+      gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width:1024px)", () => {
+        gsap.fromTo(
+          pinnedRef.current,
+          { scale: 1 },
+          {
+            scale: 1,
+            transformOrigin: "left left",
+
+            ease: "sine.inOut",
+            duration: 0.5,
+            scrollTrigger: {
+              trigger: pinnedRef.current,
+              start: "top 20%",
+              pin: true,
+              endTrigger: endtrigger.current,
+              end: "top top",
+              scrub: 1,
+              // markers: true,
+            },
+          },
+        );
+
+        // Animate background color on values
+        const bgTriggers: ScrollTrigger[] = [];
+        bgRefs.current.forEach((el) => {
+          if (!el) return;
+          const tween = gsap.fromTo(
+            el,
+            { backgroundColor: "#c3c3c3" },
+            {
+              backgroundColor: "#191919",
+              scrollTrigger: {
+                trigger: el,
+                start: "top 70%",
+                end: "top 60%",
+                toggleActions: "play none none none",
+                // scrub: 1,
+                // markers: true,
+              },
+            },
+          );
+          bgTriggers.push(tween.scrollTrigger as ScrollTrigger);
+        });
+      });
+      mm.add("(max-width:1023px)", () => {
+        const bgTriggers: ScrollTrigger[] = [];
+        bgRefs.current.forEach((el) => {
+          if (!el) return;
+          const tween = gsap.fromTo(
+            el,
+            { backgroundColor: "#E5E5E5" },
+            {
+              backgroundColor: "#161616",
+              scrollTrigger: {
+                trigger: el,
+                start: "top 70%",
+                end: "top 60%",
+                toggleActions: "play none none none",
+                // scrub: 1,
+                // markers: true,
+              },
+            },
+          );
+          bgTriggers.push(tween.scrollTrigger as ScrollTrigger);
+        });
+      });
+      return () => {
+        mm.revert();
+      };
+    },
+    { scope: pinnedRef, dependencies: [language, isRouteReady] },
+  );
 
   return (
     <div className=" bg-diphblack text-wlite font-urbanistr">

@@ -12,6 +12,8 @@ type SmootherInstance = NonNullable<ReturnType<typeof getSmoother>>;
 
 const PENDING_SCROLL_KEY = "diphtong:pending-scroll-target";
 
+export { getSmoother };
+
 function getHashId(target: string | null) {
   if (!target) return null;
   if (target.startsWith("#")) return target.slice(1);

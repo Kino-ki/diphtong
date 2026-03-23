@@ -11,63 +11,65 @@ import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Projects() {
-  const { dictionary } = useLanguage();
+  const { dictionary, language } = useLanguage();
   const router = useRouter();
   const works = dictionary.homepage.projservSection;
   const len = works.works.length;
   const titleRef = useRef<HTMLDivElement | null>(null);
   const triggerRef = useRef<HTMLDivElement | null>(null);
-  const [isHovered, setIsHovered] = useState<boolean>(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  useGSAP(() => {
-    if (!titleRef.current) return;
-    const mm = gsap.matchMedia();
+  useGSAP(
+    () => {
+      if (!titleRef.current) return;
+      const mm = gsap.matchMedia();
 
-    mm.add(
-      // Desktop
-      "(min-width: 1024px)",
-      () => {
-        gsap.to(titleRef.current, {
-          xPercent: 2,
-          scale: 0.3,
-          ease: "sine.inOut",
-          transformOrigin: "left bottom",
-          duration: 2,
-          scrollTrigger: {
-            trigger: titleRef.current,
-            start: "top 70%",
-            end: "top top",
-            scrub: 1,
-            // markers: true,
-          },
-        });
-      },
-    );
-    mm.add(
-      // Mobile
-      "(max-width: 1023px)",
-      () => {
-        gsap.to(titleRef.current, {
-          xPercent: 0,
-          yPercent: 0,
-          scale: 0.8,
-          ease: "sine.inOut",
-          duration: 2,
-          scrollTrigger: {
-            trigger: triggerRef.current,
-            start: "top 20%",
-            end: "bottom top",
-            scrub: 1,
-            // markers: true,
-          },
-        });
-      },
-    );
-    return () => {
-      mm.revert();
-    };
-  });
+      mm.add(
+        // Desktop
+        "(min-width: 1024px)",
+        () => {
+          gsap.to(titleRef.current, {
+            xPercent: 2,
+            scale: 0.3,
+            ease: "sine.inOut",
+            transformOrigin: "left bottom",
+            duration: 2,
+            scrollTrigger: {
+              trigger: titleRef.current,
+              start: "top 70%",
+              end: "top top",
+              scrub: 1,
+              // markers: true,
+            },
+          });
+        },
+      );
+      mm.add(
+        // Mobile
+        "(max-width: 1023px)",
+        () => {
+          gsap.to(titleRef.current, {
+            xPercent: 0,
+            yPercent: 0,
+            scale: 0.8,
+            ease: "sine.inOut",
+            duration: 2,
+            scrollTrigger: {
+              trigger: triggerRef.current,
+              start: "top 20%",
+              end: "bottom top",
+              scrub: 1,
+              // markers: true,
+            },
+          });
+        },
+      );
+      return () => {
+        mm.revert();
+      };
+    },
+    { scope: triggerRef, dependencies: [language] },
+  );
 
   return (
     <div
@@ -85,24 +87,22 @@ export default function Projects() {
         </div>
         {works.works.map((work, index) => (
           <section
-            onPointerMove={() => {
-              setIsHovered(true);
+            onMouseEnter={() => {
               setHoveredIndex(index);
             }}
             onMouseLeave={() => {
-              setIsHovered(false);
               setHoveredIndex(null);
             }}
             key={index}
             className={`flex gap-8 flex-row items-center  ${index !== len - 1 && "border-b border-[#999696]"} px-5 lg:px-10 `}
           >
-            {isHovered && hoveredIndex === index && (
+            {hoveredIndex === index && (
               <div className=" hidden md:flex md:w-[194px] md:h-[120px]  2xl:w-[260px] 2xl:h-[161px] relative border my-2 border-[#999696] ">
                 <Image
                   src={work.imageSrc}
                   alt="image"
                   fill
-                  className="object-cover object-center "
+                  className="object-cover object-center pointer-events-none "
                 />
               </div>
             )}

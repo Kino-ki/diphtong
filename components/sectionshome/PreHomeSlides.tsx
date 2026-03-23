@@ -9,26 +9,27 @@ export default function PreHomeSlides() {
   const titleRef = useRef<HTMLDivElement | null>(null);
   const sectionsNameRef = useRef<HTMLDivElement | null>(null);
 
-  const { dictionary } = useLanguage();
+  const { dictionary, language } = useLanguage();
   const phslides = dictionary.homepage.horizontalScroll;
 
-  useGSAP(() => {
-    if (!titleRef.current) return;
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-    // ScrollTrigger.normalizeScroll(true);
+  useGSAP(
+    () => {
+      const title = titleRef.current;
+      if (!title) return;
 
-    if (titleRef.current) {
+      gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
       const mm = gsap.matchMedia();
+
       mm.add("(min-width: 1024px)", () => {
         gsap.fromTo(
-          titleRef.current,
+          title,
           { scale: 1, xPercent: 0.5 },
           {
             scale: 0.3,
             transformOrigin: "left left",
             ease: "power2.out",
             scrollTrigger: {
-              trigger: titleRef.current,
+              trigger: title,
               start: "top 480px",
               end: "+=500",
               scrub: 1,
@@ -41,7 +42,7 @@ export default function PreHomeSlides() {
       });
       mm.add("(max-width: 1023px)", () => {
         gsap.fromTo(
-          titleRef.current,
+          title,
           { scale: 1 },
           {
             scale: 0.5,
@@ -49,21 +50,22 @@ export default function PreHomeSlides() {
             transformOrigin: "left left",
             ease: "power2.out",
             scrollTrigger: {
-              trigger: titleRef.current,
+              trigger: title,
               start: "top 70%",
               end: "+=500",
               scrub: 1,
               pin: true,
               pinSpacing: true,
-
               // markers: true,
             },
           },
         );
       });
+
       return () => mm.revert();
-    }
-  }, []);
+    },
+    { scope: sectionsNameRef, dependencies: [language] },
+  );
 
   return (
     <div className="bg-wlite md:h-auto  lg:pb-20  ">

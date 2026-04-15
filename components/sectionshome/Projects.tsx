@@ -2,7 +2,7 @@
 import { useLanguage } from "@/components/language/LangContext";
 import Image from "next/image";
 import gsap from "gsap";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -18,6 +18,19 @@ export default function Projects() {
   const titleRef = useRef<HTMLDivElement | null>(null);
   const triggerRef = useRef<HTMLDivElement | null>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const preloadedImagesRef = useRef<HTMLImageElement[]>([]);
+
+  useEffect(() => {
+    preloadedImagesRef.current = works.works.map((work) => {
+      const img = new window.Image();
+      img.src = work.imageSrc;
+      return img;
+    });
+
+    return () => {
+      preloadedImagesRef.current = [];
+    };
+  }, [language]);
 
   useGSAP(
     () => {

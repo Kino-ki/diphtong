@@ -86,7 +86,7 @@ export const dictionaries = {
             id: "0",
             title: "Béances Editions",
             serv: ["full stack develoment", "Web design"],
-            imageSrc: "/images/projserv/beancesthree.svg",
+            imageSrc: "/images/projserv/beancesthree.jpg",
 
             hash: "beances",
           },
@@ -103,7 +103,7 @@ export const dictionaries = {
             id: "1",
             title: "Esther Lhuillery Video Editor",
             serv: ["full stack develoment", "Web design"],
-            imageSrc: "/images/projserv/infraredContact.svg",
+            imageSrc: "/images/projserv/infraredContact.jpg",
 
             hash: "esther_portfolio",
           },
@@ -599,7 +599,7 @@ export const dictionaries = {
             id: "0",
             title: "Béances Editions",
             serv: ["Développmenet full stack", "design Web"],
-            imageSrc: "/images/projserv/beancesthree.svg",
+            imageSrc: "/images/projserv/beancesthree.jpg",
 
             hash: "beances",
           },
@@ -616,7 +616,7 @@ export const dictionaries = {
             id: "1",
             title: "Esther Lhuillery Monteuse Video",
             serv: ["Développmenet full stack", "design Web"],
-            imageSrc: "/images/projserv/infraredContact.svg",
+            imageSrc: "/images/projserv/infraredContact.jpg",
 
             hash: "esther_portfolio",
           },

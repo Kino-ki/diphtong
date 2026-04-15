@@ -1,13 +1,47 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { ContactButton } from "../Buttons";
 import { useLanguage } from "../language/LangContext";
 
 export default function NewFooter() {
   const { dictionary } = useLanguage();
+  const pathname = usePathname();
+  const isHomeRoute = pathname === "/" || pathname === "/home";
+  const [isVisible, setIsVisible] = useState(!isHomeRoute);
   const footer = dictionary.footer;
+
+  useEffect(() => {
+    if (!isHomeRoute) {
+      setIsVisible(true);
+      return;
+    }
+
+    const hasSeenSplash = sessionStorage.getItem("hasSeenSplash") === "true";
+
+    if (hasSeenSplash) {
+      setIsVisible(true);
+      return;
+    }
+
+    setIsVisible(false);
+
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [isHomeRoute]);
+
   return (
-    <div className=" md:h-[50svh]  bg-diphblack text-wlite border-y-2 border-y-wlite flex flex-col justify-center lg:gap-6 lg:px-5 py-10 lg:py-5   ">
+    <div
+      className={`md:h-[50svh] bg-diphblack text-wlite border-y-2 border-y-wlite flex flex-col justify-center lg:gap-6 lg:px-5 py-10 lg:py-5 transition-opacity duration-700 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <div className="flex flex-col gap-12 md:flex-row justify-evenly px-5 lg:py-5">
         <div className="md:hidden flex flex-col font-urbanistr gap-5  justify-end ">
           <h2 className="font-urbanistmed text-2xl  tracking-widest text-center   ">

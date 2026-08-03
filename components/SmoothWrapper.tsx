@@ -25,6 +25,11 @@ export default function SmoothWrapper({
       smoother = ScrollSmoother.create({
         smooth: 1.3,
         effects: true,
+        // iOS: sync scroll-driven transforms to a normalized scroll position so
+        // parallax/scrub/pin animations stop jittering during momentum scroll,
+        // and stabilize measurements against the address-bar show/hide resize.
+        normalizeScroll: true,
+        ignoreMobileResize: true,
       });
 
       return () => {

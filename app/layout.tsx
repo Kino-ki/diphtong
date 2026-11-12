@@ -118,23 +118,21 @@ export default function RootLayout({
       <body
         className={`${akiraExpanded.variable} ${menloRegular.variable} ${menloBold.variable} ${urbanistLight.variable} ${urbanistRegular.variable} ${urbanistMedium.variable} ${figtreeSemiBold.variable} ${figtreeLight.variable} ${inter.variable} bg-diphblack relative overflow-x-hidden`}
       >
-        <SplashScreenWrapper>
+        {/* <SplashScreenWrapper> */}
           <LanguageProvider>
             <header className="">
-              <NavBar />
-              <MobileNav />
+              {/* <NavBar />
+              <MobileNav /> */}
             </header>
-            <SmoothWrapper>
+            {/* <SmoothWrapper> */}
               <main className="text-wlite  ">
                 {children}
                 <Analytics />
               </main>
-              <footer className="">
-                <NewFooter />
-              </footer>
-            </SmoothWrapper>
+              <footer className="">{/* <NewFooter /> */}</footer>
+            {/* </SmoothWrapper> */}
           </LanguageProvider>
-        </SplashScreenWrapper>
+        {/* </SplashScreenWrapper> */}
       </body>
     </html>
   );

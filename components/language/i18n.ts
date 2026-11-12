@@ -590,7 +590,7 @@ export const dictionaries = {
           {
             id: "3",
             title: "Analogizing",
-            serv: ["Développmenet full stack", "design Web"],
+            serv: ["Développement full stack", "design Web"],
             imageSrc: "/images/projserv/analogizing.svg",
 
             hash: "analogizing",
@@ -598,7 +598,7 @@ export const dictionaries = {
           {
             id: "0",
             title: "Béances Editions",
-            serv: ["Développmenet full stack", "design Web"],
+            serv: ["Développement full stack", "design Web"],
             imageSrc: "/images/projserv/beancesthree.jpg",
 
             hash: "beances",
@@ -615,7 +615,7 @@ export const dictionaries = {
           {
             id: "1",
             title: "Esther Lhuillery Monteuse Video",
-            serv: ["Développmenet full stack", "design Web"],
+            serv: ["Développement full stack", "design Web"],
             imageSrc: "/images/projserv/infraredContact.jpg",
 
             hash: "esther_portfolio",

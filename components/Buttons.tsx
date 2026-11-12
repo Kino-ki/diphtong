@@ -16,7 +16,7 @@ export function LangButton() {
       onClick={handleLanguageChange}
     >
       <div>
-        <p className="font-menlor text-2xl lg:text-[1.1rem]/5 tracking-[0.25rem] w-full h-full ">
+        <p className="font-akira hover:text-graytext text-2xl lg:text-[1.1rem]/5 w-full h-full ">
           {language === "EN" ? "FR" : "EN"}
         </p>
       </div>

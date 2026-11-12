@@ -16,13 +16,13 @@ export default function HomePage() {
         <div className="">
           <HeroSection />
           <SectionCta />
+          <div className="  z-10 relative lg:-mt-2 ">
+            {/* <PreHomeSlides />
+            <HomeHorizontalScroll /> */}
+            <Projects />
+          </div>
           <div className="z-0">
             <SectionWhyUs />
-          </div>
-          <div className=" bg-wlite z-10 relative lg:-mt-2 ">
-            <PreHomeSlides />
-            <HomeHorizontalScroll />
-            <Projects />
           </div>
           <SectionServices />
         </div>

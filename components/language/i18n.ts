@@ -76,7 +76,7 @@ export const dictionaries = {
           {
             id: "3",
             title: "Analogizing",
-            serv: ["full stack develoment", "Web design"],
+            serv: ["full stack development", "Web design"],
             imageSrc: "/images/projserv/analogizing.svg",
 
             path: "/projects",
@@ -85,7 +85,7 @@ export const dictionaries = {
           {
             id: "0",
             title: "Béances Editions",
-            serv: ["full stack develoment", "Web design"],
+            serv: ["full stack development", "Web design"],
             imageSrc: "/images/projserv/beancesthree.jpg",
 
             hash: "beances",
@@ -94,7 +94,7 @@ export const dictionaries = {
           {
             id: "2",
             title: "Plein la tête studio éclaté",
-            serv: ["collavorative project", "Font-End develoment"],
+            serv: ["collaborative project", "Front-End development"],
             imageSrc: "/images/projserv/plt.svg",
 
             hash: "collaborations",
@@ -102,7 +102,7 @@ export const dictionaries = {
           {
             id: "1",
             title: "Esther Lhuillery Video Editor",
-            serv: ["full stack develoment", "Web design"],
+            serv: ["full stack development", "Web design"],
             imageSrc: "/images/projserv/infraredContact.jpg",
 
             hash: "esther_portfolio",
@@ -230,7 +230,7 @@ export const dictionaries = {
         website: "website (optional)",
       },
       contactInfo: "Contact Information",
-      adress: "2861 Ontario St E , Montréal (QC),H21X6  (514) 265-6791",
+      adress: "2861 Ontario St E, Montréal (QC), H2K 1X6  (514) 265-6791",
     },
     servicesPage: {
       h1: ["My ", "Services"],
@@ -384,7 +384,7 @@ export const dictionaries = {
         h1: "Analogizing",
         id: "analogizing",
         subtitle: "Artist Portfolio",
-        services: [" web design ", "full stack develoment"],
+        services: [" web design ", "full stack development"],
         content: [
           "Analogizing is the digital portfolio of a ",
           { bold: "multidisciplinary artist based in Montreal. " },
@@ -404,7 +404,7 @@ export const dictionaries = {
         h1: "béances éditions",
         id: "beances_editions",
         subtitle: "QUEER ZINES EDITIONS",
-        services: [" web design ", "full stack develoment"],
+        services: [" web design ", "full stack development"],
         content: [
           "Béances Éditions is a Montreal-based publishing house amplifying ",
           { bold: "lesbo-queer, lesbian, and trans voices " },
@@ -421,7 +421,7 @@ export const dictionaries = {
         id: "esther_portfolio",
         subtitle: "video editor",
         span: "portfolio",
-        services: [" web design ", "full stack develoment"],
+        services: [" web design ", "full stack development"],
         content: [
           "Esther Lhuillery is a Montreal-based video editor specializing in movie trailers. Her work blends precision and emotion, capturing the essence of each film in just a few minutes. ",
           { br: "I designed a " },
@@ -442,7 +442,7 @@ export const dictionaries = {
             id: 0,
             projectName: "Plein la tête - studio éclaté",
             projectSubtitle: " studio éclaté",
-            services: ["Front-End develoment"],
+            services: ["Front-End development"],
             projecDescription:
               "Front-end development and motion design for a digital marketing agency based in Lévis, Québec.",
             href: "https://pleinlatete.ca/",
@@ -590,7 +590,7 @@ export const dictionaries = {
           {
             id: "3",
             title: "Analogizing",
-            serv: ["Développmenet full stack", "design Web"],
+            serv: ["Développement full stack", "design Web"],
             imageSrc: "/images/projserv/analogizing.svg",
 
             hash: "analogizing",
@@ -598,7 +598,7 @@ export const dictionaries = {
           {
             id: "0",
             title: "Béances Editions",
-            serv: ["Développmenet full stack", "design Web"],
+            serv: ["Développement full stack", "design Web"],
             imageSrc: "/images/projserv/beancesthree.jpg",
 
             hash: "beances",
@@ -607,7 +607,7 @@ export const dictionaries = {
           {
             id: "2",
             title: "Plein la tête studio éclaté",
-            serv: ["projet collaboratif", "Développment Font-End"],
+            serv: ["projet collaboratif", "Développement Front-End"],
             imageSrc: "/images/projserv/plt.svg",
 
             hash: "collaborations",
@@ -615,7 +615,7 @@ export const dictionaries = {
           {
             id: "1",
             title: "Esther Lhuillery Monteuse Video",
-            serv: ["Développmenet full stack", "design Web"],
+            serv: ["Développement full stack", "design Web"],
             imageSrc: "/images/projserv/infraredContact.jpg",
 
             hash: "esther_portfolio",
@@ -742,7 +742,7 @@ export const dictionaries = {
         website: "website (optional)",
       },
       contactInfo: "Information de Contact ",
-      adress: "2861 Rue Ontario Est , Montréal (QC),H21X6  (514) 265-6791",
+      adress: "2861 Rue Ontario Est, Montréal (QC), H2K 1X6  (514) 265-6791",
     },
     servicesPage: {
       h1: ["Mes", "Services"],
@@ -899,7 +899,7 @@ export const dictionaries = {
         h1: "Analogizing",
         id: "analogizing",
         subtitle: "Artist Portfolio",
-        services: [" web design ", "full stack develoment"],
+        services: [" web design ", "full stack development"],
         content: [
           "Analogizing est le portfolio numérique d’un·e ",
           { bold: "artiste pluridisciplinaire basé·e à Montréal. " },
@@ -919,7 +919,7 @@ export const dictionaries = {
         h1: "béances éditions",
         id: "beances_editions",
         subtitle: "QUEER ZINES EDITIONS",
-        services: [" web design ", "full stack develoment"],
+        services: [" web design ", "full stack development"],
         content: [
           "Béances Éditions est une maison d’édition montréalaise qui met en lumière ",
           { bold: "des voix lesbo-queer, lesbiennes et trans " },
@@ -937,7 +937,7 @@ export const dictionaries = {
         id: "esther_portfolio",
         subtitle: "video editor",
         span: "portfolio",
-        services: [" web design ", "full stack develoment"],
+        services: [" web design ", "full stack development"],
         content: [
           "Esther Lhuillery est une monteuse vidéo basée à Montréal, spécialisée dans les bandes-annonces de films. Son travail allie précision et émotion, capturant l’essence de chaque œuvre en quelques minutes seulement. ",
           { br: "J'ai conçu un " },
@@ -958,7 +958,7 @@ export const dictionaries = {
             id: 0,
             projectName: "Plein la tête - studio éclaté",
             projectSubtitle: " studio éclaté",
-            services: ["Front-End develoment"],
+            services: ["Front-End development"],
             projecDescription:
               "Développement Front-End et motion design pour une agence de marketing digital basée à Lévis, Québec.",
             href: "https://pleinlatete.ca/",

@@ -114,27 +114,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html>
+    <html suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={`${akiraExpanded.variable} ${menloRegular.variable} ${menloBold.variable} ${urbanistLight.variable} ${urbanistRegular.variable} ${urbanistMedium.variable} ${figtreeSemiBold.variable} ${figtreeLight.variable} ${inter.variable} bg-diphblack relative overflow-x-hidden`}
       >
-        <SplashScreenWrapper>
-          <LanguageProvider>
-            <header className="">
-              <NavBar />
-              <MobileNav />
-            </header>
-            <SmoothWrapper>
-              <main className="text-wlite  ">
-                {children}
-                <Analytics />
-              </main>
-              <footer className="">
-                <NewFooter />
-              </footer>
-            </SmoothWrapper>
-          </LanguageProvider>
-        </SplashScreenWrapper>
+        {/* <SplashScreenWrapper> */}
+        <LanguageProvider>
+          <header className="">
+            {/* <NavBar />
+              <MobileNav /> */}
+          </header>
+          <SmoothWrapper>
+            <main className="text-wlite  ">
+              {children}
+              <Analytics />
+            </main>
+            <footer className="">{/* <NewFooter /> */}</footer>
+          </SmoothWrapper>
+        </LanguageProvider>
+        {/* </SplashScreenWrapper> */}
       </body>
     </html>
   );

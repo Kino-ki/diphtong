@@ -183,11 +183,14 @@ export default function MaintenancePage() {
       >
         <div className="flex justify-center">
           <div
-            className="relative inline-block px-[100px] pt-24"
+            className="relative inline-block xl:px-[100px]  pt-24"
             onMouseEnter={() => animateByTruck("forward")}
             onMouseLeave={() => animateByTruck("backward")}
           >
-            <h1 aria-label={title} className="font-akira text-center text-6xl">
+            <h1
+              aria-label={title}
+              className="font-akira text-center text-lg lg:text-6xl"
+            >
               <span ref={fallTextRef} className="relative inline-block">
                 <span
                   ref={truckRef}
@@ -219,8 +222,10 @@ export default function MaintenancePage() {
         </div>
       </section>
       <section className="grid w-full grid-cols-3 items-center pb-6 font-akira">
-        <p className="col-start-2 justify-self-center text-2xl">Diphtong</p>
-        <p className="col-start-3 justify-self-end pr-12 text-right">
+        <p className="col-start-1 xl:col-start-2 justify-self-center text-sm xl:text-2xl">
+          Diphtong
+        </p>
+        <p className="col-start-3 justify-self-end pr-3 xl:pr-12 text-right text-sm xl:text-base ">
           {language === "EN"
             ? "Check out our projects"
             : "Découvrez nos projets"}{" "}

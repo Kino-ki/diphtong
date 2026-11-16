@@ -1,11 +1,11 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import constructiontruck from "@/public/images/icons8-digger-light.png";
 import Image from "next/image";
 
 type LetterMotion = {
-  midpointX: number;
+  positionX: number;
   landingY: number;
   finalX: number;
   finalRotation: number;
@@ -35,65 +35,90 @@ export default function MaintenancePage() {
     if (!area || !text || !truck) return;
 
     const areaBottom = area.getBoundingClientRect().bottom;
-    const textRect = text.getBoundingClientRect();
-    const textWidth = textRect.width;
-    if (!textWidth) return;
     const letters = Array.from(
       text.querySelectorAll<HTMLElement>("[data-fall-letter]"),
     );
     fallTimelineRef.current?.kill();
     gsap.killTweensOf(letters);
     gsap.killTweensOf(truck);
-    const currentTruckX = gsap.utils.clamp(
-      0,
-      textWidth,
-      Number(gsap.getProperty(truck, "x")) || 0,
-    );
+
+    const truckRect = truck.getBoundingClientRect();
+    const truckX = Number(gsap.getProperty(truck, "x")) || 0;
+    const anchorLeft = truckRect.left - truckX;
+    const glyphs = letters.map((letter) => {
+      const rect = letter.getBoundingClientRect();
+      const letterX = Number(gsap.getProperty(letter, "x")) || 0;
+      const centerX = rect.left + rect.width / 2 - letterX;
+      const width = letter.offsetWidth || rect.width;
+
+      return {
+        letter,
+        positionX: centerX - anchorLeft,
+        rightX: centerX + width / 2 - anchorLeft,
+      };
+    });
+    const totalTravelX = Math.max(...glyphs.map((glyph) => glyph.rightX));
+    if (!Number.isFinite(totalTravelX) || totalTravelX <= 0) return;
+
+    const currentTruckX = gsap.utils.clamp(0, totalTravelX, truckX);
+    const targetTruckX = direction === "forward" ? totalTravelX : 0;
+    const distanceToTravel = targetTruckX - currentTruckX;
+    const travelDuration =
+      (Math.abs(distanceToTravel) / totalTravelX) * 3.2;
+    if (!travelDuration) return;
 
     const timeline = gsap.timeline({ paused: true });
-    const driveDuration = 2.2;
-    const targetTruckX = direction === "forward" ? textWidth : 0;
-    const travelDuration =
-      (Math.abs(targetTruckX - currentTruckX) / textWidth) * driveDuration;
+    const driveEase = (progress: number) =>
+      progress * progress * (3 - 2 * progress);
+    const easeFunction = gsap.parseEase(driveEase);
+    const timeAtProgress = (progress: number) => {
+      if (progress <= 0) return 0;
+      if (progress >= 1) return travelDuration;
+
+      let low = 0;
+      let high = 1;
+      for (let iteration = 0; iteration < 24; iteration += 1) {
+        const middle = (low + high) / 2;
+        if (easeFunction(middle) < progress) low = middle;
+        else high = middle;
+      }
+
+      return ((low + high) / 2) * travelDuration;
+    };
 
     timeline.to(
       truck,
       {
         x: targetTruckX,
         duration: travelDuration,
-        ease: "none",
+        ease: driveEase,
       },
       0,
     );
 
-    letters.forEach((letter) => {
+    glyphs.forEach(({ letter, positionX }) => {
       const rect = letter.getBoundingClientRect();
       const currentX = Number(gsap.getProperty(letter, "x")) || 0;
       const currentY = Number(gsap.getProperty(letter, "y")) || 0;
-      const midpointX = gsap.utils.clamp(
-        0,
-        textWidth,
-        rect.left + rect.width / 2 - currentX - textRect.left,
-      );
       const motion = letterMotionsRef.current.get(letter);
 
       if (direction === "forward") {
-        if (midpointX < currentTruckX || !travelDuration) return;
+        if (positionX <= currentTruckX) return;
 
         const letterMotion: LetterMotion =
           currentTruckX === 0 || !motion
             ? {
-                midpointX,
+                positionX,
                 landingY: Math.max(0, areaBottom - rect.bottom + currentY - 4),
                 finalX: gsap.utils.random(-70, 70),
                 finalRotation: gsap.utils.random(-24, 24),
                 duration: gsap.utils.random(0.75, 1.3),
               }
-            : { ...motion, midpointX };
+            : { ...motion, positionX };
         letterMotionsRef.current.set(letter, letterMotion);
 
-        const startTime =
-          ((midpointX - currentTruckX) / textWidth) * driveDuration;
+        const progress = (positionX - currentTruckX) / distanceToTravel;
+        const startTime = timeAtProgress(progress);
         timeline
           .to(
             letter,
@@ -129,17 +154,17 @@ export default function MaintenancePage() {
             startTime + letterMotion.duration + 0.2,
           );
       } else {
-        if (midpointX > currentTruckX || !travelDuration) return;
+        if (positionX >= currentTruckX) return;
 
         const letterMotion = motion ?? {
-          midpointX,
+          positionX,
           landingY: Math.max(0, areaBottom - rect.bottom + currentY - 4),
           finalX: currentX,
           finalRotation: Number(gsap.getProperty(letter, "rotation")) || 0,
           duration: 0.9,
         };
-        const returnStartTime =
-          ((currentTruckX - midpointX) / textWidth) * driveDuration;
+        const progress = (positionX - currentTruckX) / distanceToTravel;
+        const returnStartTime = timeAtProgress(progress);
 
         timeline.to(
           letter,
@@ -183,15 +208,15 @@ export default function MaintenancePage() {
       >
         <div className="flex justify-center">
           <div
-            className="relative inline-block xl:px-[100px]  pt-24"
+            className="relative inline-block max-w-full pt-24 xl:px-[100px]"
             onMouseEnter={() => animateByTruck("forward")}
             onMouseLeave={() => animateByTruck("backward")}
           >
             <h1
               aria-label={title}
-              className="font-akira text-center text-lg lg:text-6xl"
+              className="font-akira text-center text-4xl md:text-5xl lg:text-6xl"
             >
-              <span ref={fallTextRef} className="relative inline-block">
+              <span ref={fallTextRef} className="relative block max-w-full">
                 <span
                   ref={truckRef}
                   className="pointer-events-none absolute -top-24 left-0 z-10"
@@ -203,19 +228,22 @@ export default function MaintenancePage() {
                     alt="construction truck"
                   />
                 </span>
-                {Array.from(title).map((character, index) =>
-                  character === " " ? (
-                    " "
-                  ) : (
-                    <span
-                      key={index}
-                      data-fall-letter=""
-                      className="inline-block pointer-events-none"
-                    >
-                      {character}
+                {title.split(" ").map((word, wordIndex) => (
+                  <Fragment key={wordIndex}>
+                    {wordIndex > 0 && " "}
+                    <span className="relative inline-block whitespace-nowrap">
+                      {Array.from(word).map((character, letterIndex) => (
+                        <span
+                          key={letterIndex}
+                          data-fall-letter=""
+                          className="inline-block pointer-events-none"
+                        >
+                          {character}
+                        </span>
+                      ))}
                     </span>
-                  ),
-                )}
+                  </Fragment>
+                ))}
               </span>
             </h1>
           </div>

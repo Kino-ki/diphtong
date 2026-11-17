@@ -2,12 +2,10 @@
 
 import HeroSection from "@/components/sectionshome/HeroSection";
 import ReachOutSection from "@/components/sectionshome/ReachOutSection";
-import SectionCta from "@/components/sectionshome/SectionCta";
-import SectionWhyUs from "@/components/sectionshome/SectionWhyUs";
-import PreHomeSlides from "@/components/sectionshome/PreHomeSlides";
-import HomeHorizontalScroll from "@/components/sectionshome/HomeHorizontalScroll";
-import SectionServices from "@/components/sectionshome/SectionServices";
+import SectionServices from "@/components/TOBEAGENCYTYPE";
 import Projects from "@/components/sectionshome/Projects";
+import InterversionSect from "@/components/sectionshome/InterversionSect";
+import HowCollab from "@/components/sectionshome/HowCollab";
 
 export default function HomePage() {
   return (
@@ -15,16 +13,12 @@ export default function HomePage() {
       <div className="relative">
         <div className="">
           <HeroSection />
-          <SectionCta />
+          <div aria-hidden="true" className="h-[100svh] bg-wlite" />
+          <InterversionSect />
           <div className="  z-10 relative lg:-mt-2 ">
-            {/* <PreHomeSlides />
-            <HomeHorizontalScroll /> */}
             <Projects />
+            <HowCollab />
           </div>
-          <div className="z-0">
-            <SectionWhyUs />
-          </div>
-          <SectionServices />
         </div>
         <ReachOutSection />
       </div>

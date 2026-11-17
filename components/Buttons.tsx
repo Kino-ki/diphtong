@@ -4,9 +4,21 @@ import { useLanguage } from "@/components/language/LangContext";
 import arrow from "@/public/images/servicearrow.svg";
 import blackarrow from "@/public/images/blackservicearrow.svg";
 import Image from "next/image";
+import Link from "next/link";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
+
+export function CtaBtn({ text, href }: { text: string; href: string }) {
+  return (
+    <Link
+      href={href}
+      className="border border-wlite px-[24px] py-4 2xl:py-[30px] text-center font-urbanistr text-sm md:text-[16px] text-wlite hover:ring-2 ring-wlite"
+    >
+      {text}
+    </Link>
+  );
+}
 
 export function LangButton() {
   const { language, handleLanguageChange } = useLanguage();

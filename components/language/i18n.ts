@@ -1,224 +1,241 @@
 export const dictionaries = {
   EN: {
     homepage: {
-      heroh2: "Freelance Web Developer",
-      heroh3:
-        "Elegant, high-performance websites for artists and growing businesses",
-      firsttext:
-        "I’m a Montréal-based web designer and developer, crafting custom websites that blend creativity, performance, and strategy. Whether you’re an artist in need of a stunning portfolio or a small business owner ready to grow your brand, I design and build websites that captivate your audience, load at lightning speed, and are built with SEO in mind to deliver measurable results.",
-      ctaright: [
-        "Built with ",
-        { bold: " modern design " },
-        "seamless navigation, and future-proof technology.",
-      ],
-      ctaleft: [
-        { bold: " Tailored for artists, creators, and entrepreneur " },
-        "who need more than just a website, they need a digital presence that sells",
-        { bold: " their story " },
-      ],
-      whyus: {
-        h21: "Why trust me",
-        h22: "with your project?",
-        pillars: [
-          {
-            title: "Design Excellence",
-            content: "Websites that look elegant, clean, and timeless.",
-          },
-          {
-            title: " Business Growth",
-            content: "SEO-friendly, scalable, and aligned with your goals.",
-          },
-          {
-            title: " Smooth User Experience",
-            content:
-              " Fast-loading, mobile-optimized, and intuitive to navigate.",
-          },
-        ],
-        button: "about me",
+      hero: {
+        h1: "DIPHTONG",
+        tagline: "Your web development partner.",
+        textone: "You stay close to your clients.",
+        texttwo: "We move their web projects forward, right by your side.",
+        collabbutton: "How we work together",
+        contactbutton: "Discuss a project",
       },
 
-      horizontalScroll: {
-        intro: {
-          h2: "Together.",
-          subtitle:
-            "From Idea to Launch, we keep the process smooth, transparent, and stress-free",
-          text: "Building a website might seem complex, but I make the process clear and straightforward. From our first conversation to launch day, I guide you step by step, with transparency, strategy, and a human touch.",
-        },
-        firstSlide: {
-          h3: [{ gray: " Discovery:" }, " Understanding Your Needs"],
-          txtone:
-            "This is where everything begins. I take the time to truly understand who you are, what your business or art is about, and what you want your website to achieve.",
-          txttwo: "Think of it as a conversation, not a technical meeting.",
-          txtthree:
-            "We’ll talk about your vision, your audience, your style, and even your budget. By the end of this step, you’ll have a clear direction and a solid foundation for a website that reflects your identity and supports your goals from day one.",
-        },
-        secondSlide: {
-          h3: [{ gray: "Creating a Website " }, "Your Users Will Love"],
-          txtone:
-            "This is where ideas take shape. While I handle the design and development, you’ll see your website come to life step by step.",
-          txttwo:
-            "I focus on thoughtful design, strong performance, and a seamless user experience that feels natural and intuitive.",
-          txtthree:
-            "You don’t have to worry about the technical side, I take care of everything, keeping you informed throughout the process so you always feel confident and involved.",
-        },
-        thirdSlide: {
-          h3: ["Launching & Helping ", { gray: "Your Business Grow" }],
-          txtone: "Here comes the exciting part: your website goes live!  ",
-          txttwo:
-            "But it doesn’t end there. If you need updates, improvements, or ongoing support,I make sure it continues to evolve with your business.",
-          txtthree:
-            "Your website isn’t just a project, it’s the foundation of your online growth. We help you make the most of it.",
-        },
+      services: {
+        eyebrow: "Your starting point / How we help",
+        h2: "Web development support for agencies",
+        h2content:
+          "We take care of the web development for your clients’ projects, stepping in wherever your agency needs a trusted specialist. Work with us behind the scenes under your brand, or introduce us as your web partner.",
+        servarray: [
+          {
+            id: "01",
+            h3: "Turn an approved design into a website",
+            content:
+              "We build a responsive website that brings your approved design to life while preserving its visual direction.",
+          },
+          {
+            id: "02",
+            h3: "Build a new website from the ground up",
+            content:
+              "From early wireframes to responsive web development, we help turn your client’s idea into a launch-ready website.",
+          },
+          {
+            id: "03",
+            h3: "Improve an existing website",
+            content:
+              "We test and fix live websites, resolve issues, and add new features to support your client’s next stage of growth.",
+          },
+        ],
+        closing:
+          "Have a project that fits one of these situations? Let’s talk about it.",
+        button: "Discuss a project",
       },
+
       projservSection: {
-        workstitle: "featured works",
+        workstitle: "Featured projects",
         works: [
+          {
+            id: "4",
+            title: "Chambre de Commerce de Lotbinière",
+            serv: ["Projet collaboratif", "Front-end Development"],
+            imageSrc: "/images/projserv/ccl.png",
+            hash: "collaborations",
+            stack: ["Wordpress", "Elementor", "Yapla"],
+          },
+          {
+            id: "2",
+            title: "Plein la tête studio éclaté",
+            serv: ["Agency collaboration", "Full-stack web development"],
+            imageSrc: "/images/projserv/plt.svg",
+            hash: "collaborations",
+            stack: ["SvelteKit", "Sanity", "GSAP"],
+          },
           {
             id: "3",
             title: "Analogizing",
-            serv: ["full stack development", "Web design"],
+            serv: ["Full-stack web development", "Web design"],
             imageSrc: "/images/projserv/analogizing.svg",
-
-            path: "/projects",
             hash: "analogizing",
+            stack: ["NextJs", "Sanity", "GSAP", "Figma"],
           },
           {
             id: "0",
             title: "Béances Editions",
-            serv: ["full stack development", "Web design"],
+            serv: ["Full-stack web development", "Web design"],
             imageSrc: "/images/projserv/beancesthree.jpg",
-
             hash: "beances",
-          },
-
-          {
-            id: "2",
-            title: "Plein la tête studio éclaté",
-            serv: ["collaborative project", "Front-End development"],
-            imageSrc: "/images/projserv/plt.svg",
-
-            hash: "collaborations",
-          },
-          {
-            id: "1",
-            title: "Esther Lhuillery Video Editor",
-            serv: ["full stack development", "Web design"],
-            imageSrc: "/images/projserv/infraredContact.jpg",
-
-            hash: "esther_portfolio",
+            stack: ["NextJs", "Sanity", "Figma"],
           },
         ],
-        button: "view my work",
+        button: "Explore all projects",
       },
-      services: {
-        h2: "What I build",
-        h2content: "Websites designed to grow, evolve, and perform over time.",
-        servarray: [
+
+      collaboration: {
+        eyebrow: "Working together / Our commitment",
+        h2: "A clear scope from day one. Support through delivery.",
+        content:
+          "You lead the project and stay connected with your client. We handle the web work, either behind the scenes under your agency’s brand or directly as your client’s web development partner, depending on what the project needs.",
+        steps: [
+          {
+            h3: "Before the project starts",
+            content:
+              "We agree on the project scope, budget, and timeline together.",
+          },
+          {
+            h3: "Throughout the project",
+            content:
+              "We keep you informed and share progress at key project milestones.",
+          },
+          {
+            h3: "When the scope changes",
+            content:
+              "We explain how the change affects the budget and timeline, then wait for your approval before starting any additional work.",
+          },
+        ],
+        closing:
+          "You always know what’s planned, what’s in progress, and what’s changing.",
+        button: "How we work together",
+      },
+      reachoutsection: {
+        h2: "Web development support that keeps pace with your client projects.",
+        content:
+          "Deliver your clients’ projects without hiring in-house every time a new web need comes up.",
+        cta: "Have a web project in mind? Let’s talk.",
+      },
+    },
+    collaboration: {
+      hero: {
+        h1: "Web development support\nthat keeps pace with your projects.",
+        content:
+          "Deliver your clients’ projects without hiring in-house for every new need.",
+        collabbutton: "How we work together",
+        contactbutton: "Discuss a project",
+      },
+
+      agencySupport: {
+        h2: "Your agency leads the project. Diphtong delivers the web work.",
+        intro:
+          "The right time to bring in extra support depends on your agency’s specialty.",
+        cases: [
+          {
+            h3: "Design, branding, marketing, and communications agencies",
+            need: "You have set the visual direction, approved a design, or scoped a web project for your client.",
+            content:
+              "We design the UX/UI and build a responsive website from your brief, designs, and supplied content.",
+          },
+          {
+            h3: "SEO agencies",
+            need: "Your technical recommendations are ready, but the website implementation is still outstanding.",
+            content:
+              "Your team leads SEO strategy. We implement the agreed website changes and check that they work properly and meet quality standards.",
+          },
+          {
+            h3: "Web and digital agencies",
+            need: "Your team needs extra production support for a specific project.",
+            content:
+              "We implement designs, develop pages and features, and QA the agreed scope.",
+          },
+          {
+            h3: "Existing websites",
+            content:
+              "We fix bugs, improve website performance, and add content, sections, or features. For WordPress sites, we update WordPress core, plugins, and themes.",
+          },
+        ],
+      },
+
+      securityDisclosure: {
+        h2: "Reduce security risks and keep visitors on track",
+        items: [
+          {
+            h3: "Security updates and vulnerabilities",
+            content:
+              "Depending on the issue, a vulnerability can allow an attacker to inject content into a website, redirect visitors, access certain functions, or steal data. Patchstack, a WordPress security specialist, recorded 11,334 new vulnerabilities in the WordPress ecosystem in 2025: 91% affected plugins and 9% affected themes. When a fix is released, updating the affected component applies it and helps reduce exposure to that vulnerability.",
+            sources: [
+              { label: "Patchstack report", href: null },
+              {
+                label: "Examples of vulnerabilities and their impact",
+                href: null,
+              },
+            ],
+          },
+          {
+            h3: "Performance and browsing experience",
+            content:
+              "In its analysis of ecommerce websites, Akamai found that a two-second slowdown in page loading was associated with nearly 47% fewer pages viewed per visit on desktop and 51% fewer on mobile. The figures cover both device types in the ecommerce sites analyzed.",
+            sources: [{ label: "Akamai report", href: null }],
+          },
+        ],
+      },
+
+      collaboration: {
+        eyebrow: "Our collaboration, step by step",
+        h2: "A clear framework\nfrom kickoff to delivery",
+        content:
+          "Have a web project to deliver? We handle the web work behind the scenes under your agency’s brand. For one-off or ongoing support, our collaboration fits the pace of your projects, without hiring for every new need.",
+        steps: [
           {
             id: "01",
-            h3: "Web design",
+            h3: "1. You send us the project brief",
+            outcome: "A clarified brief, with missing information identified.",
             content:
-              "Elegant, clear interfaces designed to guide users and drive conversions. Every design decision serves a purpose: understanding, engagement, trust.",
+              "You introduce the project, the client context, and the materials available: designs, content, or instructions. We review the brief, identify missing information, and ask the questions we need answered.",
           },
           {
             id: "02",
-            h3: "web development",
+            h3: "2. We agree on the project framework",
+            outcome: "Scope, budget, and timeline agreed before work begins.",
             content:
-              "Fast, stable and scalable websites built with modern technologies chosen for your real needs.",
+              "Together, we define the scope, deliverables, acceptance criteria, budget, and timeline. The agreed budget covers the defined scope.",
           },
           {
             id: "03",
-            h3: "Maintenance & optimization",
+            h3: "3. We deliver the work and keep you updated",
+            outcome:
+              "Updates at the agreed cadence; approval before any additional work.",
             content:
-              "We keep your website secure, fast and reliable over time, while continuously improving performance and stability.",
+              "We complete the agreed work and update you at the cadence we set together. You share your client’s feedback and provide the planned approvals. The agreed budget and timeline remain in effect as long as the scope stays the same. If a request changes the scope, we outline its cost and timeline impact, then wait for your approval before starting additional work.",
           },
           {
             id: "04",
-            h3: "Content & SEO strategy",
+            h3: "4. You approve; we hand over the work",
+            outcome: "Deliverables checked and handed over to your agency.",
             content:
-              "Clear, strategic content designed for both users and search engines, helping you increase visibility and turn traffic into results.",
+              "We complete the planned QA and fix items covered by the agreed scope. Each project stage includes two rounds of revisions. You approve the work before passing it to your client; we hand over the specified deliverables. For 30 days after launch, any fixes or adjustments related to the project are covered.",
           },
         ],
-        button: "discover my services",
       },
-      reachoutsection: {
-        h2: "Ready to Elevate Your Online Presence?",
+
+      cta: {
         content:
-          "Whether you’re an artist who wants a portfolio that shines or a small business looking to grow, I'm here to help. With expertise in design, development, and SEO, I create websites that don’t just look beautiful, they’re built to perform and support your goals.",
+          "Planning a web project? Let’s discuss the scope and support you’ll need.",
+        button: "Discuss a project",
       },
-    },
-    aboutPage: {
-      h1: "About ",
-      h1description:
-        "Web Services for Artists & Growing Businesses in Montreal",
-      firsttext:
-        "Based in Montréal, I design and develop websites for artists and small businesses looking to combine aesthetics, performance, and brand clarity. Each project is crafted with intention, whether you need a fully custom solution or something simple and manageable. ",
-      secondSectionspecial: {
-        h3: "The Purpose Behind My Work",
-        specialcontent: [
-          "A website isn’t just a page on the internet, it’s a strategic tool that represents your work, your credibility, and your growth.",
-          "I specialize in:",
-        ],
-        specialarray: [
-          "Portfolio websites for creatives",
-          "Websites for growing businesses",
-          "Optimization and maintenance of existing sites",
-        ],
-        specialend: [
-          "Whether you’re launching a new site or need support for an existing one, I make sure your online presence stays ",
-          { bold: "modern, functional, and aligned with your goals." },
-        ],
-      },
-      thirdSectionhow: {
-        h3: "What Sets Me Apart",
-        howcontent: [
-          "I combine design sensitivity with technical precision. As a musician and someone who has worked within growing businesses, I understand both ",
+
+      faq: {
+        h2: "FAQ",
+        items: [
           {
-            bold: "the creative mindset and the strategic demands of building something that lasts.",
+            question: "Who stays in contact with my client during the project?",
+            answer:
+              "You remain in charge of the project and handle communication with your client. We deliver the web work behind the scenes under your agency’s brand. You relay your client’s feedback and provide the planned approvals.",
           },
           {
-            br: "You’re not hiring an agency with layers of communication, you’re working directly with the person building your website.",
-          },
-          {
-            br: "Clear communication, thoughtful execution, and long-term thinking guide every project.",
+            question:
+              "What happens if the project scope changes after work begins?",
+            answer:
+              "The agreed budget and timeline remain in effect as long as the scope stays the same. If a request changes the scope, we explain its cost and timeline impact before starting any additional work. We proceed once you approve.",
           },
         ],
       },
-      fourthsectionValues: {
-        h3: "My Values",
-        valuesArray: [
-          [
-            { bold: "Creativity with clarity " },
-            "design that is elegant, modern, and user-friendly.",
-          ],
-          [
-            "Human approach ",
-            { bold: "flexible pricing and collaboration " },
-            "to fit your budget and goals.",
-          ],
-          [
-            { bold: "Accessibility for all " },
-            "quality websites for artists and small businesses, regardless of size or resources.",
-          ],
-          [
-            { bold: "Reliability & support  " },
-            "keeping your site updated, secure, and performing at its best.",
-          ],
-        ],
-      },
-      founderNote: {
-        h3: "A Personal Note",
-        content:
-          "“As both a creative and an entrepreneur, I understand how important it is to have a website that feels authentic and professional. I created my practice to help artists and growing businesses share their vision work with clarity and confidence whether through fully custom experiences or accessible, easy-to-manage solutions. Every project I take on is built with intention, care, and attention to detail.“",
-      },
-      conclusion: {
-        h3: "Let’s Create Something Together",
-        content:
-          "If you’re looking for a website that feels personal, professional, and designed around your vision, we’d love to collaborate  whether it’s a brand-new site or an update to your existing one.",
-      },
-      cta: "Reach out today,  let’s bring your ideas online.",
-      projcta: "View my work",
-      servcta: "Discover my services",
     },
     contactPage: {
       PageTitle: "Contact",
@@ -232,153 +249,7 @@ export const dictionaries = {
       contactInfo: "Contact Information",
       adress: "2861 Ontario St E, Montréal (QC), H2K 1X6  (514) 265-6791",
     },
-    servicesPage: {
-      h1: ["My ", "Services"],
-      textintro: [
-        "I create websites that are both ",
-        { bold: "visually striking and technically solid. " },
-        " Whether you’re an artist or a growing business, I offer everything you need to build a strong and effective online presence: ",
-      ],
-      introarray: [
-        {
-          b: {
-            txt: " web development",
-            href: "#dev",
-          },
-        },
-        {
-          b: {
-            txt: "design",
-            href: "#design",
-          },
-        },
-        {
-          b: {
-            txt: "maintenance",
-            href: "#maintenance",
-          },
-        },
-        {
-          b: {
-            txt: "Content & SEO strategy ",
-            href: "#seo",
-          },
-        },
-      ],
 
-      servicearray: [
-        {
-          id: "dev",
-          serv: {
-            h2: "web development",
-            content: [
-              "I build ",
-              { bold: "custom websites tailored to your goals. " },
-              "Whether you’re looking for a high-end website with ",
-              { bold: "animations and cutting-edge performance, " },
-              "or an ",
-              { bold: "affordable WordPress site that’s easy to manage, " },
-              "I adapt to your needs and budget.",
-            ],
-            h3: "My development ensures:",
-            webdevarray: [
-              "SEO-friendly code for better visibility on Google",
-              "Fast load times and optimized performance",
-              "Secure, scalable solutions for growth",
-              "Full ownership, no locked platforms or hidden fees",
-            ],
-            conclusion: [
-              {
-                bold: "From artists in Montreal to growing businesses worldwide, ",
-              },
-              "I help you launch a website that’s both beautiful and functional.",
-            ],
-          },
-        },
-        {
-          id: "design",
-          serv: {
-            h2: "Web Design",
-            content: [
-              "Design is more than just looks, it’s ",
-              { bold: "how people experience your brand online. " },
-              "I craft websites shaped by ",
-              {
-                bold: "who you are and who you’re speaking to, ",
-              },
-              "ensuring every interaction feels natural and purposeful.",
-            ],
-            h3: "What I offer:",
-            webdevarray: [
-              "Custom layouts that reflect your brand’s personality",
-              "Accessible and inclusive design for all audiences",
-              "Mobile-first interfaces that adapt to every screen",
-              "Integration of visual identity, typography, and colors",
-            ],
-            conclusion: [
-              "I design websites that ",
-              {
-                bold: "inspire trust and engage visitors, ",
-              },
-              "helping your business stand out in a competitive online world.",
-            ],
-          },
-        },
-        {
-          id: "maintenance",
-          serv: {
-            h2: "Maintenance & Updates",
-            content: [
-              "Already have a website? I’ll help you  ",
-              { bold: "keep it fresh and secure. " },
-              "Many clients reach out for ",
-              { bold: "updates, bug fixes, or content changes. " },
-              " I make sure everything runs smoothly so your website remains reliable and effective. ",
-            ],
-            h3: "My maintenance services include: ",
-            webdevarray: [
-              "Security updates & plugin management",
-              "Regular backups to prevent data loss",
-              "Content and design updates on demand",
-              "Performance audits & speed optimization",
-            ],
-            conclusion: [
-              "Whether your site was built on WordPress or custom code, I offer ",
-              {
-                bold: "flexible maintenance plans ",
-              },
-              "so you can focus on your work while we handle the tech.",
-            ],
-          },
-        },
-        {
-          id: "seo",
-          serv: {
-            h2: "Content & SEO strategy",
-            content: [
-              "Search engines are often the first place people discover your business. A well-optimized website ensures ",
-              {
-                bold: "you’re visible to the right audience at the right time.",
-              },
-            ],
-            h3: "What you can expect:",
-            webdevarray: [
-              "Strategic keyword research based on your industry, audience, and goals.",
-              "Optimized site structure and technical foundations that support long-term visibility.",
-              "Clear, persuasive content designed for both users and search engines.",
-              "Performance optimization to improve rankings and user experience.",
-            ],
-            conclusion: [
-              "A strong SEO foundation means ",
-              {
-                bold: "more qualified traffic, better visibility, and sustainable growth ",
-              },
-              "for your business.",
-            ],
-          },
-        },
-      ],
-    },
     projectsPage: {
       AnalogProject: {
         h1: "Analogizing",
@@ -498,239 +369,258 @@ export const dictionaries = {
       cta: ["let's talk about your next", { br: "project" }],
     },
     navbar: {
-      services: "services",
-      about: "about",
+      collab: "collboration",
       proj: "projects",
       contact: "contact",
     },
     mobilenav: [
       { txt: "home", href: "/home" },
+      { txt: "collaboration", href: "/collaboration" },
       { txt: "projects", href: "/projects" },
-      { txt: "services", href: "/services" },
-      { txt: "about", href: "/about" },
       { txt: "contact", href: "/contact" },
     ],
   },
   FR: {
     homepage: {
-      heroh2: "Développeuse Web Freelance",
-      heroh3:
-        "Sites élégants et performants pour artistes et petites entreprises",
-      firsttext:
-        "Je suis conceptrice et développeuse web basée à Montréal, travaillant à l’international. Je crée des sites web sur mesure qui allient créativité, performance et stratégie. Que vous soyez un artiste à la recherche d’un portfolio en ligne captivant ou une petite entreprise souhaitant développer sa marque, je conçois et développe des sites qui séduisent votre audience, se chargent rapidement et sont pensés pour le référencement (SEO) afin de générer des résultats concrets.",
-      ctaright: [
-        "Conçus avec",
-        { bold: " un design moderne " },
-        ", une navigation fluide et une technologie pérenne.",
-      ],
-      ctaleft: [
-        { bold: " Pensés pour les artistes, créateurs et entrepreneurs " },
-        "qui ont besoin de plus qu’un simple site web : une présence numérique qui met en valeur",
-        { bold: " leur histoire " },
-      ],
-      whyus: {
-        h21: "Pourquoi me confier",
-        h22: "votre site web ?",
-        pillars: [
+      hero: {
+        h1: "DIPHTONG",
+        tagline: "Votre allié web.",
+        textone: "Vous gardez le lien avec vos clients.",
+        texttwo: "Nous faisons avancer leurs projets web, à vos côtés.",
+        collabbutton: "Comment on collabore",
+        contactbutton: "Parler d’un mandat",
+      },
+
+      services: {
+        eyebrow: "Votre point de départ / Nos interventions",
+        h2: "Pour les agences qui ont un volet web à livrer",
+        h2content:
+          "Nous prenons en charge le volet web des mandats de vos clients, à l’étape où votre agence a besoin d’un renfort spécialisé.",
+        servarray: [
           {
-            title: "Excellence du design",
-            content: "Des sites élégants, épurés et intemporels.",
-          },
-          {
-            title: " Croissance de votre activité",
-            content: "SEO intégré, évolutif et aligné avec vos objectifs.",
-          },
-          {
-            title: " Expérience utilisateur fluide",
+            id: "01",
+            h3: "Une maquette validée",
             content:
-              "Rapidité de chargement, optimisation mobile et navigation intuitive.",
+              "À transformer en site responsive, sans perdre la direction visuelle.",
+          },
+          {
+            id: "02",
+            h3: "Un nouveau site",
+            content:
+              "À concevoir, des premiers wireframes au développement responsive.",
+          },
+          {
+            id: "03",
+            h3: "Un site en ligne",
+            content:
+              "À tester et corriger, ou à faire évoluer avec de nouvelles fonctionnalités.",
           },
         ],
-        button: "à propos de moi",
+        closing: "Votre mandat ressemble à l’un de ces cas ? Parlons-en.",
+        button: "Parler d’un mandat",
       },
-      horizontalScroll: {
-        intro: {
-          h2: "Ensemble",
-          subtitle:
-            "De l’idée au lancement, le processus sera fluide, transparent et sans stress",
-          text: "Créer un site web peut sembler complexe, mais je rends le processus clair et fluide. De notre première discussion jusqu’à la mise en ligne, je vous accompagne étape par étape, avec transparence, stratégie et une vraie dimension humaine.",
-        },
-        firstSlide: {
-          h3: [{ gray: " Découverte: " }, "comprendre vos besoins"],
-          txtone:
-            "C’est ici que tout commence. Je prends le temps de comprendre qui vous êtes, ce que représente votre activité ou votre univers artistique, et ce que vous attendez réellement de votre site web.",
-          txttwo: "Voyez cela comme une discussion, pas une réunion technique.",
-          txtthree:
-            "Nous parlerons de votre vision, de votre audience, de votre style et même de votre budget. À l’issue de cette étape, vous avez une direction claire et des bases solides pour créer un site qui reflète votre identité et sert vos objectifs dès le départ.",
-        },
-        secondSlide: {
-          h3: [
-            { gray: "Créer un site web " },
-            "que vos utilisateurs vont adorer",
-          ],
-          txtone:
-            "C’est ici que les idées prennent forme. Je prends en charge le design et le développement pendant que vous voyez votre futur site web évoluer étape par étape.",
-          txttwo:
-            "Je veille à créer un design soigné, une performance fluide et une expérience utilisateur intuitive.",
-          txtthree:
-            "Vous n’avez pas à vous soucier de l’aspect technique, je m'occupe de tout, en vous tenant informé à chaque étape pour que vous soyez toujours impliqué dans le processus.",
-        },
-        thirdSlide: {
-          h3: ["Lancement & accompagnement "],
-          txtone: "Voici le moment tant attendu : votre site est en ligne.",
-          txttwo:
-            "Mais l’accompagnement ne s’arrête pas là. Si vous avez besoin de mises à jour, d’améliorations ou d’un suivi continu, je reste disponible.",
-          txtthree:
-            "Votre site n’est pas seulement un projet, c’est la base de votre croissance en ligne. Je vous aide à le faire évoluer dans le temps.",
-        },
-      },
+
       projservSection: {
         workstitle: "Réalisations",
         works: [
           {
+            id: "4",
+            title: "Chambre de Commerce de Lotbinière",
+            serv: ["Projet collaboratif", "Développement front-end"],
+            imageSrc: "/images/projserv/ccl.png",
+            hash: "collaborations",
+            stack: ["Wordpress", "Elementor", "Yapla"],
+          },
+          {
+            id: "2",
+            title: "Plein la tête studio éclaté",
+            serv: ["Projet collaboratif", "Développement full stack"],
+            imageSrc: "/images/projserv/plt.png",
+            hash: "collaborations",
+            stack: ["SvelteKit", "Sanity", "GSAP"],
+          },
+          {
             id: "3",
             title: "Analogizing",
-            serv: ["Développement full stack", "design Web"],
+            serv: ["Développement full stack", "Design web"],
             imageSrc: "/images/projserv/analogizing.svg",
-
             hash: "analogizing",
+            stack: ["NextJs", "Sanity", "GSAP", "Figma"],
           },
           {
             id: "0",
             title: "Béances Editions",
-            serv: ["Développement full stack", "design Web"],
+            serv: ["Développement full stack", "Design web"],
             imageSrc: "/images/projserv/beancesthree.jpg",
-
             hash: "beances",
-          },
-
-          {
-            id: "2",
-            title: "Plein la tête studio éclaté",
-            serv: ["projet collaboratif", "Développement Front-End"],
-            imageSrc: "/images/projserv/plt.svg",
-
-            hash: "collaborations",
-          },
-          {
-            id: "1",
-            title: "Esther Lhuillery Monteuse Video",
-            serv: ["Développement full stack", "design Web"],
-            imageSrc: "/images/projserv/infraredContact.jpg",
-
-            hash: "esther_portfolio",
+            stack: ["NextJs", "Sanity", "Figma"],
           },
         ],
-        button: "voir mes projets",
+        button: "Voir toutes les réalisations",
       },
-      services: {
-        h2: "Services",
-        h2content: "Des sites web évolutifs, performants et pensés pour durer.",
-        servarray: [
+
+      collaboration: {
+        eyebrow: "Collaboration / Notre engagement",
+        h2: "Un cadre clair dès le départ\n Un suivi jusqu’à la livraison.",
+        content:
+          "Vous gardez la direction du mandat et le lien avec votre client. Nous prenons en charge le volet web, en coulisses sous la marque de votre agence ou ouvertement comme partenaire web auprès de votre client, selon le mandat.",
+        steps: [
+          {
+            h3: "Avant le démarrage",
+            content:
+              "Nous convenons ensemble du périmètre, du budget et de l’échéancier.",
+          },
+          {
+            h3: "Pendant le mandat",
+            content:
+              "Nous vous tenons informés de l’avancement aux étapes clés.",
+          },
+          {
+            h3: "Si le périmètre évolue",
+            content:
+              "Nous vous présentons les effets sur le budget et l’échéancier, puis attendons votre accord avant d’engager le travail supplémentaire.",
+          },
+        ],
+        closing: "Vous savez ce qui est prévu, ce qui avance et ce qui change.",
+        button: "Comment on collabore",
+      },
+      reachoutsection: {
+        h2: "Le renfort web qui suit le rythme de vos mandats.",
+        content:
+          "Livrez les projets de vos clients sans embaucher pour chaque nouveau besoin.",
+        cta: "Un mandat web en tête? Parlons-en.",
+      },
+    },
+    collaboration: {
+      hero: {
+        h1: "Le renfort web\nqui suit le rythme de vos mandats.",
+        content:
+          "Livrez les projets de vos clients sans embaucher pour chaque nouveau besoin.",
+        collabbutton: "Comment on collabore",
+        contactbutton: "Parler d’un mandat",
+      },
+
+      agencySupport: {
+        h2: "Votre agence pilote le mandat. Diphtong réalise le volet web.",
+        intro:
+          "Selon votre spécialité, le besoin de renfort ne se présente pas à la même étape.",
+        cases: [
+          {
+            h3: "Agences de design, branding, marketing et communication",
+            need: "Vous avez défini la direction visuelle, validé une maquette ou cadré un projet web pour votre client.",
+            content:
+              "Nous concevons l’UX/UI et réalisons le site responsive à partir de votre brief, de vos maquettes et des contenus fournis.",
+          },
+          {
+            h3: "Agences SEO",
+            need: "Vos recommandations techniques sont prêtes, mais leur mise en œuvre reste à faire.",
+            content:
+              "Votre équipe pilote la stratégie SEO; nous réalisons les changements web convenus et en vérifions le fonctionnement et la qualité.",
+          },
+          {
+            h3: "Agences web et numériques",
+            need: "Votre équipe a besoin d’un renfort de production sur un mandat précis.",
+            content:
+              "Nous intégrons les maquettes, développons des pages ou fonctionnalités et effectuons le QA du périmètre convenu.",
+          },
+          {
+            h3: "Sites déjà en ligne",
+            content:
+              "Nous corrigeons les bugs, améliorons les performances, ajoutons du contenu, de nouvelles sections ou fonctionnalités. Pour les sites WordPress, nous mettons à jour WordPress, ses extensions et son thème.",
+          },
+        ],
+      },
+
+      securityDisclosure: {
+        h2: "Réduire les risques d’attaque et garder les visiteurs dans leur parcours",
+        items: [
+          {
+            h3: "Mises à jour et failles de sécurité",
+            content:
+              "Une faille peut permettre à une personne malveillante d’injecter du contenu dans le site, de rediriger ses visiteurs, d’accéder à certaines fonctions ou de dérober des données, selon le problème en cause. Patchstack, spécialiste de la sécurité WordPress, a recensé 11 334 nouvelles vulnérabilités dans l’écosystème WordPress en 2025 : 91 % touchaient des extensions et 9 % des thèmes. Lorsqu’un correctif est publié, mettre à jour le composant concerné permet de l’appliquer et de réduire l’exposition à cette faille.",
+            sources: [
+              {
+                label: "Rapport Patchstack",
+                href: "https://patchstack.com/whitepaper/state-of-wordpress-security-in-2026/",
+              },
+              { label: "Exemples de failles et de leurs effets", href: "" },
+            ],
+          },
+          {
+            h3: "Performance et navigation",
+            content:
+              "Dans son analyse de sites de commerce en ligne, Akamai a observé qu’un chargement ralenti de deux secondes était associé à près de 47 % moins de pages consultées par visite sur ordinateur et 51 % moins sur mobile. La donnée concerne les deux types d’appareils dans le contexte des sites de commerce analysés.",
+            sources: [
+              {
+                label: "Rapport Akamai",
+                href: "https://www.igds.org/fileadmin/uploads/igds/Documents/Research_Reports/2017/akamai-state-of-online-retail-performance-spring-2017.pdf",
+              },
+            ],
+          },
+        ],
+      },
+
+      collaboration: {
+        eyebrow: "Notre collaboration, étape par étape",
+        h2: "Un cadre clair\ndu démarrage à la livraison",
+        content:
+          "Vous avez un mandat web à livrer? Nous prenons en charge le volet web en coulisses, sous la marque de votre agence. Pour un besoin ponctuel ou récurrent, la collaboration suit le rythme de vos mandats, sans embaucher pour chaque nouveau besoin.",
+        steps: [
           {
             id: "01",
-            h3: "Design web",
+            h3: "1. Vous nous transmettez le dossier",
+            outcome: "Dossier clarifié, éléments manquants identifiés.",
             content:
-              "Des interfaces élégantes, claires et orientées conversion. Chaque décision de design sert un objectif précis : compréhension, engagement, confiance.",
+              "Vous nous présentez le mandat, le contexte client et les éléments disponibles : maquettes, contenus ou directives. Nous examinons le dossier, relevons les informations manquantes et vous posons les questions nécessaires.",
           },
           {
             id: "02",
-            h3: "developpement web",
+            h3: "2. Nous convenons du cadre",
+            outcome: "Périmètre, budget et échéancier validés avant démarrage.",
             content:
-              "Des sites rapides, stables et évolutifs, construits avec des technologies modernes adaptées à vos besoins réels.",
+              "Nous définissons ensemble le périmètre, les livrables, les critères de validation, le budget et l’échéancier. Le budget convenu couvre le périmètre défini.",
           },
           {
             id: "03",
-            h3: "Maintenance & optimisation",
+            h3: "3. Nous réalisons le mandat et faisons le point",
+            outcome:
+              "Suivi à la fréquence convenue, changements approuvés avant travaux supplémentaires.",
             content:
-              "Nous assurons la stabilité, la sécurité et l’optimisation de votre site pour qu’il reste rapide, fiable et efficace",
+              "Nous réalisons le travail convenu et vous informons de l’avancement à la fréquence convenue avec vous. Vous transmettez les retours de votre client et donnez les validations prévues. Le budget et l’échéancier convenus restent en vigueur tant que le périmètre ne change pas. Si une demande le fait évoluer, nous vous présentons son coût et son effet sur l’échéancier, puis attendons votre accord avant d’engager le travail supplémentaire.",
           },
           {
             id: "04",
-            h3: "Contenu & strategie SEO",
+            h3: "4. Vous validez, nous remettons le travail",
+            outcome: "Livrables vérifiés et remis à votre agence.",
             content:
-              "Des contenus clairs et stratégiques, pensés pour vos utilisateurs et les moteurs de recherche, afin d’augmenter votre visibilité et vos conversions.",
+              "Nous effectuons le QA prévu et corrigeons les éléments couverts par le périmètre convenu. Chaque étape du projet comprend deux rondes de révision. Vous validez le travail avant qu’il soit transmis à votre client; nous vous remettons les livrables prévus. Toute demande de correctif ou d’ajustement liée au mandat est couverte pendant les 30 jours suivant la mise en ligne.",
           },
         ],
-        button: "découvrir mes services",
       },
-      reachoutsection: {
-        h2: "Donnez une nouvelle dimension à votre présence en ligne",
+
+      cta: {
         content:
-          "Que vous soyez un artiste souhaitant un portfolio qui brille ou une petite entreprise cherchant à se développer, je suis là pour vous accompagner. Grâce à mon expertise en design, développement et référencement (SEO), je crée des sites qui ne sont pas seulement esthétiques : ils sont pensés pour soutenir vos objectifs.",
+          "Vous préparez un mandat web? Parlons du cadre et du renfort à prévoir.",
+        button: "Parler d’un mandat",
       },
-    },
-    aboutPage: {
-      h1: "À propos",
-      h1description:
-        "Conception de sites web pour artistes et entreprises à Montréal",
-      firsttext:
-        "Développeuse web basée à Montréal, j’aide les artistes et les petites entreprises à créer des sites web à la fois esthétiques, performants et stratégiquement pensés pour refléter leur identité. Je propose des solutions sur mesure ou évolutives, adaptées à vos objectifs et à votre budget.",
-      secondSectionspecial: {
-        h3: "Ma vision du web",
-        specialcontent: [
-          "Un site web n’est pas qu’une présence en ligne : c’est un outil stratégique au service de votre image et de votre développement.",
-          "C’est pourquoi je me spécialise dans :",
-        ],
-        specialarray: [
-          "Sites portfolio pour artistes",
-          "Sites web pour petites et moyennes entreprises",
-          "L’optimisation et le suivi technique",
-        ],
-        specialend: [
-          "De la création à l’évolution continue, je vous accompagne pour bâtir une présence digitale solide et durable.",
-        ],
-      },
-      thirdSectionhow: {
-        h3: "Ce qui me distingue",
-        howcontent: [
-          "J’allie sensibilité créative et rigueur technique. En tant que musicienne et après avoir évolué au sein d’entreprises en croissance, je comprends à la fois ",
+
+      faq: {
+        h2: "FAQ",
+        items: [
           {
-            bold: "les enjeux créatifs et les impératifs stratégiques liés au développement d’un projet.",
+            question:
+              "Qui reste en contact avec mon client pendant le mandat ?",
+            answer:
+              "Vous gardez la direction du mandat et les échanges avec votre client. Nous réalisons le volet web en coulisses, sous la marque de votre agence. Vous nous transmettez les retours et validations prévus.",
           },
           {
-            br: "Vous travaillez directement avec la personne qui conçoit et développe votre site, sans intermédiaire.",
-          },
-          {
-            br: "Chaque projet repose sur une communication claire, une exécution soignée et une vision durable.",
+            question:
+              "Que se passe-t-il si le périmètre du mandat change après le démarrage ?",
+            answer:
+              "Le budget et l’échéancier convenus restent en vigueur tant que le périmètre ne change pas. Si une demande le fait évoluer, nous vous présentons son coût et son effet sur l’échéancier avant d’engager le travail supplémentaire. Nous poursuivons après votre accord.",
           },
         ],
       },
-      fourthsectionValues: {
-        h3: "Mes valeurs",
-        valuesArray: [
-          [
-            { bold: "Créativité avec clarté " },
-            "un design élégant, moderne et facile à utiliser.",
-          ],
-          [
-            "Une approche humaine : ",
-            { bold: "tarification flexible et collaboration " },
-            "pour s’adapter à vos objectifs et à votre budget.",
-          ],
-          [
-            { bold: "Accessibilité pour tous " },
-            "des sites de qualité pour artistes et petites entreprises, quelle que soit leur taille ou leurs ressources.",
-          ],
-          [
-            { bold: "Fiabilité & accompagnement " },
-            "des sites toujours à jour, sécurisés et performants.",
-          ],
-        ],
-      },
-      founderNote: {
-        h3: "Une note personnelle",
-        content:
-          "« En tant que créative et entrepreneure, je sais à quel point il est essentiel d’avoir un site web à la fois authentique et professionnel. J’ai lancé mon activité pour aider les artistes et les petites entreprises à partager leur vision avec clarté et assurance, à travers des solutions sur mesure ou accessibles et simples à gérer. Chaque projet est conçu avec intention, exigence et attention aux détails.»",
-      },
-      conclusion: {
-        h3: "Créons ensemble votre site",
-        content:
-          "Si vous cherchez un site web à la fois personnel, professionnel et pensé pour refléter votre vision, nous serions ravies de collaborer avec vous — qu’il s’agisse d’un tout nouveau projet ou de l’amélioration de votre site existant.",
-      },
-      cta: "Donnons vie à vos idées en ligne.",
-      projcta: "Explorer mon travail",
-      servcta: "Découvrir mes services",
     },
     contactPage: {
       PageTitle: "Contact",
@@ -744,156 +634,7 @@ export const dictionaries = {
       contactInfo: "Information de Contact ",
       adress: "2861 Rue Ontario Est, Montréal (QC), H2K 1X6  (514) 265-6791",
     },
-    servicesPage: {
-      h1: ["Mes", "Services"],
-      textintro: [
-        "Je crée des sites qui allient ",
-        { bold: "identité visuelle forte et performance technique. " },
-        "Du portfolio créatif aux petites et moyennes entreprises, j’offre les services essentiels pour faire de votre site un véritable levier de croissance :",
-      ],
-      introarray: [
-        {
-          b: {
-            txt: " développement web",
-            href: "#dev",
-          },
-        },
-        {
-          b: {
-            txt: "design",
-            href: "#design",
-          },
-        },
-        {
-          b: {
-            txt: "maintenance",
-            href: "#maintenance",
-          },
-        },
-        {
-          b: {
-            txt: "contenu & strategie SEO",
-            href: "#seo",
-          },
-        },
-      ],
 
-      servicearray: [
-        {
-          id: "dev",
-          serv: {
-            h2: "Développement Web",
-            content: [
-              "Je crée ",
-              { bold: "des sites web sur mesure adaptés à vos objectifs. " },
-              "Que vous recherchiez un site haut de gamme avec ",
-              { bold: "animations et performance de pointe, " },
-              "ou un ",
-              { bold: "site WordPress abordable et facile à gérer, " },
-              "je m'adapte à vos besoins et à votre budget.",
-            ],
-            h3: "Mon développement garantit :",
-            webdevarray: [
-              "Un code optimisé pour le SEO et une meilleure visibilité sur Google",
-              "Des temps de chargement rapides et des performances optimisées",
-              "Des solutions sécurisées et évolutives pour accompagner votre croissance",
-              "Une pleine propriété, sans plateformes verrouillées ni frais cachés",
-            ],
-            conclusion: [
-              {
-                bold: "Des artistes de Montréal aux entreprises du monde entier, ",
-              },
-              "Je vous aide à lancer un site web à la fois élégant et fonctionnel.",
-            ],
-          },
-        },
-        {
-          id: "design",
-          serv: {
-            h2: "Design Web",
-            content: [
-              "Le design ne se limite pas à l’apparence: ",
-              {
-                bold: "il structure la manière dont votre marque est perçue en ligne. ",
-              },
-              "Je conçois des sites alignés sur ",
-              {
-                bold: "votre identité, vos objectifs et les attentes de votre clientèle, ",
-              },
-              "afin de créer une expérience cohérente, fluide et engageante.",
-            ],
-            h3: "Ce que j'offre :",
-            webdevarray: [
-              "Des maquettes personnalisées qui reflètent la personnalité de votre marque",
-              "Un design accessible et inclusif pour tous les publics",
-              "Des interfaces mobile-first qui s’adaptent à tous les écrans",
-              "L’intégration de l’identité visuelle, de la typographie et des couleurs",
-            ],
-            conclusion: [
-              "Je conçois des sites web qui ",
-              {
-                bold: "inspirent confiance et engagent les visiteurs, ",
-              },
-              "aidant votre entreprise à se démarquer dans un monde numérique compétitif.",
-            ],
-          },
-        },
-        {
-          id: "maintenance",
-          serv: {
-            h2: "Maintenance & Mises à jour",
-            content: [
-              "Vous avez déjà un site web ? Je vous aide à ",
-              { bold: "le garder à jour et sécurisé. " },
-              "De nombreux clients me contactent pour ",
-              {
-                bold: "des mises à jour, des corrections de bugs ou des ajustements de contenu. ",
-              },
-              " Je m'assure que tout fonctionne parfaitement, afin que votre site reste fiable et efficace au quotidien. ",
-            ],
-            h3: "Mes services de maintenance incluent :",
-            webdevarray: [
-              "Mises à jour de sécurité et gestion des plugins",
-              "Sauvegardes régulières pour éviter toute perte de données",
-              "Mises à jour de contenu et design à la demande",
-              "Audits de performance et optimisation de la vitesse",
-            ],
-            conclusion: [
-              "Que votre site ait été développé sous WordPress ou en code personnalisé, je propose ",
-              {
-                bold: "des forfaits de maintenance flexibles ",
-              },
-              "afin que vous puissiez vous concentrer sur votre activité pendant que je gére la partie technique.",
-            ],
-          },
-        },
-        {
-          id: "seo",
-          serv: {
-            h2: "Contenu & stratégie SEO",
-            content: [
-              "Les moteurs de recherche sont souvent le premier point de contact entre votre entreprise et vos futurs clients. Un site bien optimisé vous permet d’être ",
-              {
-                bold: "visible auprès des bonnes personnes, au bon moment. ",
-              },
-            ],
-            h3: "Ce que je vous apporte :",
-            webdevarray: [
-              "Une recherche de mots-clés stratégique alignée sur votre activité, votre audience et vos objectifs.",
-              "Une structure de site optimisée et des bases techniques solides pour soutenir votre visibilité à long terme. ",
-              "Un contenu clair et persuasif, pensé à la fois pour vos visiteurs et pour les moteurs de recherche.",
-              "Une optimisation des performances pour améliorer votre positionnement et l’expérience utilisateur.",
-            ],
-            conclusion: [
-              "Un référencement solide, c’est ",
-              {
-                bold: "plus de trafic qualifié, une meilleure visibilité et une croissance durable pour votre entreprise.",
-              },
-            ],
-          },
-        },
-      ],
-    },
     projectsPage: {
       AnalogProject: {
         h1: "Analogizing",
@@ -1014,16 +755,15 @@ export const dictionaries = {
       cta: ["Discutons de votre prochain ", { br: "projet en ligne" }],
     },
     navbar: {
-      services: "services",
-      about: "a propos",
+      collab: "collboration",
+
       proj: "projets",
       contact: "contact",
     },
     mobilenav: [
       { txt: "accueil", href: "/home" },
+      { txt: "collaboration", href: "/collaboration" },
       { txt: "projets", href: "/projects" },
-      { txt: "services", href: "/services" },
-      { txt: "a propos", href: "/about" },
       { txt: "contact", href: "/contact" },
     ],
   },

@@ -26,8 +26,8 @@ export default {
         orange: "#f3701e",
       },
       backgroundImage: {
-        herogif: "url(/images/herogif.gif)",
-        mobileherogif: "url(/images/mobileherogif.gif)",
+        homebrush: "url(/images/backgrounds/homebrush.png) ",
+        collabbrush: "url(/images/backgrounds/collabHero.png) ",
         slideone: "url(/images/backgrounds/heroslideone.svg) ",
         slidetwopic: "url(/images/backgrounds/heroslidetwo.svg) ",
         bgdragonmobile: "url(/images/backgrounds/bgdragonmobile.svg) ",
@@ -36,7 +36,7 @@ export default {
         bgbeancesmauve: "url(/images/projectsPage/beancesone.svg) ",
         bganalogf: "url(/images/projectsPage/analogf.svg) ",
         beancesprojmobile: "url(/images/projectsPage/bgbeancesmobile.svg)",
-        rectangleservices: "url(/images/backgrounds/homeservices.svg) "
+        rectangleservices: "url(/images/backgrounds/homeservices.svg) ",
       },
     },
     fontFamily: {

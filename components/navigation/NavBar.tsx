@@ -1,146 +1,37 @@
 "use client";
 
 import Image from "next/image";
-import diphtext from "@/public/images/logo/dIphtongtext.svg";
-import { gsap } from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { useRef, useState } from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LangButton } from "../Buttons";
+import logo from "@/public/images/brushcirc.png";
 import { useLanguage } from "../language/LangContext";
-import { useGSAP } from "@gsap/react";
-
-const SPLASH_HIDDEN_EVENT = "diphtong:splash-hidden";
-
-gsap.registerPlugin(ScrollTrigger);
+import Link from "next/link";
 
 export default function NavBar() {
-  const logoRef = useRef<HTMLImageElement | null>(null);
-  const navRef = useRef<HTMLDivElement | null>(null);
-  const [scrollY, setScrollY] = useState(0);
   const pathname = usePathname();
   const { dictionary } = useLanguage();
   const {
-    navbar: { services, about, contact, proj },
+    navbar: { collab, contact, proj },
   } = dictionary;
-
-  useGSAP(
-    () => {
-      if (pathname !== "/" && pathname !== "/home") return;
-
-      const handleScroll = () => setScrollY(window.scrollY);
-      window.addEventListener("scroll", handleScroll);
-
-      const imageWidth = 350;
-      const viewportWidth = window.innerWidth;
-      const scaleFactor = imageWidth ? (viewportWidth * 0.95) / imageWidth : 1;
-
-      const mm = gsap.matchMedia();
-
-      const createScrollAnimation = (startY: string) => {
-        gsap.fromTo(
-          logoRef.current,
-          {
-            scale: scaleFactor,
-            y: startY,
-            x: "-45%",
-            transformOrigin: "center center",
-          },
-          {
-            scale: 1,
-            y: "0rem",
-            x: "0%",
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: document.documentElement,
-              start: "top top",
-              end: "400px top",
-              scrub: true,
-            },
-          },
-        );
-      };
-
-      const startNavIntro = () => {
-        mm.revert();
-
-        mm.add("(min-width:1536px)", () => {
-          createScrollAnimation("12rem");
-        });
-
-        mm.add("(max-width:1535px)", () => {
-          createScrollAnimation("10rem");
-        });
-
-        gsap.fromTo(
-          navRef.current,
-          { opacity: 0 },
-          {
-            opacity: 1,
-            duration: 1,
-            ease: "power2.out",
-          },
-        );
-      };
-
-      if (sessionStorage.getItem("hasSeenSplash") === "true") {
-        startNavIntro();
-      } else {
-        gsap.set(navRef.current, { opacity: 0 });
-        window.addEventListener(SPLASH_HIDDEN_EVENT, startNavIntro, {
-          once: true,
-        });
-      }
-
-      return () => {
-        mm.revert();
-        window.removeEventListener("scroll", handleScroll);
-        window.removeEventListener(SPLASH_HIDDEN_EVENT, startNavIntro);
-      };
-    },
-    { dependencies: [pathname] },
-  );
 
   return (
     <div
-      ref={navRef}
       id="navbar"
       key={pathname}
-      className={`fixed top-0 z-40 w-full  text-wlite px-5 2xl:pl-5 pr-3 text-[1.1rem]/5 font-menlor uppercase lg:flex hidden ${
-        pathname.includes("/home") && scrollY < 400
-          ? ""
-          : "mix-blend-difference"
-      }  tracking-[0.25rem]`}
+      className={`fixed top-0 z-40 w-full  text-wlite px-5 2xl:pl-5 pr-3 text-[1.1rem]/5 font-menlor uppercase lg:flex hidden mix-blend-difference lg:justify-between  tracking-[0.25rem]`}
     >
-      <div className="flex justify-between w-full pt-3">
+      <Link href="/home" className="mix-blend-difference">
+        <Image src={logo} width={80} height={20} alt="diphtong logo" />
+      </Link>
+      <div className="flex justify-end w-full pt-3">
         <ul className="flex gap-12 2xl:gap-20   ">
           <li className="">
-            <a href="/services">{services} </a>
-          </li>
-
-          <li>
-            <a href="/about">{about} </a>
+            <a href="/collaboration">{collab} </a>
           </li>
           <li className="">
             <a href="/projects">{proj} </a>
           </li>
-        </ul>
-        <div id="" className=" top-2 lg:pl-20 2xl:pl-0">
-          <Link href="/home">
-            <Image
-              ref={logoRef}
-              src={diphtext}
-              width={350}
-              height={50}
-              alt="text"
-              loading="eager"
-              className=""
-            />
-          </Link>
-        </div>
 
-        <ul className=" text-wlite  flex ">
           <li>
             <a href="/contact">{contact} </a>
           </li>

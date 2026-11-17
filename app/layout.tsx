@@ -7,9 +7,7 @@ import { LanguageProvider } from "../components/language/LangContext";
 import MobileNav from "@/components/navigation/MobileNav";
 import { Analytics } from "@vercel/analytics/next";
 import NewFooter from "@/components/navigation/NewFooter";
-
 import SmoothWrapper from "@/components/SmoothWrapper";
-import SplashScreenWrapper from "@/components/SplashScreenWrapper";
 
 const akiraExpanded = localFont({
   src: "../public/fonts/akira-expanded-demo.otf",
@@ -119,11 +117,10 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${akiraExpanded.variable} ${menloRegular.variable} ${menloBold.variable} ${urbanistLight.variable} ${urbanistRegular.variable} ${urbanistMedium.variable} ${figtreeSemiBold.variable} ${figtreeLight.variable} ${inter.variable} bg-diphblack relative overflow-x-hidden`}
       >
-        {/* <SplashScreenWrapper> */}
         <LanguageProvider>
           <header className="">
-            {/* <NavBar />
-              <MobileNav /> */}
+            <NavBar />
+            <MobileNav />
           </header>
           <SmoothWrapper>
             <main className="text-wlite  ">
@@ -133,7 +130,6 @@ export default function RootLayout({
             <footer className="">{/* <NewFooter /> */}</footer>
           </SmoothWrapper>
         </LanguageProvider>
-        {/* </SplashScreenWrapper> */}
       </body>
     </html>
   );

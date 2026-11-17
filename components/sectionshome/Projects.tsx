@@ -93,7 +93,7 @@ export default function Projects() {
         <div className="w-full h-fit  my-10 lg:mt-20  lg:mb-10 2xl:mb-10 ">
           <h2
             ref={titleRef}
-            className="text-[11svw]  md:text-[10svw] lg:text-[10svw] xl:text-[11svw] uppercase 2xl:text-[18vh]   font-urbanistr font-semibold lg:underline text-center md:text-start -mb-5 tracking-wider text-[#999696]"
+            className="text-[11svw]  md:text-[10svw] lg:text-[10svw] xl:text-[11svw] uppercase 2xl:text-[16vh] font-urbanistr font-semibold lg:underline text-center md:text-start -mb-5 tracking-wider text-[#999696]"
           >
             {works.workstitle}
           </h2>
@@ -107,10 +107,10 @@ export default function Projects() {
               setHoveredIndex(null);
             }}
             key={index}
-            className={`flex gap-8 flex-row items-center  ${index !== len - 1 && "border-b border-[#999696]"} px-5 lg:px-10 `}
+            className={`flex gap-8 flex-row items-center  ${index !== len - 1 && "border-b border-[#999696]/30"} px-5 lg:px-10 `}
           >
             {hoveredIndex === index && (
-              <div className=" hidden md:flex md:w-[194px] md:h-[120px]  2xl:w-[260px] 2xl:h-[161px] relative border my-2 border-[#999696] ">
+              <div className=" hidden md:flex md:w-[194px] md:h-[120px]  2xl:w-[200px] 2xl:h-[120px] relative border my-2 border-[#999696] ">
                 <Image
                   src={work.imageSrc}
                   alt="image"
@@ -126,7 +126,7 @@ export default function Projects() {
               className={` flex flex-col-reverse gap-5 py-6  2xl:py-8  `}
             >
               <div className="flex justify-center lg:justify-start  ">
-                <h3 className="font-menlob text-start font-semibold  text-3xl lg:text-5xl 2xl:text-6xl uppercase tracking-[0.1rem] md:tracking-[0.2rem]  ">
+                <h3 className="font-menlob text-start font-semibold  text-3xl lg:text-5xl 2xl:text-5xl uppercase tracking-[0.1rem] md:tracking-[0.2rem]  ">
                   {work.title}
                 </h3>
               </div>

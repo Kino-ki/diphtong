@@ -12,7 +12,7 @@ export default function CollabPage() {
       <CollabHero />
       <AgencyClients />
       <RisksComponent />
-      <div className="h-2 " />
+      <div className="h-1 " />
       <Projects />
       <CollabProcedure />
       <FAQ />

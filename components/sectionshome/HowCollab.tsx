@@ -6,7 +6,7 @@ export default function HowCollab() {
   const { dictionary } = useLanguage();
   const collab = dictionary.homepage.collaboration;
   return (
-    <div className="md:h-[100svh]  xl:h-auto 2xl:h-[100svh] pagpadding font-urbanistr flex flex-col gap-8 md:gap-20 xl:gap-8 2xl:gap-20">
+    <div className="md:min-h-[100svh]  xl:h-auto 2xl:h-[100svh] pagpadding font-urbanistr flex flex-col gap-8 md:gap-20 xl:gap-8 2xl:gap-20">
       <section className="flex flex-col gap-4 xl:gap-2 2xl:gap-4">
         <p className="text-graytext underline text-sm md:text-xl uppercase">
           {" "}

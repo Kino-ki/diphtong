@@ -1,114 +1,45 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
-import { ContactButton } from "../Buttons";
 import { useLanguage } from "../language/LangContext";
+import qrcode from "@/public/images/qr.png";
+import linkedin from "@/public/images/ICONS/linkedin.png";
+import Image from "next/image";
 
 export default function NewFooter() {
   const { dictionary } = useLanguage();
-  const pathname = usePathname();
-  const isHomeRoute = pathname === "/" || pathname === "/home";
-  const [isVisible, setIsVisible] = useState(!isHomeRoute);
+
   const footer = dictionary.footer;
 
-  useEffect(() => {
-    if (!isHomeRoute) {
-      setIsVisible(true);
-      return;
-    }
-
-    const hasSeenSplash = sessionStorage.getItem("hasSeenSplash") === "true";
-
-    if (hasSeenSplash) {
-      setIsVisible(true);
-      return;
-    }
-
-    setIsVisible(false);
-
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 3000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [isHomeRoute]);
-
   return (
-    <div
-      className={`md:h-[50svh] bg-diphblack text-wlite border-y-2 border-y-wlite flex flex-col justify-center lg:gap-6 lg:px-5 py-10 lg:py-5 transition-opacity duration-700 ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
-    >
-      <div className="flex flex-col gap-12 md:flex-row justify-evenly px-5 lg:py-5">
-        <div className="md:hidden flex flex-col font-urbanistr gap-5  justify-end ">
-          <h2 className="font-urbanistmed text-2xl  tracking-widest text-center   ">
-            {footer.cta.map((c, i) =>
-              typeof c === "string" ? c : <span key={i}> {c.br} </span>,
-            )}
-          </h2>
-          <div className=" 2xl:w-[30%] w-[50%]  mx-auto ">
-            <ContactButton textsize="text-xl " width="w-full" height=" h-14" />
-          </div>
+    <div className="lg:h-[25svh] bg-wlite flex flex-col md:grid grid-cols-3 text-diphblack font font-urbanistr py-10 2xl:px-[66px] px-8 md:px-[32px] border-t-2 border-diphblack">
+      <section className="flex flex-col justify-between">
+        <div className="pt-1">
+          <Image src={linkedin} alt="linkedIn logo" width={50} height={50} />
         </div>
-        <div className="flex  gap-6 lg:items-start items-center  flex-col justify-start md:gap-10  md:w-[25%] ">
-          <h2 className="font-menlor capitalize w-1/2 md:w-full   text-xl md:text-2xl lg:text-3xl 2xl:text-4xl text-center md:text-start  ">
+        <div className="flex flex-col lg:flex-row text-graytext text-xs ">
+          <p className="hover:underline hover:text-diphblack ">
+            Politique de confidentialité
+          </p>
+          <p className="hidden lg:flex">&nbsp;| </p>
+          <p className="hover:underline hover:text-diphblack ">
             {" "}
-            {footer.services.h2}{" "}
-          </h2>
-          <ul className="capitalize lg:text-lg 2xl:text-xl font-menlor flex flex-col gap-3 w-1/2 md:w-full ">
-            {footer.services.servicearray.map((s, i) => (
-              <li key={i} className="md:text-start text-center">
-                <a
-                  className="hover:underline capitalize"
-                  href={`/services/#${s.id}`}
-                >
-                  {s.h3}
-                </a>
-              </li>
-            ))}
-          </ul>
+            Politique des cookies
+          </p>
         </div>
-        <div className="flex gap-6  items-center md:items-start  flex-col justify-start md:gap-10  md:w-[25%]   ">
-          <h2 className="font-menlor capitalize  w-1/2 md:w-full  text-xl md:text-2xl lg:text-3xl 2xl:text-4xl text-center md:text-start ">
-            {footer.h22}{" "}
-          </h2>
-          <ul className="capitalize lg:text-lg 2xl:text-xl font-menlor flex flex-col gap-3 w-1/2 md:w-full md:text-start text-center ">
-            <li>
-              <a className="hover:underline" href="/about">
-                {footer.about}
-              </a>
-            </li>
-            <li>
-              <a className="hover:underline" href="/projects">
-                {footer.projects}
-              </a>
-            </li>
-
-            <li>
-              <a className="hover:underline" href="/contact">
-                {footer.contact}
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className=" hidden md:flex flex-col lg:flex-row font-urbanistr lg:gap-12 2xl:gap-20 md:w-[50%] my-auto justify-center  ">
-          <h2 className="font-menlor text-xl 2xl:text-3xl tracking-widest text-center md:text-start lg:w-[50%] ">
-            {footer.cta.map((c, i) =>
-              typeof c === "string" ? c : <span key={i}> {c.br} </span>,
-            )}
-          </h2>
-          <div className=" 2xl:w-[30%] w-[50%] py-10 lg:py-0 mx-auto md:mx-0">
-            <ContactButton
-              textsize="text-xl lg:text-2xl 2xl:text-xl"
-              width="w-full"
-              height="2xl:h-16 h-16"
-            />
+      </section>
+      <section className="flex flex-col justify-end items-center">
+        <p className="font-akira text-xs lg:text-sm text-center">
+          tous droits reserves 2026
+        </p>
+      </section>
+      <section className="flex flex-col justify-between items-end">
+        <div className="flex items-start ">
+          <div>
+            <Image src={qrcode} width={120} height={120} alt="qr code" />
           </div>
         </div>
-      </div>
+        <p className="font-akira text-base">diphtong</p>
+      </section>
     </div>
   );
 }

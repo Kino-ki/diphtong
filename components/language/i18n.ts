@@ -239,7 +239,7 @@ export const dictionaries = {
     },
     contactPage: {
       PageTitle: "Contact",
-      h2: "Let’s talk about your project",
+      h2: "Let’s talk.",
       h3: "Ask your questions or schedule a meeting to explore how we can move forward.",
       form: {
         name: "name",
@@ -624,7 +624,7 @@ export const dictionaries = {
     },
     contactPage: {
       PageTitle: "Contact",
-      h2: "Parlons de votre projet.",
+      h2: "Faisons connaissance.",
       h3: "Posez-moi vos questions ou réservez une rencontre",
       form: {
         name: "name",

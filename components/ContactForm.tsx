@@ -47,20 +47,20 @@ export default function ContactForm({ lang }: ContactFormProps) {
   }, [isSent, lang]);
 
   return (
-    <div className="w-full h-full font-urbanistr text-start text-xl flex flex-col justify-center ">
+    <div className="w-full h-full font-urbanistr text-start text-xl flex flex-col justify-center  ">
       <form
-        className="flex flex-col w gap-[4vh] h-full "
+        className="flex flex-col w gap-[5vh] h-full "
         onSubmit={handleSubmit(onSubmit)}
         action=""
       >
         <div className="flex justify-between h-[15%] ">
           <div className="flex flex-col justify-between  w-1/2 mr-4  ">
             {lang === "EN" ? (
-              <label className="" htmlFor="name">
+              <label className="md:text-lg text-sm" htmlFor="name">
                 name <span className="text-base">*</span>
               </label>
             ) : (
-              <label className="" htmlFor="name">
+              <label className="md:text-lg text-sm" htmlFor="name">
                 nom <span className=" lg:text-base">*</span>
               </label>
             )}
@@ -85,11 +85,11 @@ export default function ContactForm({ lang }: ContactFormProps) {
           </div>
           <div className="flex flex-col justify-between w-1/2   ">
             {lang === "EN" ? (
-              <label className="" htmlFor="email">
+              <label className="md:text-lg text-sm" htmlFor="email">
                 email <span className=" lg:text-base">*</span>
               </label>
             ) : (
-              <label className="" htmlFor="name">
+              <label className="md:text-lg text-sm" htmlFor="name">
                 email <span className=" lg:text-base">*</span>
               </label>
             )}
@@ -116,11 +116,11 @@ export default function ContactForm({ lang }: ContactFormProps) {
 
         <div className="flex flex-col justify-between border-gray-400 border-b  h-[10%]  ">
           {lang === "EN" ? (
-            <label htmlFor="website">
+            <label htmlFor="website" className="md:text-lg text-sm">
               website <span className="text-xs lg:text-base">(optional)</span>
             </label>
           ) : (
-            <label htmlFor="website">
+            <label htmlFor="website" className="md:text-lg text-sm">
               site web <span className="text-xs lg:text-base">(optionnel)</span>
             </label>
           )}
@@ -137,11 +137,11 @@ export default function ContactForm({ lang }: ContactFormProps) {
         </div>
         <div className="flex flex-col gap-5 h-[30%]">
           {lang === "EN" ? (
-            <label htmlFor="content">
+            <label htmlFor="content" className="md:text-lg text-sm">
               let's talk <span className=" lg:text-base">*</span>
             </label>
           ) : (
-            <label htmlFor="content">
+            <label htmlFor="content" className="md:text-lg text-sm">
               discutons <span className=" lg:text-base">*</span>
             </label>
           )}
@@ -166,7 +166,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
             * {lang === "EN" ? "required" : "champ obligatoire"}{" "}
           </p>
         </div>
-        <div className="mx-auto flex flex-col gap-5  ">
+        <div className="mx-auto flex flex-col gap-5  pt-5 md:pt-0">
           {isSent !== 0 && (
             <div className="h-10 flex justify-center">
               <p className="   text-lg font-akira">{messageStatusText}</p>
@@ -187,7 +187,9 @@ export default function ContactForm({ lang }: ContactFormProps) {
                 />
               </div>
             ) : (
-              <div>{lang === "EN" ? <p>submit</p> : <p>envoyer</p>}</div>
+              <div className="md:text-lg text-sm">
+                {lang === "EN" ? <p>submit</p> : <p>envoyer</p>}
+              </div>
             )}
           </button>
         </div>

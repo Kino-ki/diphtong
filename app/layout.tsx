@@ -127,7 +127,9 @@ export default function RootLayout({
               {children}
               <Analytics />
             </main>
-            <footer className="">{/* <NewFooter /> */}</footer>
+            <footer className="">
+              <NewFooter />
+              </footer>
           </SmoothWrapper>
         </LanguageProvider>
       </body>

@@ -16,14 +16,14 @@ export default function CollabHero() {
         </p>
       </section>
       <section className="flex flex-col justify-center items-start lg:items-end gap-4 mix-blend-difference">
-        <h1 className="whitespace-pre-line text-xl md:text-3xl 2xl:text-3xl lg:w-3/4 2xl:w-2/3 2xl:ml-auto">
+        <h1 className="whitespace-pre-line text-xl md:text-3xl 2xl:text-3xl lg:w-3/4 2xl:ml-auto">
           {collab.h1}
         </h1>
-        <p className="font-urbanistl text-base md:text-2xl lg:w-3/4 2xl:w-2/3 2xl:ml-auto">
+        <p className="font-urbanistl text-base md:text-2xl lg:w-3/4  2xl:ml-auto">
           {" "}
           {collab.content}{" "}
         </p>
-        <div className="  flex flex-col items-start justify-start gap-4  lg:w-3/4 2xl:w-2/3 xl:ml-auto md:flex-row 2xl:gap-8 pt-9">
+        <div className="  flex flex-col items-start justify-start gap-4  lg:w-3/4 xl:ml-auto md:flex-row 2xl:gap-8 pt-9">
           <CtaBtn text={collab.collabbutton} href="/collaboration#steps" />
           <CtaBtn text={collab.contactbutton} href="/contact" />
         </div>

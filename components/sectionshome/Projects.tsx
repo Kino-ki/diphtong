@@ -94,7 +94,7 @@ export default function Projects() {
         <div className="w-full h-fit  my-10 lg:mt-20  lg:mb-10 2xl:mb-10 px-8 md:px-[32px] 2xl:px-[66px]">
           <h2
             ref={titleRef}
-            className="text-[11svw]  md:text-[10svw] lg:text-[9svw] xl:text-[9svw] uppercase 2xl:text-[14vh] font-urbanistr font-semibold lg:underline text-center md:text-start -mb-5 tracking-wider leading-10 text-[#999696]"
+            className="text-[11svw]  md:text-[10svw] lg:pb-10 lg:text-[9svw] xl:text-[9svw] uppercase 2xl:text-[14vh] font-urbanistr font-semibold lg:underline text-center md:text-start -mb-5 tracking-wider leading-10 text-[#999696]"
           >
             {works.workstitle}
           </h2>
@@ -108,7 +108,7 @@ export default function Projects() {
               setHoveredIndex(null);
             }}
             key={index}
-            className={`flex gap-8 flex-row items-center  ${index !== len - 1 && "border-b border-[#999696]/30"} px-8 md:px-[32px] 2xl:px-[66px]`}
+            className={`flex gap-4 flex-row items-center  ${index !== len - 1 && "border-b border-[#999696]/30"} px-8 md:px-[32px] 2xl:px-[66px]`}
           >
             {hoveredIndex === index && (
               <div className=" hidden md:flex md:w-[194px] md:h-[120px]  2xl:w-[200px] 2xl:h-[120px] relative border my-2 border-[#999696] ">
@@ -124,10 +124,10 @@ export default function Projects() {
               onClick={() => {
                 navigateWithScroll(router, "/projects", work.hash);
               }}
-              className={` flex flex-col-reverse gap-5 py-6  2xl:py-8  `}
+              className={` flex flex-col-reverse gap-5 py-4 md:py-6  2xl:py-8  `}
             >
               <div className="flex justify-center lg:justify-start  ">
-                <h3 className="font-menlob text-start font-semibold  text-3xl lg:text-4xl 2xl:text-5xl uppercase tracking-[0.1rem] md:tracking-[0.15rem]  ">
+                <h3 className="font-menlob text-start font-semibold text-lg md:text-3xl lg:text-4xl 2xl:text-5xl uppercase tracking-[0.05rem] md:tracking-[0.15rem]  ">
                   {work.title}
                 </h3>
               </div>

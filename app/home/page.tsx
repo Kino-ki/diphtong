@@ -2,7 +2,6 @@
 
 import HeroSection from "@/components/sectionshome/HeroSection";
 import ReachOutSection from "@/components/sectionshome/ReachOutSection";
-import SectionServices from "@/components/TOBEAGENCYTYPE";
 import Projects from "@/components/sectionshome/Projects";
 import InterversionSect from "@/components/sectionshome/InterversionSect";
 import HowCollab from "@/components/sectionshome/HowCollab";

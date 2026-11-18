@@ -13,7 +13,7 @@ export function CtaBtn({ text, href }: { text: string; href: string }) {
   return (
     <Link
       href={href}
-      className="border border-wlite px-[24px] py-4 2xl:py-[30px] text-center font-urbanistr text-sm md:text-[16px] text-wlite hover:ring-2 ring-wlite"
+      className="border border-wlite px-[24px] py-4 md:py-[30px] text-center font-urbanistr text-sm md:text-[16px] text-wlite hover:ring-2 ring-wlite active:scale-90  "
     >
       {text}
     </Link>

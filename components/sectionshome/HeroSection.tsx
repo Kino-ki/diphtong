@@ -97,7 +97,7 @@ export default function HeroSection() {
 
       <div
         ref={contentRef}
-        className="relative z-10 flex h-full flex-col justify-around px-8 md:px-[32px] lg:flex-row lg:justify-between 2xl:px-[66px]"
+        className="relative flex h-full flex-col justify-around px-8 md:px-[32px] lg:flex-row lg:justify-between 2xl:px-[66px] w-[100svw] "
       >
         <section className="flex flex-col justify-center mix-blend-difference">
           <h1 className="w-fit text-center font-akira text-8xl md:text-start md:text-[160px] md:leading-[150px] 2xl:text-[200px] 2xl:leading-[200px]">
@@ -108,12 +108,12 @@ export default function HeroSection() {
             </span>
           </h1>
         </section>
-        <section className="flex flex-col gap-8 text-center font-urbanistr md:text-end lg:h-full lg:justify-end 2xl:gap-[52px] md:pb-20 2xl:pb-[105px]">
-          <div className="flex flex-col gap-3">
-            <p className="font-urbanistl text-base 2xl:text-2xl">
+        <section className="flex flex-col gap-8 text-center font-urbanistr md:text-end lg:h-full lg:justify-end 2xl:gap-[52px] md:pb-20 2xl:pb-[105px] mix-blend-difference">
+          <div className="flex flex-col gap-3 lg:w-4/5 2xl:w-4/5 lg:ml-auto ">
+            <p className="font-urbanistl text-base md:text-2xl">
               {hero.textone}{" "}
             </p>
-            <p className="text-lg font-urbanistr 2xl:text-[32px]">
+            <p className="text-lg font-urbanistr md:text-3xl 2xl:text-3xl">
               {hero.texttwo}{" "}
             </p>
           </div>

@@ -47,7 +47,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
   }, [isSent, lang]);
 
   return (
-    <div className="w-full h-full font-urbanistr text-start text-xl flex flex-col justify-center">
+    <div className="w-full h-full font-urbanistr text-start text-xl flex flex-col justify-center ">
       <form
         className="flex flex-col w gap-[4vh] h-full "
         onSubmit={handleSubmit(onSubmit)}
@@ -57,14 +57,11 @@ export default function ContactForm({ lang }: ContactFormProps) {
           <div className="flex flex-col justify-between  w-1/2 mr-4  ">
             {lang === "EN" ? (
               <label className="" htmlFor="name">
-                name <span className="text-base">(required)</span>
+                name <span className="text-base">*</span>
               </label>
             ) : (
               <label className="" htmlFor="name">
-                nom{" "}
-                <span className="text-xs lg:text-base">
-                  (champ obligatoire)
-                </span>
+                nom <span className=" lg:text-base">*</span>
               </label>
             )}
             <input
@@ -89,14 +86,11 @@ export default function ContactForm({ lang }: ContactFormProps) {
           <div className="flex flex-col justify-between w-1/2   ">
             {lang === "EN" ? (
               <label className="" htmlFor="email">
-                email <span className="text-xs lg:text-base">(required)</span>
+                email <span className=" lg:text-base">*</span>
               </label>
             ) : (
               <label className="" htmlFor="name">
-                email{" "}
-                <span className="text-xs lg:text-base">
-                  (champ obligatoire)
-                </span>
+                email <span className=" lg:text-base">*</span>
               </label>
             )}
             <input
@@ -144,13 +138,11 @@ export default function ContactForm({ lang }: ContactFormProps) {
         <div className="flex flex-col gap-5 h-[30%]">
           {lang === "EN" ? (
             <label htmlFor="content">
-              how can I help{" "}
-              <span className="text-xs lg:text-base">(required)</span>
+              let's talk <span className=" lg:text-base">*</span>
             </label>
           ) : (
             <label htmlFor="content">
-              Comment puis-je vous aider?{" "}
-              <span className="text-xs lg:text-base">(champ obligatoire)</span>
+              discutons <span className=" lg:text-base">*</span>
             </label>
           )}
           <textarea
@@ -170,6 +162,9 @@ export default function ContactForm({ lang }: ContactFormProps) {
               <p className="text-red-500 text-sm">{errors?.content?.message}</p>
             )}
           </div>
+          <p className="lg:text-base text-xs">
+            * {lang === "EN" ? "required" : "champ obligatoire"}{" "}
+          </p>
         </div>
         <div className="mx-auto flex flex-col gap-5  ">
           {isSent !== 0 && (

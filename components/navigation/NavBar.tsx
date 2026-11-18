@@ -21,10 +21,10 @@ export default function NavBar() {
       className={`fixed top-0 z-40 w-full  text-wlite px-5 2xl:pl-5 pr-3 text-[1.1rem]/5 font-menlor uppercase lg:flex hidden mix-blend-difference lg:justify-between  tracking-[0.25rem]`}
     >
       <Link href="/home" className="mix-blend-difference">
-        <Image src={logo} width={80} height={20} alt="diphtong logo" />
+        <Image src={logo} width={60} height={60} alt="diphtong logo" />
       </Link>
-      <div className="flex justify-end w-full pt-3">
-        <ul className="flex gap-12 2xl:gap-20   ">
+      <div className="flex justify-end w-full items-center pt-3">
+        <ul className="flex gap-12 2xl:gap-12   ">
           <li className="">
             <a href="/collaboration">{collab} </a>
           </li>

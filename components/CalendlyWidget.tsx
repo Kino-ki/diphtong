@@ -17,7 +17,7 @@ export default function CalendlyWidget() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="btn hover:ring-1 hover:ring-wlite text-sm md:text-base"
+        className="border border-wlite px-[24px] py-4 md:py-[30px] text-center font-urbanistr text-sm md:text-[16px] text-wlite hover:ring-2 ring-wlite active:scale-95 "
       >
         {language === "EN" ? "book a meeting" : "prendre un rendez-vous"}
       </button>

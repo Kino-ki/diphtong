@@ -6,6 +6,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { useLanguage } from "../language/LangContext";
+import { CtaBtn } from "../Buttons";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -112,7 +113,11 @@ export default function CollabProcedure() {
   );
 
   return (
-    <div id="steps" ref={rootRef} className="font-urbanistr text-wlite pagpadding">
+    <div
+      id="steps"
+      ref={rootRef}
+      className="font-urbanistr text-wlite pagpadding"
+    >
       <section
         ref={sceneRef}
         className="flex min-h-screen flex-col  md:min-h-[720px]  "
@@ -131,7 +136,7 @@ export default function CollabProcedure() {
 
         <div
           ref={viewportRef}
-          className="mt-12 md:mt-32 md:h-[64vh] md:max-h-[600px] md:min-h-[440px] "
+          className="mt-12 md:mt-32 xl:mt-16 2xl:mt-32   md:h-[64vh] md:max-h-[600px] md:min-h-[440px] "
         >
           <div
             ref={trackRef}
@@ -161,11 +166,11 @@ export default function CollabProcedure() {
             {collab.steps.map((step, index) => (
               <article
                 key={step.id}
-                className={`flex w-full items-start gap-4 md:w-[calc(100vw_-_114px)] md:gap-[53px] md:-mr-[31vw] 2xl:w-[1586px] 2xl:-mr-[528px] ${
-                  index % 2 === 1 ? "md:mt-[30vh]" : ""
+                className={`flex w-full items-start gap-4 md:w-[calc(100vw_-_114px)] md:gap-[53px] xl:gap-4 2xl:gap-[53px] md:-mr-[31vw]  2xl:w-[1586px] 2xl:-mr-[528px] ${
+                  index % 2 === 1 ? "md:mt-[30vh] " : ""
                 }`}
               >
-                <span className="shrink-0 pt-2 font-akira text-3xl md:w-[105px] md:text-[60px] md:leading-none">
+                <span className="shrink-0 pt-2  xl:pt-10 2xl:pt-4 font-akira text-3xl md:w-[105px] md:text-[60px] md:leading-none ">
                   {step.id}
                 </span>
                 <div
@@ -193,14 +198,12 @@ export default function CollabProcedure() {
         </div>
       </section>
 
-      <section className=" flex flex-col items-center gap-6">
-        <p className="max-w-3xl text-xl md:text-xl">{cta.content}</p>
-        <Link
-          href="/contact"
-          className="border border-wlite px-6 py-4 text-center text-sm hover:bg-wlite hover:text-diphblack md:text-base"
-        >
-          {cta.button}
-        </Link>
+      <section className=" flex flex-col items-center gap-6 pt-12 md:pt-32 lg:pt-0 ">
+        <p className="max-w-3xl text-xl md:text-xl text-center md:text-start">
+          {cta.content}
+        </p>
+
+        <CtaBtn href="/contact" text={cta.button} />
       </section>
     </div>
   );

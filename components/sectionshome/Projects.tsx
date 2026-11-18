@@ -42,15 +42,16 @@ export default function Projects() {
         "(min-width: 1024px)",
         () => {
           gsap.to(titleRef.current, {
-            xPercent: 2,
+            xPercent: 0,
+            yPercent: 2,
             scale: 0.3,
             ease: "sine.inOut",
             transformOrigin: "left bottom",
             duration: 2,
             scrollTrigger: {
               trigger: titleRef.current,
-              start: "top 70%",
-              end: "top top",
+              start: "top 80%",
+              end: "top 10%",
               scrub: 1,
               // markers: true,
             },
@@ -87,13 +88,13 @@ export default function Projects() {
   return (
     <div
       ref={triggerRef}
-      className=" flex flex-col bg-wlite border-t-8 lg:border-none border-black text-[#1e1e1e] overflow-hidden "
+      className=" flex flex-col bg-wlite text-diphblack overflow-hidden "
     >
       <div className="flex flex-col justify-center  relative ">
-        <div className="w-full h-fit  my-10 lg:mt-20  lg:mb-10 2xl:mb-10 ">
+        <div className="w-full h-fit  my-10 lg:mt-20  lg:mb-10 2xl:mb-10 px-8 md:px-[32px] 2xl:px-[66px]">
           <h2
             ref={titleRef}
-            className="text-[11svw]  md:text-[10svw] lg:text-[10svw] xl:text-[11svw] uppercase 2xl:text-[16vh] font-urbanistr font-semibold lg:underline text-center md:text-start -mb-5 tracking-wider text-[#999696]"
+            className="text-[11svw]  md:text-[10svw] lg:text-[9svw] xl:text-[9svw] uppercase 2xl:text-[14vh] font-urbanistr font-semibold lg:underline text-center md:text-start -mb-5 tracking-wider leading-10 text-[#999696]"
           >
             {works.workstitle}
           </h2>
@@ -107,7 +108,7 @@ export default function Projects() {
               setHoveredIndex(null);
             }}
             key={index}
-            className={`flex gap-8 flex-row items-center  ${index !== len - 1 && "border-b border-[#999696]/30"} px-5 lg:px-10 `}
+            className={`flex gap-8 flex-row items-center  ${index !== len - 1 && "border-b border-[#999696]/30"} px-8 md:px-[32px] 2xl:px-[66px]`}
           >
             {hoveredIndex === index && (
               <div className=" hidden md:flex md:w-[194px] md:h-[120px]  2xl:w-[200px] 2xl:h-[120px] relative border my-2 border-[#999696] ">
@@ -126,7 +127,7 @@ export default function Projects() {
               className={` flex flex-col-reverse gap-5 py-6  2xl:py-8  `}
             >
               <div className="flex justify-center lg:justify-start  ">
-                <h3 className="font-menlob text-start font-semibold  text-3xl lg:text-5xl 2xl:text-5xl uppercase tracking-[0.1rem] md:tracking-[0.2rem]  ">
+                <h3 className="font-menlob text-start font-semibold  text-3xl lg:text-4xl 2xl:text-5xl uppercase tracking-[0.1rem] md:tracking-[0.15rem]  ">
                   {work.title}
                 </h3>
               </div>
@@ -145,15 +146,12 @@ export default function Projects() {
           </section>
         ))}
       </div>
-      <div className=" md:px-10 px-5 flex justify-center lg:justify-start pt-8 xl:pt-10 pb-16 lg:pb-20">
+      <div className=" px-8 md:px-[32px] 2xl:px-[66px] flex justify-center lg:justify-start pt-8 xl:pt-10 pb-16 lg:pb-20 ">
         <Link
           href="/projects"
-          className="blackbtn hover:ring-1 hover:ring-[#525252]"
+          className="blackbtn hover:ring-1 hover:ring-[#525252] px-[24px] py-4 md:py-[30px] text-center font-urbanistr text-sm md:text-[16px] hover:shadow-md active:scale-95"
         >
-          <p className="text-base md:text-xl text-[#525252] ">
-            {" "}
-            {works.button}{" "}
-          </p>
+          <p className=" text-[#525252] "> {works.button} </p>
         </Link>
       </div>
     </div>

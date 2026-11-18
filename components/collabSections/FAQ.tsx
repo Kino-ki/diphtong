@@ -7,7 +7,7 @@ export default function FAQ() {
   const faq = dictionary.collaboration.faq;
 
   return (
-    <section className="bg-diphblack pagpadding font-urbanistr text-wlite">
+    <section className="bg-diphblack pagpadding  font-urbanistr text-wlite">
       <h2 className="mb-10 text-center font-akira text-3xl md:mb-14 md:text-5xl">
         {faq.h2}
       </h2>

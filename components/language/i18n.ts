@@ -46,9 +46,9 @@ export const dictionaries = {
           {
             id: "4",
             title: "Chambre de Commerce de Lotbinière",
-            serv: ["Projet collaboratif", "Front-end Development"],
+            serv: ["Agency collaboration", "Front-end Development"],
             imageSrc: "/images/projserv/ccl.png",
-            hash: "collaborations",
+            hash: "ccl",
             stack: ["Wordpress", "Elementor", "Yapla"],
           },
           {
@@ -56,7 +56,7 @@ export const dictionaries = {
             title: "Plein la tête studio éclaté",
             serv: ["Agency collaboration", "Full-stack web development"],
             imageSrc: "/images/projserv/plt.svg",
-            hash: "collaborations",
+            hash: "plt",
             stack: ["SvelteKit", "Sanity", "GSAP"],
           },
           {
@@ -251,6 +251,22 @@ export const dictionaries = {
     },
 
     projectsPage: {
+      CclProject: {
+        h1: "Chambre de commerce de Lotbinière",
+        id: "ccl",
+        // subtitle: "Marketing Agency",
+        services: [" PLT x DIPHTOING", "Front-End Development"],
+        content: ["content to come"],
+        href: "hhttps://cclotbiniere.com/",
+      },
+      PltProject: {
+        h1: "Plein la tête",
+        id: "plt",
+        subtitle: "Marketing Agency",
+        services: [" PLT x DIPHTOING", "full stack development"],
+        content: ["content to come"],
+        href: "https://pleinlatete.ca/",
+      },
       AnalogProject: {
         h1: "Analogizing",
         id: "analogizing",
@@ -636,11 +652,27 @@ export const dictionaries = {
     },
 
     projectsPage: {
+      CclProject: {
+        h1: "Chambre de commerce de Lotbinière",
+        id: "ccl",
+        // subtitle: "Marketing Agency",
+        services: [" PLT x DIPHTOING", "Front-End Development"],
+        content: ["content to come"],
+        href: "hhttps://cclotbiniere.com/",
+      },
+      PltProject: {
+        h1: "Plein la tête",
+        id: "plt",
+        subtitle: "Agence de marketing",
+        services: [" PLT x DIPHTOING ", "développement full stack"],
+        content: ["content to come"],
+        href: "https://pleinlatete.ca/",
+      },
       AnalogProject: {
         h1: "Analogizing",
         id: "analogizing",
         subtitle: "Artist Portfolio",
-        services: [" web design ", "full stack development"],
+        services: [" web design ", "développement full stack"],
         content: [
           "Analogizing est le portfolio numérique d’un·e ",
           { bold: "artiste pluridisciplinaire basé·e à Montréal. " },
@@ -660,7 +692,7 @@ export const dictionaries = {
         h1: "béances éditions",
         id: "beances_editions",
         subtitle: "QUEER ZINES EDITIONS",
-        services: [" web design ", "full stack development"],
+        services: [" web design ", "développement full stack"],
         content: [
           "Béances Éditions est une maison d’édition montréalaise qui met en lumière ",
           { bold: "des voix lesbo-queer, lesbiennes et trans " },
@@ -678,7 +710,7 @@ export const dictionaries = {
         id: "esther_portfolio",
         subtitle: "video editor",
         span: "portfolio",
-        services: [" web design ", "full stack development"],
+        services: [" web design ", "développement full stack"],
         content: [
           "Esther Lhuillery est une monteuse vidéo basée à Montréal, spécialisée dans les bandes-annonces de films. Son travail allie précision et émotion, capturant l’essence de chaque œuvre en quelques minutes seulement. ",
           { br: "J'ai conçu un " },

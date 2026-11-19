@@ -23,7 +23,7 @@ export default function AgencyClients() {
           {agency.cases.map((agencyCase, index) => (
             <article
               key={index}
-              className={`pt-5 pb-2 xl:pb-5 lg:pt-7 px-5 2xl:px-20  2xl:py-6 xl:hover:bg-wlite xl:hover:text-diphblack xl:mt-1 2xl:mt-0 ${index % 2 === 0 ? "xl:mr-5 " : "2xl:-ml-1"} `}
+              className={`pt-5 pb-2 xl:pb-5 lg:pt-7  2xl:px-20  2xl:py-6 xl:hover:bg-wlite xl:hover:text-diphblack xl:mt-1 2xl:mt-0 ${index % 2 === 0 ? "xl:mr-5 " : "2xl:-ml-1"} `}
             >
               <div className="mb-5 flex items-start gap-4 md:mb-7">
                 <h3 className="font-akira text-lg leading-snug md:text-2xl underline w-2/3">

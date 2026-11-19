@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   // reactStrictMode: false,
-  allowedDevOrigins: ["10.0.0.184"],
+  allowedDevOrigins: ["192.168.1.128"],
 };
 
 export default nextConfig;

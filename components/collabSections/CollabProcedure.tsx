@@ -184,7 +184,7 @@ export default function CollabProcedure() {
                   <p className="mb-3 text-xs uppercase leading-relaxed text-graytext md:text-sm">
                     {step.outcome}
                   </p>
-                  <p className="text-sm leading-relaxed md:text-base">
+                  <p className="text-sm leading-relaxed md:text-base 2xl:text-lg">
                     {step.content}
                   </p>
                 </div>
@@ -199,7 +199,7 @@ export default function CollabProcedure() {
       </section>
 
       <section className=" flex flex-col items-center gap-6 pt-12 md:pt-32 lg:pt-0 ">
-        <p className="max-w-3xl text-xl md:text-xl text-center md:text-start">
+        <p className="max-w-3xl text-sm md:text-xl text-center md:text-start">
           {cta.content}
         </p>
 

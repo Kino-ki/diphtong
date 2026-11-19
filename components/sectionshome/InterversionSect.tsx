@@ -21,11 +21,11 @@ export default function InterversionSect() {
         </p>
       </section>
 
-      <section className=" grid w-full grid-cols-1 px-5  md:grid-cols-3 md:px-0 md:h-[36svh]   md:py-0 py-4 ">
+      <section className=" grid w-full grid-cols-1   md:grid-cols-3 md:px-0 md:h-[36svh]   md:py-0 py-4 ">
         {services.servarray.map((service, index) => (
           <div
             key={service.id}
-            className={`flex flex-col gap-2 md:gap-8 md:min-h-52 items-center px-5 py-8 leading-relaxed md:px-7 bg-diphblack text-wlite md:bg-wlite md:text-diphblack  ${
+            className={`flex flex-col gap-4 md:gap-8 md:min-h-52 items-center px-5 py-10 leading-relaxed md:px-7 bg-diphblack text-wlite md:bg-wlite md:text-diphblack  ${
               index === 0
                 ? "md:justify-start md:pl-0 md:text-center"
                 : index === 1
@@ -40,8 +40,8 @@ export default function InterversionSect() {
           </div>
         ))}
       </section>
-      <section className="flex flex-col justify-center  items-center gap-4 2xl:gap-12 xl:mt-3 mt-6  ">
-        <p className="md:text-lg md:text-start text-center">
+      <section className="flex flex-col justify-center  items-center gap-4 2xl:gap-12 xl:mt-3 md:mt-6  ">
+        <p className="text-sm md:text-lg md:text-start text-center">
           {services.closing}
         </p>
         <Link

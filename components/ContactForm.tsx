@@ -188,7 +188,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
               </div>
             ) : (
               <div className="md:text-lg text-sm">
-                {lang === "EN" ? <p>submit</p> : <p>envoyer</p>}
+                {lang === "EN" ? <p>send</p> : <p>envoyer</p>}
               </div>
             )}
           </button>

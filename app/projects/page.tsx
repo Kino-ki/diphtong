@@ -9,6 +9,8 @@ import BeancesProject from "@/components/projectSection/beances";
 import Esther from "@/components/projectSection/esther";
 import CollabProjects from "@/components/projectSection/CollabProjects";
 import UpcomingProjects from "@/components/projectSection/UpcomingProjects";
+import Plt from "@/components/projectSection/plt";
+import Ccl from "@/components/projectSection/ccl";
 
 export default function ProjectsPage() {
   useEffect(() => {
@@ -26,10 +28,30 @@ export default function ProjectsPage() {
 
   return (
     <div className="flex flex-col bg-diphblack ">
+      {/*  --------------------------------PLT----------------------------- */}
+
+      <section data-speed="1" className=" outer relative h-[110svh]   ">
+        <div data-speed="0.5" className="h-full inner">
+          <Plt />
+        </div>
+      </section>
+      {/*  --------------------------------CCL----------------------------- */}
+
+      <section
+        data-speed="1"
+        className=" outer relative h-[110svh] overflow-hidden "
+      >
+        <div data-speed="0.5" className="h-full inner">
+          <Ccl />
+        </div>
+      </section>
       {/*  --------------------------------ANALOG----------------------------- */}
 
-      <section data-speed="1" className=" outer h-[110svh]  ">
-        <div data-speed="0.5" className="h-full  overflow-hidden inner">
+      <section
+        data-speed="1"
+        className=" outer relative h-[120svh] overflow-hidden  "
+      >
+        <div data-speed="0.5" className="h-full  inner">
           <Analogizing />
         </div>
       </section>
@@ -52,24 +74,6 @@ export default function ProjectsPage() {
       >
         <div data-speed="0.5" className=" h-full inner">
           <Esther />
-        </div>
-      </section>
-      {/* ---------------------------OTHER ------------------------------------ */}
-      <section
-        id="collaborations"
-        className=" outer h-[120svh]  overflow-hidden bg-auto lg:bg-diphblack "
-        data-speed="1"
-      >
-        <div data-speed="0.5" className="inner h-full">
-          <CollabProjects />
-        </div>
-      </section>
-      <section
-        className=" outer h-[110svh]  bg-auto lg:bg-diphblack overflow-hidden"
-        data-speed="1"
-      >
-        <div data-speed="0.5" className="inner h-full">
-          <UpcomingProjects />
         </div>
       </section>
     </div>
